@@ -1,0 +1,6 @@
+framework module Pods_Breaking_Bricks {
+  umbrella header "Pods-Breaking Bricks-umbrella.h"
+
+  export *
+  module * { export * }
+}

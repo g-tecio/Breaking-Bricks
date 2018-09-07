@@ -12,9 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var oldCurrency : Int = UserDefaults.standard.integer(forKey: "coins")
+    
+    var oldWins : Int = UserDefaults.standard.integer(forKey: "wins")
+    var oldLoses : Int = UserDefaults.standard.integer(forKey: "loses")
+    var oldplaytime : Int = UserDefaults.standard.integer(forKey: "playtime")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
+        coin += oldCurrency
+        win += oldWins
+        lose += oldLoses
+        secondsPlus += oldplaytime
         // Override point for customization after application launch.
         return true
     }
