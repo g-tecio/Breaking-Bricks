@@ -35,6 +35,7 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         self.view.isUserInteractionEnabled = false
         
         if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone{
@@ -46,16 +47,20 @@ class GameViewController: UIViewController {
         }
         
         //SKView to present the scenes
+        intro.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height)
+        intro.center = self.view.center
+        intro.contentMode = .scaleAspectFill
+        
         skView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height)
         skView.center = self.view.center
         skView.contentMode = .scaleAspectFill
-       // skView.allowsTransparency = true
-
+        skView.allowsTransparency = true
+        
         intro.play{ (finished) in
-            
+           // view.addSubview(intro)
             self.timerIntro = Timer.scheduledTimer(timeInterval: 0.10, target: self, selector: #selector(self.introTimer), userInfo: nil, repeats: true)
         }
-        
+       // view.addSubview(intro)
         /// MenuScene Setup
         menuScene = MenuScene.init(sceneSize: view.bounds.size, referenceGVC: self)
         
@@ -68,8 +73,12 @@ class GameViewController: UIViewController {
         /// GameScene Setup
         gameScene = GameScene.init(sceneSize: view.bounds.size, referenceGVC: self)
         
-        skView.presentScene(menuScene)
+        
+       skView.presentScene(menuScene)
         view.addSubview(skView)
+    view.addSubview(intro)
+
+        
         
     }
     
