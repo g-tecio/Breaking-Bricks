@@ -18,7 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var oldLoses : Int = UserDefaults.standard.integer(forKey: "loses")
     var oldplaytime : Int = UserDefaults.standard.integer(forKey: "playtime")
     
-    var costRetro : Int = UserDefaults.standard.integer(forKey: "costRetro")
+    var oldCostRetro : Int = UserDefaults.standard.integer(forKey: "costRetro")
+    var oldCostRainbow : Int = UserDefaults.standard.integer(forKey: "costRainbow")
+    var oldCostLight : Int = UserDefaults.standard.integer(forKey: "costLight")
+    var oldCostSoccer : Int = UserDefaults.standard.integer(forKey: "costSoccer")
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -26,6 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         win += oldWins
         lose += oldLoses
         secondsPlus += oldplaytime
+        
+        // Cost Skins
+        costRetro += oldCostRetro
+        costRainbow += oldCostRainbow
+        costLight += oldCostLight
+        costSoccer += oldCostSoccer
+        
         // Override point for customization after application launch.
         return true
     }

@@ -9,16 +9,30 @@
 import SpriteKit
 import GameplayKit
 
+var costRetro: Int = 0
+var costRainbow: Int = 0
+var costLight: Int = 0
+var costSoccer: Int = 0
+
 class StoreScene: SKScene, ZCarouselDelegate {
+    
     func ZCarouselShowingIndex(_ scrollView: ZCarousel, index: Int) {
         if scrollView == images {
             self.index = index
             print("Showing Image at index \(index)")
+            print("Retro",costRetro)
+            print("Rainbow",costRainbow)
+            print("Light",costLight)
+            print("Soccer",costSoccer)
         }
         
     }
     
-    var storeImages = ["ClassicSelected","RetroBuy","RainbowBuy","LightBuy","SoccerBuy"]
+
+    
+    var storeImages = ["ClassicOwned","RetroBuy","RainbowBuy","LightBuy","SoccerBuy"]
+    
+    
     var images: ZCarousel!
     var index = 2
     /// GameViewControl setup as reference to handle SceneStates
@@ -34,6 +48,11 @@ class StoreScene: SKScene, ZCarouselDelegate {
     
     /// Custom Initializer
     init(sceneSize: CGSize, referenceGVC: GameViewController) {
+        
+        costRetro = 2
+        costRainbow = 2
+        costLight = 1
+        costSoccer = 3
         
         /// Set reference of GameViewControl
         gameViewController = referenceGVC
@@ -73,72 +92,79 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
-                
-                storeImages.remove(at: 0)
-                storeImages.insert("ClassicSelected", at: 0)
             }else{
                 print("NO TE ALCANZA POBRETÓN")
             }
             
         }
         if index == 1{
-            if coin >= 2{
-                coin = coin - 2
+            if coin >= costRetro{
+                coin = coin - costRetro
+                costRetro = 0
                 gameViewController.menuScene.sceneNumber = 1
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
                 
-                
-                storeImages.remove(at: 0)
-                storeImages.insert("ClassicOwned", at: 0)
-                storeImages.remove(at: 1)
-                storeImages.insert("RetroSelected", at: 1)
+                if(costRetro == 0){
+                    storeImages.remove(at: 1)
+                    storeImages.insert("RetroOwned", at: 1)
+                }
             }else{
                 print("NO TE ALCANZA POBRETÓN")
             }
             
         }
         if index == 2{
-            if coin >= 2{
-                coin = coin - 2
+            if coin >= costRainbow{
+                coin = coin - costRainbow
+                costRainbow = 0
                 gameViewController.menuScene.sceneNumber = 2
                     gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
-                
-                
-                
+                if(costRainbow == 0){
+                    storeImages.remove(at: 2)
+                    storeImages.insert("RainbowOwned", at: 2)
+                }
             }else{
                 print("NO TE ALCANZA POBRETÓN")
             }
             
         }
         if index == 3{
-            if coin >= 1{
-                coin = coin - 1
+            if coin >= costLight{
+                coin = coin - costLight
+                costLight = 0
                 gameViewController.menuScene.sceneNumber = 3
                    gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
-                
+                if(costLight == 0){
+                    storeImages.remove(at: 3)
+                    storeImages.insert("LightOwned", at: 3)
+                }
             }else{
                 print("NO TE ALCANZA POBRETÓN")
             }
             
         }
         if index == 4{
-            if coin >= 3{
-                coin = coin - 3
+            if coin >= costSoccer{
+                coin = coin - costSoccer
+                costSoccer = 0
                 gameViewController.menuScene.sceneNumber = 4
                   gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
-                
+                if(costSoccer == 0){
+                    storeImages.remove(at: 4)
+                    storeImages.insert("SoccerOwned", at: 4)
+                }
             }else{
                 print("NO TE ALCANZA POBRETÓN")
             }
