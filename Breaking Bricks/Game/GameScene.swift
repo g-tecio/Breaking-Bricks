@@ -34,6 +34,9 @@ var winsCount = ("\(win)")
 var lose: Int = 0
 var loseCount = ("\(lose)")
 
+
+
+
 let BallCategoryName = "ball"
 let PaddleCategoryName = "paddle"
 let BlockCategoryName = "block"
@@ -653,7 +656,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Score
         score += 1
         coin += 1
-        
+
         gameControls.scoreLabel.text = ("\(score)")
     }//END BreakBlocks
     

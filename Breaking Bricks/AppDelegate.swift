@@ -23,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var oldCostLight : Int = UserDefaults.standard.integer(forKey: "costLight")
     var oldCostSoccer : Int = UserDefaults.standard.integer(forKey: "costSoccer")
 
+    var oldCoinStore : Int = UserDefaults.standard.integer(forKey: "coinsStore")
+    var oldImagesArray = UserDefaults.standard.array(forKey: "storeImagesArray") as? [String]
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -32,10 +34,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         secondsPlus += oldplaytime
         
         // Cost Skins
-        costRetro += oldCostRetro
-        costRainbow += oldCostRainbow
-        costLight += oldCostLight
-        costSoccer += oldCostSoccer
+        costRetroF = oldCostRetro
+        costRainbowF = oldCostRainbow
+        costLightF = oldCostLight
+        costSoccerF = oldCostSoccer
+        
+        //STORE VALUES
+        coin = oldCoinStore
+        //storeImages = oldImagesArray as! [String]
         
         // Override point for customization after application launch.
         return true

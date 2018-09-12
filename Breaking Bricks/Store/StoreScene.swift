@@ -9,10 +9,23 @@
 import SpriteKit
 import GameplayKit
 
-var costRetro: Int = 0
-var costRainbow: Int = 0
-var costLight: Int = 0
-var costSoccer: Int = 0
+//var costRetro: Int = 2
+//var costRainbow: Int = 2
+//var costLight: Int = 1
+//var costSoccer: Int = 3
+
+var costRetroF: Int = 2
+var costRainbowF: Int = 2
+var costLightF = 1
+var costSoccerF = 3
+
+var cosa = 3
+var cosa2 = "3"
+
+var costRetroFix = 2
+
+
+var storeImages = ["ClassicOwned","RetroBuy","RainbowBuy","LightBuy","SoccerBuy"]
 
 class StoreScene: SKScene, ZCarouselDelegate {
     
@@ -20,18 +33,16 @@ class StoreScene: SKScene, ZCarouselDelegate {
         if scrollView == images {
             self.index = index
             print("Showing Image at index \(index)")
-            print("Retro",costRetro)
-            print("Rainbow",costRainbow)
-            print("Light",costLight)
-            print("Soccer",costSoccer)
+            print("Retro",costRetroF)
+            print("Rainbow",costRainbowF)
+            print("Light",costLightF)
+            print("Soccer",costSoccerF)
+            savedValues()
         }
         
     }
-    
 
-    
-    var storeImages = ["ClassicOwned","RetroBuy","RainbowBuy","LightBuy","SoccerBuy"]
-    
+
     
     var images: ZCarousel!
     var index = 2
@@ -48,14 +59,24 @@ class StoreScene: SKScene, ZCarouselDelegate {
     
     /// Custom Initializer
     init(sceneSize: CGSize, referenceGVC: GameViewController) {
-        
-        costRetro = 2
-        costRainbow = 2
-        costLight = 1
-        costSoccer = 3
+
         
         /// Set reference of GameViewControl
         gameViewController = referenceGVC
+        
+//        costRetro = 2
+//        costRainbow = 2
+//        costLight = 1
+//        costSoccer = 3
+        
+        print("SKIN VALUE", costRetroF)
+        print("SKIN VALUE", costRainbowF)
+        print("SKIN VALUE", costLightF)
+        print("SKIN VALUE", costSoccerF)
+        
+        print("COSA INT", cosa)
+        print("COSA STR", cosa2)
+         print("COSA STR", costRetroFix)
         
         /// Create scene from code
         super.init(size: sceneSize)
@@ -98,16 +119,17 @@ class StoreScene: SKScene, ZCarouselDelegate {
             
         }
         if index == 1{
-            if coin >= costRetro{
-                coin = coin - costRetro
-                costRetro = 0
+            if coin >= costRetroF{
+                coin = coin - costRetroF
+                costRetroF = 0
+                savedValues()
                 gameViewController.menuScene.sceneNumber = 1
                 gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
                 
-                if(costRetro == 0){
+                if(costRetroF == 0){
                     storeImages.remove(at: 1)
                     storeImages.insert("RetroOwned", at: 1)
                 }
@@ -117,15 +139,16 @@ class StoreScene: SKScene, ZCarouselDelegate {
             
         }
         if index == 2{
-            if coin >= costRainbow{
-                coin = coin - costRainbow
-                costRainbow = 0
+            if coin >= costRainbowF{
+                coin = coin - costRainbowF
+                costRainbowF = 0
+                savedValues()
                 gameViewController.menuScene.sceneNumber = 2
                     gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
-                if(costRainbow == 0){
+                if(costRainbowF == 0){
                     storeImages.remove(at: 2)
                     storeImages.insert("RainbowOwned", at: 2)
                 }
@@ -135,15 +158,16 @@ class StoreScene: SKScene, ZCarouselDelegate {
             
         }
         if index == 3{
-            if coin >= costLight{
-                coin = coin - costLight
-                costLight = 0
+            if coin >= costLightF{
+                coin = coin - costLightF
+                costLightF = 0
+                savedValues()
                 gameViewController.menuScene.sceneNumber = 3
                    gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
-                if(costLight == 0){
+                if(costLightF == 0){
                     storeImages.remove(at: 3)
                     storeImages.insert("LightOwned", at: 3)
                 }
@@ -153,28 +177,33 @@ class StoreScene: SKScene, ZCarouselDelegate {
             
         }
         if index == 4{
-            if coin >= costSoccer{
-                coin = coin - costSoccer
-                costSoccer = 0
+            if coin >= costSoccerF{
+                coin = coin - costSoccerF
+                costSoccerF = 0
+                savedValues()
                 gameViewController.menuScene.sceneNumber = 4
                   gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
-                if(costSoccer == 0){
+                if(costSoccerF == 0){
                     storeImages.remove(at: 4)
                     storeImages.insert("SoccerOwned", at: 4)
                 }
             }else{
                 print("NO TE ALCANZA POBRETÓN")
             }
-            
+          
         }
     }
     
     /// Present Elements to the Scene
     override func didMove(to view: SKView) {
+        
 
+
+        savedValues()
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(tappedMe))
         
         images = ZCarousel(frame: CGRect(x: (self.view?.frame.size.width)!/5, y: (self.view?.frame.size.height)!/4.25,
@@ -243,10 +272,37 @@ class StoreScene: SKScene, ZCarouselDelegate {
         }
         
         storeControls.coinLabel.text = ("\(coin)")
+         print("STORE IMAGE", storeImages)
         
+        print("SKIN VALUE", costRetroF)
+        print("SKIN VALUE", costRainbowF)
+        print("SKIN VALUE", costLightF)
+         print("SKIN VALUE", costSoccerF)
     }
 
-    
+    func savedValues() {
+        
+        let userDefaults = UserDefaults.standard
+        
+        userDefaults.setValue(coin, forKey: "coinsStore")
+
+        let coinValue = userDefaults.integer(forKey: "coinsStore")
+        print("Coins Store: \(coinValue)")
+        
+        userDefaults.setValue(storeImages, forKey: "storeImagesArray")
+        print("STORE IMAGE", storeImages)
+        
+        userDefaults.setValue(costRetroF, forKey: "costRetro")
+        print("SKIN VALUE", costRetroF)
+        userDefaults.setValue(costRainbowF, forKey: "costRainbow")
+        print("SKIN VALUE", costRainbowF)
+        userDefaults.setValue(costLightF, forKey: "costLight")
+        print("SKIN VALUE", costLightF)
+        userDefaults.setValue(costSoccerF, forKey: "costSoccer")
+        print("SKIN VALUE", costSoccerF)
+        
+        
+    }
     /// Before another Scence will be presented
     override func willMove(from view: SKView) {
         removeAllChildren()
