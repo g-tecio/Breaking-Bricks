@@ -197,266 +197,266 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             gameState.enter(WaitingForTap.self)
  
         }
-//        if(sceneNumber == 1 ){
-//            
-//            // Background and paddle
-//            self.addChild(gameControls.retroLifeSkinBackground)
-//            self.addChild(gameControls.retroLifeSkinPaddle)
-//            // Bricks
-//            self.addChild(gameControls.retroLifeSkinScore)
-//            self.addChild(gameControls.retroLifeSkinTimer)
-//            // Label
-//            self.addChild(gameControls.timerLabel)
-//            self.addChild(gameControls.scoreLabel)
-//            // Color label
-//            gameControls.timerLabel.fontColor = .white
-//            gameControls.scoreLabel.fontColor = .white
-//            
-//            //Bricks
-//            for brick in 0...24{
-//                self.addChild(brickSprite[brick].retroLifeSkin)
-//            }
-//            
-//            //Bricks 6
-//            for brick6 in 0...23{
-//                self.addChild(brickSpriteRow6[brick6].retroLifeSkin)
-//            }
-//            
-//            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
-//            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
-//            
-//            //Paddle and ball
-//            let ball = gameControls.retroLifeSkinBall
-//            let paddle = gameControls.retroLifeSkinPaddle
-//            
-//            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
-//            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
-//            
-//            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
-//            
-//            let bottom = SKNode()
-//            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
-//            addChild(bottom)
-//            
-//            
-//            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
-//            
-//            bottom.physicsBody!.categoryBitMask = BottomCategory
-//            ball.physicsBody!.categoryBitMask = BallCategory
-//            paddle.physicsBody!.categoryBitMask = PaddleCategory
-//            gameControls.borderBody.categoryBitMask = BorderCategory
-//            
-//            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
-//            
-//            //Timer Line
-//            seconds = timeSeconds
-//            //Score Line
-//            score = points
-//            
-//            
-//            //Timer And Score
-//            gameControls.scoreLabel.text = pointsCount
-//            gameControls.timerLabel.text = timerSeconds
-//            
-//            self.addChild(gameControls.retroLifeSkinBall)
-//            
-//            gameState.enter(WaitingForTap.self)
-//        }
-//        if(sceneNumber == 2 ){
-//            
-//            // Background and paddle
-//            self.addChild(gameControls.rainbowBackground)
-//            self.addChild(gameControls.rainbowPaddle)
-//            // Bricks
-//            self.addChild(gameControls.rainbowScore)
-//            self.addChild(gameControls.rainbowTimer)
-//            // Label
-//            self.addChild(gameControls.timerLabel)
-//            self.addChild(gameControls.scoreLabel)
-//            // Color label
-//            gameControls.timerLabel.fontColor = .white
-//            gameControls.scoreLabel.fontColor = .white
-//            
-//            //Bricks
-//            for brick in 0...24{
-//                self.addChild(brickSprite[brick].rainbowSkin)
-//            }
-//            
-//            //Bricks 6
-//            for brick6 in 0...23{
-//                self.addChild(brickSpriteRow6[brick6].rainbowSkin)
-//            }
-//            
-//            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
-//            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
-//            
-//            //Paddle and ball
-//            let ball = gameControls.rainbowBall
-//            let paddle = gameControls.rainbowPaddle
-//            
-//            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
-//            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
-//            
-//            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
-//            
-//            let bottom = SKNode()
-//            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
-//            addChild(bottom)
-//            
-//            
-//            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
-//            
-//            bottom.physicsBody!.categoryBitMask = BottomCategory
-//            ball.physicsBody!.categoryBitMask = BallCategory
-//            paddle.physicsBody!.categoryBitMask = PaddleCategory
-//            gameControls.borderBody.categoryBitMask = BorderCategory
-//            
-//            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
-//            
-//            //Timer Line
-//            seconds = timeSeconds
-//            //Score Line
-//            score = points
-//            
-//            
-//            //Timer And Score
-//            gameControls.scoreLabel.text = pointsCount
-//            gameControls.timerLabel.text = timerSeconds
-//            
-//            self.addChild(gameControls.rainbowBall)
-//            
-//            gameState.enter(WaitingForTap.self)
-//        }
-//        if(sceneNumber == 3 ){
-//            
-//            // Background and paddle
-//            self.addChild(gameControls.lightBackground)
-//            self.addChild(gameControls.lightPaddle)
-//            // Bricks
-//            self.addChild(gameControls.lightScore)
-//            self.addChild(gameControls.lightTimer)
-//            // Label
-//            self.addChild(gameControls.timerLabel)
-//            self.addChild(gameControls.scoreLabel)
-//            // Color label
-//            gameControls.timerLabel.fontColor = .gray
-//            gameControls.scoreLabel.fontColor = .gray
-//            
-//            //Bricks
-//            for brick in 0...24{
-//                self.addChild(brickSprite[brick].lightSkin)
-//            }
-//            
-//            //Bricks 6
-//            for brick6 in 0...23{
-//                self.addChild(brickSpriteRow6[brick6].lightSkin)
-//            }
-//            
-//            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
-//            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
-//            
-//            //Paddle and ball
-//            let ball = gameControls.lightBall
-//            let paddle = gameControls.lightPaddle
-//            
-//            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
-//            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
-//            
-//            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
-//            
-//            let bottom = SKNode()
-//            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
-//            addChild(bottom)
-//            
-//            
-//            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
-//            
-//            bottom.physicsBody!.categoryBitMask = BottomCategory
-//            ball.physicsBody!.categoryBitMask = BallCategory
-//            paddle.physicsBody!.categoryBitMask = PaddleCategory
-//            gameControls.borderBody.categoryBitMask = BorderCategory
-//            
-//            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
-//            
-//            //Timer Line
-//            seconds = timeSeconds
-//            //Score Line
-//            score = points
-//            
-//            
-//            //Timer And Score
-//            gameControls.scoreLabel.text = pointsCount
-//            gameControls.timerLabel.text = timerSeconds
-//            
-//            self.addChild(gameControls.lightBall)
-//            
-//            gameState.enter(WaitingForTap.self)
-//        }
-//        if(sceneNumber == 4 ){
-//            
-//            // Background and paddle
-//            self.addChild(gameControls.soccerBackground)
-//            self.addChild(gameControls.soccerPaddle)
-//            // Bricks
-//            self.addChild(gameControls.soccerScore)
-//            self.addChild(gameControls.soccerTimer)
-//            // Label
-//            self.addChild(gameControls.timerLabel)
-//            self.addChild(gameControls.scoreLabel)
-//            // Color label
-//            gameControls.timerLabel.fontColor = .yellow
-//            gameControls.scoreLabel.fontColor = .yellow
-//            
-//            //Bricks
-//            for brick in 0...24{
-//                self.addChild(brickSprite[brick].soccerSkin)
-//            }
-//            
-//            //Bricks 6
-//            for brick6 in 0...23{
-//                self.addChild(brickSpriteRow6[brick6].soccerSkin)
-//            }
-//            
-//            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
-//            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
-//            
-//            //Paddle and ball
-//            let ball = gameControls.soccerBall
-//            let paddle = gameControls.soccerPaddle
-//            
-//            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
-//            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
-//            
-//            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
-//            
-//            let bottom = SKNode()
-//            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
-//            addChild(bottom)
-//            
-//            
-//            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
-//            
-//            bottom.physicsBody!.categoryBitMask = BottomCategory
-//            ball.physicsBody!.categoryBitMask = BallCategory
-//            paddle.physicsBody!.categoryBitMask = PaddleCategory
-//            gameControls.borderBody.categoryBitMask = BorderCategory
-//            
-//            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
-//            
-//            //Timer Line
-//            seconds = timeSeconds
-//            //Score Line
-//            score = points
-//            
-//            
-//            //Timer And Score
-//            gameControls.scoreLabel.text = pointsCount
-//            gameControls.timerLabel.text = timerSeconds
-//            
-//            self.addChild(gameControls.soccerBall)
-//            
-//            gameState.enter(WaitingForTap.self)
-//        }
+        if(sceneNumber == 1 ){
+            
+            // Background and paddle
+            self.addChild(gameControls.retroLifeSkinBackground)
+            self.addChild(gameControls.retroLifeSkinPaddle)
+            // Bricks
+            self.addChild(gameControls.retroLifeSkinScore)
+            self.addChild(gameControls.retroLifeSkinTimer)
+            // Label
+            self.addChild(gameControls.timerLabel)
+            self.addChild(gameControls.scoreLabel)
+            // Color label
+            gameControls.timerLabel.fontColor = .white
+            gameControls.scoreLabel.fontColor = .white
+            
+            //Bricks
+            for brick in 0...24{
+                self.addChild(brickSprite[brick].retroLifeSkin)
+            }
+            
+            //Bricks 6
+            for brick6 in 0...23{
+                self.addChild(brickSpriteRow6[brick6].retroLifeSkin)
+            }
+            
+            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
+            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
+            
+            //Paddle and ball
+            let ball = gameControls.retroLifeSkinBall
+            let paddle = gameControls.retroLifeSkinPaddle
+            
+            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
+            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
+            
+            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
+            
+            let bottom = SKNode()
+            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
+            addChild(bottom)
+            
+            
+            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
+            
+            bottom.physicsBody!.categoryBitMask = BottomCategory
+            ball.physicsBody!.categoryBitMask = BallCategory
+            paddle.physicsBody!.categoryBitMask = PaddleCategory
+            gameControls.borderBody.categoryBitMask = BorderCategory
+            
+            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
+            
+            //Timer Line
+            seconds = timeSeconds
+            //Score Line
+            score = points
+            
+            
+            //Timer And Score
+            gameControls.scoreLabel.text = pointsCount
+            gameControls.timerLabel.text = timerSeconds
+            
+            self.addChild(gameControls.retroLifeSkinBall)
+            
+            gameState.enter(WaitingForTap.self)
+        }
+        if(sceneNumber == 2 ){
+            
+            // Background and paddle
+            self.addChild(gameControls.rainbowBackground)
+            self.addChild(gameControls.rainbowPaddle)
+            // Bricks
+            self.addChild(gameControls.rainbowScore)
+            self.addChild(gameControls.rainbowTimer)
+            // Label
+            self.addChild(gameControls.timerLabel)
+            self.addChild(gameControls.scoreLabel)
+            // Color label
+            gameControls.timerLabel.fontColor = .white
+            gameControls.scoreLabel.fontColor = .white
+            
+            //Bricks
+            for brick in 0...24{
+                self.addChild(brickSprite[brick].rainbowSkin)
+            }
+            
+            //Bricks 6
+            for brick6 in 0...23{
+                self.addChild(brickSpriteRow6[brick6].rainbowSkin)
+            }
+            
+            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
+            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
+            
+            //Paddle and ball
+            let ball = gameControls.rainbowBall
+            let paddle = gameControls.rainbowPaddle
+            
+            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
+            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
+            
+            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
+            
+            let bottom = SKNode()
+            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
+            addChild(bottom)
+            
+            
+            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
+            
+            bottom.physicsBody!.categoryBitMask = BottomCategory
+            ball.physicsBody!.categoryBitMask = BallCategory
+            paddle.physicsBody!.categoryBitMask = PaddleCategory
+            gameControls.borderBody.categoryBitMask = BorderCategory
+            
+            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
+            
+            //Timer Line
+            seconds = timeSeconds
+            //Score Line
+            score = points
+            
+            
+            //Timer And Score
+            gameControls.scoreLabel.text = pointsCount
+            gameControls.timerLabel.text = timerSeconds
+            
+            self.addChild(gameControls.rainbowBall)
+            
+            gameState.enter(WaitingForTap.self)
+        }
+        if(sceneNumber == 3 ){
+            
+            // Background and paddle
+            self.addChild(gameControls.lightBackground)
+            self.addChild(gameControls.lightPaddle)
+            // Bricks
+            self.addChild(gameControls.lightScore)
+            self.addChild(gameControls.lightTimer)
+            // Label
+            self.addChild(gameControls.timerLabel)
+            self.addChild(gameControls.scoreLabel)
+            // Color label
+            gameControls.timerLabel.fontColor = UIColor(red:0.54, green:0.54, blue:0.54, alpha:1.0)
+            gameControls.scoreLabel.fontColor = UIColor(red:0.54, green:0.54, blue:0.54, alpha:1.0)
+            
+            //Bricks
+            for brick in 0...24{
+                self.addChild(brickSprite[brick].lightSkin)
+            }
+            
+            //Bricks 6
+            for brick6 in 0...23{
+                self.addChild(brickSpriteRow6[brick6].lightSkin)
+            }
+            
+            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
+            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
+            
+            //Paddle and ball
+            let ball = gameControls.lightBall
+            let paddle = gameControls.lightPaddle
+            
+            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
+            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
+            
+            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
+            
+            let bottom = SKNode()
+            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
+            addChild(bottom)
+            
+            
+            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
+            
+            bottom.physicsBody!.categoryBitMask = BottomCategory
+            ball.physicsBody!.categoryBitMask = BallCategory
+            paddle.physicsBody!.categoryBitMask = PaddleCategory
+            gameControls.borderBody.categoryBitMask = BorderCategory
+            
+            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
+            
+            //Timer Line
+            seconds = timeSeconds
+            //Score Line
+            score = points
+            
+            
+            //Timer And Score
+            gameControls.scoreLabel.text = pointsCount
+            gameControls.timerLabel.text = timerSeconds
+            
+            self.addChild(gameControls.lightBall)
+            
+            gameState.enter(WaitingForTap.self)
+        }
+        if(sceneNumber == 4 ){
+            
+            // Background and paddle
+            self.addChild(gameControls.soccerBackground)
+            self.addChild(gameControls.soccerPaddle)
+            // Bricks
+            self.addChild(gameControls.soccerScore)
+            self.addChild(gameControls.soccerTimer)
+            // Label
+            self.addChild(gameControls.timerLabel)
+            self.addChild(gameControls.scoreLabel)
+            // Color label
+            gameControls.timerLabel.fontColor = UIColor(red:0.96, green:0.75, blue:0.00, alpha:1.0)
+            gameControls.scoreLabel.fontColor = UIColor(red:0.96, green:0.75, blue:0.00, alpha:1.0)
+            
+            //Bricks
+            for brick in 0...24{
+                self.addChild(brickSprite[brick].soccerSkin)
+            }
+            
+            //Bricks 6
+            for brick6 in 0...23{
+                self.addChild(brickSpriteRow6[brick6].soccerSkin)
+            }
+            
+            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
+            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
+            
+            //Paddle and ball
+            let ball = gameControls.soccerBall
+            let paddle = gameControls.soccerPaddle
+            
+            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
+            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
+            
+            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
+            
+            let bottom = SKNode()
+            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
+            addChild(bottom)
+            
+            
+            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
+            
+            bottom.physicsBody!.categoryBitMask = BottomCategory
+            ball.physicsBody!.categoryBitMask = BallCategory
+            paddle.physicsBody!.categoryBitMask = PaddleCategory
+            gameControls.borderBody.categoryBitMask = BorderCategory
+            
+            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
+            
+            //Timer Line
+            seconds = timeSeconds
+            //Score Line
+            score = points
+            
+            
+            //Timer And Score
+            gameControls.scoreLabel.text = pointsCount
+            gameControls.timerLabel.text = timerSeconds
+            
+            self.addChild(gameControls.soccerBall)
+            
+            gameState.enter(WaitingForTap.self)
+        }
         
     }//END didMove
     

@@ -3,109 +3,109 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "Logo Bricks 40.png",
+      "filename" : "Icon Bricks 40.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "Logo Bricks 60-1.png",
+      "filename" : "Icon Bricks 60.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "Logo Bricks 58-1.png",
+      "filename" : "Icon Bricks 58-1.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "Logo Bricks 87.png",
+      "filename" : "Icon Bricks 87.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "Logo Bricks 80-1.png",
+      "filename" : "Icon Bricks 80.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "Logo Bricks 120.png",
+      "filename" : "Icon Bricks 120.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Logo Bricks 120-1.png",
+      "filename" : "Icon Bricks 120-1.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "Logo Bricks 180.png",
+      "filename" : "Icon Bricks 180.png",
       "scale" : "3x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "Logo Bricks 20.png",
+      "filename" : "Icon Bricks 20.png",
       "scale" : "1x"
     },
     {
       "size" : "20x20",
       "idiom" : "ipad",
-      "filename" : "Logo Bricks 40-2.png",
+      "filename" : "Icon Bricks 40-1.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "Logo Bricks 29.png",
+      "filename" : "Icon Bricks 29.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "Logo Bricks 58.png",
+      "filename" : "Icon Bricks 58.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "Logo Bricks 40-1.png",
+      "filename" : "Icon Bricks 40-2.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "Logo Bricks 80.png",
+      "filename" : "Icon Bricks 80-1.png",
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "Logo Bricks 60.png",
+      "filename" : "Icon Bricks 76.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "Logo Bricks 152.png",
+      "filename" : "Icon Bricks 152.png",
       "scale" : "2x"
     },
     {
       "size" : "83.5x83.5",
       "idiom" : "ipad",
-      "filename" : "Logo Bricks 167.png",
+      "filename" : "Icon Bricks 167.png",
       "scale" : "2x"
     },
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "Logo Bricks 1024.png",
+      "filename" : "Icon Bricks 1024.png",
       "scale" : "1x"
     }
   ],

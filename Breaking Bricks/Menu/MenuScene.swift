@@ -59,52 +59,35 @@ class MenuScene: SKScene {
         
         
         if sceneNumber == 0 && firstload == true {
-
-            /// Present Label and Button
-     
             self.addChild(menuControls.bgclassic)
             self.addChild(menuControls.playclassic)
             self.addChild(menuControls.scoreclassic)
             self.addChild(menuControls.storeclassic)
         }
-//        if sceneNumber == 1{
-//
-//            /// Present Label and Button
-//          
-//            self.addChild(menuControls.retroLifeSkinBackground)
-//            self.addChild(menuControls.retroLifeSkinPlay)
-//            self.addChild(menuControls.retroLifeSkinScore)
-//            self.addChild(menuControls.retroLifeSkinStore)
-//        }
-//        if sceneNumber == 2{
-//            
-//            /// Present Label and Button
-//     
-//            self.addChild(menuControls.rainbowBackground)
-//            self.addChild(menuControls.rainbowPlay)
-//            self.addChild(menuControls.rainbowScore)
-//            self.addChild(menuControls.rainbowStore)
-//        }
-//        if sceneNumber == 3{
-//            
-//            /// Present Label and Button
-//            
-//            self.addChild(menuControls.lightBackground)
-//            self.addChild(menuControls.lightPlay)
-//            self.addChild(menuControls.lightScore)
-//            self.addChild(menuControls.lightStore)
-//        }
-//        if sceneNumber == 4{
-//            
-//            /// Present Label and Button
-//            
-//            self.addChild(menuControls.soccerBackground)
-//            self.addChild(menuControls.soccerPlay)
-//            self.addChild(menuControls.soccerScore)
-//            self.addChild(menuControls.soccerStore)
-//        }
-
-        
+        if sceneNumber == 1{
+            self.addChild(menuControls.retroLifeSkinBackground)
+            self.addChild(menuControls.retroLifeSkinPlay)
+            self.addChild(menuControls.retroLifeSkinScore)
+            self.addChild(menuControls.retroLifeSkinStore)
+        }
+        if sceneNumber == 2{
+            self.addChild(menuControls.rainbowBackground)
+            self.addChild(menuControls.rainbowPlay)
+            self.addChild(menuControls.rainbowScore)
+            self.addChild(menuControls.rainbowStore)
+        }
+        if sceneNumber == 3{
+            self.addChild(menuControls.lightBackground)
+            self.addChild(menuControls.lightPlay)
+            self.addChild(menuControls.lightScore)
+            self.addChild(menuControls.lightStore)
+        }
+        if sceneNumber == 4{
+            self.addChild(menuControls.soccerBackground)
+            self.addChild(menuControls.soccerPlay)
+            self.addChild(menuControls.soccerScore)
+            self.addChild(menuControls.soccerStore)
+        }
     }
     
     /// Before another Scence will be presented

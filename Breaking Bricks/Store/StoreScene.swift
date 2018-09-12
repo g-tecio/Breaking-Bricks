@@ -18,7 +18,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
         
     }
     
-    var skinCost = 1
+    var storeImages = ["ClassicSelected","RetroBuy","RainbowBuy","LightBuy","SoccerBuy"]
     var images: ZCarousel!
     var index = 2
     /// GameViewControl setup as reference to handle SceneStates
@@ -66,41 +66,50 @@ class StoreScene: SKScene, ZCarouselDelegate {
     @objc func tappedMe()
     {
         if index == 0{
-            if coin >= skinCost{
-                coin = coin - skinCost
+            if coin >= 0{
+                coin = coin - 0
                 gameViewController.menuScene.sceneNumber = 0
                    gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
                 
+                storeImages.remove(at: 0)
+                storeImages.insert("ClassicSelected", at: 0)
             }else{
                 print("NO TE ALCANZA POBRETÓN")
             }
             
         }
         if index == 1{
-            if coin >= skinCost{
-                coin = coin - skinCost
+            if coin >= 2{
+                coin = coin - 2
                 gameViewController.menuScene.sceneNumber = 1
                     gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
                 
+                
+                storeImages.remove(at: 0)
+                storeImages.insert("ClassicOwned", at: 0)
+                storeImages.remove(at: 1)
+                storeImages.insert("RetroSelected", at: 1)
             }else{
                 print("NO TE ALCANZA POBRETÓN")
             }
             
         }
         if index == 2{
-            if coin >= skinCost{
-                coin = coin - skinCost
+            if coin >= 2{
+                coin = coin - 2
                 gameViewController.menuScene.sceneNumber = 2
                     gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
+                
+                
                 
             }else{
                 print("NO TE ALCANZA POBRETÓN")
@@ -108,8 +117,8 @@ class StoreScene: SKScene, ZCarouselDelegate {
             
         }
         if index == 3{
-            if coin >= skinCost{
-                coin = coin - skinCost
+            if coin >= 1{
+                coin = coin - 1
                 gameViewController.menuScene.sceneNumber = 3
                    gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
@@ -122,8 +131,8 @@ class StoreScene: SKScene, ZCarouselDelegate {
             
         }
         if index == 4{
-            if coin >= skinCost{
-                coin = coin - skinCost
+            if coin >= 3{
+                coin = coin - 3
                 gameViewController.menuScene.sceneNumber = 4
                   gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
@@ -141,15 +150,17 @@ class StoreScene: SKScene, ZCarouselDelegate {
     override func didMove(to view: SKView) {
 
         let tap = UITapGestureRecognizer(target: self, action: #selector(tappedMe))
-        images = ZCarousel(frame: CGRect(x: (self.view?.frame.size.width)!/5, y: (self.view?.frame.size.height)!/4, width: ((self.view?.frame.size.width)!/5)*3,height: 350))
+        
+        images = ZCarousel(frame: CGRect(x: (self.view?.frame.size.width)!/5, y: (self.view?.frame.size.height)!/4.25,
+                                         width: ((self.view?.frame.size.width)!/5)*3,height: ((self.view?.frame.size.height)!/5)*2.6))
+        
         images?.ZCdelegate = self
         images.isUserInteractionEnabled = true
         images.addGestureRecognizer(tap)
-        images?.addImages(["ClassicSelected","RetroBuy","RainbowBuy","LightBuy","SoccerBuy"])
+        images?.addImages(storeImages)
         
         if let images = images {
             view.addSubview(images)
-            
         }
         
         self.addChild(storeControls.coin)
@@ -163,47 +174,48 @@ class StoreScene: SKScene, ZCarouselDelegate {
             self.addChild(storeControls.currentclassic)
 
             storeControls.coinLabel.fontColor = .white
+        
+        }
+        if sceneNumber == 1{
+            
+            /// Present Label and Button
+            self.addChild(storeControls.retroLifeSkinBackground)
+            self.addChild(storeControls.retroLifeSkinMenu)
+            self.addChild(storeControls.retroLifeSkinCurrent)
+
+            storeControls.coinLabel.fontColor = .white
+  
+        }
+        if sceneNumber == 2{
+            
+            /// Present Label and Button
+            self.addChild(storeControls.rainbowMenu)
+            self.addChild(storeControls.rainbowCurrent)
+            self.addChild(storeControls.rainbowBackground)
+            
+            storeControls.coinLabel.fontColor = .white
 
         }
-//        if sceneNumber == 1{
-//            
-//            /// Present Label and Button
-//            self.addChild(storeControls.retroLifeSkinMenu)
-//            self.addChild(storeControls.retroLifeSkinCurrent)
-//            self.addChild(storeControls.retroLifeSkinBackground)
-//
-//            storeControls.coinLabel.fontColor = .white
-//
-//        }
-//        if sceneNumber == 2{
-//            
-//            /// Present Label and Button
-//            self.addChild(storeControls.rainbowMenu)
-//            self.addChild(storeControls.rainbowCurrent)
-//            self.addChild(storeControls.rainbowBackground)
-//            
-//            storeControls.coinLabel.fontColor = .white
-//
-//        }
-//        if sceneNumber == 3{
-//            
-//            /// Present Label and Button
-//            self.addChild(storeControls.lightMenu)
-//            self.addChild(storeControls.lightCurrent)
-//            self.addChild(storeControls.lightBackground)
-//            
-//            storeControls.coinLabel.fontColor = .gray
-//        }
-//        if sceneNumber == 4{
-//            
-//            /// Present Label and Button
-//            self.addChild(storeControls.soccerMenu)
-//            self.addChild(storeControls.soccerCurrent)
-//            self.addChild(storeControls.soccerBackground)
-//            
-//            storeControls.coinLabel.fontColor = .yellow
-//            
-//        }
+        if sceneNumber == 3{
+            
+            /// Present Label and Button
+            self.addChild(storeControls.lightMenu)
+            self.addChild(storeControls.lightCurrent)
+            self.addChild(storeControls.lightBackground)
+            
+            storeControls.coinLabel.fontColor = UIColor(red:0.54, green:0.54, blue:0.54, alpha:1.0)
+        }
+        if sceneNumber == 4{
+            
+            /// Present Label and Button
+            self.addChild(storeControls.soccerMenu)
+            self.addChild(storeControls.soccerCurrent)
+            self.addChild(storeControls.soccerBackground)
+            
+            storeControls.coinLabel.fontColor = UIColor(red:0.96, green:0.75, blue:0.00, alpha:1.0)
+            
+        }
+        
         storeControls.coinLabel.text = ("\(coin)")
         
     }

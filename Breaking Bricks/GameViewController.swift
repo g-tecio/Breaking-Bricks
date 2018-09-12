@@ -36,31 +36,31 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.isUserInteractionEnabled = false
+//        self.view.isUserInteractionEnabled = false
+
+//        if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone{
+//            intro = LOTAnimationView(name: "Intro_Bricks")
+//            print("INTRO NORMAL")
+//        }else{
+//            intro = LOTAnimationView(name: "Intro Bricks_iPad")
+//            print("INTRO IPAD")
+//        }
         
-        if deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini ||  UIDevice.current.userInterfaceIdiom == .phone{
-            intro = LOTAnimationView(name: "Intro_Bricks")
-            print("INTRO NORMAL")
-        }else{
-            intro = LOTAnimationView(name: "Intro Bricks_iPad")
-            print("INTRO IPAD")
-        }
-        
-        //SKView to present the scenes
-        intro.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height)
-        intro.center = self.view.center
-        intro.contentMode = .scaleAspectFill
+//        //SKView to present the scenes
+//        intro.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height)
+//        intro.center = self.view.center
+//        intro.contentMode = .scaleAspectFill
         
         skView.frame = CGRect(x: 0, y: 0, width: view.bounds.size.width, height: view.bounds.size.height)
         skView.center = self.view.center
         skView.contentMode = .scaleAspectFill
         skView.allowsTransparency = true
         
-        intro.play{ (finished) in
-           // view.addSubview(intro)
-            self.timerIntro = Timer.scheduledTimer(timeInterval: 0.10, target: self, selector: #selector(self.introTimer), userInfo: nil, repeats: true)
-        }
-       // view.addSubview(intro)
+//        intro.play{ (finished) in
+//           // view.addSubview(intro)
+//            self.timerIntro = Timer.scheduledTimer(timeInterval: 0.10, target: self, selector: #selector(self.introTimer), userInfo: nil, repeats: true)
+//        }
+        
         /// MenuScene Setup
         menuScene = MenuScene.init(sceneSize: view.bounds.size, referenceGVC: self)
         
@@ -74,9 +74,9 @@ class GameViewController: UIViewController {
         gameScene = GameScene.init(sceneSize: view.bounds.size, referenceGVC: self)
         
         
-       skView.presentScene(menuScene)
+        skView.presentScene(menuScene)
         view.addSubview(skView)
-    view.addSubview(intro)
+//        view.addSubview(intro)
 
         
         

@@ -17,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var oldWins : Int = UserDefaults.standard.integer(forKey: "wins")
     var oldLoses : Int = UserDefaults.standard.integer(forKey: "loses")
     var oldplaytime : Int = UserDefaults.standard.integer(forKey: "playtime")
+    
+    var costRetro : Int = UserDefaults.standard.integer(forKey: "costRetro")
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
