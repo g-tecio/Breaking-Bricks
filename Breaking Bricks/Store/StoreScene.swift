@@ -9,21 +9,15 @@
 import SpriteKit
 import GameplayKit
 
-//var costRetro: Int = 2
-//var costRainbow: Int = 2
-//var costLight: Int = 1
-//var costSoccer: Int = 3
-
 var costRetroF: Int = 2
 var costRainbowF: Int = 2
 var costLightF = 1
 var costSoccerF = 3
 
-var cosa = 3
-var cosa2 = "3"
-
-var costRetroFix = 2
-
+var costRetroB = false
+var costRainbowB = false
+var costLightB = false
+var costSoccerB = false
 
 var storeImages = ["ClassicOwned","RetroBuy","RainbowBuy","LightBuy","SoccerBuy"]
 
@@ -64,19 +58,15 @@ class StoreScene: SKScene, ZCarouselDelegate {
         /// Set reference of GameViewControl
         gameViewController = referenceGVC
         
-//        costRetro = 2
-//        costRainbow = 2
-//        costLight = 1
-//        costSoccer = 3
+        costRetroF = 2
+        costRainbowF = 2
+        costLightF = 1
+        costSoccerF = 3
         
         print("SKIN VALUE", costRetroF)
         print("SKIN VALUE", costRainbowF)
         print("SKIN VALUE", costLightF)
         print("SKIN VALUE", costSoccerF)
-        
-        print("COSA INT", cosa)
-        print("COSA STR", cosa2)
-         print("COSA STR", costRetroFix)
         
         /// Create scene from code
         super.init(size: sceneSize)
@@ -119,79 +109,103 @@ class StoreScene: SKScene, ZCarouselDelegate {
             
         }
         if index == 1{
-            if coin >= costRetroF{
-                coin = coin - costRetroF
-                costRetroF = 0
-                savedValues()
+            if(costRetroB == false){
+                if coin >= costRetroF{
+                    coin = coin - costRetroF
+                    costRetroB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 1
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                    if(costRetroF == 0){
+                        storeImages.remove(at: 1)
+                        storeImages.insert("RetroOwned", at: 1)
+                    }
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            } else{
                 gameViewController.menuScene.sceneNumber = 1
                 gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
-                print("MONEDAS", coin)
-                print("Image", index)
-                
-                if(costRetroF == 0){
-                    storeImages.remove(at: 1)
-                    storeImages.insert("RetroOwned", at: 1)
-                }
-            }else{
-                print("NO TE ALCANZA POBRETÓN")
             }
-            
         }
         if index == 2{
-            if coin >= costRainbowF{
-                coin = coin - costRainbowF
-                costRainbowF = 0
-                savedValues()
-                gameViewController.menuScene.sceneNumber = 2
+            if(costRainbowB == false){
+                if coin >= costRainbowF{
+                    coin = coin - costRainbowF
+                    costRainbowB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 2
                     gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-                print("MONEDAS", coin)
-                print("Image", index)
-                if(costRainbowF == 0){
-                    storeImages.remove(at: 2)
-                    storeImages.insert("RainbowOwned", at: 2)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                    if(costRainbowF == 0){
+                        storeImages.remove(at: 2)
+                        storeImages.insert("RainbowOwned", at: 2)
+                    }
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
                 }
             }else{
-                print("NO TE ALCANZA POBRETÓN")
+                gameViewController.menuScene.sceneNumber = 2
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
             }
+
             
         }
         if index == 3{
-            if coin >= costLightF{
-                coin = coin - costLightF
-                costLightF = 0
-                savedValues()
-                gameViewController.menuScene.sceneNumber = 3
-                   gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-                print("MONEDAS", coin)
-                print("Image", index)
-                if(costLightF == 0){
-                    storeImages.remove(at: 3)
-                    storeImages.insert("LightOwned", at: 3)
+            if(costLightB == false){
+                if coin >= costLightF{
+                    coin = coin - costLightF
+                    costLightB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 3
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                    if(costLightF == 0){
+                        storeImages.remove(at: 3)
+                        storeImages.insert("LightOwned", at: 3)
+                    }
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
                 }
             }else{
-                print("NO TE ALCANZA POBRETÓN")
+                gameViewController.menuScene.sceneNumber = 3
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
             }
+            
             
         }
         if index == 4{
-            if coin >= costSoccerF{
-                coin = coin - costSoccerF
-                costSoccerF = 0
-                savedValues()
-                gameViewController.menuScene.sceneNumber = 4
-                  gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-                print("MONEDAS", coin)
-                print("Image", index)
-                if(costSoccerF == 0){
-                    storeImages.remove(at: 4)
-                    storeImages.insert("SoccerOwned", at: 4)
+            if(costSoccerB == false){
+                if coin >= costSoccerF{
+                    coin = coin - costSoccerF
+                    costSoccerB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 4
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                    if(costSoccerF == 0){
+                        storeImages.remove(at: 4)
+                        storeImages.insert("SoccerOwned", at: 4)
+                    }
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
                 }
             }else{
-                print("NO TE ALCANZA POBRETÓN")
+                gameViewController.menuScene.sceneNumber = 4
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
             }
           
         }
@@ -292,15 +306,23 @@ class StoreScene: SKScene, ZCarouselDelegate {
         userDefaults.setValue(storeImages, forKey: "storeImagesArray")
         print("STORE IMAGE", storeImages)
         
-        userDefaults.setValue(costRetroF, forKey: "costRetro")
-        print("SKIN VALUE", costRetroF)
-        userDefaults.setValue(costRainbowF, forKey: "costRainbow")
-        print("SKIN VALUE", costRainbowF)
-        userDefaults.setValue(costLightF, forKey: "costLight")
-        print("SKIN VALUE", costLightF)
-        userDefaults.setValue(costSoccerF, forKey: "costSoccer")
-        print("SKIN VALUE", costSoccerF)
+//        userDefaults.setValue(costRetroF, forKey: "costRetro")
+//        print("SKIN VALUE", costRetroF)
+//        userDefaults.setValue(costRainbowF, forKey: "costRainbow")
+//        print("SKIN VALUE", costRainbowF)
+//        userDefaults.setValue(costLightF, forKey: "costLight")
+//        print("SKIN VALUE", costLightF)
+//        userDefaults.setValue(costSoccerF, forKey: "costSoccer")
+//        print("SKIN VALUE", costSoccerF)
         
+        userDefaults.setValue(costRetroB, forKey: "costRetroB")
+        print("SKIN VALUE costRetroB ", costRetroB)
+        userDefaults.setValue(costRainbowB, forKey: "costRainbowB")
+        print("SKIN VALUE costRainbowB ", costRainbowB)
+        userDefaults.setValue(costLightB, forKey: "costLightB")
+        print("SKIN VALUE costLightB ", costLightB)
+        userDefaults.setValue(costSoccerB, forKey: "costSoccerB")
+        print("SKIN VALUE costSoccerB ", costSoccerB)
         
     }
     /// Before another Scence will be presented

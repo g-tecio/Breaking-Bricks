@@ -18,14 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var oldLoses : Int = UserDefaults.standard.integer(forKey: "loses")
     var oldplaytime : Int = UserDefaults.standard.integer(forKey: "playtime")
     
-    var oldCostRetro : Int = UserDefaults.standard.integer(forKey: "costRetro")
-    var oldCostRainbow : Int = UserDefaults.standard.integer(forKey: "costRainbow")
-    var oldCostLight : Int = UserDefaults.standard.integer(forKey: "costLight")
-    var oldCostSoccer : Int = UserDefaults.standard.integer(forKey: "costSoccer")
+//    var oldCostRetro : Int = UserDefaults.standard.integer(forKey: "costRetro")
+//    var oldCostRainbow : Int = UserDefaults.standard.integer(forKey: "costRainbow")
+//    var oldCostLight : Int = UserDefaults.standard.integer(forKey: "costLight")
+//    var oldCostSoccer : Int = UserDefaults.standard.integer(forKey: "costSoccer")
 
     var oldCoinStore : Int = UserDefaults.standard.integer(forKey: "coinsStore")
     var oldImagesArray = UserDefaults.standard.array(forKey: "storeImagesArray") as? [String]
-
+    
+    var oldCostRetroB : Bool = UserDefaults.standard.bool(forKey: "costRetroB")
+    var oldCostRainbowB : Bool = UserDefaults.standard.bool(forKey: "costRainbowB")
+    var oldCostLightB : Bool = UserDefaults.standard.bool(forKey: "costLightB")
+    var oldCostSoccerB : Bool = UserDefaults.standard.bool(forKey: "costSoccerB")
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         coin += oldCurrency
@@ -34,10 +39,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         secondsPlus += oldplaytime
         
         // Cost Skins
-        costRetroF = oldCostRetro
-        costRainbowF = oldCostRainbow
-        costLightF = oldCostLight
-        costSoccerF = oldCostSoccer
+//        costRetroF = oldCostRetro
+//        costRainbowF = oldCostRainbow
+//        costLightF = oldCostLight
+//        costSoccerF = oldCostSoccer
+        
+        // Bool
+        costRetroB = oldCostRetroB
+        costRainbowB = oldCostRainbowB
+        costLightB = oldCostLightB
+        costSoccerB = oldCostSoccerB
         
         //STORE VALUES
         coin = oldCoinStore
