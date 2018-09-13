@@ -142,13 +142,13 @@
 		8D88F033212C7C9A0077D7C7 /* Breaking Bricks */ = {
 			isa = PBXGroup;
 			children = (
+				8D88F034212C7C9A0077D7C7 /* AppDelegate.swift */,
+				8D88F03C212C7C9A0077D7C7 /* GameViewController.swift */,
 				8DB162282142F7D60064DFCD /* Intro */,
 				8D88F055212C7ED90077D7C7 /* Menu */,
 				8D88F06B212C9BD30077D7C7 /* Score */,
 				8D88F06A212C9BCB0077D7C7 /* Store */,
 				8D88F05C212C7FCE0077D7C7 /* Game */,
-				8D88F034212C7C9A0077D7C7 /* AppDelegate.swift */,
-				8D88F03C212C7C9A0077D7C7 /* GameViewController.swift */,
 				8D88F03E212C7C9A0077D7C7 /* Main.storyboard */,
 				8D88F041212C7C9E0077D7C7 /* Assets.xcassets */,
 				8D88F04C212C7D750077D7C7 /* Roboto-Regular.ttf */,

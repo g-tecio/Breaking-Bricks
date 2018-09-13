@@ -8,6 +8,7 @@
 
 import SpriteKit
 import GameplayKit
+import Device_swift
 
 var costRetroF: Int = 2
 var costRainbowF: Int = 2
@@ -20,6 +21,7 @@ var costLightB = false
 var costSoccerB = false
 
 var storeImages = ["ClassicOwned","RetroBuy","RainbowBuy","LightBuy","SoccerBuy"]
+var storeImagesiPad = ["ClassicOwnediPad","RetroBuyiPad","RainbowBuyiPad","LightBuyiPad","SoccerBuyiPad"]
 
 class StoreScene: SKScene, ZCarouselDelegate {
     
@@ -36,7 +38,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
         
     }
 
-
+    let deviceType = UIDevice.current.deviceType
     
     var images: ZCarousel!
     var index = 2
@@ -99,7 +101,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
             if coin >= 0{
                 coin = coin - 0
                 gameViewController.menuScene.sceneNumber = 0
-                   gameViewController.skView.presentScene(gameViewController.menuScene)
+                gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
                 print("MONEDAS", coin)
                 print("Image", index)
@@ -119,9 +121,16 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     images.removeFromSuperview()
                     print("MONEDAS", coin)
                     print("Image", index)
-                    if(costRetroF == 0){
-                        storeImages.remove(at: 1)
-                        storeImages.insert("RetroOwned", at: 1)
+                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
+                        if(costRetroB == true){
+                            storeImages.remove(at: 1)
+                            storeImages.insert("RetroOwned", at: 1)
+                        }
+                    }else{
+                        if(costRetroB == true){
+                            storeImagesiPad.remove(at: 1)
+                            storeImagesiPad.insert("RetroOwnediPad", at: 1)
+                        }
                     }
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
@@ -143,9 +152,16 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     images.removeFromSuperview()
                     print("MONEDAS", coin)
                     print("Image", index)
-                    if(costRainbowF == 0){
-                        storeImages.remove(at: 2)
-                        storeImages.insert("RainbowOwned", at: 2)
+                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
+                        if(costRainbowB == true){
+                            storeImages.remove(at: 2)
+                            storeImages.insert("RainbowOwned", at: 2)
+                        }
+                    }else{
+                        if(costRainbowB == true){
+                            storeImagesiPad.remove(at: 2)
+                            storeImagesiPad.insert("RainbowOwnediPad", at: 2)
+                        }
                     }
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
@@ -169,9 +185,16 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     images.removeFromSuperview()
                     print("MONEDAS", coin)
                     print("Image", index)
-                    if(costLightF == 0){
-                        storeImages.remove(at: 3)
-                        storeImages.insert("LightOwned", at: 3)
+                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
+                        if(costLightB == true){
+                            storeImages.remove(at: 3)
+                            storeImages.insert("LightOwned", at: 3)
+                        }
+                    }else{
+                        if(costLightB == true){
+                            storeImagesiPad.remove(at: 3)
+                            storeImagesiPad.insert("LightOwnediPad", at: 3)
+                        }
                     }
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
@@ -195,9 +218,16 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     images.removeFromSuperview()
                     print("MONEDAS", coin)
                     print("Image", index)
-                    if(costSoccerF == 0){
-                        storeImages.remove(at: 4)
-                        storeImages.insert("SoccerOwned", at: 4)
+                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
+                        if(costSoccerB == true){
+                            storeImages.remove(at: 4)
+                            storeImages.insert("SoccerOwned", at: 4)
+                        }
+                    }else{
+                        if(costSoccerB == true){
+                            storeImagesiPad.remove(at: 4)
+                            storeImagesiPad.insert("SoccerOwnediPad", at: 4)
+                        }
                     }
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
@@ -215,18 +245,39 @@ class StoreScene: SKScene, ZCarouselDelegate {
     override func didMove(to view: SKView) {
         
 
-
+        index = 2
         savedValues()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(tappedMe))
         
-        images = ZCarousel(frame: CGRect(x: (self.view?.frame.size.width)!/5, y: (self.view?.frame.size.height)!/4.25,
-                                         width: ((self.view?.frame.size.width)!/5)*3,height: ((self.view?.frame.size.height)!/5)*2.6))
+        if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
+            //16:9
+            images = ZCarousel(frame:
+                CGRect(x: (self.view?.frame.size.width)!/3.66, y: (self.view?.frame.size.height)!/3.45,
+                       width: ((self.view?.frame.size.width)!/100)*45.37,
+                       height: ((self.view?.frame.size.height)!/100)*41.67))
+            
+        }else{
+            //4:3
+            images = ZCarousel(frame:
+                CGRect(x: (self.view?.frame.size.width)!/4, y: (self.view?.frame.size.height)!/3.86,
+                       width: ((self.view?.frame.size.width)!/100)*50,
+                       height: ((self.view?.frame.size.height)!/100)*48.24))
+            
+        }
+        
         
         images?.ZCdelegate = self
         images.isUserInteractionEnabled = true
         images.addGestureRecognizer(tap)
-        images?.addImages(storeImages)
+        
+         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
+            
+            images?.addImages(storeImages)
+            
+         }else{
+            images?.addImages(storeImagesiPad)
+        }
         
         if let images = images {
             view.addSubview(images)
@@ -305,6 +356,9 @@ class StoreScene: SKScene, ZCarouselDelegate {
         
         userDefaults.setValue(storeImages, forKey: "storeImagesArray")
         print("STORE IMAGE", storeImages)
+        
+        userDefaults.setValue(storeImagesiPad, forKey: "storeImagesArrayiPad")
+        print("STORE IMAGE", storeImagesiPad)
         
 //        userDefaults.setValue(costRetroF, forKey: "costRetro")
 //        print("SKIN VALUE", costRetroF)
