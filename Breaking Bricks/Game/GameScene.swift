@@ -9,6 +9,7 @@
 import SpriteKit
 import GameplayKit
 import AVFoundation
+import Firebase
 
 //Time Var and Let
 let timeSeconds = 90
@@ -474,6 +475,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         didSet {
 
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                 Analytics.logEvent("GameMenu", parameters: nil)
                 self.gameViewController.skView.presentScene(self.gameViewController.menuScene)
             }
             //gameWon ? gameWonSound.play() : gameOverSound.play()

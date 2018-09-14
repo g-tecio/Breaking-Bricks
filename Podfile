@@ -8,4 +8,7 @@ target 'Breaking Bricks' do
   # Pods for Breaking Bricks
 	pod ‘lottie-ios’
 	pod 'Device.swift'
+	pod 'Firebase/Core'
+	pod 'Firebase/Performance'
+ 	pod 'Firebase/Analytics'
 end

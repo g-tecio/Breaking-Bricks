@@ -253,9 +253,9 @@ class StoreScene: SKScene, ZCarouselDelegate {
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
             //16:9
             images = ZCarousel(frame:
-                CGRect(x: (self.view?.frame.size.width)!/3.66, y: (self.view?.frame.size.height)!/3.45,
-                       width: ((self.view?.frame.size.width)!/100)*45.37,
-                       height: ((self.view?.frame.size.height)!/100)*41.67))
+                CGRect(x: (self.view?.frame.size.width)!/4, y: (self.view?.frame.size.height)!/3.84,
+                       width: ((self.view?.frame.size.width)!/100)*50,
+                       height: ((self.view?.frame.size.height)!/100)*47.08))
             
         }else{
             //4:3
