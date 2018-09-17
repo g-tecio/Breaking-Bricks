@@ -46,6 +46,9 @@
 		F439DEC621495EC000A5F840 /* Intro_08-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB721495EC000A5F840 /* Intro_08-01.png */; };
 		F439DEC721495EC000A5F840 /* Intro_11-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB821495EC000A5F840 /* Intro_11-01.png */; };
 		F439DEC821495EC000A5F840 /* Intro_10-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB921495EC000A5F840 /* Intro_10-01.png */; };
+		F46DCA042150188900399FE6 /* BallPadle_Sample.wav in Resources */ = {isa = PBXBuildFile; fileRef = F46DCA012150188800399FE6 /* BallPadle_Sample.wav */; };
+		F46DCA052150188900399FE6 /* HitBox_1.2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F46DCA022150188800399FE6 /* HitBox_1.2.wav */; };
+		F46DCA062150188900399FE6 /* WallBounce_2.2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F46DCA032150188800399FE6 /* WallBounce_2.2.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +95,9 @@
 		F439DEB721495EC000A5F840 /* Intro_08-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_08-01.png"; sourceTree = "<group>"; };
 		F439DEB821495EC000A5F840 /* Intro_11-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_11-01.png"; sourceTree = "<group>"; };
 		F439DEB921495EC000A5F840 /* Intro_10-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_10-01.png"; sourceTree = "<group>"; };
+		F46DCA012150188800399FE6 /* BallPadle_Sample.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BallPadle_Sample.wav; sourceTree = "<group>"; };
+		F46DCA022150188800399FE6 /* HitBox_1.2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HitBox_1.2.wav; sourceTree = "<group>"; };
+		F46DCA032150188800399FE6 /* WallBounce_2.2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WallBounce_2.2.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +181,7 @@
 		8D88F05C212C7FCE0077D7C7 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				F46DCA002150183C00399FE6 /* Sounds */,
 				8D88F063212C83390077D7C7 /* GameStates */,
 				8D88F05D212C80000077D7C7 /* GameScene.swift */,
 				8D88F05F212C804E0077D7C7 /* GameControls.swift */,
@@ -241,6 +248,16 @@
 				F439DEB421495EC000A5F840 /* Intro_15-01.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		F46DCA002150183C00399FE6 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				F46DCA012150188800399FE6 /* BallPadle_Sample.wav */,
+				F46DCA022150188800399FE6 /* HitBox_1.2.wav */,
+				F46DCA032150188800399FE6 /* WallBounce_2.2.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +327,7 @@
 				F439DEBB21495EC000A5F840 /* Intro_14-01.png in Resources */,
 				F439DEC221495EC000A5F840 /* Intro_12-01.png in Resources */,
 				F439DEC821495EC000A5F840 /* Intro_10-01.png in Resources */,
+				F46DCA042150188900399FE6 /* BallPadle_Sample.wav in Resources */,
 				F439DEBF21495EC000A5F840 /* Intro_06-01.png in Resources */,
 				8D88F040212C7C9A0077D7C7 /* Main.storyboard in Resources */,
 				F439DEA721495E8E00A5F840 /* Intro Bricks_iPad.json in Resources */,
@@ -318,6 +336,7 @@
 				8D88F042212C7C9E0077D7C7 /* Assets.xcassets in Resources */,
 				F439DEBA21495EC000A5F840 /* Intro_09-01.png in Resources */,
 				F439DEBE21495EC000A5F840 /* Intro_04-01.png in Resources */,
+				F46DCA052150188900399FE6 /* HitBox_1.2.wav in Resources */,
 				F439DEBD21495EC000A5F840 /* Intro_13-01.png in Resources */,
 				8DB1624C2142F8C50064DFCD /* LaunchScreeniPad.storyboard in Resources */,
 				F439DEC121495EC000A5F840 /* Intro_07-01.png in Resources */,
@@ -325,6 +344,7 @@
 				5F241342214C3774009917B7 /* GoogleService-Info.plist in Resources */,
 				8D88F04D212C7D750077D7C7 /* Roboto-Regular.ttf in Resources */,
 				8D88F045212C7C9E0077D7C7 /* LaunchScreen.storyboard in Resources */,
+				F46DCA062150188900399FE6 /* WallBounce_2.2.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

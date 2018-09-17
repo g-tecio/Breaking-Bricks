@@ -24,6 +24,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Launch_Bricks iPhone" width="1080" height="1920"/>
+        <image name="Launch_Bricks iPhone" width="4500" height="8000"/>
     </resources>
 </document>

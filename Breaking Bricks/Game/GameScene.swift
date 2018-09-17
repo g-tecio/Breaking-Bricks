@@ -35,15 +35,10 @@ var winsCount = ("\(win)")
 var lose: Int = 0
 var loseCount = ("\(lose)")
 
-
-
-
 let BallCategoryName = "ball"
 let PaddleCategoryName = "paddle"
 let BlockCategoryName = "block"
 let GameMessageName = "gameMessage"
-
-
 
 let BallCategory   : UInt32 = 0x1 << 0
 let BottomCategory : UInt32 = 0x1 << 1
@@ -52,17 +47,14 @@ let PaddleCategory : UInt32 = 0x1 << 3
 let BorderCategory : UInt32 = 0x1 << 4
 
 //fx sounds
-var blipSound = AVAudioPlayer()
-var blipPaddleSound = AVAudioPlayer()
-var bambooBreakSound = AVAudioPlayer()
-var gameWonSound = AVAudioPlayer()
-var gameOverSound = AVAudioPlayer()
-var flagsBreakSound = AVAudioPlayer()
+var hitWall = AVAudioPlayer()
+var ballPaddle = AVAudioPlayer()
+var hitBlock = AVAudioPlayer()
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
-   
-   
+    
+    
     var sceneNumber: Int!
     var firstload: Bool!
     // the definition of the var is FingerPaddle
@@ -134,7 +126,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     /// Present Elements to the Scene
     override func didMove(to view: SKView) {
         super.didMove(to: view)
-
+        
+        //Sounds
+        do{
+            hitWall = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource:"WallBounce_2.2", ofType: "wav")!))
+            hitWall.prepareToPlay()
+            
+            hitBlock = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource:"HitBox_1.2", ofType: "wav")!))
+            hitBlock.prepareToPlay()
+            
+            ballPaddle = try AVAudioPlayer(contentsOf: URL.init(fileURLWithPath:Bundle.main.path(forResource:"BallPadle_Sample", ofType: "wav")!))
+            ballPaddle.prepareToPlay()
+        }
+        catch{
+            print(error)
+        }
+        
         if sceneNumber == 0 && firstload == true{
             
             // Background and paddle
@@ -162,7 +169,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
             physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
-
+            
             //Paddle and ball
             let ball = gameControls.ballclassic
             let paddle = gameControls.paddleclassic
@@ -199,7 +206,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.addChild(gameControls.ballclassic)
             
             gameState.enter(WaitingForTap.self)
- 
+            
         }
         if(sceneNumber == 1 ){
             
@@ -468,18 +475,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         WaitingForTap(scene: self),
         Playing(scene: self),
         GameOver(scene: self)])
-
-
+    
+    
     var gameWon : Bool = false {
         
         didSet {
-
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                 Analytics.logEvent("GameMenu", parameters: nil)
+                Analytics.logEvent("GameMenu", parameters: nil)
                 self.gameViewController.skView.presentScene(self.gameViewController.menuScene)
             }
             //gameWon ? gameWonSound.play() : gameOverSound.play()
-     
+            
         }
         
     }
@@ -517,7 +524,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             seconds = timeSeconds
             //Score Line
             score = points
-
+            
             
         default:
             break
@@ -526,7 +533,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for touch in touches {
             let location = touch.location(in: self)
             let item = atPoint(location)
-
+            
             
         }
     }//END TouchesBegan
@@ -619,6 +626,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                 }
             }
+            
+            //Adding soun effects
+            if firstBody.categoryBitMask == BallCategory && secondBody.categoryBitMask == BorderCategory {
+                
+                hitWall.play()
+                
+            }
+            if firstBody.categoryBitMask == BallCategory && secondBody.categoryBitMask == PaddleCategory {
+                
+                ballPaddle.play()
+                
+            }
         }
         
     }//END DidBegin
@@ -654,11 +673,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //Position and break the flags bricks
     func breakBlock(node: SKNode) {
+        //Ading Sounds
+        hitBlock.play()
+        
         node.removeFromParent()
         //Score
         score += 1
-        coin += 1
-
+        
+        
         gameControls.scoreLabel.text = ("\(score)")
     }//END BreakBlocks
     
@@ -669,7 +691,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }//End RandomFloat
     
     func isGameWon() -> Bool {
-     
+        
         var numberOfBricks = 0
         self.enumerateChildNodes(withName: BlockCategoryName) {
             
