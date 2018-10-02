@@ -56,6 +56,25 @@ class StoreScene: SKScene, ZCarouselDelegate {
     /// Custom Initializer
     init(sceneSize: CGSize, referenceGVC: GameViewController) {
 
+        if(costRetroB == true){
+            storeImages.remove(at: 1)
+            storeImages.insert("RetroOwned", at: 1)
+        }
+        
+        if(costRainbowB == true){
+            storeImages.remove(at: 2)
+            storeImages.insert("RainbowOwned", at: 2)
+        }
+        
+        if(costLightB == true){
+            storeImages.remove(at: 3)
+            storeImages.insert("LightOwned", at: 3)
+        }
+        
+        if(costSoccerB == true){
+            storeImages.remove(at: 4)
+            storeImages.insert("SoccerOwned", at: 4)
+        }
         
         /// Set reference of GameViewControl
         gameViewController = referenceGVC
@@ -353,12 +372,6 @@ class StoreScene: SKScene, ZCarouselDelegate {
 
         let coinValue = userDefaults.integer(forKey: "coinsStore")
         print("Coins Store: \(coinValue)")
-        
-        userDefaults.setValue(storeImages, forKey: "storeImagesArray")
-        print("STORE IMAGE", storeImages)
-        
-        userDefaults.setValue(storeImagesiPad, forKey: "storeImagesArrayiPad")
-        print("STORE IMAGE", storeImagesiPad)
         
 //        userDefaults.setValue(costRetroF, forKey: "costRetro")
 //        print("SKIN VALUE", costRetroF)

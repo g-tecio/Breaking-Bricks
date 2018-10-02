@@ -25,8 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    var oldCostSoccer : Int = UserDefaults.standard.integer(forKey: "costSoccer")
 
     var oldCoinStore : Int = UserDefaults.standard.integer(forKey: "coinsStore")
-    var oldImagesArray = UserDefaults.standard.array(forKey: "storeImagesArray") as? [String]
-    var oldImagesArrayiPad = UserDefaults.standard.array(forKey: "storeImagesArrayiPad") as? [String]
+  
     
     var oldCostRetroB : Bool = UserDefaults.standard.bool(forKey: "costRetroB")
     var oldCostRainbowB : Bool = UserDefaults.standard.bool(forKey: "costRainbowB")
@@ -48,10 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //STORE VALUES
         coin = oldCoinStore
-        
-        /// Witchcraft
-        //storeImages = oldImagesArray as! [String]
-        //storeImagesiPad = oldImagesArrayiPad as! [String]
+
         
         // Override point for customization after application launch.
         FirebaseApp.configure()
