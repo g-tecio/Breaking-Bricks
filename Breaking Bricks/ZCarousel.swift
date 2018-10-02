@@ -154,11 +154,19 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
             //3
             if page <= 1{
                 let scrollToObject: AnyObject = objects[Int(objectCount-3)]
-                self.scrollRectToVisible(scrollToObject.frame, animated: false)
+                if #available(iOS 12.0, *) {
+                    self.scrollRectToVisible(scrollToObject.frame, animated: false)
+                } else {
+                    // Fallback on earlier versions
+                }
             }
             if page >= objectCount-2{
                 let scrollToObject: AnyObject = objects[2]
-                self.scrollRectToVisible(scrollToObject.frame, animated: false)
+                if #available(iOS 12.0, *) {
+                    self.scrollRectToVisible(scrollToObject.frame, animated: false)
+                } else {
+                    // Fallback on earlier versions
+                }
             }
         }
     }
