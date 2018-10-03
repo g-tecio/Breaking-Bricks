@@ -683,6 +683,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         node.removeFromParent()
         //Score
         score += 1
+        coin += 1
         
         /*
             //Test Coin

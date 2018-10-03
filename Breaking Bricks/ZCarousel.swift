@@ -140,7 +140,7 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
         page = scrollView.contentOffset.x / self.frame.width
         //2
         var objectCount : CGFloat = 0
-        var objects = [AnyObject]()
+        var objects = [UIView]()
         if isImage==true {
             objectCount = CGFloat(images.count)
             objects = images
@@ -153,20 +153,16 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
         if let page = page {
             //3
             if page <= 1{
-                let scrollToObject: AnyObject = objects[Int(objectCount-3)]
-                if #available(iOS 12.0, *) {
-                    self.scrollRectToVisible(scrollToObject.frame, animated: false)
-                } else {
-                    // Fallback on earlier versions
-                }
+                let scrollToObject: UIView = objects[Int(objectCount-3)]
+                
+                self.scrollRectToVisible(scrollToObject.frame, animated: false)
+                
             }
             if page >= objectCount-2{
-                let scrollToObject: AnyObject = objects[2]
-                if #available(iOS 12.0, *) {
-                    self.scrollRectToVisible(scrollToObject.frame, animated: false)
-                } else {
-                    // Fallback on earlier versions
-                }
+                let scrollToObject: UIView = objects[2]
+                
+                self.scrollRectToVisible(scrollToObject.frame, animated: false)
+                
             }
         }
     }
