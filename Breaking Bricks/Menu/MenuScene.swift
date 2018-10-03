@@ -18,7 +18,6 @@ class MenuScene: SKScene {
     var menuControls: MenuControls!
     
     var sceneNumber: Int!
-    var firstload: Bool!
 
     private var lastUpdateTime : TimeInterval = 0
     
@@ -35,7 +34,6 @@ class MenuScene: SKScene {
         menuControls = MenuControls.init(inThisScene: self)
         
         sceneNumber = 0
-        firstload = true
         
         /// Load scene
         if let skView = gameViewController.view as! SKView? {
@@ -58,7 +56,7 @@ class MenuScene: SKScene {
     override func didMove(to view: SKView) {
         
         
-        if sceneNumber == 0 && firstload == true {
+        if sceneNumber == 0{
             self.addChild(menuControls.bgclassic)
             self.addChild(menuControls.playclassic)
             self.addChild(menuControls.scoreclassic)

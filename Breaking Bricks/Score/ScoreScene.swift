@@ -18,7 +18,6 @@ class ScoreScene: SKScene {
     var scoreControls: ScoreControls!
     
     var sceneNumber: Int!
-    var firstload: Bool!
     
     private var lastUpdateTime : TimeInterval = 0
     
@@ -35,7 +34,6 @@ class ScoreScene: SKScene {
         scoreControls = ScoreControls.init(inThisScene: self)
         
         sceneNumber = 0
-        firstload = true
         
         /// Load scene
         if let skView = gameViewController.view as! SKView? {
@@ -57,7 +55,7 @@ class ScoreScene: SKScene {
     /// Present Elements to the Scene
     override func didMove(to view: SKView) {
         
-        if sceneNumber == 0 && firstload == true {
+        if sceneNumber == 0{
         /// Present Label and Button
             self.addChild(scoreControls.bgclassic)
             self.addChild(scoreControls.menuclassic)

@@ -20,8 +20,8 @@ var costRainbowB = false
 var costLightB = false
 var costSoccerB = false
 
-var storeImages = ["ClassicOwned","RetroBuy","RainbowBuy","LightBuy","SoccerBuy"]
-var storeImagesiPad = ["ClassicOwnediPad","RetroBuyiPad","RainbowBuyiPad","LightBuyiPad","SoccerBuyiPad"]
+var storeImages = ["RainbowBuy","RetroBuy","ClassicOwned","LightBuy","SoccerBuy"]
+var storeImagesiPad = ["RainbowBuyiPad","RetroBuyiPad","ClassicOwnediPad","LightBuyiPad","SoccerBuyiPad"]
 
 class StoreScene: SKScene, ZCarouselDelegate {
     
@@ -49,31 +49,49 @@ class StoreScene: SKScene, ZCarouselDelegate {
     var storeControls: StoreControls!
     
     var sceneNumber: Int!
-    var firstload: Bool!
     
     private var lastUpdateTime : TimeInterval = 0
     
     /// Custom Initializer
     init(sceneSize: CGSize, referenceGVC: GameViewController) {
-
+        
+        // Rainbow
+        if(costRainbowB == true){
+            storeImages.remove(at: 0)
+            storeImages.insert("RainbowOwned", at: 0)
+        }
+        if(costRainbowB == true){
+            storeImagesiPad.remove(at: 0)
+            storeImagesiPad.insert("RainbowOwnediPad", at: 0)
+        }
+        // Retro
         if(costRetroB == true){
             storeImages.remove(at: 1)
             storeImages.insert("RetroOwned", at: 1)
         }
-        
-        if(costRainbowB == true){
-            storeImages.remove(at: 2)
-            storeImages.insert("RainbowOwned", at: 2)
+        if(costRetroB == true){
+            storeImagesiPad.remove(at: 1)
+            storeImagesiPad.insert("RetroOwnediPad", at: 1)
         }
         
+        //Light
         if(costLightB == true){
             storeImages.remove(at: 3)
             storeImages.insert("LightOwned", at: 3)
         }
+        if(costLightB == true){
+            storeImagesiPad.remove(at: 3)
+            storeImagesiPad.insert("LightOwnediPad", at: 3)
+        }
         
+        //Soccer
         if(costSoccerB == true){
             storeImages.remove(at: 4)
             storeImages.insert("SoccerOwned", at: 4)
+        }
+        if(costSoccerB == true){
+            storeImagesiPad.remove(at: 4)
+            storeImagesiPad.insert("SoccerOwnediPad", at: 4)
         }
         
         /// Set reference of GameViewControl
@@ -84,18 +102,12 @@ class StoreScene: SKScene, ZCarouselDelegate {
         costLightF = 1
         costSoccerF = 3
         
-        print("SKIN VALUE", costRetroF)
-        print("SKIN VALUE", costRainbowF)
-        print("SKIN VALUE", costLightF)
-        print("SKIN VALUE", costSoccerF)
-        
         /// Create scene from code
         super.init(size: sceneSize)
         
         /// Menu Controls
         storeControls = StoreControls.init(inThisScene: self)
         sceneNumber = 0
-        firstload = true
         
         /// Load scene
         if let skView = gameViewController.view as! SKView? {
@@ -117,15 +129,34 @@ class StoreScene: SKScene, ZCarouselDelegate {
     @objc func tappedMe()
     {
         if index == 0{
-            if coin >= 0{
-                coin = coin - 0
-                gameViewController.menuScene.sceneNumber = 0
+            if(costRainbowB == false){
+                if coin >= costRainbowF{
+                    coin = coin - costRainbowF
+                    costRainbowB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 2
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
+                        if(costRainbowB == true){
+                            storeImages.remove(at: 0)
+                            storeImages.insert("RainbowOwned", at: 0)
+                        }
+                    }else{
+                        if(costRainbowB == true){
+                            storeImagesiPad.remove(at: 0)
+                            storeImagesiPad.insert("RainbowOwnediPad", at: 0)
+                        }
+                    }
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 2
                 gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
-                print("MONEDAS", coin)
-                print("Image", index)
-            }else{
-                print("NO TE ALCANZA POBRETÓN")
             }
             
         }
@@ -161,37 +192,16 @@ class StoreScene: SKScene, ZCarouselDelegate {
             }
         }
         if index == 2{
-            if(costRainbowB == false){
-                if coin >= costRainbowF{
-                    coin = coin - costRainbowF
-                    costRainbowB = true
-                    savedValues()
-                    gameViewController.menuScene.sceneNumber = 2
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
-                    images.removeFromSuperview()
-                    print("MONEDAS", coin)
-                    print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
-                        if(costRainbowB == true){
-                            storeImages.remove(at: 2)
-                            storeImages.insert("RainbowOwned", at: 2)
-                        }
-                    }else{
-                        if(costRainbowB == true){
-                            storeImagesiPad.remove(at: 2)
-                            storeImagesiPad.insert("RainbowOwnediPad", at: 2)
-                        }
-                    }
-                }else{
-                    print("NO TE ALCANZA POBRETÓN")
-                }
-            }else{
-                gameViewController.menuScene.sceneNumber = 2
+            if coin >= 0{
+                coin = coin - 0
+                gameViewController.menuScene.sceneNumber = 0
                 gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
+                print("MONEDAS", coin)
+                print("Image", index)
+            }else{
+                print("NO TE ALCANZA POBRETÓN")
             }
-
-            
         }
         if index == 3{
             if(costLightB == false){
@@ -305,7 +315,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
         self.addChild(storeControls.coin)
         self.addChild(storeControls.coinLabel)
         
-        if sceneNumber == 0 && firstload == true {
+        if sceneNumber == 0 {
             
             /// Present Label and Button
             self.addChild(storeControls.classicBackground)
@@ -356,12 +366,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
         }
         
         storeControls.coinLabel.text = ("\(coin)")
-         print("STORE IMAGE", storeImages)
-        
-        print("SKIN VALUE", costRetroF)
-        print("SKIN VALUE", costRainbowF)
-        print("SKIN VALUE", costLightF)
-         print("SKIN VALUE", costSoccerF)
+
     }
 
     func savedValues() {
@@ -371,7 +376,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
         userDefaults.setValue(coin, forKey: "coinsStore")
 
         let coinValue = userDefaults.integer(forKey: "coinsStore")
-        print("Coins Store: \(coinValue)")
+        //print("Coins Store: \(coinValue)")
         
 //        userDefaults.setValue(costRetroF, forKey: "costRetro")
 //        print("SKIN VALUE", costRetroF)
@@ -383,13 +388,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
 //        print("SKIN VALUE", costSoccerF)
         
         userDefaults.setValue(costRetroB, forKey: "costRetroB")
-        print("SKIN VALUE costRetroB ", costRetroB)
+        //print("SKIN VALUE costRetroB ", costRetroB)
         userDefaults.setValue(costRainbowB, forKey: "costRainbowB")
-        print("SKIN VALUE costRainbowB ", costRainbowB)
+        //print("SKIN VALUE costRainbowB ", costRainbowB)
         userDefaults.setValue(costLightB, forKey: "costLightB")
-        print("SKIN VALUE costLightB ", costLightB)
+        //print("SKIN VALUE costLightB ", costLightB)
         userDefaults.setValue(costSoccerB, forKey: "costSoccerB")
-        print("SKIN VALUE costSoccerB ", costSoccerB)
+        //print("SKIN VALUE costSoccerB ", costSoccerB)
         
     }
     /// Before another Scence will be presented

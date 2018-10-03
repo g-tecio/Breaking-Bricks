@@ -56,7 +56,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     var sceneNumber: Int!
-    var firstload: Bool!
+    
     // the definition of the var is FingerPaddle
     var isFingerOnPaddle = false
     
@@ -82,7 +82,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         /// Game Controls
         gameControls = GameControls.init(inThisScene: self)
         sceneNumber = 0
-        firstload = true
         
         //IF
         var numBricks = 0
@@ -142,7 +141,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             print(error)
         }
         
-        if sceneNumber == 0 && firstload == true{
+        if sceneNumber == 0{
             
             // Background and paddle
             self.addChild(gameControls.bgclassic)
@@ -685,7 +684,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Score
         score += 1
         
-        
+        /*
+            //Test Coin
+            coin += 1
+        */
         
         gameControls.scoreLabel.text = ("\(score)")
     }//END BreakBlocks
