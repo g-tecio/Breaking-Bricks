@@ -683,13 +683,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         node.removeFromParent()
         //Score
         score += 1
-        coin += 1
         
-        /*
-            //Test Coin
-            coin += 1
-        */
-        
+        ///Test Coin
+        //coin += 1
+
         gameControls.scoreLabel.text = ("\(score)")
     }//END BreakBlocks
     
