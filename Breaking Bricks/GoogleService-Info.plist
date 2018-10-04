@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>996907202522-3eigid3p1knpm86omn8j92hopeq43c09.apps.googleusercontent.com</string>
+	<string>355919381258-fs0naliifoun66quao8160cg4tcvh4s9.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.996907202522-3eigid3p1knpm86omn8j92hopeq43c09</string>
+	<string>com.googleusercontent.apps.355919381258-fs0naliifoun66quao8160cg4tcvh4s9</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCuCLvsm39cYqPhNegYXL0xPBj8bvWAQYU</string>
+	<string>AIzaSyDtxBa8VGY-z9UEHaiz8zx1-a1iBI8pvH4</string>
 	<key>GCM_SENDER_ID</key>
-	<string>996907202522</string>
+	<string>355919381258</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.guadianatechnologygames.breaking-bricks</string>
+	<string>com.guadianatechnologygames.breakingbricks</string>
 	<key>PROJECT_ID</key>
-	<string>guadianatecnologia</string>
+	<string>game-breaking-bricks</string>
 	<key>STORAGE_BUCKET</key>
-	<string>guadianatecnologia.appspot.com</string>
+	<string>game-breaking-bricks.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:996907202522:ios:e407cf31ac2ee4b4</string>
+	<string>1:355919381258:ios:a76a0acce032b43b</string>
 	<key>DATABASE_URL</key>
-	<string>https://guadianatecnologia.firebaseio.com</string>
+	<string>https://game-breaking-bricks.firebaseio.com</string>
 </dict>
 </plist>

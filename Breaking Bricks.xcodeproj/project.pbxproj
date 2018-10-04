@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		52DE7B86D077237096C32439 /* Pods_Breaking_Bricks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C4552C81ECC8469151EE4D3 /* Pods_Breaking_Bricks.framework */; };
-		5F241342214C3774009917B7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5F241341214C3774009917B7 /* GoogleService-Info.plist */; };
+		57A714F021669A9200BE8786 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 57A714EF21669A9200BE8786 /* GoogleService-Info.plist */; };
 		8D1738F8212DAC2D004A97FC /* BrickSpriteRow6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1738F7212DAC2D004A97FC /* BrickSpriteRow6.swift */; };
 		8D88F035212C7C9A0077D7C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F034212C7C9A0077D7C7 /* AppDelegate.swift */; };
 		8D88F03D212C7C9A0077D7C7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F03C212C7C9A0077D7C7 /* GameViewController.swift */; };
@@ -52,7 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5F241341214C3774009917B7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		57A714EF21669A9200BE8786 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6C31F364C08AC562A3CE053C /* Pods-Breaking Bricks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breaking Bricks.release.xcconfig"; path = "Pods/Target Support Files/Pods-Breaking Bricks/Pods-Breaking Bricks.release.xcconfig"; sourceTree = "<group>"; };
 		7C4552C81ECC8469151EE4D3 /* Pods_Breaking_Bricks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breaking_Bricks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D1738F7212DAC2D004A97FC /* BrickSpriteRow6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrickSpriteRow6.swift; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 		8D88F033212C7C9A0077D7C7 /* Breaking Bricks */ = {
 			isa = PBXGroup;
 			children = (
-				5F241341214C3774009917B7 /* GoogleService-Info.plist */,
+				57A714EF21669A9200BE8786 /* GoogleService-Info.plist */,
 				8D88F034212C7C9A0077D7C7 /* AppDelegate.swift */,
 				8D88F03C212C7C9A0077D7C7 /* GameViewController.swift */,
 				8DB162282142F7D60064DFCD /* Intro */,
@@ -322,6 +322,7 @@
 			files = (
 				F439DEC021495EC000A5F840 /* Intro_03-01.png in Resources */,
 				F439DEC421495EC000A5F840 /* Intro_05-01.png in Resources */,
+				57A714F021669A9200BE8786 /* GoogleService-Info.plist in Resources */,
 				F439DEC521495EC000A5F840 /* Intro_01-01.png in Resources */,
 				F439DEC321495EC000A5F840 /* Intro_15-01.png in Resources */,
 				F439DEBB21495EC000A5F840 /* Intro_14-01.png in Resources */,
@@ -341,7 +342,6 @@
 				8DB1624C2142F8C50064DFCD /* LaunchScreeniPad.storyboard in Resources */,
 				F439DEC121495EC000A5F840 /* Intro_07-01.png in Resources */,
 				F439DEBC21495EC000A5F840 /* Intro_02-01.png in Resources */,
-				5F241342214C3774009917B7 /* GoogleService-Info.plist in Resources */,
 				8D88F04D212C7D750077D7C7 /* Roboto-Regular.ttf in Resources */,
 				8D88F045212C7C9E0077D7C7 /* LaunchScreen.storyboard in Resources */,
 				F46DCA062150188900399FE6 /* WallBounce_2.2.wav in Resources */,
@@ -581,7 +581,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.guadianatechnologygames.breaking-bricks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guadianatechnologygames.breakingbricks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -600,7 +600,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.guadianatechnologygames.breaking-bricks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.guadianatechnologygames.breakingbricks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
