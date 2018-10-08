@@ -13,39 +13,51 @@ import Device_swift
 
 struct BrickSpriteRow6 {
     
-        let deviceType = UIDevice.current.deviceType
+    let deviceType = UIDevice.current.deviceType
     
     //blocks
-        let blockclassic : SKSpriteNode!
-        let retroLifeSkin : SKSpriteNode!
-        let rainbowSkin : SKSpriteNode!
-        let lightSkin : SKSpriteNode!
-        let soccerSkin : SKSpriteNode!
+    let blockclassic : SKSpriteNode!
+    let retroLifeSkin : SKSpriteNode!
+    let rainbowSkin : SKSpriteNode!
+    let lightSkin : SKSpriteNode!
+    let soccerSkin : SKSpriteNode!
+    let spaceDustSkin: SKSpriteNode!
+    let acidRainSkin: SKSpriteNode!
     
     
     //Array Bricks
-        let classicblocks = ["Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic"]
+    let classicblocks = ["Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic"]
     
-        let retroLifeBlocks = ["Brick-gray Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-gray Retro",
-                               "Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro",
-                               "Brick-gray Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-gray Retro",
-                               "Brick-gray Retro","Brick-gray Retro","Brick-red Retro","Brick-red Retro","Brick-gray Retro","Brick-gray Retro"]
+    let retroLifeBlocks = ["Brick-gray Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-gray Retro",
+                           "Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro",
+                           "Brick-gray Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-red Retro","Brick-gray Retro",
+                           "Brick-gray Retro","Brick-gray Retro","Brick-red Retro","Brick-red Retro","Brick-gray Retro","Brick-gray Retro"]
     
-        let rainbowBlocks = ["Brick 8 Rainbow","Brick 8 Rainbow","Brick 8 Rainbow","Brick 8 Rainbow","Brick 8 Rainbow","Brick 8 Rainbow",
-                             "Brick 6 Rainbow","Brick 6 Rainbow","Brick 6 Rainbow","Brick 6 Rainbow","Brick 6 Rainbow","Brick 6 Rainbow",
-                             "Brick 4 Rainbow","Brick 4 Rainbow","Brick 4 Rainbow","Brick 4 Rainbow","Brick 4 Rainbow","Brick 4 Rainbow",
-                             "Brick 2 Rainbow","Brick 2 Rainbow","Brick 2 Rainbow","Brick 2 Rainbow","Brick 2 Rainbow","Brick 2 Rainbow"]
+    let rainbowBlocks = ["Brick 8 Rainbow","Brick 8 Rainbow","Brick 8 Rainbow","Brick 8 Rainbow","Brick 8 Rainbow","Brick 8 Rainbow",
+                         "Brick 6 Rainbow","Brick 6 Rainbow","Brick 6 Rainbow","Brick 6 Rainbow","Brick 6 Rainbow","Brick 6 Rainbow",
+                         "Brick 4 Rainbow","Brick 4 Rainbow","Brick 4 Rainbow","Brick 4 Rainbow","Brick 4 Rainbow","Brick 4 Rainbow",
+                         "Brick 2 Rainbow","Brick 2 Rainbow","Brick 2 Rainbow","Brick 2 Rainbow","Brick 2 Rainbow","Brick 2 Rainbow"]
     
-        let lightBlocks = ["Brick Light","Brick Light","Brick Light","Brick Light","Brick Light","Brick Light",
-                           "Brick Light","Brick Light","Brick Light","Brick Light","Brick Light","Brick Light",
-                           "Brick Light","Brick Light","Brick Light","Brick Light","Brick Light","Brick Light",
-                           "Brick Light","Brick Light","Brick Light","Brick Light","Brick Light","Brick Light"]
+    let lightBlocks = ["Brick Light","Brick Light","Brick Light","Brick Light","Brick Light","Brick Light",
+                       "Brick Light","Brick Light","Brick Light","Brick Light","Brick Light","Brick Light",
+                       "Brick Light","Brick Light","Brick Light","Brick Light","Brick Light","Brick Light",
+                       "Brick Light","Brick Light","Brick Light","Brick Light","Brick Light","Brick Light"]
     
-        let soccerBlocks = ["Brick_26 Soccer","Brick_27 Soccer","Brick_28 Soccer","Brick_29 Soccer","Brick_30 Soccer","Brick_31 Soccer",
-                            "Brick_32 Soccer","Brick_33 Soccer","Brick_34 Soccer","Brick_35 Soccer","Brick_36 Soccer","Brick_37 Soccer",
-                            "Brick_38 Soccer","Brick_39 Soccer","Brick_40 Soccer","Brick_41 Soccer","Brick_42 Soccer","Brick_43 Soccer",
-                            "Brick_44 Soccer","Brick_45 Soccer","Brick_46 Soccer","Brick_47 Soccer","Brick_48 Soccer","Brick_49 Soccer",]
+    let soccerBlocks = ["Brick_26 Soccer","Brick_27 Soccer","Brick_28 Soccer","Brick_29 Soccer","Brick_30 Soccer","Brick_31 Soccer",
+                        "Brick_32 Soccer","Brick_33 Soccer","Brick_34 Soccer","Brick_35 Soccer","Brick_36 Soccer","Brick_37 Soccer",
+                        "Brick_38 Soccer","Brick_39 Soccer","Brick_40 Soccer","Brick_41 Soccer","Brick_42 Soccer","Brick_43 Soccer",
+                        "Brick_44 Soccer","Brick_45 Soccer","Brick_46 Soccer","Brick_47 Soccer","Brick_48 Soccer","Brick_49 Soccer",]
     
+    
+    let spaceDustBlocks = ["Brick_violet Dust","Brick_purple Dust","Brick_blue Dust","Brick_blue Dust","Brick_purple Dust","Brick_violet Dust",
+                           "Brick_purple Dust","Brick_blue Dust","Brick_green Dust","Brick_green Dust","Brick_blue Dust","Brick_purple Dust",
+                           "Brick_purple Dust","Brick_blue Dust","Brick_green Dust","Brick_green Dust","Brick_blue Dust","Brick_purple Dust",
+                           "Brick_violet Dust","Brick_purple Dust","Brick_blue Dust","Brick_blue Dust","Brick_purple Dust","Brick_violet Dust",]
+    
+    let rainAcidBlocks = [ "Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic",
+                           "Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic",
+                           "Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic",
+                           "Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic"]
     
     init (numBricks: Int, row: Int, col: Int , inThisScene: GameScene) {
         
@@ -59,6 +71,10 @@ struct BrickSpriteRow6 {
         lightSkin = SKSpriteNode(imageNamed: lightBlocks[numBricks])
         // Soccer Skin
         soccerSkin = SKSpriteNode(imageNamed: soccerBlocks[numBricks])
+        // SpaceDust Skin
+        spaceDustSkin = SKSpriteNode(imageNamed: spaceDustBlocks[numBricks])
+        // Acid Rain Skin
+        acidRainSkin = SKSpriteNode(imageNamed: rainAcidBlocks[numBricks])
         
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
@@ -146,7 +162,7 @@ struct BrickSpriteRow6 {
             soccerSkin.size = CGSize(
                 width:(soccerSkin.size.width * (inThisScene.size.width / soccerSkin.size.width ) * (15/100)) ,
                 height: (soccerSkin.size.height * (inThisScene.size.height / soccerSkin.size.height ) * (4/100)))
-            soccerSkin.physicsBody = SKPhysicsBody(rectangleOf: lightSkin.frame.size)
+            soccerSkin.physicsBody = SKPhysicsBody(rectangleOf: soccerSkin.frame.size)
             soccerSkin.physicsBody!.allowsRotation = false
             soccerSkin.physicsBody!.friction = 0.0
             soccerSkin.physicsBody!.affectedByGravity = false
@@ -160,6 +176,48 @@ struct BrickSpriteRow6 {
                 x: ((inThisScene.size.width * 10.5/100) + (soccerSkin.size.width * (106.25/100)) * CGFloat(col))
                 /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 79.95/100) - ((soccerSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            /// SpaceDust Skin
+            //16:9
+            spaceDustSkin.size = CGSize(
+                width:(spaceDustSkin.size.width * (inThisScene.size.width / spaceDustSkin.size.width ) * (15/100)) ,
+                height: (spaceDustSkin.size.height * (inThisScene.size.height / spaceDustSkin.size.height ) * (4/100)))
+            spaceDustSkin.physicsBody = SKPhysicsBody(rectangleOf: spaceDustSkin.frame.size)
+            spaceDustSkin.physicsBody!.allowsRotation = false
+            spaceDustSkin.physicsBody!.friction = 0.0
+            spaceDustSkin.physicsBody!.affectedByGravity = false
+            spaceDustSkin.physicsBody!.isDynamic = false
+            spaceDustSkin.name = BlockCategoryName
+            spaceDustSkin.physicsBody!.categoryBitMask = BlockCategory
+            spaceDustSkin.zPosition = 2
+            //16:9
+            spaceDustSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (spaceDustSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((spaceDustSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            
+            /// Acid Rain Skin
+            //16:9
+            acidRainSkin.size = CGSize(
+                width:(acidRainSkin.size.width * (inThisScene.size.width / acidRainSkin.size.width ) * (15/100)) ,
+                height: (acidRainSkin.size.height * (inThisScene.size.height / acidRainSkin.size.height ) * (4/100)))
+            acidRainSkin.physicsBody = SKPhysicsBody(rectangleOf: acidRainSkin.frame.size)
+            acidRainSkin.physicsBody!.allowsRotation = false
+            acidRainSkin.physicsBody!.friction = 0.0
+            acidRainSkin.physicsBody!.affectedByGravity = false
+            acidRainSkin.physicsBody!.isDynamic = false
+            acidRainSkin.name = BlockCategoryName
+            acidRainSkin.physicsBody!.categoryBitMask = BlockCategory
+            acidRainSkin.zPosition = 2
+            //16:9
+            acidRainSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (acidRainSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((acidRainSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
             
         }else{
             /// Classic
@@ -262,8 +320,51 @@ struct BrickSpriteRow6 {
                 /// Offset value px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 81.7/100) - ((soccerSkin.size.height * (228.57/100) ) * CGFloat(row)))
             
+            /// SpaceDust Skin
+            //4:3
+            spaceDustSkin.size = CGSize(
+                width:(spaceDustSkin.size.width * (inThisScene.size.width / spaceDustSkin.size.width ) * (13.67/100)) ,
+                height: (spaceDustSkin.size.height * (inThisScene.size.height / spaceDustSkin.size.height ) * (5.12/100)))
+            spaceDustSkin.physicsBody = SKPhysicsBody(rectangleOf: spaceDustSkin.frame.size)
+            spaceDustSkin.physicsBody!.allowsRotation = false
+            spaceDustSkin.physicsBody!.friction = 0.0
+            spaceDustSkin.physicsBody!.affectedByGravity = false
+            spaceDustSkin.physicsBody!.isDynamic = false
+            spaceDustSkin.name = BlockCategoryName
+            spaceDustSkin.physicsBody!.categoryBitMask = BlockCategory
+            spaceDustSkin.zPosition = 2
+            //4:3
+            spaceDustSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (spaceDustSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((spaceDustSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            
+            /// Acid Rain Skin
+            //4:3
+            acidRainSkin.size = CGSize(
+                width:(acidRainSkin.size.width * (inThisScene.size.width / acidRainSkin.size.width ) * (13.67/100)) ,
+                height: (acidRainSkin.size.height * (inThisScene.size.height / acidRainSkin.size.height ) * (5.12/100)))
+            acidRainSkin.physicsBody = SKPhysicsBody(rectangleOf: acidRainSkin.frame.size)
+            acidRainSkin.physicsBody!.allowsRotation = false
+            acidRainSkin.physicsBody!.friction = 0.0
+            acidRainSkin.physicsBody!.affectedByGravity = false
+            acidRainSkin.physicsBody!.isDynamic = false
+            acidRainSkin.name = BlockCategoryName
+            acidRainSkin.physicsBody!.categoryBitMask = BlockCategory
+            acidRainSkin.zPosition = 2
+            //4:3
+            acidRainSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (acidRainSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((acidRainSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            
+            
         }//End else
-
+        
     }//END init
     
 }//END Struct

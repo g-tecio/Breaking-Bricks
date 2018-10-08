@@ -11,77 +11,103 @@ import Device_swift
 
 struct ScoreControls {
     
-        let deviceType = UIDevice.current.deviceType
+    let deviceType = UIDevice.current.deviceType
     
-        // Labels
-        let scoreWinLabel: SKLabelNode
-        let scoreLoseLabel: SKLabelNode
-        let scoreTimeLabel: SKLabelNode
+    // Labels
+    let scoreWinLabel: SKLabelNode
+    let scoreLoseLabel: SKLabelNode
+    let scoreTimeLabel: SKLabelNode
     
-        /// Classic
-        // Backgrounds
-        let bgclassic: SKSpriteNode
-        // Menu Buttons
-        let menuclassic: SKSpriteNode
-        // Win, Lose and Time
-        let winclassic: SKSpriteNode
-        let winclassiclabel: SKSpriteNode
-        let loseclassic: SKSpriteNode
-        let loseclassiclabel: SKSpriteNode
-        let timeclassic: SKSpriteNode
-        let timeclassiclabel: SKSpriteNode
+    /// Classic
+    // Backgrounds
+    let bgclassic: SKSpriteNode
+    // Menu Buttons
+    let menuclassic: SKSpriteNode
+    // Win, Lose and Time
+    let winclassic: SKSpriteNode
+    let winclassiclabel: SKSpriteNode
+    let loseclassic: SKSpriteNode
+    let loseclassiclabel: SKSpriteNode
+    let timeclassic: SKSpriteNode
+    let timeclassiclabel: SKSpriteNode
     
-        /// Retro Life Skin
-        // Backgrounds
-        let retroLifeSkinBackground: SKSpriteNode
-        // Menu Buttons
-        let retroLifeSkinMenu: SKSpriteNode
-        // Win, Lose and Time
-        let retroLifeSkinWin: SKSpriteNode
-        let retroLifeSkinWinLabel: SKSpriteNode
-        let retroLifeSkinLose: SKSpriteNode
-        let retroLifeSkinLoseLabel: SKSpriteNode
-        let retroLifeSkinTime: SKSpriteNode
-        let retroLifeSkinTimeLabel: SKSpriteNode
+    /// Retro Life Skin
+    // Backgrounds
+    let retroLifeSkinBackground: SKSpriteNode
+    // Menu Buttons
+    let retroLifeSkinMenu: SKSpriteNode
+    // Win, Lose and Time
+    let retroLifeSkinWin: SKSpriteNode
+    let retroLifeSkinWinLabel: SKSpriteNode
+    let retroLifeSkinLose: SKSpriteNode
+    let retroLifeSkinLoseLabel: SKSpriteNode
+    let retroLifeSkinTime: SKSpriteNode
+    let retroLifeSkinTimeLabel: SKSpriteNode
     
-        /// Rainbow Skin
-        // Backgrounds
-        let rainbowBackground: SKSpriteNode
-        // Menu Buttons
-        let rainbowMenu: SKSpriteNode
-        // Win, Lose and Time
-        let rainbowWin: SKSpriteNode
-        let rainbowWinLabel: SKSpriteNode
-        let rainbowLose: SKSpriteNode
-        let rainbowLoseLabel: SKSpriteNode
-        let rainbowTime: SKSpriteNode
-        let rainbowTimeLabel: SKSpriteNode
+    /// Rainbow Skin
+    // Backgrounds
+    let rainbowBackground: SKSpriteNode
+    // Menu Buttons
+    let rainbowMenu: SKSpriteNode
+    // Win, Lose and Time
+    let rainbowWin: SKSpriteNode
+    let rainbowWinLabel: SKSpriteNode
+    let rainbowLose: SKSpriteNode
+    let rainbowLoseLabel: SKSpriteNode
+    let rainbowTime: SKSpriteNode
+    let rainbowTimeLabel: SKSpriteNode
     
-        /// Light Skin
-        // Backgrounds
-        let lightBackground: SKSpriteNode
-        // Menu Buttons
-        let lightMenu: SKSpriteNode
-        // Win, Lose and Time
-        let lightWin: SKSpriteNode
-        let lightWinLabel: SKSpriteNode
-        let lightLose: SKSpriteNode
-        let lightLoseLabel: SKSpriteNode
-        let lightTime: SKSpriteNode
-        let lightTimeLabel: SKSpriteNode
+    /// Light Skin
+    // Backgrounds
+    let lightBackground: SKSpriteNode
+    // Menu Buttons
+    let lightMenu: SKSpriteNode
+    // Win, Lose and Time
+    let lightWin: SKSpriteNode
+    let lightWinLabel: SKSpriteNode
+    let lightLose: SKSpriteNode
+    let lightLoseLabel: SKSpriteNode
+    let lightTime: SKSpriteNode
+    let lightTimeLabel: SKSpriteNode
     
-        /// Soccer Skin
-        // Backgrounds
-        let soccerBackground: SKSpriteNode
-        // Menu Buttons
-        let soccerMenu: SKSpriteNode
-        // Win, Lose and Time
-        let soccerWin: SKSpriteNode
-        let soccerWinLabel: SKSpriteNode
-        let soccerLose: SKSpriteNode
-        let soccerLoseLabel: SKSpriteNode
-        let soccerTime: SKSpriteNode
-        let soccerTimeLabel: SKSpriteNode
+    /// Soccer Skin
+    // Backgrounds
+    let soccerBackground: SKSpriteNode
+    // Menu Buttons
+    let soccerMenu: SKSpriteNode
+    // Win, Lose and Time
+    let soccerWin: SKSpriteNode
+    let soccerWinLabel: SKSpriteNode
+    let soccerLose: SKSpriteNode
+    let soccerLoseLabel: SKSpriteNode
+    let soccerTime: SKSpriteNode
+    let soccerTimeLabel: SKSpriteNode
+    
+    /// Soccer Skin
+    // Backgrounds
+    let spaceDustBackground: SKSpriteNode
+    // Menu Buttons
+    let spaceDustMenu: SKSpriteNode
+    // Win, Lose and Time
+    let spaceDustWin: SKSpriteNode
+    let spaceDustWinLabel: SKSpriteNode
+    let spaceDustLose: SKSpriteNode
+    let spaceDustLoseLabel: SKSpriteNode
+    let spaceDustTime: SKSpriteNode
+    let spaceDustTimeLabel: SKSpriteNode
+    
+    /// Acid Rain Skin
+    // Backgrounds
+    let acidRainBackground: SKSpriteNode
+    // Menu Buttons
+    let acidRainMenu: SKSpriteNode
+    // Win, Lose and Time
+    let acidRainWin: SKSpriteNode
+    let acidRainWinLabel: SKSpriteNode
+    let acidRainLose: SKSpriteNode
+    let acidRainLoseLabel: SKSpriteNode
+    let acidRainTime: SKSpriteNode
+    let acidRainTimeLabel: SKSpriteNode
     
     init(inThisScene: ScoreScene) {
         
@@ -104,7 +130,7 @@ struct ScoreControls {
         scoreLoseLabel.fontColor = .white
         scoreLoseLabel.fontSize = 32
         scoreLoseLabel.zPosition = 3
-
+        
         /// Score Time Label
         scoreTimeLabel = SKLabelNode.init(text: "10")
         scoreTimeLabel.name = "titleLabel-Menu"
@@ -194,7 +220,7 @@ struct ScoreControls {
         retroLifeSkinMenu.name = "buttonSprite-Menu"
         retroLifeSkinMenu.zPosition = 2
         retroLifeSkinMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
-
+        
         // Rainbow Skin
         /// Backgrounds
         rainbowBackground = SKSpriteNode.init(imageNamed: "Background Rainbow")
@@ -305,7 +331,82 @@ struct ScoreControls {
         soccerMenu.name = "buttonSprite-Menu"
         soccerMenu.zPosition = 2
         soccerMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
-
+        
+        
+        // Space Dust Skin
+        /// Backgrounds
+        spaceDustBackground = SKSpriteNode.init(imageNamed: "Background Dust")
+        spaceDustBackground.name = "background"
+        spaceDustBackground.zPosition = 1
+        spaceDustBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        spaceDustBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Win
+        spaceDustWin = SKSpriteNode.init(imageNamed: "Wins Dust")
+        spaceDustWin.name = "image-Win"
+        spaceDustWin.zPosition = 2
+        /// WinLabel
+        spaceDustWinLabel = SKSpriteNode.init(imageNamed: "Multipurpose Dust")
+        spaceDustWinLabel.name = "Label-Win"
+        spaceDustWinLabel.zPosition = 2
+        /// Lose
+        spaceDustLose = SKSpriteNode.init(imageNamed: "Lose Dust")
+        spaceDustLose.name = "image-Lose"
+        spaceDustLose.zPosition = 2
+        /// Loselabel
+        spaceDustLoseLabel = SKSpriteNode.init(imageNamed: "Multipurpose Dust")
+        spaceDustLoseLabel.name = "Label-Lose"
+        spaceDustLoseLabel.zPosition = 2
+        /// Time
+        spaceDustTime = SKSpriteNode.init(imageNamed: "Time Dust")
+        spaceDustTime.name = "image-Time"
+        spaceDustTime.zPosition = 2
+        /// Timelabel
+        spaceDustTimeLabel = SKSpriteNode.init(imageNamed: "Multipurpose Dust")
+        spaceDustTimeLabel.name = "Label-Time"
+        spaceDustTimeLabel.zPosition = 2
+        /// Menu Button
+        spaceDustMenu = SKSpriteNode.init(imageNamed: "MENU Dust")
+        spaceDustMenu.name = "buttonSprite-Menu"
+        spaceDustMenu.zPosition = 2
+        spaceDustMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
+        
+        // Acid Rain Skin
+        /// Backgrounds
+        acidRainBackground = SKSpriteNode.init(imageNamed: "Background Toxic")
+        acidRainBackground.name = "background"
+        acidRainBackground.zPosition = 1
+        acidRainBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        acidRainBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Win
+        acidRainWin = SKSpriteNode.init(imageNamed: "Wins Toxic")
+        acidRainWin.name = "image-Win"
+        acidRainWin.zPosition = 2
+        /// WinLabel
+        acidRainWinLabel = SKSpriteNode.init(imageNamed: "Mutipurpose Toxic")
+        acidRainWinLabel.name = "Label-Win"
+        acidRainWinLabel.zPosition = 2
+        /// Lose
+        acidRainLose = SKSpriteNode.init(imageNamed: "Lose Toxic")
+        acidRainLose.name = "image-Lose"
+        acidRainLose.zPosition = 2
+        /// Loselabel
+        acidRainLoseLabel = SKSpriteNode.init(imageNamed: "Mutipurpose Toxic")
+        acidRainLoseLabel.name = "Label-Lose"
+        acidRainLoseLabel.zPosition = 2
+        /// Time
+        acidRainTime = SKSpriteNode.init(imageNamed: "Time Toxic")
+        acidRainTime.name = "image-Time"
+        acidRainTime.zPosition = 2
+        /// Timelabel
+        acidRainTimeLabel = SKSpriteNode.init(imageNamed: "Mutipurpose Toxic")
+        acidRainTimeLabel.name = "Label-Time"
+        acidRainTimeLabel.zPosition = 2
+        /// Menu Button
+        acidRainMenu = SKSpriteNode.init(imageNamed: "MENU Toxic")
+        acidRainMenu.name = "buttonSprite-Menu"
+        acidRainMenu.zPosition = 2
+        acidRainMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
+        
         
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
             //16:9
@@ -551,6 +652,101 @@ struct ScoreControls {
                 height: (soccerMenu.size.height * (inThisScene.size.height / soccerMenu.size.height)*(10.42/100))
             )
             
+            
+            /// Dust Skin
+            //16:9
+            spaceDustWin.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            spaceDustWin.size = CGSize(
+                width: (spaceDustWin.size.width * (inThisScene.size.width / spaceDustWin.size.width)*(37.04/100)),
+                height: (spaceDustWin.size.height * (inThisScene.size.height / spaceDustWin.size.height)*(10.42/100)))
+            //16:9
+            spaceDustWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            spaceDustWinLabel.size = CGSize(
+                width: (spaceDustWinLabel.size.width * (inThisScene.size.width / spaceDustWinLabel.size.width)*(37.04/100)),
+                height: (spaceDustWinLabel.size.height * (inThisScene.size.height / spaceDustWinLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            spaceDustLose.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            spaceDustLose.size = CGSize(
+                width: (spaceDustLose.size.width * (inThisScene.size.width / spaceDustLose.size.width)*(37.04/100)),
+                height: (spaceDustLose.size.height * (inThisScene.size.height / spaceDustLose.size.height)*(10.42/100)))
+            //16:9
+            spaceDustLoseLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            spaceDustLoseLabel.size = CGSize(
+                width: (spaceDustLoseLabel.size.width * (inThisScene.size.width / spaceDustLoseLabel.size.width)*(37.04/100)),
+                height: (spaceDustLoseLabel.size.height * (inThisScene.size.height / spaceDustLoseLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            spaceDustTime.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            spaceDustTime.size = CGSize(
+                width: (spaceDustTime.size.width * (inThisScene.size.width / spaceDustTime.size.width)*(37.04/100)),
+                height: (spaceDustTime.size.height * (inThisScene.size.height / spaceDustTime.size.height)*(10.42/100))
+            )
+            //16:9
+            spaceDustTimeLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            spaceDustTimeLabel.size = CGSize(
+                width: (spaceDustTimeLabel.size.width * (inThisScene.size.width / spaceDustTimeLabel.size.width)*(37.04/100)),
+                height: (spaceDustTimeLabel.size.height * (inThisScene.size.height / spaceDustTimeLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            spaceDustMenu.size = CGSize(
+                width: (spaceDustMenu.size.width * (inThisScene.size.width / spaceDustMenu.size.width)*(37.04/100)),
+                height: (spaceDustMenu.size.height * (inThisScene.size.height / spaceDustMenu.size.height)*(10.42/100))
+            )
+            
+            
+            /// Acid Rain Skin
+            //16:9
+            acidRainWin.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            acidRainWin.size = CGSize(
+                width: (acidRainWin.size.width * (inThisScene.size.width / acidRainWin.size.width)*(37.04/100)),
+                height: (acidRainWin.size.height * (inThisScene.size.height / acidRainWin.size.height)*(10.42/100)))
+            //16:9
+            acidRainWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            acidRainWinLabel.size = CGSize(
+                width: (acidRainWinLabel.size.width * (inThisScene.size.width / acidRainWinLabel.size.width)*(37.04/100)),
+                height: (acidRainWinLabel.size.height * (inThisScene.size.height / acidRainWinLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            acidRainLose.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            acidRainLose.size = CGSize(
+                width: (acidRainLose.size.width * (inThisScene.size.width / acidRainLose.size.width)*(37.04/100)),
+                height: (acidRainLose.size.height * (inThisScene.size.height / acidRainLose.size.height)*(10.42/100)))
+            //16:9
+            acidRainLoseLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            acidRainLoseLabel.size = CGSize(
+                width: (acidRainLoseLabel.size.width * (inThisScene.size.width / acidRainLoseLabel.size.width)*(37.04/100)),
+                height: (acidRainLoseLabel.size.height * (inThisScene.size.height / acidRainLoseLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            acidRainTime.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            acidRainTime.size = CGSize(
+                width: (acidRainTime.size.width * (inThisScene.size.width / acidRainTime.size.width)*(37.04/100)),
+                height: (acidRainTime.size.height * (inThisScene.size.height / acidRainTime.size.height)*(10.42/100))
+            )
+            //16:9
+            acidRainTimeLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            acidRainTimeLabel.size = CGSize(
+                width: (acidRainTimeLabel.size.width * (inThisScene.size.width / acidRainTimeLabel.size.width)*(37.04/100)),
+                height: (acidRainTimeLabel.size.height * (inThisScene.size.height / acidRainTimeLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            acidRainMenu.size = CGSize(
+                width: (acidRainMenu.size.width * (inThisScene.size.width / acidRainMenu.size.width)*(37.04/100)),
+                height: (acidRainMenu.size.height * (inThisScene.size.height / acidRainMenu.size.height)*(10.42/100))
+            )
         }else{
             //4:3
             scoreWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
@@ -769,8 +965,92 @@ struct ScoreControls {
                 width: (soccerMenu.size.width * (inThisScene.size.width / soccerMenu.size.width)*(29.3/100)),
                 height: (soccerMenu.size.height * (inThisScene.size.height / soccerMenu.size.height)*(11/100)))
             
+            /// Dust Skin
+            //4:3
+            spaceDustWin.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            spaceDustWin.size  = CGSize(
+                width: (spaceDustWin.size.width * (inThisScene.size.width / spaceDustWin.size.width)*(29.3/100)),
+                height: (spaceDustWin.size.height * (inThisScene.size.height / spaceDustWin.size.height)*(11/100)))
+            //4:3
+            spaceDustWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            spaceDustWinLabel.size  = CGSize(
+                width: (spaceDustWinLabel.size.width * (inThisScene.size.width / spaceDustWinLabel.size.width)*(29.3/100)),
+                height: (spaceDustWinLabel.size.height * (inThisScene.size.height / spaceDustWinLabel.size.height)*(11/100)))
+            //4:3
+            spaceDustLose.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            spaceDustLose.size  = CGSize(
+                width: (spaceDustLose.size.width * (inThisScene.size.width / spaceDustLose.size.width)*(29.3/100)),
+                height: (spaceDustLose.size.height * (inThisScene.size.height / spaceDustLose.size.height)*(11/100)))
+            //4:3
+            spaceDustLoseLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            spaceDustLoseLabel.size  = CGSize(
+                width: (spaceDustLoseLabel.size.width * (inThisScene.size.width / spaceDustLoseLabel.size.width)*(29.3/100)),
+                height: (spaceDustLoseLabel.size.height * (inThisScene.size.height / spaceDustLoseLabel.size.height)*(11/100)))
+            //4:3
+            spaceDustTime.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            spaceDustTime.size  = CGSize(
+                width: (spaceDustTime.size.width * (inThisScene.size.width / spaceDustTime.size.width)*(29.3/100)),
+                height: (spaceDustTime.size.height * (inThisScene.size.height / spaceDustTime.size.height)*(11/100)))
+            //4:3
+            spaceDustTimeLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            spaceDustTimeLabel.size  = CGSize(
+                width: (spaceDustTimeLabel.size.width * (inThisScene.size.width / spaceDustTimeLabel.size.width)*(29.3/100)),
+                height: (spaceDustTimeLabel.size.height * (inThisScene.size.height / spaceDustTimeLabel.size.height)*(11/100)))
+            //4:3
+            spaceDustMenu.size  = CGSize(
+                width: (spaceDustMenu.size.width * (inThisScene.size.width / spaceDustMenu.size.width)*(29.3/100)),
+                height: (spaceDustMenu.size.height * (inThisScene.size.height / spaceDustMenu.size.height)*(11/100)))
+            
+            /// Acid Rain Skin
+            //4:3
+            acidRainWin.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            acidRainWin.size  = CGSize(
+                width: (acidRainWin.size.width * (inThisScene.size.width / acidRainWin.size.width)*(29.3/100)),
+                height: (acidRainWin.size.height * (inThisScene.size.height / acidRainWin.size.height)*(11/100)))
+            //4:3
+            acidRainWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            acidRainWinLabel.size  = CGSize(
+                width: (acidRainWinLabel.size.width * (inThisScene.size.width / acidRainWinLabel.size.width)*(29.3/100)),
+                height: (acidRainWinLabel.size.height * (inThisScene.size.height / acidRainWinLabel.size.height)*(11/100)))
+            //4:3
+            acidRainLose.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            acidRainLose.size  = CGSize(
+                width: (acidRainLose.size.width * (inThisScene.size.width / acidRainLose.size.width)*(29.3/100)),
+                height: (acidRainLose.size.height * (inThisScene.size.height / acidRainLose.size.height)*(11/100)))
+            //4:3
+            acidRainLoseLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            acidRainLoseLabel.size  = CGSize(
+                width: (acidRainLoseLabel.size.width * (inThisScene.size.width / acidRainLoseLabel.size.width)*(29.3/100)),
+                height: (acidRainLoseLabel.size.height * (inThisScene.size.height / acidRainLoseLabel.size.height)*(11/100)))
+            //4:3
+            acidRainTime.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            acidRainTime.size  = CGSize(
+                width: (acidRainTime.size.width * (inThisScene.size.width / acidRainTime.size.width)*(29.3/100)),
+                height: (acidRainTime.size.height * (inThisScene.size.height / acidRainTime.size.height)*(11/100)))
+            //4:3
+            acidRainTimeLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            acidRainTimeLabel.size  = CGSize(
+                width: (acidRainTimeLabel.size.width * (inThisScene.size.width / acidRainTimeLabel.size.width)*(29.3/100)),
+                height: (acidRainTimeLabel.size.height * (inThisScene.size.height / acidRainTimeLabel.size.height)*(11/100)))
+            //4:3
+            acidRainMenu.size  = CGSize(
+                width: (acidRainMenu.size.width * (inThisScene.size.width / acidRainMenu.size.width)*(29.3/100)),
+                height: (acidRainMenu.size.height * (inThisScene.size.height / acidRainMenu.size.height)*(11/100)))
+            
         }// END Else
-
+        
     }//END Init
     
 }//END Struct

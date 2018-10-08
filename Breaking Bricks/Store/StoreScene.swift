@@ -14,13 +14,20 @@ var costRetroF: Int = 2
 var costRainbowF: Int = 2
 var costLightF = 1
 var costSoccerF = 3
+var costSpaceDust = 3
+var costAcidF = 2
 
 var costRetroB = false
 var costRainbowB = false
 var costLightB = false
 var costSoccerB = false
+var costSpaceDustB = false
+var costAcidB = false
 
-var storeImages = ["RainbowBuy","RetroBuy","ClassicOwned","LightBuy","SoccerBuy"]
+var storeImages = ["RainbowBuy","RetroBuy","ClassicOwned","LightBuy","SoccerBuy",
+                   "SpaceDustBuy","AcidBuy"]
+
+
 var storeImagesiPad = ["RainbowBuyiPad","RetroBuyiPad","ClassicOwnediPad","LightBuyiPad","SoccerBuyiPad"]
 
 class StoreScene: SKScene, ZCarouselDelegate {
@@ -33,11 +40,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
             print("Rainbow",costRainbowF)
             print("Light",costLightF)
             print("Soccer",costSoccerF)
+            print("Space Dust",costSpaceDust)
+            print("Acid Raind", costAcidF)
             savedValues()
         }
         
     }
-
+    
     let deviceType = UIDevice.current.deviceType
     
     var images: ZCarousel!
@@ -94,6 +103,27 @@ class StoreScene: SKScene, ZCarouselDelegate {
             storeImagesiPad.insert("SoccerOwnediPad", at: 4)
         }
         
+        //Space Dust
+        if(costSpaceDustB == true){
+            storeImages.remove(at: 5)
+            storeImages.insert("SpaceDustOwned", at: 5)
+        }
+        //        if(costSpaceDustB == true){
+        //            storeImagesiPad.remove(at: 5)
+        //            storeImagesiPad.insert("SpaceDustOwnediPad", at: 5)
+        //        }
+        
+        //Acid Rain
+        if(costAcidB == true){
+            storeImages.remove(at: 6)
+            storeImages.insert("AcidOwned", at: 6)
+        }
+        //        if(costAcidB == true){
+        //            storeImagesiPad.remove(at: 6)
+        //            storeImagesiPad.insert("AcidOwnediPad", at: 6)
+        //        }
+        
+        
         /// Set reference of GameViewControl
         gameViewController = referenceGVC
         
@@ -101,13 +131,15 @@ class StoreScene: SKScene, ZCarouselDelegate {
         costRainbowF = 2
         costLightF = 1
         costSoccerF = 3
+        costSpaceDust = 3
+        costAcidF = 2
         
         /// Create scene from code
         super.init(size: sceneSize)
         
         /// Menu Controls
         storeControls = StoreControls.init(inThisScene: self)
-        sceneNumber = 0
+        sceneNumber = 2
         
         /// Load scene
         if let skView = gameViewController.view as! SKView? {
@@ -266,14 +298,75 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
             }
-          
-        }
+        }//END if
+        if index == 5{
+            if(costSpaceDustB == false){
+                if coin >= costSpaceDust{
+                    coin = coin - costSpaceDust
+                    costSpaceDustB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 5
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
+                        if(costSpaceDustB == true){
+                            storeImages.remove(at: 5)
+                            storeImages.insert("SpaceDustOwned", at: 5)
+                        }
+                    }else{
+                        if(costSpaceDustB == true){
+                            storeImagesiPad.remove(at: 5)
+                            storeImagesiPad.insert("SpaceDustOwnediPad", at: 5)
+                        }
+                    }
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 5
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 6{
+            if(costAcidB == false){
+                if coin >= costAcidF{
+                    coin = coin - costAcidF
+                    costAcidB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 6
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
+                        if(costAcidB == true){
+                            storeImages.remove(at: 6)
+                            storeImages.insert("AcidOwned", at: 6)
+                        }
+                    }else{
+                        if(costAcidB == true){
+                            storeImagesiPad.remove(at: 6)
+                            storeImagesiPad.insert("AcidOwnediPad", at: 6)
+                        }
+                    }
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 6
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
     }
     
     /// Present Elements to the Scene
     override func didMove(to view: SKView) {
         
-
+        
         index = 2
         savedValues()
         
@@ -300,11 +393,11 @@ class StoreScene: SKScene, ZCarouselDelegate {
         images.isUserInteractionEnabled = true
         images.addGestureRecognizer(tap)
         
-         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
+        if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
             
             images?.addImages(storeImages)
             
-         }else{
+        }else{
             images?.addImages(storeImagesiPad)
         }
         
@@ -321,9 +414,9 @@ class StoreScene: SKScene, ZCarouselDelegate {
             self.addChild(storeControls.classicBackground)
             self.addChild(storeControls.menuclassic)
             self.addChild(storeControls.currentclassic)
-
+            
             storeControls.coinLabel.fontColor = .white
-        
+            
         }
         if sceneNumber == 1{
             
@@ -331,9 +424,9 @@ class StoreScene: SKScene, ZCarouselDelegate {
             self.addChild(storeControls.retroLifeSkinBackground)
             self.addChild(storeControls.retroLifeSkinMenu)
             self.addChild(storeControls.retroLifeSkinCurrent)
-
+            
             storeControls.coinLabel.fontColor = .white
-  
+            
         }
         if sceneNumber == 2{
             
@@ -343,7 +436,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
             self.addChild(storeControls.rainbowBackground)
             
             storeControls.coinLabel.fontColor = .white
-
+            
         }
         if sceneNumber == 3{
             
@@ -364,28 +457,38 @@ class StoreScene: SKScene, ZCarouselDelegate {
             storeControls.coinLabel.fontColor = UIColor(red:0.96, green:0.75, blue:0.00, alpha:1.0)
             
         }
+        if sceneNumber == 5{
+            
+            /// Present Label and Button
+            self.addChild(storeControls.spaceDustMenu)
+            self.addChild(storeControls.spaceDustCurrent)
+            self.addChild(storeControls.spaceDustBackground)
+            
+            storeControls.coinLabel.fontColor = .white
+            
+        }
+        if sceneNumber == 6{
+            
+            /// Present Label and Button
+            self.addChild(storeControls.acidRainMenu)
+            self.addChild(storeControls.acidRainCurrent)
+            self.addChild(storeControls.acidRainBackground)
+            
+            storeControls.coinLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
+            
+        }
         
         storeControls.coinLabel.text = ("\(coin)")
-
+        
     }
-
+    
     func savedValues() {
         
         let userDefaults = UserDefaults.standard
         
         userDefaults.setValue(coin, forKey: "coinsStore")
-
-        let coinValue = userDefaults.integer(forKey: "coinsStore")
-        //print("Coins Store: \(coinValue)")
         
-//        userDefaults.setValue(costRetroF, forKey: "costRetro")
-//        print("SKIN VALUE", costRetroF)
-//        userDefaults.setValue(costRainbowF, forKey: "costRainbow")
-//        print("SKIN VALUE", costRainbowF)
-//        userDefaults.setValue(costLightF, forKey: "costLight")
-//        print("SKIN VALUE", costLightF)
-//        userDefaults.setValue(costSoccerF, forKey: "costSoccer")
-//        print("SKIN VALUE", costSoccerF)
+        let coinValue = userDefaults.integer(forKey: "coinsStore")
         
         userDefaults.setValue(costRetroB, forKey: "costRetroB")
         //print("SKIN VALUE costRetroB ", costRetroB)
@@ -395,6 +498,9 @@ class StoreScene: SKScene, ZCarouselDelegate {
         //print("SKIN VALUE costLightB ", costLightB)
         userDefaults.setValue(costSoccerB, forKey: "costSoccerB")
         //print("SKIN VALUE costSoccerB ", costSoccerB)
+        userDefaults.setValue(costSpaceDustB, forKey: "costSpaceDustB")
+        
+        userDefaults.setValue(costAcidB, forKey: "costAcidB")
         
     }
     /// Before another Scence will be presented

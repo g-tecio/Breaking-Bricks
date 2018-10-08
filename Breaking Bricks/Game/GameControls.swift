@@ -11,72 +11,96 @@ import Device_swift
 
 struct GameControls {
     
-        let deviceType = UIDevice.current.deviceType
+    let deviceType = UIDevice.current.deviceType
     
-        //Screen Barrier
-        let borderBody: SKPhysicsBody
-        let scoreLabel: SKLabelNode
-        let timerLabel: SKLabelNode
+    //Screen Barrier
+    let borderBody: SKPhysicsBody
+    let scoreLabel: SKLabelNode
+    let timerLabel: SKLabelNode
     
-        ///Classic
-        // Backgrounds
-        let bgclassic: SKSpriteNode
-        // Paddles
-        let  paddleclassic: SKSpriteNode
-        // Balls
-        let ballclassic: SKSpriteNode
-        //Timer
-        let timerBrick: SKSpriteNode
-        //Score
-        let scoreBrick: SKSpriteNode
+    ///Classic
+    // Backgrounds
+    let bgclassic: SKSpriteNode
+    // Paddles
+    let  paddleclassic: SKSpriteNode
+    // Balls
+    let ballclassic: SKSpriteNode
+    //Timer
+    let timerBrick: SKSpriteNode
+    //Score
+    let scoreBrick: SKSpriteNode
     
-        /// Retro Life Skin
-        // Backgrounds
-        let retroLifeSkinBackground: SKSpriteNode
-        // Paddles
-        let retroLifeSkinPaddle: SKSpriteNode
-        // Balls
-        let retroLifeSkinBall: SKSpriteNode
-        //Timer
-        let retroLifeSkinTimer: SKSpriteNode
-        //Score
-        let retroLifeSkinScore: SKSpriteNode
+    /// Retro Life Skin
+    // Backgrounds
+    let retroLifeSkinBackground: SKSpriteNode
+    // Paddles
+    let retroLifeSkinPaddle: SKSpriteNode
+    // Balls
+    let retroLifeSkinBall: SKSpriteNode
+    //Timer
+    let retroLifeSkinTimer: SKSpriteNode
+    //Score
+    let retroLifeSkinScore: SKSpriteNode
     
-        /// Rainbow Skin
-        // Backgrounds
-        let rainbowBackground: SKSpriteNode
-        // Paddles
-        let rainbowPaddle: SKSpriteNode
-        // Balls
-        let rainbowBall: SKSpriteNode
-        //Timer
-        let rainbowTimer: SKSpriteNode
-        //Score
-        let rainbowScore: SKSpriteNode
+    /// Rainbow Skin
+    // Backgrounds
+    let rainbowBackground: SKSpriteNode
+    // Paddles
+    let rainbowPaddle: SKSpriteNode
+    // Balls
+    let rainbowBall: SKSpriteNode
+    //Timer
+    let rainbowTimer: SKSpriteNode
+    //Score
+    let rainbowScore: SKSpriteNode
     
-        /// Light Skin
-        // Backgrounds
-        let lightBackground: SKSpriteNode
-        // Paddles
-        let lightPaddle: SKSpriteNode
-        // Balls
-        let lightBall: SKSpriteNode
-        //Timer
-        let lightTimer: SKSpriteNode
-        //Score
-        let lightScore: SKSpriteNode
+    /// Light Skin
+    // Backgrounds
+    let lightBackground: SKSpriteNode
+    // Paddles
+    let lightPaddle: SKSpriteNode
+    // Balls
+    let lightBall: SKSpriteNode
+    //Timer
+    let lightTimer: SKSpriteNode
+    //Score
+    let lightScore: SKSpriteNode
     
-        /// Soccer Skin
-        // Backgrounds
-        let soccerBackground: SKSpriteNode
-        // Paddles
-        let soccerPaddle: SKSpriteNode
-        // Balls
-        let soccerBall: SKSpriteNode
-        //Timer
-        let soccerTimer: SKSpriteNode
-        //Score
-        let soccerScore: SKSpriteNode
+    /// Soccer Skin
+    // Backgrounds
+    let soccerBackground: SKSpriteNode
+    // Paddles
+    let soccerPaddle: SKSpriteNode
+    // Balls
+    let soccerBall: SKSpriteNode
+    //Timer
+    let soccerTimer: SKSpriteNode
+    //Score
+    let soccerScore: SKSpriteNode
+    
+    /// Dust Skin
+    // Backgrounds
+    let spaceDustBackground: SKSpriteNode
+    // Paddles
+    let spaceDustPaddle: SKSpriteNode
+    // Balls
+    let spaceDustBall: SKSpriteNode
+    //Timer
+    let spaceDustTimer: SKSpriteNode
+    //Score
+    let spaceDustScore: SKSpriteNode
+    
+    /// Acid Rain Skin
+    // Backgrounds
+    let acidRainBackground: SKSpriteNode
+    // Paddles
+    let acidRainPaddle: SKSpriteNode
+    // Balls
+    let acidRainBall: SKSpriteNode
+    //Timer
+    let acidRainTimer: SKSpriteNode
+    //Score
+    let acidRainScore: SKSpriteNode
     
     
     init(inThisScene: GameScene) {
@@ -166,7 +190,7 @@ struct GameControls {
         retroLifeSkinScore = SKSpriteNode.init(imageNamed: "Timer_Score Retro")
         retroLifeSkinScore.zPosition = 3
         retroLifeSkinScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
-
+        
         /// Rainbow Skin
         // Backgrounds
         rainbowBackground = SKSpriteNode.init(imageNamed: "Background Rainbow")
@@ -250,6 +274,62 @@ struct GameControls {
         soccerScore = SKSpriteNode.init(imageNamed: "Timer_Score Soccer")
         soccerScore.zPosition = 3
         soccerScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
+        
+        /// Space Dust Skin
+        // Backgrounds
+        spaceDustBackground = SKSpriteNode.init(imageNamed: "Background Dust")
+        spaceDustBackground.name = "background"
+        spaceDustBackground.zPosition = 1
+        spaceDustBackground.position = CGPoint(x: inThisScene.size.width/2, y: inThisScene.size.height/2)
+        spaceDustBackground.size = CGSize(
+            width: ((spaceDustBackground.size.width * (inThisScene.size.width / spaceDustBackground.size.width))),
+            height: (spaceDustBackground.size.height * (inThisScene.size.height / spaceDustBackground.size.height)))
+        //Paddles
+        spaceDustPaddle = SKSpriteNode.init(imageNamed: "Paddle Dust")
+        spaceDustPaddle.name = "paddle"
+        spaceDustPaddle.zPosition = 3
+        spaceDustPaddle.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (12.29/100))
+        //Balls
+        spaceDustBall = SKSpriteNode.init(imageNamed: "Ball Dust")
+        spaceDustBall.name = "ball"
+        spaceDustBall.zPosition = 2
+        spaceDustBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
+        //Timer Brick
+        spaceDustTimer = SKSpriteNode.init(imageNamed: "Timer_Score Dust")
+        spaceDustTimer.zPosition = 3
+        spaceDustTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
+        //Score Brick
+        spaceDustScore = SKSpriteNode.init(imageNamed: "Timer_Score Dust")
+        spaceDustScore.zPosition = 3
+        spaceDustScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
+        
+        /// Acid Rain Skin
+        // Backgrounds
+        acidRainBackground = SKSpriteNode.init(imageNamed: "Background Toxic")
+        acidRainBackground.name = "background"
+        acidRainBackground.zPosition = 1
+        acidRainBackground.position = CGPoint(x: inThisScene.size.width/2, y: inThisScene.size.height/2)
+        acidRainBackground.size = CGSize(
+            width: ((acidRainBackground.size.width * (inThisScene.size.width / acidRainBackground.size.width))),
+            height: (acidRainBackground.size.height * (inThisScene.size.height / acidRainBackground.size.height)))
+        //Paddles
+        acidRainPaddle = SKSpriteNode.init(imageNamed: "Paddle Toxic")
+        acidRainPaddle.name = "paddle"
+        acidRainPaddle.zPosition = 3
+        acidRainPaddle.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (12.29/100))
+        //Balls
+        acidRainBall = SKSpriteNode.init(imageNamed: "Ball Toxic")
+        acidRainBall.name = "ball"
+        acidRainBall.zPosition = 2
+        acidRainBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
+        //Timer Brick
+        acidRainTimer = SKSpriteNode.init(imageNamed: "Timer_score Acid")
+        acidRainTimer.zPosition = 3
+        acidRainTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
+        //Score Brick
+        acidRainScore = SKSpriteNode.init(imageNamed: "Timer_score Acid")
+        acidRainScore.zPosition = 3
+        acidRainScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
@@ -371,13 +451,13 @@ struct GameControls {
             lightScore.size = CGSize(
                 width: (lightScore.size.width * (inThisScene.size.width / lightScore.size.width)*(22.22/100)),
                 height: (lightScore.size.height * (inThisScene.size.height / lightScore.size.height)*(4.17/100)))
-
+            
             /// Soccer Skin
             //16:9
             soccerPaddle.size = CGSize(
                 width: ((soccerPaddle.size.width * (inThisScene.size.width / soccerPaddle.size.width)*(25/100))),
                 height: (soccerPaddle.size.height * (inThisScene.size.height / soccerPaddle.size.height)*(1.56/100)))
-            soccerPaddle.physicsBody = SKPhysicsBody(rectangleOf: lightPaddle.size)
+            soccerPaddle.physicsBody = SKPhysicsBody(rectangleOf: soccerPaddle.size)
             soccerPaddle.physicsBody?.isDynamic = false
             soccerPaddle.physicsBody?.friction = 0
             soccerPaddle.physicsBody?.restitution = 1
@@ -385,7 +465,7 @@ struct GameControls {
             soccerBall.size = CGSize(
                 width: (soccerBall.size.width * (inThisScene.size.width / soccerBall.size.width)*(4.63/100)),
                 height: (soccerBall.size.height * (inThisScene.size.height / soccerBall.size.height)*(2.6/100)))
-            soccerBall.physicsBody = SKPhysicsBody(circleOfRadius: (lightBall.size.width / 2))
+            soccerBall.physicsBody = SKPhysicsBody(circleOfRadius: (soccerBall.size.width / 2))
             soccerBall.physicsBody?.allowsRotation = false
             soccerBall.physicsBody?.affectedByGravity = true
             soccerBall.physicsBody?.friction = 0
@@ -401,6 +481,67 @@ struct GameControls {
             soccerScore.size = CGSize(
                 width: (soccerScore.size.width * (inThisScene.size.width / soccerScore.size.width)*(22.22/100)),
                 height: (soccerScore.size.height * (inThisScene.size.height / soccerScore.size.height)*(4.17/100)))
+            
+            
+            /// Space Dust Skin
+            //16:9
+            spaceDustPaddle.size = CGSize(
+                width: ((spaceDustPaddle.size.width * (inThisScene.size.width / spaceDustPaddle.size.width)*(25/100))),
+                height: (spaceDustPaddle.size.height * (inThisScene.size.height / spaceDustPaddle.size.height)*(1.56/100)))
+            spaceDustPaddle.physicsBody = SKPhysicsBody(rectangleOf: spaceDustPaddle.size)
+            spaceDustPaddle.physicsBody?.isDynamic = false
+            spaceDustPaddle.physicsBody?.friction = 0
+            spaceDustPaddle.physicsBody?.restitution = 1
+            //16:9
+            spaceDustBall.size = CGSize(
+                width: (spaceDustBall.size.width * (inThisScene.size.width / spaceDustBall.size.width)*(4.63/100)),
+                height: (spaceDustBall.size.height * (inThisScene.size.height / spaceDustBall.size.height)*(2.6/100)))
+            spaceDustBall.physicsBody = SKPhysicsBody(circleOfRadius: (spaceDustBall.size.width / 2))
+            spaceDustBall.physicsBody?.allowsRotation = false
+            spaceDustBall.physicsBody?.affectedByGravity = true
+            spaceDustBall.physicsBody?.friction = 0
+            spaceDustBall.physicsBody?.restitution = 1
+            spaceDustBall.physicsBody?.linearDamping = 0
+            spaceDustBall.physicsBody?.angularDamping = 0
+            spaceDustBall.physicsBody?.mass = 0.01
+            //16:9
+            spaceDustTimer.size = CGSize(
+                width: (spaceDustTimer.size.width * (inThisScene.size.width / spaceDustTimer.size.width)*(22/100)),
+                height: (spaceDustTimer.size.height * (inThisScene.size.height / spaceDustTimer.size.height)*(4/100)))
+            //16:9
+            spaceDustScore.size = CGSize(
+                width: (spaceDustScore.size.width * (inThisScene.size.width / spaceDustScore.size.width)*(22.22/100)),
+                height: (spaceDustScore.size.height * (inThisScene.size.height / spaceDustScore.size.height)*(4.17/100)))
+            
+            /// Space Dust Skin
+            //16:9
+            acidRainPaddle.size = CGSize(
+                width: ((acidRainPaddle.size.width * (inThisScene.size.width / acidRainPaddle.size.width)*(25/100))),
+                height: (acidRainPaddle.size.height * (inThisScene.size.height / acidRainPaddle.size.height)*(1.56/100)))
+            acidRainPaddle.physicsBody = SKPhysicsBody(rectangleOf: acidRainPaddle.size)
+            acidRainPaddle.physicsBody?.isDynamic = false
+            acidRainPaddle.physicsBody?.friction = 0
+            acidRainPaddle.physicsBody?.restitution = 1
+            //16:9
+            acidRainBall.size = CGSize(
+                width: (acidRainBall.size.width * (inThisScene.size.width / acidRainBall.size.width)*(4.63/100)),
+                height: (acidRainBall.size.height * (inThisScene.size.height / acidRainBall.size.height)*(2.6/100)))
+            acidRainBall.physicsBody = SKPhysicsBody(circleOfRadius: (acidRainBall.size.width / 2))
+            acidRainBall.physicsBody?.allowsRotation = false
+            acidRainBall.physicsBody?.affectedByGravity = true
+            acidRainBall.physicsBody?.friction = 0
+            acidRainBall.physicsBody?.restitution = 1
+            acidRainBall.physicsBody?.linearDamping = 0
+            acidRainBall.physicsBody?.angularDamping = 0
+            acidRainBall.physicsBody?.mass = 0.01
+            //16:9
+            acidRainTimer.size = CGSize(
+                width: (acidRainTimer.size.width * (inThisScene.size.width / acidRainTimer.size.width)*(22/100)),
+                height: (acidRainTimer.size.height * (inThisScene.size.height / acidRainTimer.size.height)*(4/100)))
+            //16:9
+            acidRainScore.size = CGSize(
+                width: (acidRainScore.size.width * (inThisScene.size.width / acidRainScore.size.width)*(22.22/100)),
+                height: (acidRainScore.size.height * (inThisScene.size.height / acidRainScore.size.height)*(4.17/100)))
             
         }else{
             /// Classic
@@ -528,7 +669,7 @@ struct GameControls {
             soccerPaddle.size = CGSize(
                 width: ((soccerPaddle.size.width * (inThisScene.size.width / soccerPaddle.size.width)*(24.41/100))),
                 height: (soccerPaddle.size.height * (inThisScene.size.height / soccerPaddle.size.height)*(2.56/100)))
-            soccerPaddle.physicsBody = SKPhysicsBody(rectangleOf: rainbowPaddle.size)
+            soccerPaddle.physicsBody = SKPhysicsBody(rectangleOf: soccerPaddle.size)
             soccerPaddle.physicsBody?.isDynamic = false
             soccerPaddle.physicsBody?.friction = 0
             soccerPaddle.physicsBody?.restitution = 1
@@ -536,7 +677,7 @@ struct GameControls {
             soccerBall.size = CGSize(
                 width: (soccerBall.size.width * (inThisScene.size.width / soccerBall.size.width)*(3.91/100)),
                 height: (soccerBall.size.height * (inThisScene.size.height / soccerBall.size.height)*(2.93/100)))
-            soccerBall.physicsBody = SKPhysicsBody(circleOfRadius: (lightBall.size.width / 2))
+            soccerBall.physicsBody = SKPhysicsBody(circleOfRadius: (soccerBall.size.width / 2))
             soccerBall.physicsBody?.allowsRotation = false
             soccerBall.physicsBody?.affectedByGravity = true
             soccerBall.physicsBody?.friction = 0
@@ -553,8 +694,70 @@ struct GameControls {
                 width: (soccerScore.size.width * (inThisScene.size.width / soccerScore.size.width)*(17.57/100)),
                 height: (soccerScore.size.height * (inThisScene.size.height / soccerScore.size.height)*(4.49/100)))
             
+            
+            /// Space Dust Skin
+            //4:3
+            spaceDustPaddle.size = CGSize(
+                width: ((spaceDustPaddle.size.width * (inThisScene.size.width / spaceDustPaddle.size.width)*(24.41/100))),
+                height: (spaceDustPaddle.size.height * (inThisScene.size.height / spaceDustPaddle.size.height)*(2.56/100)))
+            spaceDustPaddle.physicsBody = SKPhysicsBody(rectangleOf: spaceDustPaddle.size)
+            spaceDustPaddle.physicsBody?.isDynamic = false
+            spaceDustPaddle.physicsBody?.friction = 0
+            spaceDustPaddle.physicsBody?.restitution = 1
+            //4:3
+            spaceDustBall.size = CGSize(
+                width: (spaceDustBall.size.width * (inThisScene.size.width / spaceDustBall.size.width)*(3.91/100)),
+                height: (spaceDustBall.size.height * (inThisScene.size.height / spaceDustBall.size.height)*(2.93/100)))
+            spaceDustBall.physicsBody = SKPhysicsBody(circleOfRadius: (spaceDustBall.size.width / 2))
+            spaceDustBall.physicsBody?.allowsRotation = false
+            spaceDustBall.physicsBody?.affectedByGravity = true
+            spaceDustBall.physicsBody?.friction = 0
+            spaceDustBall.physicsBody?.restitution = 1
+            spaceDustBall.physicsBody?.linearDamping = 0
+            spaceDustBall.physicsBody?.angularDamping = 0
+            spaceDustBall.physicsBody?.mass = 0.01
+            //4:3
+            spaceDustTimer.size = CGSize(
+                width: (spaceDustTimer.size.width * (inThisScene.size.width / spaceDustTimer.size.width)*(17.57/100)),
+                height: (spaceDustTimer.size.height * (inThisScene.size.height / spaceDustTimer.size.height)*(4.49/100)))
+            //4:3
+            spaceDustScore.size = CGSize(
+                width: (spaceDustScore.size.width * (inThisScene.size.width / spaceDustScore.size.width)*(17.57/100)),
+                height: (spaceDustScore.size.height * (inThisScene.size.height / spaceDustScore.size.height)*(4.49/100)))
+            
+            /// Acid Rain Skin
+            //4:3
+            acidRainPaddle.size = CGSize(
+                width: ((acidRainPaddle.size.width * (inThisScene.size.width / acidRainPaddle.size.width)*(24.41/100))),
+                height: (acidRainPaddle.size.height * (inThisScene.size.height / acidRainPaddle.size.height)*(2.56/100)))
+            acidRainPaddle.physicsBody = SKPhysicsBody(rectangleOf: acidRainPaddle.size)
+            acidRainPaddle.physicsBody?.isDynamic = false
+            acidRainPaddle.physicsBody?.friction = 0
+            acidRainPaddle.physicsBody?.restitution = 1
+            //4:3
+            acidRainBall.size = CGSize(
+                width: (acidRainBall.size.width * (inThisScene.size.width / acidRainBall.size.width)*(3.91/100)),
+                height: (acidRainBall.size.height * (inThisScene.size.height / acidRainBall.size.height)*(2.93/100)))
+            acidRainBall.physicsBody = SKPhysicsBody(circleOfRadius: (acidRainBall.size.width / 2))
+            acidRainBall.physicsBody?.allowsRotation = false
+            acidRainBall.physicsBody?.affectedByGravity = true
+            acidRainBall.physicsBody?.friction = 0
+            acidRainBall.physicsBody?.restitution = 1
+            acidRainBall.physicsBody?.linearDamping = 0
+            acidRainBall.physicsBody?.angularDamping = 0
+            acidRainBall.physicsBody?.mass = 0.01
+            //4:3
+            acidRainTimer.size = CGSize(
+                width: (acidRainTimer.size.width * (inThisScene.size.width / acidRainTimer.size.width)*(17.57/100)),
+                height: (acidRainTimer.size.height * (inThisScene.size.height / acidRainTimer.size.height)*(4.49/100)))
+            //4:3
+            acidRainScore.size = CGSize(
+                width: (acidRainScore.size.width * (inThisScene.size.width / acidRainScore.size.width)*(17.57/100)),
+                height: (acidRainScore.size.height * (inThisScene.size.height / acidRainScore.size.height)*(4.49/100)))
+            
+            
         }//End else
-
+        
     }//END Init
     
 }//END Struct

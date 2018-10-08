@@ -11,6 +11,13 @@ import Device_swift
 
 struct StoreControls {
     
+    //Coin Icon
+    let coin: SKSpriteNode
+    //Coin label
+    let coinLabel: SKLabelNode
+    
+    let deviceType = UIDevice.current.deviceType
+    
     /// Classic
     //backgrounds
     let classicBackground: SKSpriteNode
@@ -33,19 +40,21 @@ struct StoreControls {
     let lightBackground: SKSpriteNode
     let lightCurrent: SKSpriteNode
     let lightMenu: SKSpriteNode
-
+    
     /// Soccer Skin
     let soccerMenu: SKSpriteNode
     let soccerBackground: SKSpriteNode
     let soccerCurrent: SKSpriteNode
     
-    //Coin Icon
-    let coin: SKSpriteNode
+    /// Dust Skin
+    let spaceDustMenu: SKSpriteNode
+    let spaceDustBackground: SKSpriteNode
+    let spaceDustCurrent: SKSpriteNode
     
-    //Coin label
-    let coinLabel: SKLabelNode
-    
-    let deviceType = UIDevice.current.deviceType
+    /// Acid Rain Skin
+    let acidRainMenu: SKSpriteNode
+    let acidRainBackground: SKSpriteNode
+    let acidRainCurrent: SKSpriteNode
     
     init(inThisScene: StoreScene) {
         
@@ -84,7 +93,7 @@ struct StoreControls {
         currentclassic = SKSpriteNode.init(imageNamed: "Multipurpose Classic")
         currentclassic.zPosition = 2
         currentclassic.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
-
+        
         // Retro Life
         // Background
         retroLifeSkinBackground = SKSpriteNode.init(imageNamed: "Background Retro")
@@ -133,7 +142,7 @@ struct StoreControls {
         lightCurrent = SKSpriteNode.init(imageNamed: "Mutipurpose Light")
         lightCurrent.zPosition = 2
         lightCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
-
+        
         // Soccer skin
         soccerBackground = SKSpriteNode.init(imageNamed: "Background Soccer")
         soccerBackground.name = "backgroundLightSkin"
@@ -149,6 +158,39 @@ struct StoreControls {
         soccerCurrent = SKSpriteNode.init(imageNamed: "Multipurpose Soccer")
         soccerCurrent.zPosition = 2
         soccerCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
+        
+        // Dust skin
+        spaceDustBackground = SKSpriteNode.init(imageNamed: "Background Dust")
+        spaceDustBackground.name = "backgroundLightSkin"
+        spaceDustBackground.zPosition = 1
+        spaceDustBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        spaceDustBackground.size  = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        //Menu
+        spaceDustMenu = SKSpriteNode.init(imageNamed: "MENU Dust")
+        spaceDustMenu.name = "buttonSprite-Menu"
+        spaceDustMenu.zPosition = 2
+        spaceDustMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((16.15/100))))
+        //Current
+        spaceDustCurrent = SKSpriteNode.init(imageNamed: "Multipurpose Dust")
+        spaceDustCurrent.zPosition = 2
+        spaceDustCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
+        
+        
+        // AcidRain skin
+        acidRainBackground = SKSpriteNode.init(imageNamed: "Background Toxic")
+        acidRainBackground.name = "backgroundLightSkin"
+        acidRainBackground.zPosition = 1
+        acidRainBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        acidRainBackground.size  = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        //Menu
+        acidRainMenu = SKSpriteNode.init(imageNamed: "MENU Toxic")
+        acidRainMenu.name = "buttonSprite-Menu"
+        acidRainMenu.zPosition = 2
+        acidRainMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((16.15/100))))
+        //Current
+        acidRainCurrent = SKSpriteNode.init(imageNamed: "Mutipurpose Toxic")
+        acidRainCurrent.zPosition = 2
+        acidRainCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
         
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
             //16:9
@@ -217,6 +259,30 @@ struct StoreControls {
                 height: (soccerCurrent.size.height * (inThisScene.size.height / soccerCurrent.size.height)*(10.42/100))
             )
             
+            /// Dust Skin
+            //16:9
+            spaceDustMenu.size = CGSize(
+                width: (spaceDustMenu.size.width * (inThisScene.size.width / spaceDustMenu.size.width)*(37.04/100)),
+                height: (spaceDustMenu.size.height * (inThisScene.size.height / spaceDustMenu.size.height)*(10.42/100))
+            )
+            //16:9
+            spaceDustCurrent.size = CGSize(
+                width: (spaceDustCurrent.size.width * (inThisScene.size.width / spaceDustCurrent.size.width)*(37.04/100)),
+                height: (spaceDustCurrent.size.height * (inThisScene.size.height / spaceDustCurrent.size.height)*(10.42/100))
+            )
+            
+            /// AcidRain Skin
+            //16:9
+            acidRainMenu.size = CGSize(
+                width: (acidRainMenu.size.width * (inThisScene.size.width / acidRainMenu.size.width)*(37.04/100)),
+                height: (acidRainMenu.size.height * (inThisScene.size.height / acidRainMenu.size.height)*(10.42/100))
+            )
+            //16:9
+            acidRainCurrent.size = CGSize(
+                width: (acidRainCurrent.size.width * (inThisScene.size.width / acidRainCurrent.size.width)*(37.04/100)),
+                height: (acidRainCurrent.size.height * (inThisScene.size.height / acidRainCurrent.size.height)*(10.42/100))
+            )
+            
         }else{
             //4:3
             coin.size = CGSize(
@@ -279,8 +345,32 @@ struct StoreControls {
                 width: (soccerCurrent.size.width * (inThisScene.size.width / soccerCurrent.size.width)*(29.3/100)),
                 height: (soccerCurrent.size.height * (inThisScene.size.height / soccerCurrent.size.height)*(11/100)))
             
+            /// Dust Skin
+            //4:3
+            spaceDustMenu.size  = CGSize(
+                width: (spaceDustMenu.size.width * (inThisScene.size.width / spaceDustMenu.size.width)*(29.3/100)),
+                height: (spaceDustMenu.size.height * (inThisScene.size.height / spaceDustMenu.size.height)*(11/100))
+            )
+            //4:3
+            spaceDustCurrent.size  = CGSize(
+                width: (spaceDustCurrent.size.width * (inThisScene.size.width / spaceDustCurrent.size.width)*(29.3/100)),
+                height: (spaceDustCurrent.size.height * (inThisScene.size.height / spaceDustCurrent.size.height)*(11/100)))
+            
+            /// AcidRain Skin
+            //4:3
+            acidRainMenu.size  = CGSize(
+                width: (acidRainMenu.size.width * (inThisScene.size.width / acidRainMenu.size.width)*(29.3/100)),
+                height: (acidRainMenu.size.height * (inThisScene.size.height / acidRainMenu.size.height)*(11/100))
+            )
+            //4:3
+            acidRainCurrent.size  = CGSize(
+                width: (acidRainCurrent.size.width * (inThisScene.size.width / acidRainCurrent.size.width)*(29.3/100)),
+                height: (acidRainCurrent.size.height * (inThisScene.size.height / acidRainCurrent.size.height)*(11/100)))
+            
+            
+            
         }//End else
- 
+        
     }//END Init
     
 }//END Struct

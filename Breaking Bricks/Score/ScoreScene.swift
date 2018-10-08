@@ -56,7 +56,7 @@ class ScoreScene: SKScene {
     override func didMove(to view: SKView) {
         
         if sceneNumber == 0{
-        /// Present Label and Button
+            /// Present Label and Button
             self.addChild(scoreControls.bgclassic)
             self.addChild(scoreControls.menuclassic)
             self.addChild(scoreControls.winclassic)
@@ -73,7 +73,7 @@ class ScoreScene: SKScene {
             scoreControls.scoreWinLabel.fontColor = .white
             scoreControls.scoreLoseLabel.fontColor = .white
             scoreControls.scoreTimeLabel.fontColor = .white
-
+            
         }
         if sceneNumber == 1{
             
@@ -86,7 +86,7 @@ class ScoreScene: SKScene {
             self.addChild(scoreControls.retroLifeSkinLoseLabel)
             self.addChild(scoreControls.retroLifeSkinTime)
             self.addChild(scoreControls.retroLifeSkinTimeLabel)
-
+            
             
             self.addChild(scoreControls.scoreTimeLabel)
             self.addChild(scoreControls.scoreLoseLabel)
@@ -95,7 +95,7 @@ class ScoreScene: SKScene {
             scoreControls.scoreWinLabel.fontColor = .white
             scoreControls.scoreLoseLabel.fontColor = .white
             scoreControls.scoreTimeLabel.fontColor = .white
-
+            
         }
         if sceneNumber == 2{
             
@@ -113,7 +113,7 @@ class ScoreScene: SKScene {
             self.addChild(scoreControls.scoreTimeLabel)
             self.addChild(scoreControls.scoreLoseLabel)
             self.addChild(scoreControls.scoreWinLabel)
-
+            
             scoreControls.scoreWinLabel.fontColor = .white
             scoreControls.scoreLoseLabel.fontColor = .white
             scoreControls.scoreTimeLabel.fontColor = .white
@@ -163,11 +163,55 @@ class ScoreScene: SKScene {
             scoreControls.scoreTimeLabel.fontColor = UIColor(red:0.96, green:0.75, blue:0.00, alpha:1.0)
             
         }
+        if sceneNumber == 5{
+            
+            /// Present Label and Button
+            self.addChild(scoreControls.spaceDustBackground)
+            self.addChild(scoreControls.spaceDustMenu)
+            self.addChild(scoreControls.spaceDustWin)
+            self.addChild(scoreControls.spaceDustWinLabel)
+            self.addChild(scoreControls.spaceDustLose)
+            self.addChild(scoreControls.spaceDustLoseLabel)
+            self.addChild(scoreControls.spaceDustTime)
+            self.addChild(scoreControls.spaceDustTimeLabel)
+            
+            
+            self.addChild(scoreControls.scoreTimeLabel)
+            self.addChild(scoreControls.scoreLoseLabel)
+            self.addChild(scoreControls.scoreWinLabel)
+            
+            scoreControls.scoreWinLabel.fontColor = .white
+            scoreControls.scoreLoseLabel.fontColor = .white
+            scoreControls.scoreTimeLabel.fontColor = .white
+            
+        }
+        if sceneNumber == 6{
+            
+            /// Present Label and Button
+            self.addChild(scoreControls.acidRainBackground)
+            self.addChild(scoreControls.acidRainMenu)
+            self.addChild(scoreControls.acidRainWin)
+            self.addChild(scoreControls.acidRainWinLabel)
+            self.addChild(scoreControls.acidRainLose)
+            self.addChild(scoreControls.acidRainLoseLabel)
+            self.addChild(scoreControls.acidRainTime)
+            self.addChild(scoreControls.acidRainTimeLabel)
+            
+            
+            self.addChild(scoreControls.scoreTimeLabel)
+            self.addChild(scoreControls.scoreLoseLabel)
+            self.addChild(scoreControls.scoreWinLabel)
+            
+            scoreControls.scoreWinLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
+            scoreControls.scoreLoseLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
+            scoreControls.scoreTimeLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
+            
+        }
         
         scoreControls.scoreWinLabel.text = ("\(win)")
         scoreControls.scoreLoseLabel.text = ("\(lose)")
         scoreControls.scoreTimeLabel.text = ("\(secondsPlus)")
-
+        
     }
     
     /// Before another Scence will be presented

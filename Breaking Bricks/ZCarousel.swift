@@ -131,7 +131,8 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
         }
         
         isImage = true
-        let middleImage = images[(images.count/2)]
+        //Change the image in the center 
+        let middleImage = images[4]
         self.scrollRectToVisible(middleImage.frame, animated: false)
     }
     

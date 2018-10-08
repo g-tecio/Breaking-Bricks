@@ -18,7 +18,7 @@ class MenuScene: SKScene {
     var menuControls: MenuControls!
     
     var sceneNumber: Int!
-
+    
     private var lastUpdateTime : TimeInterval = 0
     
     /// Custom Initializer
@@ -86,6 +86,18 @@ class MenuScene: SKScene {
             self.addChild(menuControls.soccerScore)
             self.addChild(menuControls.soccerStore)
         }
+        if sceneNumber == 5{
+            self.addChild(menuControls.spaceDustBackground)
+            self.addChild(menuControls.spaceDustPlay)
+            self.addChild(menuControls.spaceDustScore)
+            self.addChild(menuControls.spaceDustStore)
+        }
+        if sceneNumber == 6{
+            self.addChild(menuControls.acidRainBackground)
+            self.addChild(menuControls.acidRainPlay)
+            self.addChild(menuControls.acidRainScore)
+            self.addChild(menuControls.acidRainStore)
+        }
     }
     
     /// Before another Scence will be presented
@@ -106,12 +118,12 @@ class MenuScene: SKScene {
             }
             if (item.name == "buttonSprite-Store") {
                 gameViewController.storeScene.sceneNumber = gameViewController.menuScene.sceneNumber
-                    gameViewController.skView.presentScene(gameViewController.storeScene)
+                gameViewController.skView.presentScene(gameViewController.storeScene)
                 
             }
             if (item.name == "buttonSprite-Score") {
                 gameViewController.scoreScene.sceneNumber = gameViewController.menuScene.sceneNumber
-                    gameViewController.skView.presentScene(gameViewController.scoreScene)
+                gameViewController.skView.presentScene(gameViewController.scoreScene)
             }
         }
     }
