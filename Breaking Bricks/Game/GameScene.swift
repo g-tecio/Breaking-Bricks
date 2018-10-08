@@ -818,7 +818,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score += 1
         
         ///Test Coin
-       // coin += 1
+//        coin += 1
         
         gameControls.scoreLabel.text = ("\(score)")
     }//END BreakBlocks

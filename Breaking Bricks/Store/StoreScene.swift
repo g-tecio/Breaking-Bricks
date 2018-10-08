@@ -28,7 +28,8 @@ var storeImages = ["RainbowBuy","RetroBuy","ClassicOwned","LightBuy","SoccerBuy"
                    "SpaceDustBuy","AcidBuy"]
 
 
-var storeImagesiPad = ["RainbowBuyiPad","RetroBuyiPad","ClassicOwnediPad","LightBuyiPad","SoccerBuyiPad"]
+var storeImagesiPad = ["RainbowBuyiPad","RetroBuyiPad","ClassicOwnediPad","LightBuyiPad","SoccerBuyiPad",
+                       "SpaceDustBuyiPad","AcidBuyiPad"]
 
 class StoreScene: SKScene, ZCarouselDelegate {
     
@@ -108,20 +109,20 @@ class StoreScene: SKScene, ZCarouselDelegate {
             storeImages.remove(at: 5)
             storeImages.insert("SpaceDustOwned", at: 5)
         }
-        //        if(costSpaceDustB == true){
-        //            storeImagesiPad.remove(at: 5)
-        //            storeImagesiPad.insert("SpaceDustOwnediPad", at: 5)
-        //        }
+        if(costSpaceDustB == true){
+            storeImagesiPad.remove(at: 5)
+            storeImagesiPad.insert("SpaceDustOwnediPad", at: 5)
+        }
         
         //Acid Rain
         if(costAcidB == true){
             storeImages.remove(at: 6)
             storeImages.insert("AcidOwned", at: 6)
         }
-        //        if(costAcidB == true){
-        //            storeImagesiPad.remove(at: 6)
-        //            storeImagesiPad.insert("AcidOwnediPad", at: 6)
-        //        }
+        if(costAcidB == true){
+            storeImagesiPad.remove(at: 6)
+            storeImagesiPad.insert("AcidOwnediPad", at: 6)
+        }
         
         
         /// Set reference of GameViewControl
