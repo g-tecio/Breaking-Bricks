@@ -11,8 +11,9 @@ import SpriteKit
 import GameplayKit
 import Device_swift
 import Lottie
+import GoogleMobileAds
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, GADInterstitialDelegate, GADRewardBasedVideoAdDelegate  {
     var value:Double = 1.0
     var timerIntro = Timer()
     let deviceType = UIDevice.current.deviceType
@@ -20,6 +21,12 @@ class GameViewController: UIViewController {
     
      let skView = SKView()
     // MARK: App Properties
+    
+    //declare Interstitial Ad
+    var interstitial: GADInterstitial!
+    
+    //declare VideoReward Ad
+    var videoreward: GADRewardBasedVideoAd!
     
     /// Scene State Machine
     var sceneStateMachine: GKStateMachine!
@@ -73,6 +80,8 @@ class GameViewController: UIViewController {
         /// GameScene Setup
         gameScene = GameScene.init(sceneSize: view.bounds.size, referenceGVC: self)
         
+        //load the videoreward
+        loadVideoReward()
         
         skView.presentScene(menuScene)
         view.addSubview(skView)
@@ -108,4 +117,67 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    // functions that requiere the interstitial ad
+    func createAndLoadInterstitial() -> GADInterstitial {
+        interstitial = GADInterstitial(adUnitID: "ca-app-pub-5267056163100832/5654904447")
+        interstitial.delegate = self
+        interstitial.load(GADRequest())
+        return interstitial
+    }
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        self.interstitial.present(fromRootViewController: self)
+    }
+    
+    //functions for the videoReward ad
+    func loadVideoReward() {
+        videoreward = GADRewardBasedVideoAd.sharedInstance()
+        videoreward.delegate = self
+        videoreward.load(GADRequest(), withAdUnitID: "ca-app-pub-5267056163100832/6814506085")
+        videoreward.present(fromRootViewController: self)
+    }
+    func showVideoReward(){
+        if videoreward.isReady {
+            videoreward.present(fromRootViewController: self)
+        }
+    }
+    
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd,
+                            didRewardUserWith reward: GADAdReward) {
+        coin += 1
+        print("Reward received with currency: \(reward.type), amount \(reward.amount).")
+    }
+    
+    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd:GADRewardBasedVideoAd) {
+        print("Reward based video ad is received.")
+    }
+    
+    func rewardBasedVideoAdDidOpen(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Opened reward based video ad.")
+    }
+    
+    func rewardBasedVideoAdDidStartPlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad started playing.")
+    }
+    
+    func rewardBasedVideoAdDidCompletePlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad has completed.")
+    }
+    
+    func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        GADRewardBasedVideoAd.sharedInstance().load(GADRequest(),
+                                                    withAdUnitID: "ca-app-pub-5267056163100832/6814506085")
+        print("Reward based video ad is closed.")
+    }
+    
+    func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+        print("Reward based video ad will leave application.")
+    }
+    
+    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd,
+                            didFailToLoadWithError error: Error) {
+        print("Reward based video ad failed to load.")
+    }
+    
+    
 }//End Class

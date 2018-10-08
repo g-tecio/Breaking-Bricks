@@ -611,18 +611,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         didSet {
             
+            self.gameViewController.interstitial = self.gameViewController.createAndLoadInterstitial()
+
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3 ) {
                 Analytics.logEvent("GameMenu", parameters: nil)
                 
                 //                let transition = SKTransition.fade(with: UIColor(red:0.00, green:0.00, blue:0.00, alpha:1.0), duration: 5)
                 //                let menuScene = SKScene(fileNamed: "MenuScene") as! MenuScene
                 //                self.view?.presentScene(menuScene, transition: transition)
-                
                 self.gameViewController.skView.presentScene(self.gameViewController.menuScene)
             }
             //gameWon ? gameWonSound.play() : gameOverSound.play()
-            
         }
+    
         
     }
     
@@ -758,6 +759,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     gameWon = true
                     timer.invalidate()
                     saveValues()
+                    self.gameViewController.showVideoReward()
                     
                 }
             }
@@ -816,7 +818,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score += 1
         
         ///Test Coin
-        coin += 1
+       // coin += 1
         
         gameControls.scoreLabel.text = ("\(score)")
     }//END BreakBlocks

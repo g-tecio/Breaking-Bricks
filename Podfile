@@ -11,4 +11,6 @@ target 'Breaking Bricks' do
 	pod 'Firebase/Core'
 	pod 'Firebase/Performance'
  	pod 'Firebase/Analytics'
+	pod 'Firebase/AdMob'
+ 	pod 'Google-Mobile-Ads-SDK'
 end
