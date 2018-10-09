@@ -597,8 +597,136 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             gameState.enter(WaitingForTap.self)
         }//END SCENENUMBER 6
-        
-        
+        if(sceneNumber == 7){
+            
+            // Background and paddle
+            self.addChild(gameControls.endTimesBackground)
+            self.addChild(gameControls.endTimesPaddle)
+            // Bricks
+            self.addChild(gameControls.endTimesScore)
+            self.addChild(gameControls.endTimesTimer)
+            // Label
+            self.addChild(gameControls.timerLabel)
+            self.addChild(gameControls.scoreLabel)
+            // Color label
+            gameControls.timerLabel.fontColor = .white
+            gameControls.scoreLabel.fontColor = .white
+            
+            //Bricks
+            for brick in 0...24{
+                self.addChild(brickSprite[brick].endTimesSkin)
+            }
+            
+            //Bricks 6
+            for brick6 in 0...23{
+                self.addChild(brickSpriteRow6[brick6].endTimesSkin)
+            }
+            
+            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
+            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
+            
+            //Paddle and ball
+            let ball = gameControls.endTimesBall
+            let paddle = gameControls.endTimesPaddle
+            
+            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
+            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
+            
+            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
+            
+            let bottom = SKNode()
+            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
+            addChild(bottom)
+            
+            
+            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
+            
+            bottom.physicsBody!.categoryBitMask = BottomCategory
+            ball.physicsBody!.categoryBitMask = BallCategory
+            paddle.physicsBody!.categoryBitMask = PaddleCategory
+            gameControls.borderBody.categoryBitMask = BorderCategory
+            
+            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
+            
+            //Timer Line
+            seconds = timeSeconds
+            //Score Line
+            score = points
+            
+            
+            //Timer And Score
+            gameControls.scoreLabel.text = pointsCount
+            gameControls.timerLabel.text = timerSeconds
+            
+            self.addChild(gameControls.endTimesBall)
+            
+            gameState.enter(WaitingForTap.self)
+        }//END SCENENUMBER 7
+        if(sceneNumber == 8){
+            
+            // Background and paddle
+            self.addChild(gameControls.pumpkinBackground)
+            self.addChild(gameControls.pumpkinPaddle)
+            // Bricks
+            self.addChild(gameControls.pumpkinScore)
+            self.addChild(gameControls.pumpkinTimer)
+            // Label
+            self.addChild(gameControls.timerLabel)
+            self.addChild(gameControls.scoreLabel)
+            // Color label
+            gameControls.timerLabel.fontColor = .white
+            gameControls.scoreLabel.fontColor = .white
+            
+            //Bricks
+            for brick in 0...24{
+                self.addChild(brickSprite[brick].pumpkinSkin)
+            }
+            
+            //Bricks 6
+            for brick6 in 0...23{
+                self.addChild(brickSpriteRow6[brick6].pumpkinSkin)
+            }
+            
+            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
+            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
+            
+            //Paddle and ball
+            let ball = gameControls.pumpkinBall
+            let paddle = gameControls.pumpkinPaddle
+            
+            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
+            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
+            
+            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
+            
+            let bottom = SKNode()
+            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
+            addChild(bottom)
+            
+            
+            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
+            
+            bottom.physicsBody!.categoryBitMask = BottomCategory
+            ball.physicsBody!.categoryBitMask = BallCategory
+            paddle.physicsBody!.categoryBitMask = PaddleCategory
+            gameControls.borderBody.categoryBitMask = BorderCategory
+            
+            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
+            
+            //Timer Line
+            seconds = timeSeconds
+            //Score Line
+            score = points
+            
+            
+            //Timer And Score
+            gameControls.scoreLabel.text = pointsCount
+            gameControls.timerLabel.text = timerSeconds
+            
+            self.addChild(gameControls.pumpkinBall)
+            
+            gameState.enter(WaitingForTap.self)
+        }//END SCENENUMBER 8
     }//END didMove
     
     lazy var gameState: GKStateMachine = GKStateMachine(states: [
@@ -818,7 +946,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score += 1
         
         ///Test Coin
-//        coin += 1
+        coin += 1
         
         gameControls.scoreLabel.text = ("\(score)")
     }//END BreakBlocks

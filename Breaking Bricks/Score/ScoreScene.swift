@@ -207,6 +207,51 @@ class ScoreScene: SKScene {
             scoreControls.scoreTimeLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
             
         }
+        if sceneNumber == 7{
+            
+            /// Present Label and Button
+            self.addChild(scoreControls.endTimesBackground)
+            self.addChild(scoreControls.endTimesMenu)
+            self.addChild(scoreControls.endTimesWin)
+            self.addChild(scoreControls.endTimesWinLabel)
+            self.addChild(scoreControls.endTimesLose)
+            self.addChild(scoreControls.endTimesLoseLabel)
+            self.addChild(scoreControls.endTimesTime)
+            self.addChild(scoreControls.endTimesTimeLabel)
+            
+            
+            self.addChild(scoreControls.scoreTimeLabel)
+            self.addChild(scoreControls.scoreLoseLabel)
+            self.addChild(scoreControls.scoreWinLabel)
+            
+            scoreControls.scoreWinLabel.fontColor = .white
+            scoreControls.scoreLoseLabel.fontColor = .white
+            scoreControls.scoreTimeLabel.fontColor = .white
+            
+        }
+        if sceneNumber == 8{
+            
+            /// Present Label and Button
+            self.addChild(scoreControls.pumpkinBackground)
+            self.addChild(scoreControls.pumpkinMenu)
+            self.addChild(scoreControls.pumpkinWin)
+            self.addChild(scoreControls.pumpkinWinLabel)
+            self.addChild(scoreControls.pumpkinLose)
+            self.addChild(scoreControls.pumpkinLoseLabel)
+            self.addChild(scoreControls.pumpkinTime)
+            self.addChild(scoreControls.pumpkinTimeLabel)
+            
+            
+            self.addChild(scoreControls.scoreTimeLabel)
+            self.addChild(scoreControls.scoreLoseLabel)
+            self.addChild(scoreControls.scoreWinLabel)
+            
+            scoreControls.scoreWinLabel.fontColor = .white
+            scoreControls.scoreLoseLabel.fontColor = .white
+            scoreControls.scoreTimeLabel.fontColor = .white
+            
+        }
+        
         
         scoreControls.scoreWinLabel.text = ("\(win)")
         scoreControls.scoreLoseLabel.text = ("\(lose)")

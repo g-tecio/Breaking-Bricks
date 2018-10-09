@@ -23,7 +23,8 @@ struct BrickSpriteRow6 {
     let soccerSkin : SKSpriteNode!
     let spaceDustSkin: SKSpriteNode!
     let acidRainSkin: SKSpriteNode!
-    
+    let endTimesSkin: SKSpriteNode!
+    let pumpkinSkin: SKSpriteNode!
     
     //Array Bricks
     let classicblocks = ["Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic"]
@@ -59,6 +60,17 @@ struct BrickSpriteRow6 {
                            "Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic",
                            "Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic","Brick Toxic"]
     
+    let endTimesBlocks = ["Brick End_Times","Brick End_Times","Brick End_Times","Brick End_Times","Brick End_Times","Brick End_Times",
+                          "Brick End_Times","Brick End_Times","Brick End_Times","Brick End_Times","Brick End_Times","Brick End_Times",
+                          "Brick End_Times","Brick End_Times","Brick End_Times","Brick End_Times","Brick End_Times","Brick End_Times",
+                          "Brick End_Times","Brick End_Times","Brick End_Times","Brick End_Times","Brick End_Times","Brick End_Times"]
+    
+    let pumpkinBlocks = [ "Brick_Orange Pumpkin","Brick_Yellow Pumpkin","Brick_Orange Pumpkin","Brick_Orange Pumpkin","Brick_Yellow Pumpkin", "Brick_Orange Pumpkin",
+                          "Brick_Orange Pumpkin","Brick_Orange Pumpkin","Brick_Orange Pumpkin","Brick_Orange Pumpkin","Brick_Orange Pumpkin","Brick_Orange Pumpkin",
+                          "Brick_Orange Pumpkin","Brick_Yellow Pumpkin","Brick_Yellow Pumpkin","Brick_Yellow Pumpkin","Brick_Yellow Pumpkin","Brick_Orange Pumpkin",
+                          "Brick_Orange Pumpkin","Brick_Orange Pumpkin","Brick_Yellow Pumpkin","Brick_Yellow Pumpkin","Brick_Orange Pumpkin","Brick_Orange Pumpkin",]
+
+    
     init (numBricks: Int, row: Int, col: Int , inThisScene: GameScene) {
         
         //classic
@@ -75,6 +87,10 @@ struct BrickSpriteRow6 {
         spaceDustSkin = SKSpriteNode(imageNamed: spaceDustBlocks[numBricks])
         // Acid Rain Skin
         acidRainSkin = SKSpriteNode(imageNamed: rainAcidBlocks[numBricks])
+        // End Times Skin
+        endTimesSkin = SKSpriteNode(imageNamed: endTimesBlocks[numBricks])
+        // Pumpkin Skin
+        pumpkinSkin = SKSpriteNode(imageNamed: pumpkinBlocks[numBricks])
         
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
@@ -197,7 +213,6 @@ struct BrickSpriteRow6 {
                 /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 79.95/100) - ((spaceDustSkin.size.height * (237.5/100) ) * CGFloat(row)))
             
-            
             /// Acid Rain Skin
             //16:9
             acidRainSkin.size = CGSize(
@@ -218,6 +233,45 @@ struct BrickSpriteRow6 {
                 /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 79.95/100) - ((acidRainSkin.size.height * (237.5/100) ) * CGFloat(row)))
             
+            /// End Times Skin
+            //16:9
+            endTimesSkin.size = CGSize(
+                width:(endTimesSkin.size.width * (inThisScene.size.width / endTimesSkin.size.width ) * (15/100)) ,
+                height: (endTimesSkin.size.height * (inThisScene.size.height / endTimesSkin.size.height ) * (4/100)))
+            endTimesSkin.physicsBody = SKPhysicsBody(rectangleOf: endTimesSkin.frame.size)
+            endTimesSkin.physicsBody!.allowsRotation = false
+            endTimesSkin.physicsBody!.friction = 0.0
+            endTimesSkin.physicsBody!.affectedByGravity = false
+            endTimesSkin.physicsBody!.isDynamic = false
+            endTimesSkin.name = BlockCategoryName
+            endTimesSkin.physicsBody!.categoryBitMask = BlockCategory
+            endTimesSkin.zPosition = 2
+            //16:9
+            endTimesSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (endTimesSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((endTimesSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            /// Pumpkin Skin
+            //16:9
+            pumpkinSkin.size = CGSize(
+                width:(pumpkinSkin.size.width * (inThisScene.size.width / pumpkinSkin.size.width ) * (15/100)) ,
+                height: (pumpkinSkin.size.height * (inThisScene.size.height / pumpkinSkin.size.height ) * (4/100)))
+            pumpkinSkin.physicsBody = SKPhysicsBody(rectangleOf: pumpkinSkin.frame.size)
+            pumpkinSkin.physicsBody!.allowsRotation = false
+            pumpkinSkin.physicsBody!.friction = 0.0
+            pumpkinSkin.physicsBody!.affectedByGravity = false
+            pumpkinSkin.physicsBody!.isDynamic = false
+            pumpkinSkin.name = BlockCategoryName
+            pumpkinSkin.physicsBody!.categoryBitMask = BlockCategory
+            pumpkinSkin.zPosition = 2
+            //16:9
+            pumpkinSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (pumpkinSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((pumpkinSkin.size.height * (237.5/100) ) * CGFloat(row)))
             
         }else{
             /// Classic
@@ -361,6 +415,45 @@ struct BrickSpriteRow6 {
                 /// Offset value px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 81.7/100) - ((acidRainSkin.size.height * (228.57/100) ) * CGFloat(row)))
             
+            /// End Times Skin
+            //4:3
+            endTimesSkin.size = CGSize(
+                width:(endTimesSkin.size.width * (inThisScene.size.width / endTimesSkin.size.width ) * (13.67/100)) ,
+                height: (endTimesSkin.size.height * (inThisScene.size.height / endTimesSkin.size.height ) * (5.12/100)))
+            endTimesSkin.physicsBody = SKPhysicsBody(rectangleOf: endTimesSkin.frame.size)
+            endTimesSkin.physicsBody!.allowsRotation = false
+            endTimesSkin.physicsBody!.friction = 0.0
+            endTimesSkin.physicsBody!.affectedByGravity = false
+            endTimesSkin.physicsBody!.isDynamic = false
+            endTimesSkin.name = BlockCategoryName
+            endTimesSkin.physicsBody!.categoryBitMask = BlockCategory
+            endTimesSkin.zPosition = 2
+            //4:3
+            endTimesSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (endTimesSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((endTimesSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            /// Pumpkin Skin
+            //4:3
+            pumpkinSkin.size = CGSize(
+                width:(pumpkinSkin.size.width * (inThisScene.size.width / pumpkinSkin.size.width ) * (13.67/100)) ,
+                height: (pumpkinSkin.size.height * (inThisScene.size.height / pumpkinSkin.size.height ) * (5.12/100)))
+            pumpkinSkin.physicsBody = SKPhysicsBody(rectangleOf: pumpkinSkin.frame.size)
+            pumpkinSkin.physicsBody!.allowsRotation = false
+            pumpkinSkin.physicsBody!.friction = 0.0
+            pumpkinSkin.physicsBody!.affectedByGravity = false
+            pumpkinSkin.physicsBody!.isDynamic = false
+            pumpkinSkin.name = BlockCategoryName
+            pumpkinSkin.physicsBody!.categoryBitMask = BlockCategory
+            pumpkinSkin.zPosition = 2
+            //4:3
+            pumpkinSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (pumpkinSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((pumpkinSkin.size.height * (228.57/100) ) * CGFloat(row)))
             
             
         }//End else

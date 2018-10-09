@@ -56,6 +56,16 @@ struct StoreControls {
     let acidRainBackground: SKSpriteNode
     let acidRainCurrent: SKSpriteNode
     
+    /// End Times Skin
+    let endTimesMenu: SKSpriteNode
+    let endTimesBackground: SKSpriteNode
+    let endTimesCurrent: SKSpriteNode
+    
+    /// Pumpkin Skin
+    let pumpkinMenu: SKSpriteNode
+    let pumpkinBackground: SKSpriteNode
+    let pumpkinCurrent: SKSpriteNode
+    
     init(inThisScene: StoreScene) {
         
         //Coin
@@ -192,6 +202,39 @@ struct StoreControls {
         acidRainCurrent.zPosition = 2
         acidRainCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
         
+        // End Times skin
+        endTimesBackground = SKSpriteNode.init(imageNamed: "Background End_Times")
+        endTimesBackground.name = "backgroundLightSkin"
+        endTimesBackground.zPosition = 1
+        endTimesBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        endTimesBackground.size  = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        //Menu
+        endTimesMenu = SKSpriteNode.init(imageNamed: "MENU End_Times")
+        endTimesMenu.name = "buttonSprite-Menu"
+        endTimesMenu.zPosition = 2
+        endTimesMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((16.15/100))))
+        //Current
+        endTimesCurrent = SKSpriteNode.init(imageNamed: "Multipurpose End_Times")
+        endTimesCurrent.zPosition = 2
+        endTimesCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
+        
+        // Pumpkin skin
+        pumpkinBackground = SKSpriteNode.init(imageNamed: "Background Pumpkin")
+        pumpkinBackground.name = "backgroundLightSkin"
+        pumpkinBackground.zPosition = 1
+        pumpkinBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        pumpkinBackground.size  = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        //Menu
+        pumpkinMenu = SKSpriteNode.init(imageNamed: "MENU Pumpkin")
+        pumpkinMenu.name = "buttonSprite-Menu"
+        pumpkinMenu.zPosition = 2
+        pumpkinMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((16.15/100))))
+        //Current
+        pumpkinCurrent = SKSpriteNode.init(imageNamed: "Multipurpose Pumpkin")
+        pumpkinCurrent.zPosition = 2
+        pumpkinCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
+
+        
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
             //16:9
             coin.size = CGSize(
@@ -283,6 +326,30 @@ struct StoreControls {
                 height: (acidRainCurrent.size.height * (inThisScene.size.height / acidRainCurrent.size.height)*(10.42/100))
             )
             
+            /// End Times Skin
+            //16:9
+            endTimesMenu.size = CGSize(
+                width: (endTimesMenu.size.width * (inThisScene.size.width / endTimesMenu.size.width)*(37.04/100)),
+                height: (endTimesMenu.size.height * (inThisScene.size.height / endTimesMenu.size.height)*(10.42/100))
+            )
+            //16:9
+            endTimesCurrent.size = CGSize(
+                width: (endTimesCurrent.size.width * (inThisScene.size.width / endTimesCurrent.size.width)*(37.04/100)),
+                height: (endTimesCurrent.size.height * (inThisScene.size.height / endTimesCurrent.size.height)*(10.42/100))
+            )
+            
+            /// Pumpkin Skin
+            //16:9
+            pumpkinMenu.size = CGSize(
+                width: (pumpkinMenu.size.width * (inThisScene.size.width / pumpkinMenu.size.width)*(37.04/100)),
+                height: (pumpkinMenu.size.height * (inThisScene.size.height / pumpkinMenu.size.height)*(10.42/100))
+            )
+            //16:9
+            pumpkinCurrent.size = CGSize(
+                width: (pumpkinCurrent.size.width * (inThisScene.size.width / pumpkinCurrent.size.width)*(37.04/100)),
+                height: (pumpkinCurrent.size.height * (inThisScene.size.height / pumpkinCurrent.size.height)*(10.42/100))
+            )
+            
         }else{
             //4:3
             coin.size = CGSize(
@@ -367,7 +434,27 @@ struct StoreControls {
                 width: (acidRainCurrent.size.width * (inThisScene.size.width / acidRainCurrent.size.width)*(29.3/100)),
                 height: (acidRainCurrent.size.height * (inThisScene.size.height / acidRainCurrent.size.height)*(11/100)))
             
+            /// End Times Skin
+            //4:3
+            endTimesMenu.size  = CGSize(
+                width: (endTimesMenu.size.width * (inThisScene.size.width / endTimesMenu.size.width)*(29.3/100)),
+                height: (endTimesMenu.size.height * (inThisScene.size.height / endTimesMenu.size.height)*(11/100))
+            )
+            //4:3
+            endTimesCurrent.size  = CGSize(
+                width: (endTimesCurrent.size.width * (inThisScene.size.width / endTimesCurrent.size.width)*(29.3/100)),
+                height: (endTimesCurrent.size.height * (inThisScene.size.height / endTimesCurrent.size.height)*(11/100)))
             
+            /// Pumpkin Skin
+            //4:3
+            pumpkinMenu.size  = CGSize(
+                width: (pumpkinMenu.size.width * (inThisScene.size.width / pumpkinMenu.size.width)*(29.3/100)),
+                height: (pumpkinMenu.size.height * (inThisScene.size.height / pumpkinMenu.size.height)*(11/100))
+            )
+            //4:3
+            pumpkinCurrent.size  = CGSize(
+                width: (pumpkinCurrent.size.width * (inThisScene.size.width / pumpkinCurrent.size.width)*(29.3/100)),
+                height: (pumpkinCurrent.size.height * (inThisScene.size.height / pumpkinCurrent.size.height)*(11/100)))
             
         }//End else
         

@@ -109,6 +109,32 @@ struct ScoreControls {
     let acidRainTime: SKSpriteNode
     let acidRainTimeLabel: SKSpriteNode
     
+    /// End Times Skin
+    // Backgrounds
+    let endTimesBackground: SKSpriteNode
+    // Menu Buttons
+    let endTimesMenu: SKSpriteNode
+    // Win, Lose and Time
+    let endTimesWin: SKSpriteNode
+    let endTimesWinLabel: SKSpriteNode
+    let endTimesLose: SKSpriteNode
+    let endTimesLoseLabel: SKSpriteNode
+    let endTimesTime: SKSpriteNode
+    let endTimesTimeLabel: SKSpriteNode
+    
+    /// Pumpkin Skin
+    // Backgrounds
+    let pumpkinBackground: SKSpriteNode
+    // Menu Buttons
+    let pumpkinMenu: SKSpriteNode
+    // Win, Lose and Time
+    let pumpkinWin: SKSpriteNode
+    let pumpkinWinLabel: SKSpriteNode
+    let pumpkinLose: SKSpriteNode
+    let pumpkinLoseLabel: SKSpriteNode
+    let pumpkinTime: SKSpriteNode
+    let pumpkinTimeLabel: SKSpriteNode
+    
     init(inThisScene: ScoreScene) {
         
         /// Score Win Label
@@ -407,7 +433,81 @@ struct ScoreControls {
         acidRainMenu.zPosition = 2
         acidRainMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
         
+        // End Times Skin
+        /// Backgrounds
+        endTimesBackground = SKSpriteNode.init(imageNamed: "Background End_Times")
+        endTimesBackground.name = "background"
+        endTimesBackground.zPosition = 1
+        endTimesBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        endTimesBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Win
+        endTimesWin = SKSpriteNode.init(imageNamed: "Wins End_Times")
+        endTimesWin.name = "image-Win"
+        endTimesWin.zPosition = 2
+        /// WinLabel
+        endTimesWinLabel = SKSpriteNode.init(imageNamed: "Multipurpose End_Times")
+        endTimesWinLabel.name = "Label-Win"
+        endTimesWinLabel.zPosition = 2
+        /// Lose
+        endTimesLose = SKSpriteNode.init(imageNamed: "Lose End_Times")
+        endTimesLose.name = "image-Lose"
+        endTimesLose.zPosition = 2
+        /// Loselabel
+        endTimesLoseLabel = SKSpriteNode.init(imageNamed: "Multipurpose End_Times")
+        endTimesLoseLabel.name = "Label-Lose"
+        endTimesLoseLabel.zPosition = 2
+        /// Time
+        endTimesTime = SKSpriteNode.init(imageNamed: "Time End_Times")
+        endTimesTime.name = "image-Time"
+        endTimesTime.zPosition = 2
+        /// Timelabel
+        endTimesTimeLabel = SKSpriteNode.init(imageNamed: "Multipurpose End_Times")
+        endTimesTimeLabel.name = "Label-Time"
+        endTimesTimeLabel.zPosition = 2
+        /// Menu Button
+        endTimesMenu = SKSpriteNode.init(imageNamed: "MENU End_Times")
+        endTimesMenu.name = "buttonSprite-Menu"
+        endTimesMenu.zPosition = 2
+        endTimesMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
         
+        // Pumpkin Skin
+        /// Backgrounds
+        pumpkinBackground = SKSpriteNode.init(imageNamed: "Background Pumpkin")
+        pumpkinBackground.name = "background"
+        pumpkinBackground.zPosition = 1
+        pumpkinBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        pumpkinBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Win
+        pumpkinWin = SKSpriteNode.init(imageNamed: "Wins Pumpkin")
+        pumpkinWin.name = "image-Win"
+        pumpkinWin.zPosition = 2
+        /// WinLabel
+        pumpkinWinLabel = SKSpriteNode.init(imageNamed: "Multipurpose Pumpkin")
+        pumpkinWinLabel.name = "Label-Win"
+        pumpkinWinLabel.zPosition = 2
+        /// Lose
+        pumpkinLose = SKSpriteNode.init(imageNamed: "Lose Pumpkin")
+        pumpkinLose.name = "image-Lose"
+        pumpkinLose.zPosition = 2
+        /// Loselabel
+        pumpkinLoseLabel = SKSpriteNode.init(imageNamed: "Multipurpose Pumpkin")
+        pumpkinLoseLabel.name = "Label-Lose"
+        pumpkinLoseLabel.zPosition = 2
+        /// Time
+        pumpkinTime = SKSpriteNode.init(imageNamed: "Time Pumpkin")
+        pumpkinTime.name = "image-Time"
+        pumpkinTime.zPosition = 2
+        /// Timelabel
+        pumpkinTimeLabel = SKSpriteNode.init(imageNamed: "Multipurpose Pumpkin")
+        pumpkinTimeLabel.name = "Label-Time"
+        pumpkinTimeLabel.zPosition = 2
+        /// Menu Button
+        pumpkinMenu = SKSpriteNode.init(imageNamed: "MENU Pumpkin")
+        pumpkinMenu.name = "buttonSprite-Menu"
+        pumpkinMenu.zPosition = 2
+        pumpkinMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
+
+
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
             //16:9
             scoreWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
@@ -747,6 +847,103 @@ struct ScoreControls {
                 width: (acidRainMenu.size.width * (inThisScene.size.width / acidRainMenu.size.width)*(37.04/100)),
                 height: (acidRainMenu.size.height * (inThisScene.size.height / acidRainMenu.size.height)*(10.42/100))
             )
+            
+            
+            /// End Times Skin
+            //16:9
+            endTimesWin.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            endTimesWin.size = CGSize(
+                width: (endTimesWin.size.width * (inThisScene.size.width / endTimesWin.size.width)*(37.04/100)),
+                height: (endTimesWin.size.height * (inThisScene.size.height / endTimesWin.size.height)*(10.42/100)))
+            //16:9
+            endTimesWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            endTimesWinLabel.size = CGSize(
+                width: (endTimesWinLabel.size.width * (inThisScene.size.width / endTimesWinLabel.size.width)*(37.04/100)),
+                height: (endTimesWinLabel.size.height * (inThisScene.size.height / endTimesWinLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            endTimesLose.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            endTimesLose.size = CGSize(
+                width: (endTimesLose.size.width * (inThisScene.size.width / endTimesLose.size.width)*(37.04/100)),
+                height: (endTimesLose.size.height * (inThisScene.size.height / endTimesLose.size.height)*(10.42/100)))
+            //16:9
+            endTimesLoseLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            endTimesLoseLabel.size = CGSize(
+                width: (endTimesLoseLabel.size.width * (inThisScene.size.width / endTimesLoseLabel.size.width)*(37.04/100)),
+                height: (endTimesLoseLabel.size.height * (inThisScene.size.height / endTimesLoseLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            endTimesTime.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            endTimesTime.size = CGSize(
+                width: (endTimesTime.size.width * (inThisScene.size.width / endTimesTime.size.width)*(37.04/100)),
+                height: (endTimesTime.size.height * (inThisScene.size.height / endTimesTime.size.height)*(10.42/100))
+            )
+            //16:9
+            endTimesTimeLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            endTimesTimeLabel.size = CGSize(
+                width: (endTimesTimeLabel.size.width * (inThisScene.size.width / endTimesTimeLabel.size.width)*(37.04/100)),
+                height: (endTimesTimeLabel.size.height * (inThisScene.size.height / endTimesTimeLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            endTimesMenu.size = CGSize(
+                width: (endTimesMenu.size.width * (inThisScene.size.width / endTimesMenu.size.width)*(37.04/100)),
+                height: (endTimesMenu.size.height * (inThisScene.size.height / endTimesMenu.size.height)*(10.42/100))
+            )
+            
+            
+            /// Pumpkin Skin
+            //16:9
+            pumpkinWin.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            pumpkinWin.size = CGSize(
+                width: (pumpkinWin.size.width * (inThisScene.size.width / pumpkinWin.size.width)*(37.04/100)),
+                height: (pumpkinWin.size.height * (inThisScene.size.height / pumpkinWin.size.height)*(10.42/100)))
+            //16:9
+            pumpkinWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            pumpkinWinLabel.size = CGSize(
+                width: (pumpkinWinLabel.size.width * (inThisScene.size.width / pumpkinWinLabel.size.width)*(37.04/100)),
+                height: (pumpkinWinLabel.size.height * (inThisScene.size.height / pumpkinWinLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            pumpkinLose.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            pumpkinLose.size = CGSize(
+                width: (pumpkinLose.size.width * (inThisScene.size.width / pumpkinLose.size.width)*(37.04/100)),
+                height: (pumpkinLose.size.height * (inThisScene.size.height / pumpkinLose.size.height)*(10.42/100)))
+            //16:9
+            pumpkinLoseLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            pumpkinLoseLabel.size = CGSize(
+                width: (pumpkinLoseLabel.size.width * (inThisScene.size.width / pumpkinLoseLabel.size.width)*(37.04/100)),
+                height: (pumpkinLoseLabel.size.height * (inThisScene.size.height / pumpkinLoseLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            pumpkinTime.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            pumpkinTime.size = CGSize(
+                width: (pumpkinTime.size.width * (inThisScene.size.width / pumpkinTime.size.width)*(37.04/100)),
+                height: (pumpkinTime.size.height * (inThisScene.size.height / pumpkinTime.size.height)*(10.42/100))
+            )
+            //16:9
+            pumpkinTimeLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            pumpkinTimeLabel.size = CGSize(
+                width: (pumpkinTimeLabel.size.width * (inThisScene.size.width / pumpkinTimeLabel.size.width)*(37.04/100)),
+                height: (pumpkinTimeLabel.size.height * (inThisScene.size.height / pumpkinTimeLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            pumpkinMenu.size = CGSize(
+                width: (pumpkinMenu.size.width * (inThisScene.size.width / pumpkinMenu.size.width)*(37.04/100)),
+                height: (pumpkinMenu.size.height * (inThisScene.size.height / pumpkinMenu.size.height)*(10.42/100))
+            )
+            
         }else{
             //4:3
             scoreWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
@@ -1049,8 +1246,89 @@ struct ScoreControls {
                 width: (acidRainMenu.size.width * (inThisScene.size.width / acidRainMenu.size.width)*(29.3/100)),
                 height: (acidRainMenu.size.height * (inThisScene.size.height / acidRainMenu.size.height)*(11/100)))
             
+            /// End Times Skin
+            //4:3
+            endTimesWin.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            endTimesWin.size  = CGSize(
+                width: (endTimesWin.size.width * (inThisScene.size.width / endTimesWin.size.width)*(29.3/100)),
+                height: (endTimesWin.size.height * (inThisScene.size.height / endTimesWin.size.height)*(11/100)))
+            //4:3
+            endTimesWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            endTimesWinLabel.size  = CGSize(
+                width: (endTimesWinLabel.size.width * (inThisScene.size.width / endTimesWinLabel.size.width)*(29.3/100)),
+                height: (endTimesWinLabel.size.height * (inThisScene.size.height / endTimesWinLabel.size.height)*(11/100)))
+            //4:3
+            endTimesLose.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            endTimesLose.size  = CGSize(
+                width: (endTimesLose.size.width * (inThisScene.size.width / endTimesLose.size.width)*(29.3/100)),
+                height: (endTimesLose.size.height * (inThisScene.size.height / endTimesLose.size.height)*(11/100)))
+            //4:3
+            endTimesLoseLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            endTimesLoseLabel.size  = CGSize(
+                width: (endTimesLoseLabel.size.width * (inThisScene.size.width / endTimesLoseLabel.size.width)*(29.3/100)),
+                height: (endTimesLoseLabel.size.height * (inThisScene.size.height / endTimesLoseLabel.size.height)*(11/100)))
+            //4:3
+            endTimesTime.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            endTimesTime.size  = CGSize(
+                width: (endTimesTime.size.width * (inThisScene.size.width / endTimesTime.size.width)*(29.3/100)),
+                height: (endTimesTime.size.height * (inThisScene.size.height / endTimesTime.size.height)*(11/100)))
+            //4:3
+            endTimesTimeLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            endTimesTimeLabel.size  = CGSize(
+                width: (endTimesTimeLabel.size.width * (inThisScene.size.width / endTimesTimeLabel.size.width)*(29.3/100)),
+                height: (endTimesTimeLabel.size.height * (inThisScene.size.height / endTimesTimeLabel.size.height)*(11/100)))
+            //4:3
+            endTimesMenu.size  = CGSize(
+                width: (endTimesMenu.size.width * (inThisScene.size.width / endTimesMenu.size.width)*(29.3/100)),
+                height: (endTimesMenu.size.height * (inThisScene.size.height / endTimesMenu.size.height)*(11/100)))
+            
+            /// Pumpkin Skin
+            //4:3
+            pumpkinWin.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            pumpkinWin.size  = CGSize(
+                width: (pumpkinWin.size.width * (inThisScene.size.width / pumpkinWin.size.width)*(29.3/100)),
+                height: (pumpkinWin.size.height * (inThisScene.size.height / pumpkinWin.size.height)*(11/100)))
+            //4:3
+            pumpkinWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            pumpkinWinLabel.size  = CGSize(
+                width: (pumpkinWinLabel.size.width * (inThisScene.size.width / pumpkinWinLabel.size.width)*(29.3/100)),
+                height: (pumpkinWinLabel.size.height * (inThisScene.size.height / pumpkinWinLabel.size.height)*(11/100)))
+            //4:3
+            pumpkinLose.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            pumpkinLose.size  = CGSize(
+                width: (pumpkinLose.size.width * (inThisScene.size.width / pumpkinLose.size.width)*(29.3/100)),
+                height: (pumpkinLose.size.height * (inThisScene.size.height / pumpkinLose.size.height)*(11/100)))
+            //4:3
+            pumpkinLoseLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            pumpkinLoseLabel.size  = CGSize(
+                width: (pumpkinLoseLabel.size.width * (inThisScene.size.width / pumpkinLoseLabel.size.width)*(29.3/100)),
+                height: (pumpkinLoseLabel.size.height * (inThisScene.size.height / pumpkinLoseLabel.size.height)*(11/100)))
+            //4:3
+            pumpkinTime.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            pumpkinTime.size  = CGSize(
+                width: (pumpkinTime.size.width * (inThisScene.size.width / pumpkinTime.size.width)*(29.3/100)),
+                height: (pumpkinTime.size.height * (inThisScene.size.height / pumpkinTime.size.height)*(11/100)))
+            //4:3
+            pumpkinTimeLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            pumpkinTimeLabel.size  = CGSize(
+                width: (pumpkinTimeLabel.size.width * (inThisScene.size.width / pumpkinTimeLabel.size.width)*(29.3/100)),
+                height: (pumpkinTimeLabel.size.height * (inThisScene.size.height / pumpkinTimeLabel.size.height)*(11/100)))
+            //4:3
+            pumpkinMenu.size  = CGSize(
+                width: (pumpkinMenu.size.width * (inThisScene.size.width / pumpkinMenu.size.width)*(29.3/100)),
+                height: (pumpkinMenu.size.height * (inThisScene.size.height / pumpkinMenu.size.height)*(11/100)))
         }// END Else
-        
     }//END Init
-    
 }//END Struct

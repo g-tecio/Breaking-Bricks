@@ -102,7 +102,30 @@ struct GameControls {
     //Score
     let acidRainScore: SKSpriteNode
     
+    /// End Times Skin
+    // Backgrounds
+    let endTimesBackground: SKSpriteNode
+    // Paddles
+    let endTimesPaddle: SKSpriteNode
+    // Balls
+    let endTimesBall: SKSpriteNode
+    //Timer
+    let endTimesTimer: SKSpriteNode
+    //Score
+    let endTimesScore: SKSpriteNode
     
+    /// Pumpkin Skin
+    // Backgrounds
+    let pumpkinBackground: SKSpriteNode
+    // Paddles
+    let pumpkinPaddle: SKSpriteNode
+    // Balls
+    let pumpkinBall: SKSpriteNode
+    //Timer
+    let pumpkinTimer: SKSpriteNode
+    //Score
+    let pumpkinScore: SKSpriteNode
+
     init(inThisScene: GameScene) {
         
         //Barrier
@@ -331,6 +354,62 @@ struct GameControls {
         acidRainScore.zPosition = 3
         acidRainScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
+        /// End Times Skin
+        // Backgrounds
+        endTimesBackground = SKSpriteNode.init(imageNamed: "Background End_Times")
+        endTimesBackground.name = "background"
+        endTimesBackground.zPosition = 1
+        endTimesBackground.position = CGPoint(x: inThisScene.size.width/2, y: inThisScene.size.height/2)
+        endTimesBackground.size = CGSize(
+            width: ((endTimesBackground.size.width * (inThisScene.size.width / endTimesBackground.size.width))),
+            height: (endTimesBackground.size.height * (inThisScene.size.height / endTimesBackground.size.height)))
+        //Paddles
+        endTimesPaddle = SKSpriteNode.init(imageNamed: "Paddle End_Times")
+        endTimesPaddle.name = "paddle"
+        endTimesPaddle.zPosition = 3
+        endTimesPaddle.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (12.29/100))
+        //Balls
+        endTimesBall = SKSpriteNode.init(imageNamed: "Ball End_Times")
+        endTimesBall.name = "ball"
+        endTimesBall.zPosition = 2
+        endTimesBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
+        //Timer Brick
+        endTimesTimer = SKSpriteNode.init(imageNamed: "Timer_Score End_Times")
+        endTimesTimer.zPosition = 3
+        endTimesTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
+        //Score Brick
+        endTimesScore = SKSpriteNode.init(imageNamed: "Timer_Score End_Times")
+        endTimesScore.zPosition = 3
+        endTimesScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
+        
+        /// Pumpkin Skin
+        // Backgrounds
+        pumpkinBackground = SKSpriteNode.init(imageNamed: "Background Pumpkin")
+        pumpkinBackground.name = "background"
+        pumpkinBackground.zPosition = 1
+        pumpkinBackground.position = CGPoint(x: inThisScene.size.width/2, y: inThisScene.size.height/2)
+        pumpkinBackground.size = CGSize(
+            width: ((pumpkinBackground.size.width * (inThisScene.size.width / pumpkinBackground.size.width))),
+            height: (pumpkinBackground.size.height * (inThisScene.size.height / pumpkinBackground.size.height)))
+        //Paddles
+        pumpkinPaddle = SKSpriteNode.init(imageNamed: "Paddle Pumpkin")
+        pumpkinPaddle.name = "paddle"
+        pumpkinPaddle.zPosition = 3
+        pumpkinPaddle.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (12.29/100))
+        //Balls
+        pumpkinBall = SKSpriteNode.init(imageNamed: "Ball Pumpkin")
+        pumpkinBall.name = "ball"
+        pumpkinBall.zPosition = 2
+        pumpkinBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
+        //Timer Brick
+        pumpkinTimer = SKSpriteNode.init(imageNamed: "Timer_Score Pumpkin")
+        pumpkinTimer.zPosition = 3
+        pumpkinTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
+        //Score Brick
+        pumpkinScore = SKSpriteNode.init(imageNamed: "Timer_Score Pumpkin")
+        pumpkinScore.zPosition = 3
+        pumpkinScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
+        
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
             //16:9
@@ -513,7 +592,7 @@ struct GameControls {
                 width: (spaceDustScore.size.width * (inThisScene.size.width / spaceDustScore.size.width)*(22.22/100)),
                 height: (spaceDustScore.size.height * (inThisScene.size.height / spaceDustScore.size.height)*(4.17/100)))
             
-            /// Space Dust Skin
+            /// Acid Rain Skin
             //16:9
             acidRainPaddle.size = CGSize(
                 width: ((acidRainPaddle.size.width * (inThisScene.size.width / acidRainPaddle.size.width)*(25/100))),
@@ -542,6 +621,66 @@ struct GameControls {
             acidRainScore.size = CGSize(
                 width: (acidRainScore.size.width * (inThisScene.size.width / acidRainScore.size.width)*(22.22/100)),
                 height: (acidRainScore.size.height * (inThisScene.size.height / acidRainScore.size.height)*(4.17/100)))
+            
+            /// End Times Skin
+            //16:9
+            endTimesPaddle.size = CGSize(
+                width: ((endTimesPaddle.size.width * (inThisScene.size.width / endTimesPaddle.size.width)*(25/100))),
+                height: (endTimesPaddle.size.height * (inThisScene.size.height / endTimesPaddle.size.height)*(1.56/100)))
+            endTimesPaddle.physicsBody = SKPhysicsBody(rectangleOf: endTimesPaddle.size)
+            endTimesPaddle.physicsBody?.isDynamic = false
+            endTimesPaddle.physicsBody?.friction = 0
+            endTimesPaddle.physicsBody?.restitution = 1
+            //16:9
+            endTimesBall.size = CGSize(
+                width: (endTimesBall.size.width * (inThisScene.size.width / endTimesBall.size.width)*(4.63/100)),
+                height: (endTimesBall.size.height * (inThisScene.size.height / endTimesBall.size.height)*(2.6/100)))
+            endTimesBall.physicsBody = SKPhysicsBody(circleOfRadius: (endTimesBall.size.width / 2))
+            endTimesBall.physicsBody?.allowsRotation = false
+            endTimesBall.physicsBody?.affectedByGravity = true
+            endTimesBall.physicsBody?.friction = 0
+            endTimesBall.physicsBody?.restitution = 1
+            endTimesBall.physicsBody?.linearDamping = 0
+            endTimesBall.physicsBody?.angularDamping = 0
+            endTimesBall.physicsBody?.mass = 0.01
+            //16:9
+            endTimesTimer.size = CGSize(
+                width: (endTimesTimer.size.width * (inThisScene.size.width / endTimesTimer.size.width)*(22/100)),
+                height: (endTimesTimer.size.height * (inThisScene.size.height / endTimesTimer.size.height)*(4/100)))
+            //16:9
+            endTimesScore.size = CGSize(
+                width: (endTimesScore.size.width * (inThisScene.size.width / endTimesScore.size.width)*(22.22/100)),
+                height: (endTimesScore.size.height * (inThisScene.size.height / endTimesScore.size.height)*(4.17/100)))
+            
+            /// Pumpkin Skin
+            //16:9 pumpkinBall
+            pumpkinPaddle.size = CGSize(
+                width: ((pumpkinPaddle.size.width * (inThisScene.size.width / pumpkinPaddle.size.width)*(25/100))),
+                height: (pumpkinPaddle.size.height * (inThisScene.size.height / pumpkinPaddle.size.height)*(1.56/100)))
+            pumpkinPaddle.physicsBody = SKPhysicsBody(rectangleOf: pumpkinPaddle.size)
+            pumpkinPaddle.physicsBody?.isDynamic = false
+            pumpkinPaddle.physicsBody?.friction = 0
+            pumpkinPaddle.physicsBody?.restitution = 1
+            //16:9
+            pumpkinBall.size = CGSize(
+                width: (pumpkinBall.size.width * (inThisScene.size.width / pumpkinBall.size.width)*(4.63/100)),
+                height: (pumpkinBall.size.height * (inThisScene.size.height / pumpkinBall.size.height)*(2.6/100)))
+            pumpkinBall.physicsBody = SKPhysicsBody(circleOfRadius: (pumpkinBall.size.width / 2))
+            pumpkinBall.physicsBody?.allowsRotation = false
+            pumpkinBall.physicsBody?.affectedByGravity = true
+            pumpkinBall.physicsBody?.friction = 0
+            pumpkinBall.physicsBody?.restitution = 1
+            pumpkinBall.physicsBody?.linearDamping = 0
+            pumpkinBall.physicsBody?.angularDamping = 0
+            pumpkinBall.physicsBody?.mass = 0.01
+            //16:9
+            pumpkinTimer.size = CGSize(
+                width: (pumpkinTimer.size.width * (inThisScene.size.width / pumpkinTimer.size.width)*(22/100)),
+                height: (pumpkinTimer.size.height * (inThisScene.size.height / pumpkinTimer.size.height)*(4/100)))
+            //16:9
+            pumpkinScore.size = CGSize(
+                width: (pumpkinScore.size.width * (inThisScene.size.width / pumpkinScore.size.width)*(22.22/100)),
+                height: (pumpkinScore.size.height * (inThisScene.size.height / pumpkinScore.size.height)*(4.17/100)))
             
         }else{
             /// Classic
@@ -754,6 +893,66 @@ struct GameControls {
             acidRainScore.size = CGSize(
                 width: (acidRainScore.size.width * (inThisScene.size.width / acidRainScore.size.width)*(17.57/100)),
                 height: (acidRainScore.size.height * (inThisScene.size.height / acidRainScore.size.height)*(4.49/100)))
+            
+            /// End Times Skin
+            //4:3
+            endTimesPaddle.size = CGSize(
+                width: ((endTimesPaddle.size.width * (inThisScene.size.width / endTimesPaddle.size.width)*(24.41/100))),
+                height: (endTimesPaddle.size.height * (inThisScene.size.height / endTimesPaddle.size.height)*(2.56/100)))
+            endTimesPaddle.physicsBody = SKPhysicsBody(rectangleOf: endTimesPaddle.size)
+            endTimesPaddle.physicsBody?.isDynamic = false
+            endTimesPaddle.physicsBody?.friction = 0
+            endTimesPaddle.physicsBody?.restitution = 1
+            //4:3
+            endTimesBall.size = CGSize(
+                width: (endTimesBall.size.width * (inThisScene.size.width / endTimesBall.size.width)*(3.91/100)),
+                height: (endTimesBall.size.height * (inThisScene.size.height / endTimesBall.size.height)*(2.93/100)))
+            endTimesBall.physicsBody = SKPhysicsBody(circleOfRadius: (endTimesBall.size.width / 2))
+            endTimesBall.physicsBody?.allowsRotation = false
+            endTimesBall.physicsBody?.affectedByGravity = true
+            endTimesBall.physicsBody?.friction = 0
+            endTimesBall.physicsBody?.restitution = 1
+            endTimesBall.physicsBody?.linearDamping = 0
+            endTimesBall.physicsBody?.angularDamping = 0
+            endTimesBall.physicsBody?.mass = 0.01
+            //4:3
+            endTimesTimer.size = CGSize(
+                width: (endTimesTimer.size.width * (inThisScene.size.width / endTimesTimer.size.width)*(17.57/100)),
+                height: (endTimesTimer.size.height * (inThisScene.size.height / endTimesTimer.size.height)*(4.49/100)))
+            //4:3
+            endTimesScore.size = CGSize(
+                width: (endTimesScore.size.width * (inThisScene.size.width / endTimesScore.size.width)*(17.57/100)),
+                height: (endTimesScore.size.height * (inThisScene.size.height / endTimesScore.size.height)*(4.49/100)))
+            
+            /// Pumpkin Skin
+            //4:3
+            pumpkinPaddle.size = CGSize(
+                width: ((pumpkinPaddle.size.width * (inThisScene.size.width / pumpkinPaddle.size.width)*(24.41/100))),
+                height: (pumpkinPaddle.size.height * (inThisScene.size.height / pumpkinPaddle.size.height)*(2.56/100)))
+            pumpkinPaddle.physicsBody = SKPhysicsBody(rectangleOf: pumpkinPaddle.size)
+            pumpkinPaddle.physicsBody?.isDynamic = false
+            pumpkinPaddle.physicsBody?.friction = 0
+            pumpkinPaddle.physicsBody?.restitution = 1
+            //4:3
+            pumpkinBall.size = CGSize(
+                width: (pumpkinBall.size.width * (inThisScene.size.width / pumpkinBall.size.width)*(3.91/100)),
+                height: (pumpkinBall.size.height * (inThisScene.size.height / pumpkinBall.size.height)*(2.93/100)))
+            pumpkinBall.physicsBody = SKPhysicsBody(circleOfRadius: (pumpkinBall.size.width / 2))
+            pumpkinBall.physicsBody?.allowsRotation = false
+            pumpkinBall.physicsBody?.affectedByGravity = true
+            pumpkinBall.physicsBody?.friction = 0
+            pumpkinBall.physicsBody?.restitution = 1
+            pumpkinBall.physicsBody?.linearDamping = 0
+            pumpkinBall.physicsBody?.angularDamping = 0
+            pumpkinBall.physicsBody?.mass = 0.01
+            //4:3
+            pumpkinTimer.size = CGSize(
+                width: (pumpkinTimer.size.width * (inThisScene.size.width / pumpkinTimer.size.width)*(17.57/100)),
+                height: (pumpkinTimer.size.height * (inThisScene.size.height / pumpkinTimer.size.height)*(4.49/100)))
+            //4:3
+            pumpkinScore.size = CGSize(
+                width: (pumpkinScore.size.width * (inThisScene.size.width / pumpkinScore.size.width)*(17.57/100)),
+                height: (pumpkinScore.size.height * (inThisScene.size.height / pumpkinScore.size.height)*(4.49/100)))
             
             
         }//End else

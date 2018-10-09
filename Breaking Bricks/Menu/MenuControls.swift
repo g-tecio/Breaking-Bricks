@@ -19,70 +19,90 @@ struct MenuControls {
     let bgclassic:SKSpriteNode
     /// Game Button
     let playclassic: SKSpriteNode
-    /// Score Button
-    let scoreclassic:SKSpriteNode
     /// Store Button
     let storeclassic:SKSpriteNode
+    /// Score Button
+    let scoreclassic:SKSpriteNode
     
     /// Retro Life Skin
     // Background
     let retroLifeSkinBackground:SKSpriteNode
     /// Game Button
     let retroLifeSkinPlay: SKSpriteNode
-    /// Score Button
-    let retroLifeSkinScore:SKSpriteNode
     /// Store Button
     let retroLifeSkinStore:SKSpriteNode
+    /// Score Button
+    let retroLifeSkinScore:SKSpriteNode
     
     /// Rainbow Skin
     // Background
     let rainbowBackground:SKSpriteNode
     /// Game Button
     let rainbowPlay: SKSpriteNode
-    /// Score Button
-    let rainbowScore:SKSpriteNode
     /// Store Button
     let rainbowStore:SKSpriteNode
+    /// Score Button
+    let rainbowScore:SKSpriteNode
     
     /// Light Skin
     // Background
     let lightBackground:SKSpriteNode
     /// Game Button
     let lightPlay: SKSpriteNode
-    /// Score Button
-    let lightScore:SKSpriteNode
     /// Store Button
     let lightStore:SKSpriteNode
+    /// Score Button
+    let lightScore:SKSpriteNode
     
     /// Soccer Skin
     // Background
     let soccerBackground:SKSpriteNode
     /// Game Button
     let soccerPlay: SKSpriteNode
-    /// Score Button
-    let soccerScore:SKSpriteNode
     /// Store Button
     let soccerStore:SKSpriteNode
+    /// Score Button
+    let soccerScore:SKSpriteNode
     
     /// spaceDust Skin
     // Background
     let spaceDustBackground:SKSpriteNode
     /// Game Button
     let spaceDustPlay: SKSpriteNode
-    /// Score Button
-    let spaceDustScore:SKSpriteNode
     /// Store Button
     let spaceDustStore:SKSpriteNode
+    /// Score Button
+    let spaceDustScore:SKSpriteNode
     
     /// AcidRain Skin
     // Background
     let acidRainBackground:SKSpriteNode
     /// Game Button
     let acidRainPlay: SKSpriteNode
-    /// Score Button
-    let acidRainScore:SKSpriteNode
     /// Store Button
     let acidRainStore:SKSpriteNode
+    /// Score Button
+    let acidRainScore:SKSpriteNode
+    
+    /// End Times Skin
+    // Background
+    let endTimesBackground:SKSpriteNode
+    /// Game Button
+    let endTimesPlay: SKSpriteNode
+    /// Store Button
+    let endTimesStore:SKSpriteNode
+    /// Score Button
+    let endTimesScore:SKSpriteNode
+
+    /// Pumpkin Skin
+    // Background
+    let pumpkinBackground:SKSpriteNode
+    /// Game Button
+    let pumpkinPlay: SKSpriteNode
+    /// Store Button
+    let pumpkinStore:SKSpriteNode
+    /// Score Button
+    let pumpkinScore:SKSpriteNode
     
     
     init(inThisScene: MenuScene) {
@@ -248,6 +268,53 @@ struct MenuControls {
         acidRainScore.zPosition = 2
         acidRainScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
         
+        // End Times Skin
+        /// background
+        endTimesBackground = SKSpriteNode.init(imageNamed: "Background End_Times")
+        endTimesBackground.name = "background"
+        endTimesBackground.zPosition = 1
+        endTimesBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        endTimesBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Play Button
+        endTimesPlay = SKSpriteNode.init(imageNamed: "Play End_Times")
+        endTimesPlay.name = "buttonSprite-Play"
+        endTimesPlay.zPosition = 2
+        endTimesPlay.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(61.20/100)))
+        /// Store Button
+        endTimesStore = SKSpriteNode.init(imageNamed: "Store End_Times")
+        endTimesStore.name = "buttonSprite-Store"
+        endTimesStore.zPosition = 2
+        endTimesStore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(34.64/100)))
+        /// Score Button
+        endTimesScore = SKSpriteNode.init(imageNamed: "Score End_Times")
+        endTimesScore.name = "buttonSprite-Score"
+        endTimesScore.zPosition = 2
+        endTimesScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
+        
+        
+        // Pumpkin
+        /// background
+        pumpkinBackground = SKSpriteNode.init(imageNamed: "Background Pumpkin")
+        pumpkinBackground.name = "background"
+        pumpkinBackground.zPosition = 1
+        pumpkinBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        pumpkinBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Play Button
+        pumpkinPlay = SKSpriteNode.init(imageNamed: "Play Pumpkin")
+        pumpkinPlay.name = "buttonSprite-Play"
+        pumpkinPlay.zPosition = 2
+        pumpkinPlay.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(61.20/100)))
+        /// Store Button
+        pumpkinStore = SKSpriteNode.init(imageNamed: "Store Pumpkin")
+        pumpkinStore.name = "buttonSprite-Store"
+        pumpkinStore.zPosition = 2
+        pumpkinStore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(34.64/100)))
+        /// Score Button
+        pumpkinScore = SKSpriteNode.init(imageNamed: "Score Pumpkin")
+        pumpkinScore.name = "buttonSprite-Score"
+        pumpkinScore.zPosition = 2
+        pumpkinScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
+        
         
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
@@ -348,6 +415,34 @@ struct MenuControls {
                 width: (acidRainScore.size.width * (inThisScene.size.width / acidRainScore.size.width)*(37.04/100)),
                 height: (acidRainScore.size.height * (inThisScene.size.height / acidRainScore.size.height)*(10.42/100)))
             
+            /// End Times Skin
+            //16:9
+            endTimesPlay.size  = CGSize(
+                width: (endTimesPlay.size.width * (inThisScene.size.width / endTimesPlay.size.width)*(37.04/100)),
+                height: (endTimesPlay.size.height * (inThisScene.size.height / endTimesPlay.size.height)*(10.42/100)))
+            //16:9
+            endTimesStore.size = CGSize(
+                width: (endTimesStore.size.width * (inThisScene.size.width / endTimesStore.size.width)*(37.04/100)),
+                height: (endTimesStore.size.height * (inThisScene.size.height / endTimesStore.size.height)*(10.42/100)))
+            //16:9
+            endTimesScore.size = CGSize(
+                width: (endTimesScore.size.width * (inThisScene.size.width / endTimesScore.size.width)*(37.04/100)),
+                height: (endTimesScore.size.height * (inThisScene.size.height / endTimesScore.size.height)*(10.42/100)))
+            
+            /// End Times Skin
+            //16:9
+            pumpkinPlay.size  = CGSize(
+                width: (pumpkinPlay.size.width * (inThisScene.size.width / pumpkinPlay.size.width)*(37.04/100)),
+                height: (pumpkinPlay.size.height * (inThisScene.size.height / pumpkinPlay.size.height)*(10.42/100)))
+            //16:9
+            pumpkinStore.size = CGSize(
+                width: (pumpkinStore.size.width * (inThisScene.size.width / pumpkinStore.size.width)*(37.04/100)),
+                height: (pumpkinStore.size.height * (inThisScene.size.height / pumpkinStore.size.height)*(10.42/100)))
+            //16:9
+            pumpkinScore.size = CGSize(
+                width: (pumpkinScore.size.width * (inThisScene.size.width / pumpkinScore.size.width)*(37.04/100)),
+                height: (pumpkinScore.size.height * (inThisScene.size.height / pumpkinScore.size.height)*(10.42/100)))
+            
         }else{
             /// Classic
             //4:3
@@ -447,8 +542,36 @@ struct MenuControls {
                 width: (acidRainScore.size.width * (inThisScene.size.width / acidRainScore.size.width)*(29.3/100)),
                 height: (acidRainScore.size.height * (inThisScene.size.height / acidRainScore.size.height)*(11/100)))
             
+            
+            /// End Times Skin
+            //4:3
+            endTimesPlay.size  = CGSize(
+                width: (endTimesPlay.size.width * (inThisScene.size.width / endTimesPlay.size.width)*(29.3/100)),
+                height: (endTimesPlay.size.height * (inThisScene.size.height / endTimesPlay.size.height)*(11/100)))
+            //4:3
+            endTimesStore.size  = CGSize(
+                width: (endTimesStore.size.width * (inThisScene.size.width / endTimesStore.size.width)*(29.3/100)),
+                height: (endTimesStore.size.height * (inThisScene.size.height / endTimesStore.size.height)*(11/100)))
+            //4:3
+            endTimesScore.size  = CGSize(
+                width: (endTimesScore.size.width * (inThisScene.size.width / endTimesScore.size.width)*(29.3/100)),
+                height: (endTimesScore.size.height * (inThisScene.size.height / endTimesScore.size.height)*(11/100)))
+            
+            /// Pumpkin Skin
+            //4:3
+            pumpkinPlay.size  = CGSize(
+                width: (pumpkinPlay.size.width * (inThisScene.size.width / pumpkinPlay.size.width)*(29.3/100)),
+                height: (pumpkinPlay.size.height * (inThisScene.size.height / pumpkinPlay.size.height)*(11/100)))
+            //4:3
+            pumpkinStore.size  = CGSize(
+                width: (pumpkinStore.size.width * (inThisScene.size.width / pumpkinStore.size.width)*(29.3/100)),
+                height: (pumpkinStore.size.height * (inThisScene.size.height / pumpkinStore.size.height)*(11/100)))
+            //4:3
+            pumpkinScore.size  = CGSize(
+                width: (pumpkinScore.size.width * (inThisScene.size.width / pumpkinScore.size.width)*(29.3/100)),
+                height: (pumpkinScore.size.height * (inThisScene.size.height / pumpkinScore.size.height)*(11/100)))
+            
+            
         }//End else
-        
-        
     }//END init
 }//END Struct

@@ -98,6 +98,18 @@ class MenuScene: SKScene {
             self.addChild(menuControls.acidRainScore)
             self.addChild(menuControls.acidRainStore)
         }
+        if sceneNumber == 7{
+            self.addChild(menuControls.endTimesBackground)
+            self.addChild(menuControls.endTimesPlay)
+            self.addChild(menuControls.endTimesScore)
+            self.addChild(menuControls.endTimesStore)
+        }
+        if sceneNumber == 8{
+            self.addChild(menuControls.pumpkinBackground)
+            self.addChild(menuControls.pumpkinPlay)
+            self.addChild(menuControls.pumpkinStore)
+            self.addChild(menuControls.pumpkinScore)
+        }
     }
     
     /// Before another Scence will be presented
