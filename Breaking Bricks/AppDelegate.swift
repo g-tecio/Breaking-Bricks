@@ -30,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var oldCostAcidB : Bool = UserDefaults.standard.bool(forKey: "costAcidB")
     var oldcostEndTimeB : Bool = UserDefaults.standard.bool(forKey: "costEndTimeB")
     var oldcostPumpkinB : Bool = UserDefaults.standard.bool(forKey: "costPumpkinB")
+    var oldcostScreamRedB : Bool = UserDefaults.standard.bool(forKey: "costScreamRedB")
+    var oldcostScreamGreenB : Bool = UserDefaults.standard.bool(forKey: "costScreamGreenB")
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -48,6 +50,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         costAcidB = oldCostAcidB
         costEndTimeB = oldcostEndTimeB
         costPumpkinB = oldcostPumpkinB
+        
+        oldcostScreamRedB = costScreamRedB
+        oldcostScreamGreenB = costScreamGreenB
         
         //STORE VALUES
         coin = oldCoinStore

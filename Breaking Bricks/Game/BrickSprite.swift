@@ -23,6 +23,8 @@ struct BrickSprite {
     let acidRainSkin: SKSpriteNode!
     let endTimesSkin: SKSpriteNode!
     let pumpkinSkin: SKSpriteNode!
+    let screamRedSkin: SKSpriteNode!
+    let screamGreenSkin: SKSpriteNode!
     
     //Array Bricks
     let classicblocks = ["Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic",
@@ -79,7 +81,18 @@ struct BrickSprite {
                          "Brick_Orange Pumpkin","Brick_Yellow Pumpkin","Brick_Yellow Pumpkin","Brick_Yellow Pumpkin","Brick_Orange Pumpkin",
                          "Brick_Orange Pumpkin","Brick_Orange Pumpkin","Brick_Orange Pumpkin","Brick_Orange Pumpkin","Brick_Orange Pumpkin"]
     
-
+    let screamRedBlocks = ["Brick Scream_Red","Brick Scream_Red","Brick Scream_Red","Brick Scream_Red","Brick Scream_Red",
+                           "Brick Scream_Red","Brick Scream_Red","Brick Scream_Red","Brick Scream_Red","Brick Scream_Red",
+                           "Brick Scream_Red","Brick Scream_Red","Brick Scream_Red","Brick Scream_Red","Brick Scream_Red",
+                           "Brick Scream_Red","Brick Scream_Red","Brick Scream_Red","Brick Scream_Red","Brick Scream_Red",
+                           "Brick Scream_Red","Brick Scream_Red","Brick Scream_Red","Brick Scream_Red","Brick Scream_Red"]
+    
+    let screamGreenBlocks = ["Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green",
+                             "Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green",
+                             "Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green",
+                             "Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green",
+                             "Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green",]
+    
     init (numBricks: Int, row: Int, col: Int , inThisScene: GameScene) {
         
         /// Classic
@@ -100,6 +113,11 @@ struct BrickSprite {
         endTimesSkin = SKSpriteNode(imageNamed: endTimesBlocks[numBricks])
         // Pumpkin Skin
         pumpkinSkin = SKSpriteNode(imageNamed: pumpkinBlocks[numBricks])
+        // Scream Red Skin
+        screamRedSkin = SKSpriteNode(imageNamed: screamRedBlocks[numBricks])
+        // Scream Green Skin
+        screamGreenSkin = SKSpriteNode(imageNamed: screamGreenBlocks[numBricks])
+        
         
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
@@ -282,6 +300,46 @@ struct BrickSprite {
                 /// Offset value 295px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 84.64/100) - ((pumpkinSkin.size.height * (237.5/100) ) * CGFloat(row)))
             
+            /// Scream Red Skin
+            //16:9
+            screamRedSkin.size = CGSize(
+                width:(screamRedSkin.size.width * (inThisScene.size.width / screamRedSkin.size.width ) * (15/100)) ,
+                height: (screamRedSkin.size.height * (inThisScene.size.height / screamRedSkin.size.height ) * (4/100)))
+            screamRedSkin.physicsBody = SKPhysicsBody(rectangleOf: screamRedSkin.frame.size)
+            screamRedSkin.physicsBody!.allowsRotation = false
+            screamRedSkin.physicsBody!.friction = 0.0
+            screamRedSkin.physicsBody!.affectedByGravity = false
+            screamRedSkin.physicsBody!.isDynamic = false
+            screamRedSkin.name = BlockCategoryName
+            screamRedSkin.physicsBody!.categoryBitMask = BlockCategory
+            screamRedSkin.zPosition = 2
+            //16:9
+            screamRedSkin.position = CGPoint(
+                /// Offset value 200px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 18.5/100) + (screamRedSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 295px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 84.64/100) - ((screamRedSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            /// Scream Green Skin
+            //16:9
+            screamGreenSkin.size = CGSize(
+                width:(screamGreenSkin.size.width * (inThisScene.size.width / screamGreenSkin.size.width ) * (15/100)) ,
+                height: (screamGreenSkin.size.height * (inThisScene.size.height / screamGreenSkin.size.height ) * (4/100)))
+            screamGreenSkin.physicsBody = SKPhysicsBody(rectangleOf: screamGreenSkin.frame.size)
+            screamGreenSkin.physicsBody!.allowsRotation = false
+            screamGreenSkin.physicsBody!.friction = 0.0
+            screamGreenSkin.physicsBody!.affectedByGravity = false
+            screamGreenSkin.physicsBody!.isDynamic = false
+            screamGreenSkin.name = BlockCategoryName
+            screamGreenSkin.physicsBody!.categoryBitMask = BlockCategory
+            screamGreenSkin.zPosition = 2
+            //16:9
+            screamGreenSkin.position = CGPoint(
+                /// Offset value 200px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 18.5/100) + (screamGreenSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 295px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 84.64/100) - ((screamGreenSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
         }else{
             /// Classic
             //4:3
@@ -463,6 +521,47 @@ struct BrickSprite {
                 x: ((inThisScene.size.width * 20.70/100) + (pumpkinSkin.size.width * (106.25/100)) * CGFloat(col))
                 /// Offset value px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 87.55/100) - ((pumpkinSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            /// Scream Red Skin
+            //4:3
+            screamRedSkin.size = CGSize(
+                width:(screamRedSkin.size.width * (inThisScene.size.width / screamRedSkin.size.width ) * (13.67/100)) ,
+                height: (screamRedSkin.size.height * (inThisScene.size.height / screamRedSkin.size.height ) * (5.12/100)))
+            screamRedSkin.physicsBody = SKPhysicsBody(rectangleOf: screamRedSkin.frame.size)
+            screamRedSkin.physicsBody!.allowsRotation = false
+            screamRedSkin.physicsBody!.friction = 0.0
+            screamRedSkin.physicsBody!.affectedByGravity = false
+            screamRedSkin.physicsBody!.isDynamic = false
+            screamRedSkin.name = BlockCategoryName
+            screamRedSkin.physicsBody!.categoryBitMask = BlockCategory
+            screamRedSkin.zPosition = 2
+            //4:3
+            screamRedSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 20.70/100) + (screamRedSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 87.55/100) - ((screamRedSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            /// Scream Green Skin
+            //4:3
+            screamGreenSkin.size = CGSize(
+                width:(screamGreenSkin.size.width * (inThisScene.size.width / screamGreenSkin.size.width ) * (13.67/100)) ,
+                height: (screamGreenSkin.size.height * (inThisScene.size.height / screamGreenSkin.size.height ) * (5.12/100)))
+            screamGreenSkin.physicsBody = SKPhysicsBody(rectangleOf: screamGreenSkin.frame.size)
+            screamGreenSkin.physicsBody!.allowsRotation = false
+            screamGreenSkin.physicsBody!.friction = 0.0
+            screamGreenSkin.physicsBody!.affectedByGravity = false
+            screamGreenSkin.physicsBody!.isDynamic = false
+            screamGreenSkin.name = BlockCategoryName
+            screamGreenSkin.physicsBody!.categoryBitMask = BlockCategory
+            screamGreenSkin.zPosition = 2
+            //4:3
+            screamGreenSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 20.70/100) + (screamGreenSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 87.55/100) - ((screamGreenSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
             
             
             

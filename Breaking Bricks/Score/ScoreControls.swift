@@ -135,6 +135,32 @@ struct ScoreControls {
     let pumpkinTime: SKSpriteNode
     let pumpkinTimeLabel: SKSpriteNode
     
+    /// Scream Red Skin
+    // Backgrounds
+    let screamRedBackground: SKSpriteNode
+    // Menu Buttons
+    let screamRedMenu: SKSpriteNode
+    // Win, Lose and Time
+    let screamRedWin: SKSpriteNode
+    let screamRedWinLabel: SKSpriteNode
+    let screamRedLose: SKSpriteNode
+    let screamRedLoseLabel: SKSpriteNode
+    let screamRedTime: SKSpriteNode
+    let screamRedTimeLabel: SKSpriteNode
+    
+    /// Scream Green Skin
+    // Backgrounds
+    let screamGreenBackground: SKSpriteNode
+    // Menu Buttons
+    let screamGreenMenu: SKSpriteNode
+    // Win, Lose and Time
+    let screamGreenWin: SKSpriteNode
+    let screamGreenWinLabel: SKSpriteNode
+    let screamGreenLose: SKSpriteNode
+    let screamGreenLoseLabel: SKSpriteNode
+    let screamGreenTime: SKSpriteNode
+    let screamGreenTimeLabel: SKSpriteNode
+    
     init(inThisScene: ScoreScene) {
         
         /// Score Win Label
@@ -507,7 +533,81 @@ struct ScoreControls {
         pumpkinMenu.zPosition = 2
         pumpkinMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
 
+        // Red Scream Skin
+        /// Backgrounds
+        screamRedBackground = SKSpriteNode.init(imageNamed: "Background Scream_Red")
+        screamRedBackground.name = "background"
+        screamRedBackground.zPosition = 1
+        screamRedBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        screamRedBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Win
+        screamRedWin = SKSpriteNode.init(imageNamed: "Wins Scream_Red")
+        screamRedWin.name = "image-Win"
+        screamRedWin.zPosition = 2
+        /// WinLabel
+        screamRedWinLabel = SKSpriteNode.init(imageNamed: "Multipurpose Scream_Red")
+        screamRedWinLabel.name = "Label-Win"
+        screamRedWinLabel.zPosition = 2
+        /// Lose
+        screamRedLose = SKSpriteNode.init(imageNamed: "Lose Scream_Red")
+        screamRedLose.name = "image-Lose"
+        screamRedLose.zPosition = 2
+        /// Loselabel
+        screamRedLoseLabel = SKSpriteNode.init(imageNamed: "Multipurpose Scream_Red")
+        screamRedLoseLabel.name = "Label-Lose"
+        screamRedLoseLabel.zPosition = 2
+        /// Time
+        screamRedTime = SKSpriteNode.init(imageNamed: "Time Scream_Red")
+        screamRedTime.name = "image-Time"
+        screamRedTime.zPosition = 2
+        /// Timelabel
+        screamRedTimeLabel = SKSpriteNode.init(imageNamed: "Multipurpose Scream_Red")
+        screamRedTimeLabel.name = "Label-Time"
+        screamRedTimeLabel.zPosition = 2
+        /// Menu Button
+        screamRedMenu = SKSpriteNode.init(imageNamed: "Menu Scream_Red")
+        screamRedMenu.name = "buttonSprite-Menu"
+        screamRedMenu.zPosition = 2
+        screamRedMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
 
+        // Green Scream Skin
+        /// Backgrounds
+        screamGreenBackground = SKSpriteNode.init(imageNamed: "Background Scream_Red")
+        screamGreenBackground.name = "background"
+        screamGreenBackground.zPosition = 1
+        screamGreenBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        screamGreenBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Win
+        screamGreenWin = SKSpriteNode.init(imageNamed: "Wins Scream_Red")
+        screamGreenWin.name = "image-Win"
+        screamGreenWin.zPosition = 2
+        /// WinLabel
+        screamGreenWinLabel = SKSpriteNode.init(imageNamed: "Multipurpose Scream_Red")
+        screamGreenWinLabel.name = "Label-Win"
+        screamGreenWinLabel.zPosition = 2
+        /// Lose
+        screamGreenLose = SKSpriteNode.init(imageNamed: "Lose Scream_Red")
+        screamGreenLose.name = "image-Lose"
+        screamGreenLose.zPosition = 2
+        /// Loselabel
+        screamGreenLoseLabel = SKSpriteNode.init(imageNamed: "Multipurpose Scream_Red")
+        screamGreenLoseLabel.name = "Label-Lose"
+        screamGreenLoseLabel.zPosition = 2
+        /// Time
+        screamGreenTime = SKSpriteNode.init(imageNamed: "Time Scream_Red")
+        screamGreenTime.name = "image-Time"
+        screamGreenTime.zPosition = 2
+        /// Timelabel
+        screamGreenTimeLabel = SKSpriteNode.init(imageNamed: "Multipurpose Scream_Red")
+        screamGreenTimeLabel.name = "Label-Time"
+        screamGreenTimeLabel.zPosition = 2
+        /// Menu Button
+        screamGreenMenu = SKSpriteNode.init(imageNamed: "Menu Scream_Red")
+        screamGreenMenu.name = "buttonSprite-Menu"
+        screamGreenMenu.zPosition = 2
+        screamGreenMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
+        
+        
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
             //16:9
             scoreWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
@@ -944,6 +1044,102 @@ struct ScoreControls {
                 height: (pumpkinMenu.size.height * (inThisScene.size.height / pumpkinMenu.size.height)*(10.42/100))
             )
             
+            /// Scream Red Skin
+            //16:9
+            screamRedWin.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            screamRedWin.size = CGSize(
+                width: (screamRedWin.size.width * (inThisScene.size.width / screamRedWin.size.width)*(37.04/100)),
+                height: (screamRedWin.size.height * (inThisScene.size.height / screamRedWin.size.height)*(10.42/100)))
+            //16:9
+            screamRedWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            screamRedWinLabel.size = CGSize(
+                width: (screamRedWinLabel.size.width * (inThisScene.size.width / screamRedWinLabel.size.width)*(37.04/100)),
+                height: (screamRedWinLabel.size.height * (inThisScene.size.height / screamRedWinLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            screamRedLose.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            screamRedLose.size = CGSize(
+                width: (screamRedLose.size.width * (inThisScene.size.width / screamRedLose.size.width)*(37.04/100)),
+                height: (screamRedLose.size.height * (inThisScene.size.height / screamRedLose.size.height)*(10.42/100)))
+            //16:9
+            screamRedLoseLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            screamRedLoseLabel.size = CGSize(
+                width: (screamRedLoseLabel.size.width * (inThisScene.size.width / screamRedLoseLabel.size.width)*(37.04/100)),
+                height: (screamRedLoseLabel.size.height * (inThisScene.size.height / screamRedLoseLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            screamRedTime.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            screamRedTime.size = CGSize(
+                width: (screamRedTime.size.width * (inThisScene.size.width / screamRedTime.size.width)*(37.04/100)),
+                height: (screamRedTime.size.height * (inThisScene.size.height / screamRedTime.size.height)*(10.42/100))
+            )
+            //16:9
+            screamRedTimeLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            screamRedTimeLabel.size = CGSize(
+                width: (screamRedTimeLabel.size.width * (inThisScene.size.width / screamRedTimeLabel.size.width)*(37.04/100)),
+                height: (screamRedTimeLabel.size.height * (inThisScene.size.height / screamRedTimeLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            screamRedMenu.size = CGSize(
+                width: (screamRedMenu.size.width * (inThisScene.size.width / screamRedMenu.size.width)*(37.04/100)),
+                height: (screamRedMenu.size.height * (inThisScene.size.height / screamRedMenu.size.height)*(10.42/100))
+            )
+            
+            /// Scream Green Skin
+            //16:9
+            screamGreenWin.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            screamGreenWin.size = CGSize(
+                width: (screamGreenWin.size.width * (inThisScene.size.width / screamGreenWin.size.width)*(37.04/100)),
+                height: (screamGreenWin.size.height * (inThisScene.size.height / screamGreenWin.size.height)*(10.42/100)))
+            //16:9
+            screamGreenWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            screamGreenWinLabel.size = CGSize(
+                width: (screamGreenWinLabel.size.width * (inThisScene.size.width / screamGreenWinLabel.size.width)*(37.04/100)),
+                height: (screamGreenWinLabel.size.height * (inThisScene.size.height / screamGreenWinLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            screamGreenLose.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            screamGreenLose.size = CGSize(
+                width: (screamGreenLose.size.width * (inThisScene.size.width / screamGreenLose.size.width)*(37.04/100)),
+                height: (screamGreenLose.size.height * (inThisScene.size.height / screamGreenLose.size.height)*(10.42/100)))
+            //16:9
+            screamGreenLoseLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            screamGreenLoseLabel.size = CGSize(
+                width: (screamGreenLoseLabel.size.width * (inThisScene.size.width / screamGreenLoseLabel.size.width)*(37.04/100)),
+                height: (screamGreenLoseLabel.size.height * (inThisScene.size.height / screamGreenLoseLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            screamGreenTime.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            screamGreenTime.size = CGSize(
+                width: (screamGreenTime.size.width * (inThisScene.size.width / screamGreenTime.size.width)*(37.04/100)),
+                height: (screamGreenTime.size.height * (inThisScene.size.height / screamGreenTime.size.height)*(10.42/100))
+            )
+            //16:9
+            screamGreenTimeLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            screamGreenTimeLabel.size = CGSize(
+                width: (screamGreenTimeLabel.size.width * (inThisScene.size.width / screamGreenTimeLabel.size.width)*(37.04/100)),
+                height: (screamGreenTimeLabel.size.height * (inThisScene.size.height / screamGreenTimeLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            screamGreenMenu.size = CGSize(
+                width: (screamGreenMenu.size.width * (inThisScene.size.width / screamGreenMenu.size.width)*(37.04/100)),
+                height: (screamGreenMenu.size.height * (inThisScene.size.height / screamGreenMenu.size.height)*(10.42/100))
+            )
+            
+            
+            
         }else{
             //4:3
             scoreWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
@@ -1329,6 +1525,92 @@ struct ScoreControls {
             pumpkinMenu.size  = CGSize(
                 width: (pumpkinMenu.size.width * (inThisScene.size.width / pumpkinMenu.size.width)*(29.3/100)),
                 height: (pumpkinMenu.size.height * (inThisScene.size.height / pumpkinMenu.size.height)*(11/100)))
+            
+            
+            /// Scream Red Skin
+            //4:3
+            screamRedWin.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            screamRedWin.size  = CGSize(
+                width: (screamRedWin.size.width * (inThisScene.size.width / screamRedWin.size.width)*(29.3/100)),
+                height: (screamRedWin.size.height * (inThisScene.size.height / screamRedWin.size.height)*(11/100)))
+            //4:3
+            screamRedWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            screamRedWinLabel.size  = CGSize(
+                width: (screamRedWinLabel.size.width * (inThisScene.size.width / screamRedWinLabel.size.width)*(29.3/100)),
+                height: (screamRedWinLabel.size.height * (inThisScene.size.height / screamRedWinLabel.size.height)*(11/100)))
+            //4:3
+            screamRedLose.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            screamRedLose.size  = CGSize(
+                width: (screamRedLose.size.width * (inThisScene.size.width / screamRedLose.size.width)*(29.3/100)),
+                height: (screamRedLose.size.height * (inThisScene.size.height / screamRedLose.size.height)*(11/100)))
+            //4:3
+            screamRedLoseLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            screamRedLoseLabel.size  = CGSize(
+                width: (screamRedLoseLabel.size.width * (inThisScene.size.width / screamRedLoseLabel.size.width)*(29.3/100)),
+                height: (screamRedLoseLabel.size.height * (inThisScene.size.height / screamRedLoseLabel.size.height)*(11/100)))
+            //4:3
+            screamRedTime.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            screamRedTime.size  = CGSize(
+                width: (screamRedTime.size.width * (inThisScene.size.width / screamRedTime.size.width)*(29.3/100)),
+                height: (screamRedTime.size.height * (inThisScene.size.height / screamRedTime.size.height)*(11/100)))
+            //4:3
+            screamRedTimeLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            screamRedTimeLabel.size  = CGSize(
+                width: (screamRedTimeLabel.size.width * (inThisScene.size.width / screamRedTimeLabel.size.width)*(29.3/100)),
+                height: (screamRedTimeLabel.size.height * (inThisScene.size.height / screamRedTimeLabel.size.height)*(11/100)))
+            //4:3
+            screamRedMenu.size  = CGSize(
+                width: (screamRedMenu.size.width * (inThisScene.size.width / screamRedMenu.size.width)*(29.3/100)),
+                height: (screamRedMenu.size.height * (inThisScene.size.height / screamRedMenu.size.height)*(11/100)))
+            
+            /// Scream Green Skin
+            //4:3
+            screamGreenWin.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            screamGreenWin.size  = CGSize(
+                width: (screamGreenWin.size.width * (inThisScene.size.width / screamGreenWin.size.width)*(29.3/100)),
+                height: (screamGreenWin.size.height * (inThisScene.size.height / screamGreenWin.size.height)*(11/100)))
+            //4:3
+            screamGreenWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            screamGreenWinLabel.size  = CGSize(
+                width: (screamGreenWinLabel.size.width * (inThisScene.size.width / screamGreenWinLabel.size.width)*(29.3/100)),
+                height: (screamGreenWinLabel.size.height * (inThisScene.size.height / screamGreenWinLabel.size.height)*(11/100)))
+            //4:3
+            screamGreenLose.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            screamGreenLose.size  = CGSize(
+                width: (screamGreenLose.size.width * (inThisScene.size.width / screamGreenLose.size.width)*(29.3/100)),
+                height: (screamGreenLose.size.height * (inThisScene.size.height / screamGreenLose.size.height)*(11/100)))
+            //4:3
+            screamGreenLoseLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            screamGreenLoseLabel.size  = CGSize(
+                width: (screamGreenLoseLabel.size.width * (inThisScene.size.width / screamGreenLoseLabel.size.width)*(29.3/100)),
+                height: (screamGreenLoseLabel.size.height * (inThisScene.size.height / screamGreenLoseLabel.size.height)*(11/100)))
+            //4:3
+            screamGreenTime.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            screamGreenTime.size  = CGSize(
+                width: (screamGreenTime.size.width * (inThisScene.size.width / screamGreenTime.size.width)*(29.3/100)),
+                height: (screamGreenTime.size.height * (inThisScene.size.height / screamGreenTime.size.height)*(11/100)))
+            //4:3
+            screamGreenTimeLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            screamGreenTimeLabel.size  = CGSize(
+                width: (screamGreenTimeLabel.size.width * (inThisScene.size.width / screamGreenTimeLabel.size.width)*(29.3/100)),
+                height: (screamGreenTimeLabel.size.height * (inThisScene.size.height / screamGreenTimeLabel.size.height)*(11/100)))
+            //4:3
+            screamGreenMenu.size  = CGSize(
+                width: (screamGreenMenu.size.width * (inThisScene.size.width / screamGreenMenu.size.width)*(29.3/100)),
+                height: (screamGreenMenu.size.height * (inThisScene.size.height / screamGreenMenu.size.height)*(11/100)))
+            
         }// END Else
     }//END Init
 }//END Struct

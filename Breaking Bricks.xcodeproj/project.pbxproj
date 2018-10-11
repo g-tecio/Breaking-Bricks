@@ -30,25 +30,11 @@
 		8D88F075212C9C660077D7C7 /* ScoreScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F074212C9C660077D7C7 /* ScoreScene.swift */; };
 		8DB1624C2142F8C50064DFCD /* LaunchScreeniPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB1624A2142F8C50064DFCD /* LaunchScreeniPad.storyboard */; };
 		DE0BAEEF2139C45300FD2398 /* ZCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE0BAEEE2139C45300FD2398 /* ZCarousel.swift */; };
-		F439DEA721495E8E00A5F840 /* Intro Bricks_iPad.json in Resources */ = {isa = PBXBuildFile; fileRef = F439DEA621495E8E00A5F840 /* Intro Bricks_iPad.json */; };
-		F439DEBA21495EC000A5F840 /* Intro_09-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEAB21495EBF00A5F840 /* Intro_09-01.png */; };
-		F439DEBB21495EC000A5F840 /* Intro_14-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEAC21495EBF00A5F840 /* Intro_14-01.png */; };
-		F439DEBC21495EC000A5F840 /* Intro_02-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEAD21495EBF00A5F840 /* Intro_02-01.png */; };
-		F439DEBD21495EC000A5F840 /* Intro_13-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEAE21495EBF00A5F840 /* Intro_13-01.png */; };
-		F439DEBE21495EC000A5F840 /* Intro_04-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEAF21495EBF00A5F840 /* Intro_04-01.png */; };
-		F439DEBF21495EC000A5F840 /* Intro_06-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB021495EBF00A5F840 /* Intro_06-01.png */; };
-		F439DEC021495EC000A5F840 /* Intro_03-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB121495EC000A5F840 /* Intro_03-01.png */; };
-		F439DEC121495EC000A5F840 /* Intro_07-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB221495EC000A5F840 /* Intro_07-01.png */; };
-		F439DEC221495EC000A5F840 /* Intro_12-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB321495EC000A5F840 /* Intro_12-01.png */; };
-		F439DEC321495EC000A5F840 /* Intro_15-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB421495EC000A5F840 /* Intro_15-01.png */; };
-		F439DEC421495EC000A5F840 /* Intro_05-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB521495EC000A5F840 /* Intro_05-01.png */; };
-		F439DEC521495EC000A5F840 /* Intro_01-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB621495EC000A5F840 /* Intro_01-01.png */; };
-		F439DEC621495EC000A5F840 /* Intro_08-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB721495EC000A5F840 /* Intro_08-01.png */; };
-		F439DEC721495EC000A5F840 /* Intro_11-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB821495EC000A5F840 /* Intro_11-01.png */; };
-		F439DEC821495EC000A5F840 /* Intro_10-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F439DEB921495EC000A5F840 /* Intro_10-01.png */; };
 		F46DCA042150188900399FE6 /* BallPadle_Sample.wav in Resources */ = {isa = PBXBuildFile; fileRef = F46DCA012150188800399FE6 /* BallPadle_Sample.wav */; };
 		F46DCA052150188900399FE6 /* HitBox_1.2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F46DCA022150188800399FE6 /* HitBox_1.2.wav */; };
 		F46DCA062150188900399FE6 /* WallBounce_2.2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F46DCA032150188800399FE6 /* WallBounce_2.2.wav */; };
+		F4FA1E8D216FF52400598E07 /* Intro_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1E8B216FF52400598E07 /* Intro_iPhone.png */; };
+		F4FA1E8E216FF52400598E07 /* Intro_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1E8C216FF52400598E07 /* Intro_iPad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,25 +65,11 @@
 		8DB1624B2142F8C50064DFCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreeniPad.storyboard; sourceTree = "<group>"; };
 		C99881D996F7E891D18C7949 /* Pods-Breaking Bricks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breaking Bricks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Breaking Bricks/Pods-Breaking Bricks.debug.xcconfig"; sourceTree = "<group>"; };
 		DE0BAEEE2139C45300FD2398 /* ZCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZCarousel.swift; sourceTree = "<group>"; };
-		F439DEA621495E8E00A5F840 /* Intro Bricks_iPad.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Intro Bricks_iPad.json"; sourceTree = "<group>"; };
-		F439DEAB21495EBF00A5F840 /* Intro_09-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_09-01.png"; sourceTree = "<group>"; };
-		F439DEAC21495EBF00A5F840 /* Intro_14-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_14-01.png"; sourceTree = "<group>"; };
-		F439DEAD21495EBF00A5F840 /* Intro_02-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_02-01.png"; sourceTree = "<group>"; };
-		F439DEAE21495EBF00A5F840 /* Intro_13-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_13-01.png"; sourceTree = "<group>"; };
-		F439DEAF21495EBF00A5F840 /* Intro_04-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_04-01.png"; sourceTree = "<group>"; };
-		F439DEB021495EBF00A5F840 /* Intro_06-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_06-01.png"; sourceTree = "<group>"; };
-		F439DEB121495EC000A5F840 /* Intro_03-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_03-01.png"; sourceTree = "<group>"; };
-		F439DEB221495EC000A5F840 /* Intro_07-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_07-01.png"; sourceTree = "<group>"; };
-		F439DEB321495EC000A5F840 /* Intro_12-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_12-01.png"; sourceTree = "<group>"; };
-		F439DEB421495EC000A5F840 /* Intro_15-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_15-01.png"; sourceTree = "<group>"; };
-		F439DEB521495EC000A5F840 /* Intro_05-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_05-01.png"; sourceTree = "<group>"; };
-		F439DEB621495EC000A5F840 /* Intro_01-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_01-01.png"; sourceTree = "<group>"; };
-		F439DEB721495EC000A5F840 /* Intro_08-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_08-01.png"; sourceTree = "<group>"; };
-		F439DEB821495EC000A5F840 /* Intro_11-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_11-01.png"; sourceTree = "<group>"; };
-		F439DEB921495EC000A5F840 /* Intro_10-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Intro_10-01.png"; sourceTree = "<group>"; };
 		F46DCA012150188800399FE6 /* BallPadle_Sample.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BallPadle_Sample.wav; sourceTree = "<group>"; };
 		F46DCA022150188800399FE6 /* HitBox_1.2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HitBox_1.2.wav; sourceTree = "<group>"; };
 		F46DCA032150188800399FE6 /* WallBounce_2.2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WallBounce_2.2.wav; sourceTree = "<group>"; };
+		F4FA1E8B216FF52400598E07 /* Intro_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Intro_iPhone.png; sourceTree = "<group>"; };
+		F4FA1E8C216FF52400598E07 /* Intro_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Intro_iPad.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +104,8 @@
 		8D88F028212C7C9A0077D7C7 = {
 			isa = PBXGroup;
 			children = (
+				F4FA1E8C216FF52400598E07 /* Intro_iPad.png */,
+				F4FA1E8B216FF52400598E07 /* Intro_iPhone.png */,
 				8D88F033212C7C9A0077D7C7 /* Breaking Bricks */,
 				8D88F032212C7C9A0077D7C7 /* Products */,
 				260560C09775FD1302E3603C /* Pods */,
@@ -153,7 +127,6 @@
 				57A714EF21669A9200BE8786 /* GoogleService-Info.plist */,
 				8D88F034212C7C9A0077D7C7 /* AppDelegate.swift */,
 				8D88F03C212C7C9A0077D7C7 /* GameViewController.swift */,
-				8DB162282142F7D60064DFCD /* Intro */,
 				8D88F055212C7ED90077D7C7 /* Menu */,
 				8D88F06B212C9BD30077D7C7 /* Score */,
 				8D88F06A212C9BCB0077D7C7 /* Store */,
@@ -217,37 +190,6 @@
 				8D88F074212C9C660077D7C7 /* ScoreScene.swift */,
 			);
 			path = Score;
-			sourceTree = "<group>";
-		};
-		8DB162282142F7D60064DFCD /* Intro */ = {
-			isa = PBXGroup;
-			children = (
-				F439DEAA21495EAC00A5F840 /* images */,
-				F439DEA621495E8E00A5F840 /* Intro Bricks_iPad.json */,
-			);
-			path = Intro;
-			sourceTree = "<group>";
-		};
-		F439DEAA21495EAC00A5F840 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				F439DEB621495EC000A5F840 /* Intro_01-01.png */,
-				F439DEAD21495EBF00A5F840 /* Intro_02-01.png */,
-				F439DEB121495EC000A5F840 /* Intro_03-01.png */,
-				F439DEAF21495EBF00A5F840 /* Intro_04-01.png */,
-				F439DEB521495EC000A5F840 /* Intro_05-01.png */,
-				F439DEB021495EBF00A5F840 /* Intro_06-01.png */,
-				F439DEB221495EC000A5F840 /* Intro_07-01.png */,
-				F439DEB721495EC000A5F840 /* Intro_08-01.png */,
-				F439DEAB21495EBF00A5F840 /* Intro_09-01.png */,
-				F439DEB921495EC000A5F840 /* Intro_10-01.png */,
-				F439DEB821495EC000A5F840 /* Intro_11-01.png */,
-				F439DEB321495EC000A5F840 /* Intro_12-01.png */,
-				F439DEAE21495EBF00A5F840 /* Intro_13-01.png */,
-				F439DEAC21495EBF00A5F840 /* Intro_14-01.png */,
-				F439DEB421495EC000A5F840 /* Intro_15-01.png */,
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 		F46DCA002150183C00399FE6 /* Sounds */ = {
@@ -320,29 +262,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F439DEC021495EC000A5F840 /* Intro_03-01.png in Resources */,
-				F439DEC421495EC000A5F840 /* Intro_05-01.png in Resources */,
 				57A714F021669A9200BE8786 /* GoogleService-Info.plist in Resources */,
-				F439DEC521495EC000A5F840 /* Intro_01-01.png in Resources */,
-				F439DEC321495EC000A5F840 /* Intro_15-01.png in Resources */,
-				F439DEBB21495EC000A5F840 /* Intro_14-01.png in Resources */,
-				F439DEC221495EC000A5F840 /* Intro_12-01.png in Resources */,
-				F439DEC821495EC000A5F840 /* Intro_10-01.png in Resources */,
+				F4FA1E8D216FF52400598E07 /* Intro_iPhone.png in Resources */,
 				F46DCA042150188900399FE6 /* BallPadle_Sample.wav in Resources */,
-				F439DEBF21495EC000A5F840 /* Intro_06-01.png in Resources */,
 				8D88F040212C7C9A0077D7C7 /* Main.storyboard in Resources */,
-				F439DEA721495E8E00A5F840 /* Intro Bricks_iPad.json in Resources */,
-				F439DEC721495EC000A5F840 /* Intro_11-01.png in Resources */,
-				F439DEC621495EC000A5F840 /* Intro_08-01.png in Resources */,
 				8D88F042212C7C9E0077D7C7 /* Assets.xcassets in Resources */,
-				F439DEBA21495EC000A5F840 /* Intro_09-01.png in Resources */,
-				F439DEBE21495EC000A5F840 /* Intro_04-01.png in Resources */,
 				F46DCA052150188900399FE6 /* HitBox_1.2.wav in Resources */,
-				F439DEBD21495EC000A5F840 /* Intro_13-01.png in Resources */,
 				8DB1624C2142F8C50064DFCD /* LaunchScreeniPad.storyboard in Resources */,
-				F439DEC121495EC000A5F840 /* Intro_07-01.png in Resources */,
-				F439DEBC21495EC000A5F840 /* Intro_02-01.png in Resources */,
 				8D88F04D212C7D750077D7C7 /* Roboto-Regular.ttf in Resources */,
+				F4FA1E8E216FF52400598E07 /* Intro_iPad.png in Resources */,
 				8D88F045212C7C9E0077D7C7 /* LaunchScreen.storyboard in Resources */,
 				F46DCA062150188900399FE6 /* WallBounce_2.2.wav in Resources */,
 			);

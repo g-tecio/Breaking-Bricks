@@ -104,6 +104,25 @@ struct MenuControls {
     /// Score Button
     let pumpkinScore:SKSpriteNode
     
+    /// Scream Red Skin
+    // Background
+    let screamRedBackground:SKSpriteNode
+    /// Game Button
+    let screamRedPlay: SKSpriteNode
+    /// Store Button
+    let screamRedStore:SKSpriteNode
+    /// Score Button
+    let screamRedScore:SKSpriteNode
+    
+    /// Scream Green Skin
+    // Background
+    let screamGreenBackground:SKSpriteNode
+    /// Game Button
+    let screamGreenPlay: SKSpriteNode
+    /// Store Button
+    let screamGreenStore:SKSpriteNode
+    /// Score Button
+    let screamGreenScore:SKSpriteNode
     
     init(inThisScene: MenuScene) {
         
@@ -315,6 +334,51 @@ struct MenuControls {
         pumpkinScore.zPosition = 2
         pumpkinScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
         
+        // Scream Red
+        /// background
+        screamRedBackground = SKSpriteNode.init(imageNamed: "Background Scream_Red")
+        screamRedBackground.name = "background"
+        screamRedBackground.zPosition = 1
+        screamRedBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        screamRedBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Play Button
+        screamRedPlay = SKSpriteNode.init(imageNamed: "Play Scream_Red")
+        screamRedPlay.name = "buttonSprite-Play"
+        screamRedPlay.zPosition = 2
+        screamRedPlay.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(61.20/100)))
+        /// Store Button
+        screamRedStore = SKSpriteNode.init(imageNamed: "Store Scream_Red")
+        screamRedStore.name = "buttonSprite-Store"
+        screamRedStore.zPosition = 2
+        screamRedStore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(34.64/100)))
+        /// Score Button
+        screamRedScore = SKSpriteNode.init(imageNamed: "Score Scream_Red")
+        screamRedScore.name = "buttonSprite-Score"
+        screamRedScore.zPosition = 2
+        screamRedScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
+        
+        // Scream Green
+        /// background
+        screamGreenBackground = SKSpriteNode.init(imageNamed: "Background Scream_Green")
+        screamGreenBackground.name = "background"
+        screamGreenBackground.zPosition = 1
+        screamGreenBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        screamGreenBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Play Button
+        screamGreenPlay = SKSpriteNode.init(imageNamed: "Play Scream_Green")
+        screamGreenPlay.name = "buttonSprite-Play"
+        screamGreenPlay.zPosition = 2
+        screamGreenPlay.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(61.20/100)))
+        /// Store Button
+        screamGreenStore = SKSpriteNode.init(imageNamed: "Store Scream_Green")
+        screamGreenStore.name = "buttonSprite-Store"
+        screamGreenStore.zPosition = 2
+        screamGreenStore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(34.64/100)))
+        /// Score Button
+        screamGreenScore = SKSpriteNode.init(imageNamed: "Score Scream_Green")
+        screamGreenScore.name = "buttonSprite-Score"
+        screamGreenScore.zPosition = 2
+        screamGreenScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
         
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
@@ -429,7 +493,7 @@ struct MenuControls {
                 width: (endTimesScore.size.width * (inThisScene.size.width / endTimesScore.size.width)*(37.04/100)),
                 height: (endTimesScore.size.height * (inThisScene.size.height / endTimesScore.size.height)*(10.42/100)))
             
-            /// End Times Skin
+            /// Pumpkin Skin
             //16:9
             pumpkinPlay.size  = CGSize(
                 width: (pumpkinPlay.size.width * (inThisScene.size.width / pumpkinPlay.size.width)*(37.04/100)),
@@ -442,6 +506,34 @@ struct MenuControls {
             pumpkinScore.size = CGSize(
                 width: (pumpkinScore.size.width * (inThisScene.size.width / pumpkinScore.size.width)*(37.04/100)),
                 height: (pumpkinScore.size.height * (inThisScene.size.height / pumpkinScore.size.height)*(10.42/100)))
+            
+            /// Scream Red  Skin
+            //16:9
+            screamRedPlay.size  = CGSize(
+                width: (screamRedPlay.size.width * (inThisScene.size.width / screamRedPlay.size.width)*(37.04/100)),
+                height: (screamRedPlay.size.height * (inThisScene.size.height / screamRedPlay.size.height)*(10.42/100)))
+            //16:9
+            screamRedStore.size = CGSize(
+                width: (screamRedStore.size.width * (inThisScene.size.width / screamRedStore.size.width)*(37.04/100)),
+                height: (screamRedStore.size.height * (inThisScene.size.height / screamRedStore.size.height)*(10.42/100)))
+            //16:9
+            screamRedScore.size = CGSize(
+                width: (screamRedScore.size.width * (inThisScene.size.width / screamRedScore.size.width)*(37.04/100)),
+                height: (screamRedScore.size.height * (inThisScene.size.height / screamRedScore.size.height)*(10.42/100)))
+            
+            /// Scream Green Skin
+            //16:9
+            screamGreenPlay.size  = CGSize(
+                width: (screamGreenPlay.size.width * (inThisScene.size.width / screamGreenPlay.size.width)*(37.04/100)),
+                height: (screamGreenPlay.size.height * (inThisScene.size.height / screamGreenPlay.size.height)*(10.42/100)))
+            //16:9
+            screamGreenStore.size = CGSize(
+                width: (screamGreenStore.size.width * (inThisScene.size.width / screamGreenStore.size.width)*(37.04/100)),
+                height: (screamGreenStore.size.height * (inThisScene.size.height / screamGreenStore.size.height)*(10.42/100)))
+            //16:9
+            screamGreenScore.size = CGSize(
+                width: (screamGreenScore.size.width * (inThisScene.size.width / screamGreenScore.size.width)*(37.04/100)),
+                height: (screamGreenScore.size.height * (inThisScene.size.height / screamGreenScore.size.height)*(10.42/100)))
             
         }else{
             /// Classic
@@ -570,6 +662,34 @@ struct MenuControls {
             pumpkinScore.size  = CGSize(
                 width: (pumpkinScore.size.width * (inThisScene.size.width / pumpkinScore.size.width)*(29.3/100)),
                 height: (pumpkinScore.size.height * (inThisScene.size.height / pumpkinScore.size.height)*(11/100)))
+            
+            /// Scream Red Skin
+            //4:3
+            screamRedPlay.size  = CGSize(
+                width: (screamRedPlay.size.width * (inThisScene.size.width / screamRedPlay.size.width)*(29.3/100)),
+                height: (screamRedPlay.size.height * (inThisScene.size.height / screamRedPlay.size.height)*(11/100)))
+            //4:3
+            screamRedStore.size  = CGSize(
+                width: (screamRedStore.size.width * (inThisScene.size.width / screamRedStore.size.width)*(29.3/100)),
+                height: (screamRedStore.size.height * (inThisScene.size.height / screamRedStore.size.height)*(11/100)))
+            //4:3
+            screamRedScore.size  = CGSize(
+                width: (screamRedScore.size.width * (inThisScene.size.width / screamRedScore.size.width)*(29.3/100)),
+                height: (screamRedScore.size.height * (inThisScene.size.height / screamRedScore.size.height)*(11/100)))
+            
+            /// Scream Red Skin
+            //4:3
+            screamGreenPlay.size  = CGSize(
+                width: (screamGreenPlay.size.width * (inThisScene.size.width / screamGreenPlay.size.width)*(29.3/100)),
+                height: (screamGreenPlay.size.height * (inThisScene.size.height / screamGreenPlay.size.height)*(11/100)))
+            //4:3
+            screamGreenStore.size  = CGSize(
+                width: (screamGreenStore.size.width * (inThisScene.size.width / screamGreenStore.size.width)*(29.3/100)),
+                height: (screamGreenStore.size.height * (inThisScene.size.height / screamGreenStore.size.height)*(11/100)))
+            //4:3
+            screamGreenScore.size  = CGSize(
+                width: (screamGreenScore.size.width * (inThisScene.size.width / screamGreenScore.size.width)*(29.3/100)),
+                height: (screamGreenScore.size.height * (inThisScene.size.height / screamGreenScore.size.height)*(11/100)))
             
             
         }//End else

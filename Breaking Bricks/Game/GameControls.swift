@@ -125,6 +125,30 @@ struct GameControls {
     let pumpkinTimer: SKSpriteNode
     //Score
     let pumpkinScore: SKSpriteNode
+    
+    /// Scream Red Skin
+    // Backgrounds
+    let screamRedBackground: SKSpriteNode
+    // Paddles
+    let screamRedPaddle: SKSpriteNode
+    // Balls
+    let screamRedBall: SKSpriteNode
+    //Timer
+    let screamRedTimer: SKSpriteNode
+    //Score
+    let screamRedScore: SKSpriteNode
+    
+    /// Scream Green Skin
+    // Backgrounds
+    let screamGreenBackground: SKSpriteNode
+    // Paddles
+    let screamGreenPaddle: SKSpriteNode
+    // Balls
+    let screamGreenBall: SKSpriteNode
+    //Timer
+    let screamGreenTimer: SKSpriteNode
+    //Score
+    let screamGreenScore: SKSpriteNode
 
     init(inThisScene: GameScene) {
         
@@ -410,6 +434,62 @@ struct GameControls {
         pumpkinScore.zPosition = 3
         pumpkinScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
+        /// Scream Red Skin
+        // Backgrounds
+        screamRedBackground = SKSpriteNode.init(imageNamed: "Background Scream_Red")
+        screamRedBackground.name = "background"
+        screamRedBackground.zPosition = 1
+        screamRedBackground.position = CGPoint(x: inThisScene.size.width/2, y: inThisScene.size.height/2)
+        screamRedBackground.size = CGSize(
+            width: ((screamRedBackground.size.width * (inThisScene.size.width / screamRedBackground.size.width))),
+            height: (screamRedBackground.size.height * (inThisScene.size.height / screamRedBackground.size.height)))
+        //Paddles
+        screamRedPaddle = SKSpriteNode.init(imageNamed: "Paddle Scream_Red")
+        screamRedPaddle.name = "paddle"
+        screamRedPaddle.zPosition = 3
+        screamRedPaddle.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (12.29/100))
+        //Balls
+        screamRedBall = SKSpriteNode.init(imageNamed: "Ball Scream_Red")
+        screamRedBall.name = "ball"
+        screamRedBall.zPosition = 2
+        screamRedBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
+        //Timer Brick
+        screamRedTimer = SKSpriteNode.init(imageNamed: "Timer_Score Scream_Red")
+        screamRedTimer.zPosition = 3
+        screamRedTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
+        //Score Brick
+        screamRedScore = SKSpriteNode.init(imageNamed: "Timer_Score Scream_Red")
+        screamRedScore.zPosition = 3
+        screamRedScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
+        
+        /// Scream Green Skin
+        // Backgrounds
+        screamGreenBackground = SKSpriteNode.init(imageNamed: "Background Scream_Red")
+        screamGreenBackground.name = "background"
+        screamGreenBackground.zPosition = 1
+        screamGreenBackground.position = CGPoint(x: inThisScene.size.width/2, y: inThisScene.size.height/2)
+        screamGreenBackground.size = CGSize(
+            width: ((screamGreenBackground.size.width * (inThisScene.size.width / screamGreenBackground.size.width))),
+            height: (screamGreenBackground.size.height * (inThisScene.size.height / screamGreenBackground.size.height)))
+        //Paddles
+        screamGreenPaddle = SKSpriteNode.init(imageNamed: "Paddle Scream_Red")
+        screamGreenPaddle.name = "paddle"
+        screamGreenPaddle.zPosition = 3
+        screamGreenPaddle.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (12.29/100))
+        //Balls
+        screamGreenBall = SKSpriteNode.init(imageNamed: "Ball Scream_Red")
+        screamGreenBall.name = "ball"
+        screamGreenBall.zPosition = 2
+        screamGreenBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
+        //Timer Brick
+        screamGreenTimer = SKSpriteNode.init(imageNamed: "Timer_Score Scream_Red")
+        screamGreenTimer.zPosition = 3
+        screamGreenTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
+        //Score Brick
+        screamGreenScore = SKSpriteNode.init(imageNamed: "Timer_Score Scream_Red")
+        screamGreenScore.zPosition = 3
+        screamGreenScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
+        
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
             //16:9
@@ -681,6 +761,66 @@ struct GameControls {
             pumpkinScore.size = CGSize(
                 width: (pumpkinScore.size.width * (inThisScene.size.width / pumpkinScore.size.width)*(22.22/100)),
                 height: (pumpkinScore.size.height * (inThisScene.size.height / pumpkinScore.size.height)*(4.17/100)))
+            
+            /// Scream Red  Skin
+            //16:9 pumpkinBall
+            screamRedPaddle.size = CGSize(
+                width: ((screamRedPaddle.size.width * (inThisScene.size.width / screamRedPaddle.size.width)*(25/100))),
+                height: (screamRedPaddle.size.height * (inThisScene.size.height / screamRedPaddle.size.height)*(1.56/100)))
+            screamRedPaddle.physicsBody = SKPhysicsBody(rectangleOf: screamRedPaddle.size)
+            screamRedPaddle.physicsBody?.isDynamic = false
+            screamRedPaddle.physicsBody?.friction = 0
+            screamRedPaddle.physicsBody?.restitution = 1
+            //16:9
+            screamRedBall.size = CGSize(
+                width: (screamRedBall.size.width * (inThisScene.size.width / screamRedBall.size.width)*(4.63/100)),
+                height: (screamRedBall.size.height * (inThisScene.size.height / screamRedBall.size.height)*(2.6/100)))
+            screamRedBall.physicsBody = SKPhysicsBody(circleOfRadius: ( screamRedBall.size.width / 2))
+            screamRedBall.physicsBody?.allowsRotation = false
+            screamRedBall.physicsBody?.affectedByGravity = true
+            screamRedBall.physicsBody?.friction = 0
+            screamRedBall.physicsBody?.restitution = 1
+            screamRedBall.physicsBody?.linearDamping = 0
+            screamRedBall.physicsBody?.angularDamping = 0
+            screamRedBall.physicsBody?.mass = 0.01
+            //16:9
+            screamRedTimer.size = CGSize(
+                width: (screamRedTimer.size.width * (inThisScene.size.width / screamRedTimer.size.width)*(22/100)),
+                height: (screamRedTimer.size.height * (inThisScene.size.height / screamRedTimer.size.height)*(4/100)))
+            //16:9
+            screamRedScore.size = CGSize(
+                width: (screamRedScore.size.width * (inThisScene.size.width / screamRedScore.size.width)*(22.22/100)),
+                height: (screamRedScore.size.height * (inThisScene.size.height / screamRedScore.size.height)*(4.17/100)))
+            
+            /// Scream Green  Skin
+            //16:9 pumpkinBall
+            screamGreenPaddle.size = CGSize(
+                width: ((screamGreenPaddle.size.width * (inThisScene.size.width / screamGreenPaddle.size.width)*(25/100))),
+                height: (screamGreenPaddle.size.height * (inThisScene.size.height / screamGreenPaddle.size.height)*(1.56/100)))
+            screamGreenPaddle.physicsBody = SKPhysicsBody(rectangleOf: screamGreenPaddle.size)
+            screamGreenPaddle.physicsBody?.isDynamic = false
+            screamGreenPaddle.physicsBody?.friction = 0
+            screamGreenPaddle.physicsBody?.restitution = 1
+            //16:9
+            screamGreenBall.size = CGSize(
+                width: (screamGreenBall.size.width * (inThisScene.size.width / screamGreenBall.size.width)*(4.63/100)),
+                height: (screamGreenBall.size.height * (inThisScene.size.height / screamGreenBall.size.height)*(2.6/100)))
+            screamGreenBall.physicsBody = SKPhysicsBody(circleOfRadius: ( screamGreenBall.size.width / 2))
+            screamGreenBall.physicsBody?.allowsRotation = false
+            screamGreenBall.physicsBody?.affectedByGravity = true
+            screamGreenBall.physicsBody?.friction = 0
+            screamGreenBall.physicsBody?.restitution = 1
+            screamGreenBall.physicsBody?.linearDamping = 0
+            screamGreenBall.physicsBody?.angularDamping = 0
+            screamGreenBall.physicsBody?.mass = 0.01
+            //16:9
+            screamGreenTimer.size = CGSize(
+                width: (screamGreenTimer.size.width * (inThisScene.size.width / screamGreenTimer.size.width)*(22/100)),
+                height: (screamGreenTimer.size.height * (inThisScene.size.height / screamGreenTimer.size.height)*(4/100)))
+            //16:9
+            screamGreenScore.size = CGSize(
+                width: (screamGreenScore.size.width * (inThisScene.size.width / screamGreenScore.size.width)*(22.22/100)),
+                height: (screamGreenScore.size.height * (inThisScene.size.height / screamGreenScore.size.height)*(4.17/100)))
             
         }else{
             /// Classic
@@ -954,9 +1094,67 @@ struct GameControls {
                 width: (pumpkinScore.size.width * (inThisScene.size.width / pumpkinScore.size.width)*(17.57/100)),
                 height: (pumpkinScore.size.height * (inThisScene.size.height / pumpkinScore.size.height)*(4.49/100)))
             
+            /// Scream Red Skin
+            //4:3
+            screamRedPaddle.size = CGSize(
+                width: ((screamRedPaddle.size.width * (inThisScene.size.width / screamRedPaddle.size.width)*(24.41/100))),
+                height: (screamRedPaddle.size.height * (inThisScene.size.height / screamRedPaddle.size.height)*(2.56/100)))
+            screamRedPaddle.physicsBody = SKPhysicsBody(rectangleOf: screamRedPaddle.size)
+            screamRedPaddle.physicsBody?.isDynamic = false
+            screamRedPaddle.physicsBody?.friction = 0
+            screamRedPaddle.physicsBody?.restitution = 1
+            //4:3
+            screamRedBall.size = CGSize(
+                width: (screamRedBall.size.width * (inThisScene.size.width / screamRedBall.size.width)*(3.91/100)),
+                height: (screamRedBall.size.height * (inThisScene.size.height / screamRedBall.size.height)*(2.93/100)))
+            screamRedBall.physicsBody = SKPhysicsBody(circleOfRadius: (screamRedBall.size.width / 2))
+            screamRedBall.physicsBody?.allowsRotation = false
+            screamRedBall.physicsBody?.affectedByGravity = true
+            screamRedBall.physicsBody?.friction = 0
+            screamRedBall.physicsBody?.restitution = 1
+            screamRedBall.physicsBody?.linearDamping = 0
+            screamRedBall.physicsBody?.angularDamping = 0
+            screamRedBall.physicsBody?.mass = 0.01
+            //4:3
+            screamRedTimer.size = CGSize(
+                width: (screamRedTimer.size.width * (inThisScene.size.width / screamRedTimer.size.width)*(17.57/100)),
+                height: (screamRedTimer.size.height * (inThisScene.size.height / screamRedTimer.size.height)*(4.49/100)))
+            //4:3
+            screamRedScore.size = CGSize(
+                width: (screamRedScore.size.width * (inThisScene.size.width / screamRedScore.size.width)*(17.57/100)),
+                height: (screamRedScore.size.height * (inThisScene.size.height / screamRedScore.size.height)*(4.49/100)))
+            
+            /// Scream Green Skin
+            //4:3
+            screamGreenPaddle.size = CGSize(
+                width: ((screamGreenPaddle.size.width * (inThisScene.size.width / screamGreenPaddle.size.width)*(24.41/100))),
+                height: (screamGreenPaddle.size.height * (inThisScene.size.height / screamGreenPaddle.size.height)*(2.56/100)))
+            screamGreenPaddle.physicsBody = SKPhysicsBody(rectangleOf: screamGreenPaddle.size)
+            screamGreenPaddle.physicsBody?.isDynamic = false
+            screamGreenPaddle.physicsBody?.friction = 0
+            screamGreenPaddle.physicsBody?.restitution = 1
+            //4:3
+            screamGreenBall.size = CGSize(
+                width: (screamGreenBall.size.width * (inThisScene.size.width / screamGreenBall.size.width)*(3.91/100)),
+                height: (screamGreenBall.size.height * (inThisScene.size.height / screamGreenBall.size.height)*(2.93/100)))
+            screamGreenBall.physicsBody = SKPhysicsBody(circleOfRadius: (screamGreenBall.size.width / 2))
+            screamGreenBall.physicsBody?.allowsRotation = false
+            screamGreenBall.physicsBody?.affectedByGravity = true
+            screamGreenBall.physicsBody?.friction = 0
+            screamGreenBall.physicsBody?.restitution = 1
+            screamGreenBall.physicsBody?.linearDamping = 0
+            screamGreenBall.physicsBody?.angularDamping = 0
+            screamGreenBall.physicsBody?.mass = 0.01
+            //4:3
+            screamGreenTimer.size = CGSize(
+                width: (screamGreenTimer.size.width * (inThisScene.size.width / screamGreenTimer.size.width)*(17.57/100)),
+                height: (screamGreenTimer.size.height * (inThisScene.size.height / screamGreenTimer.size.height)*(4.49/100)))
+            //4:3
+            screamGreenScore.size = CGSize(
+                width: (screamGreenScore.size.width * (inThisScene.size.width / screamGreenScore.size.width)*(17.57/100)),
+                height: (screamGreenScore.size.height * (inThisScene.size.height / screamGreenScore.size.height)*(4.49/100)))
+            
             
         }//End else
-        
     }//END Init
-    
 }//END Struct

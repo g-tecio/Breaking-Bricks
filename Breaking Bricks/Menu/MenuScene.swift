@@ -110,6 +110,18 @@ class MenuScene: SKScene {
             self.addChild(menuControls.pumpkinStore)
             self.addChild(menuControls.pumpkinScore)
         }
+        if sceneNumber == 9{
+            self.addChild(menuControls.screamRedBackground)
+            self.addChild(menuControls.screamRedPlay)
+            self.addChild(menuControls.screamRedStore)
+            self.addChild(menuControls.screamRedScore)
+        }
+        if sceneNumber == 10{
+            self.addChild(menuControls.screamGreenBackground)
+            self.addChild(menuControls.screamGreenPlay)
+            self.addChild(menuControls.screamGreenStore)
+            self.addChild(menuControls.screamGreenScore)
+        }
     }
     
     /// Before another Scence will be presented
