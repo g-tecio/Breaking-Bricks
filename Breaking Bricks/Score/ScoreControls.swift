@@ -572,37 +572,37 @@ struct ScoreControls {
 
         // Green Scream Skin
         /// Backgrounds
-        screamGreenBackground = SKSpriteNode.init(imageNamed: "Background Scream_Red")
+        screamGreenBackground = SKSpriteNode.init(imageNamed: "Background Scream_Green")
         screamGreenBackground.name = "background"
         screamGreenBackground.zPosition = 1
         screamGreenBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
         screamGreenBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
         /// Win
-        screamGreenWin = SKSpriteNode.init(imageNamed: "Wins Scream_Red")
+        screamGreenWin = SKSpriteNode.init(imageNamed: "Wins Scream_Green")
         screamGreenWin.name = "image-Win"
         screamGreenWin.zPosition = 2
         /// WinLabel
-        screamGreenWinLabel = SKSpriteNode.init(imageNamed: "Multipurpose Scream_Red")
+        screamGreenWinLabel = SKSpriteNode.init(imageNamed: "Multipurpose Scream_Green")
         screamGreenWinLabel.name = "Label-Win"
         screamGreenWinLabel.zPosition = 2
         /// Lose
-        screamGreenLose = SKSpriteNode.init(imageNamed: "Lose Scream_Red")
+        screamGreenLose = SKSpriteNode.init(imageNamed: "Lose Scream_Green")
         screamGreenLose.name = "image-Lose"
         screamGreenLose.zPosition = 2
         /// Loselabel
-        screamGreenLoseLabel = SKSpriteNode.init(imageNamed: "Multipurpose Scream_Red")
+        screamGreenLoseLabel = SKSpriteNode.init(imageNamed: "Multipurpose Scream_Green")
         screamGreenLoseLabel.name = "Label-Lose"
         screamGreenLoseLabel.zPosition = 2
         /// Time
-        screamGreenTime = SKSpriteNode.init(imageNamed: "Time Scream_Red")
+        screamGreenTime = SKSpriteNode.init(imageNamed: "Time Scream_Green")
         screamGreenTime.name = "image-Time"
         screamGreenTime.zPosition = 2
         /// Timelabel
-        screamGreenTimeLabel = SKSpriteNode.init(imageNamed: "Multipurpose Scream_Red")
+        screamGreenTimeLabel = SKSpriteNode.init(imageNamed: "Multipurpose Scream_Green")
         screamGreenTimeLabel.name = "Label-Time"
         screamGreenTimeLabel.zPosition = 2
         /// Menu Button
-        screamGreenMenu = SKSpriteNode.init(imageNamed: "Menu Scream_Red")
+        screamGreenMenu = SKSpriteNode.init(imageNamed: "Menu Scream_Green")
         screamGreenMenu.name = "buttonSprite-Menu"
         screamGreenMenu.zPosition = 2
         screamGreenMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))

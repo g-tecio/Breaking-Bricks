@@ -532,72 +532,72 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             gameState.enter(WaitingForTap.self)
         }//END SCENENUMBER 5
-        if(sceneNumber == 6 ){
-            
-            // Background and paddle
-            self.addChild(gameControls.acidRainBackground)
-            self.addChild(gameControls.acidRainPaddle)
-            // Bricks
-            self.addChild(gameControls.acidRainScore)
-            self.addChild(gameControls.acidRainTimer)
-            // Label
-            self.addChild(gameControls.timerLabel)
-            self.addChild(gameControls.scoreLabel)
-            // Color label
-            gameControls.timerLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
-            gameControls.scoreLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
-            
-            //Bricks
-            for brick in 0...24{
-                self.addChild(brickSprite[brick].acidRainSkin)
-            }
-            
-            //Bricks 6
-            for brick6 in 0...23{
-                self.addChild(brickSpriteRow6[brick6].acidRainSkin)
-            }
-            
-            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
-            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
-            
-            //Paddle and ball
-            let ball = gameControls.acidRainBall
-            let paddle = gameControls.acidRainPaddle
-            
-            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
-            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
-            
-            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
-            
-            let bottom = SKNode()
-            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
-            addChild(bottom)
-            
-            
-            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
-            
-            bottom.physicsBody!.categoryBitMask = BottomCategory
-            ball.physicsBody!.categoryBitMask = BallCategory
-            paddle.physicsBody!.categoryBitMask = PaddleCategory
-            gameControls.borderBody.categoryBitMask = BorderCategory
-            
-            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
-            
-            //Timer Line
-            seconds = timeSeconds
-            //Score Line
-            score = points
-            
-            
-            //Timer And Score
-            gameControls.scoreLabel.text = pointsCount
-            gameControls.timerLabel.text = timerSeconds
-            
-            self.addChild(gameControls.acidRainBall)
-            
-            gameState.enter(WaitingForTap.self)
-        }//END SCENENUMBER 6
-        if(sceneNumber == 7){
+//        if(sceneNumber == 6 ){
+//
+//            // Background and paddle
+//            self.addChild(gameControls.acidRainBackground)
+//            self.addChild(gameControls.acidRainPaddle)
+//            // Bricks
+//            self.addChild(gameControls.acidRainScore)
+//            self.addChild(gameControls.acidRainTimer)
+//            // Label
+//            self.addChild(gameControls.timerLabel)
+//            self.addChild(gameControls.scoreLabel)
+//            // Color label
+//            gameControls.timerLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
+//            gameControls.scoreLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
+//
+//            //Bricks
+//            for brick in 0...24{
+//                self.addChild(brickSprite[brick].acidRainSkin)
+//            }
+//
+//            //Bricks 6
+//            for brick6 in 0...23{
+//                self.addChild(brickSpriteRow6[brick6].acidRainSkin)
+//            }
+//
+//            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
+//            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
+//
+//            //Paddle and ball
+//            let ball = gameControls.acidRainBall
+//            let paddle = gameControls.acidRainPaddle
+//
+//            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
+//            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
+//
+//            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
+//
+//            let bottom = SKNode()
+//            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
+//            addChild(bottom)
+//
+//
+//            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
+//
+//            bottom.physicsBody!.categoryBitMask = BottomCategory
+//            ball.physicsBody!.categoryBitMask = BallCategory
+//            paddle.physicsBody!.categoryBitMask = PaddleCategory
+//            gameControls.borderBody.categoryBitMask = BorderCategory
+//
+//            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
+//
+//            //Timer Line
+//            seconds = timeSeconds
+//            //Score Line
+//            score = points
+//
+//
+//            //Timer And Score
+//            gameControls.scoreLabel.text = pointsCount
+//            gameControls.timerLabel.text = timerSeconds
+//
+//            self.addChild(gameControls.acidRainBall)
+//
+//            gameState.enter(WaitingForTap.self)
+//        }//END SCENENUMBER 6
+        if(sceneNumber == 6){
             
             // Background and paddle
             self.addChild(gameControls.endTimesBackground)
@@ -661,8 +661,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.addChild(gameControls.endTimesBall)
             
             gameState.enter(WaitingForTap.self)
-        }//END SCENENUMBER 7
-        if(sceneNumber == 8){
+        }//END SCENENUMBER
+        if(sceneNumber == 7){
             
             // Background and paddle
             self.addChild(gameControls.pumpkinBackground)
@@ -727,7 +727,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             gameState.enter(WaitingForTap.self)
         }//END SCENENUMBER
-        if(sceneNumber == 9){
+        if(sceneNumber == 8){
             
             // Background and paddle
             self.addChild(gameControls.screamRedBackground)
@@ -792,7 +792,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             gameState.enter(WaitingForTap.self)
         }//END SCENENUMBER
-        if(sceneNumber == 10){
+        if(sceneNumber == 9){
             
             // Background and paddle
             self.addChild(gameControls.screamGreenBackground)
@@ -1076,7 +1076,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score += 1
         
         ///Test Coin
-        coin += 1
+//        coin += 1
         
         gameControls.scoreLabel.text = ("\(score)")
     }//END BreakBlocks

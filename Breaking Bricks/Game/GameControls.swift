@@ -464,7 +464,7 @@ struct GameControls {
         
         /// Scream Green Skin
         // Backgrounds
-        screamGreenBackground = SKSpriteNode.init(imageNamed: "Background Scream_Red")
+        screamGreenBackground = SKSpriteNode.init(imageNamed: "Background Scream_Green")
         screamGreenBackground.name = "background"
         screamGreenBackground.zPosition = 1
         screamGreenBackground.position = CGPoint(x: inThisScene.size.width/2, y: inThisScene.size.height/2)
@@ -472,21 +472,21 @@ struct GameControls {
             width: ((screamGreenBackground.size.width * (inThisScene.size.width / screamGreenBackground.size.width))),
             height: (screamGreenBackground.size.height * (inThisScene.size.height / screamGreenBackground.size.height)))
         //Paddles
-        screamGreenPaddle = SKSpriteNode.init(imageNamed: "Paddle Scream_Red")
+        screamGreenPaddle = SKSpriteNode.init(imageNamed: "Paddle Scream_Green")
         screamGreenPaddle.name = "paddle"
         screamGreenPaddle.zPosition = 3
         screamGreenPaddle.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (12.29/100))
         //Balls
-        screamGreenBall = SKSpriteNode.init(imageNamed: "Ball Scream_Red")
+        screamGreenBall = SKSpriteNode.init(imageNamed: "Ball Scream_Green")
         screamGreenBall.name = "ball"
         screamGreenBall.zPosition = 2
         screamGreenBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
-        screamGreenTimer = SKSpriteNode.init(imageNamed: "Timer_Score Scream_Red")
+        screamGreenTimer = SKSpriteNode.init(imageNamed: "Timer_Score Scream_Green")
         screamGreenTimer.zPosition = 3
         screamGreenTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
-        screamGreenScore = SKSpriteNode.init(imageNamed: "Timer_Score Scream_Red")
+        screamGreenScore = SKSpriteNode.init(imageNamed: "Timer_Score Scream_Green")
         screamGreenScore.zPosition = 3
         screamGreenScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         

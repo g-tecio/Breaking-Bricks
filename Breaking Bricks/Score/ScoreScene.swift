@@ -185,29 +185,29 @@ class ScoreScene: SKScene {
             scoreControls.scoreTimeLabel.fontColor = .white
             
         }
+//        if sceneNumber == 6{
+//
+//            /// Present Label and Button
+//            self.addChild(scoreControls.acidRainBackground)
+//            self.addChild(scoreControls.acidRainMenu)
+//            self.addChild(scoreControls.acidRainWin)
+//            self.addChild(scoreControls.acidRainWinLabel)
+//            self.addChild(scoreControls.acidRainLose)
+//            self.addChild(scoreControls.acidRainLoseLabel)
+//            self.addChild(scoreControls.acidRainTime)
+//            self.addChild(scoreControls.acidRainTimeLabel)
+//
+//
+//            self.addChild(scoreControls.scoreTimeLabel)
+//            self.addChild(scoreControls.scoreLoseLabel)
+//            self.addChild(scoreControls.scoreWinLabel)
+//
+//            scoreControls.scoreWinLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
+//            scoreControls.scoreLoseLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
+//            scoreControls.scoreTimeLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
+//
+//        }
         if sceneNumber == 6{
-            
-            /// Present Label and Button
-            self.addChild(scoreControls.acidRainBackground)
-            self.addChild(scoreControls.acidRainMenu)
-            self.addChild(scoreControls.acidRainWin)
-            self.addChild(scoreControls.acidRainWinLabel)
-            self.addChild(scoreControls.acidRainLose)
-            self.addChild(scoreControls.acidRainLoseLabel)
-            self.addChild(scoreControls.acidRainTime)
-            self.addChild(scoreControls.acidRainTimeLabel)
-            
-            
-            self.addChild(scoreControls.scoreTimeLabel)
-            self.addChild(scoreControls.scoreLoseLabel)
-            self.addChild(scoreControls.scoreWinLabel)
-            
-            scoreControls.scoreWinLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
-            scoreControls.scoreLoseLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
-            scoreControls.scoreTimeLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
-            
-        }
-        if sceneNumber == 7{
             
             /// Present Label and Button
             self.addChild(scoreControls.endTimesBackground)
@@ -229,7 +229,7 @@ class ScoreScene: SKScene {
             scoreControls.scoreTimeLabel.fontColor = .white
             
         }
-        if sceneNumber == 8{
+        if sceneNumber == 7{
             
             /// Present Label and Button
             self.addChild(scoreControls.pumpkinBackground)
@@ -251,7 +251,7 @@ class ScoreScene: SKScene {
             scoreControls.scoreTimeLabel.fontColor = .white
             
         }
-        if sceneNumber == 9{
+        if sceneNumber == 8{
             
             /// Present Label and Button
             self.addChild(scoreControls.screamRedBackground)
@@ -273,7 +273,7 @@ class ScoreScene: SKScene {
             scoreControls.scoreTimeLabel.fontColor = .white
             
         }
-        if sceneNumber == 10{
+        if sceneNumber == 9{
             
             /// Present Label and Button
             self.addChild(scoreControls.screamGreenBackground)

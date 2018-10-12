@@ -92,31 +92,31 @@ class MenuScene: SKScene {
             self.addChild(menuControls.spaceDustScore)
             self.addChild(menuControls.spaceDustStore)
         }
+//        if sceneNumber == 6{
+//            self.addChild(menuControls.acidRainBackground)
+//            self.addChild(menuControls.acidRainPlay)
+//            self.addChild(menuControls.acidRainScore)
+//            self.addChild(menuControls.acidRainStore)
+//        }
         if sceneNumber == 6{
-            self.addChild(menuControls.acidRainBackground)
-            self.addChild(menuControls.acidRainPlay)
-            self.addChild(menuControls.acidRainScore)
-            self.addChild(menuControls.acidRainStore)
-        }
-        if sceneNumber == 7{
             self.addChild(menuControls.endTimesBackground)
             self.addChild(menuControls.endTimesPlay)
             self.addChild(menuControls.endTimesScore)
             self.addChild(menuControls.endTimesStore)
         }
-        if sceneNumber == 8{
+        if sceneNumber == 7{
             self.addChild(menuControls.pumpkinBackground)
             self.addChild(menuControls.pumpkinPlay)
             self.addChild(menuControls.pumpkinStore)
             self.addChild(menuControls.pumpkinScore)
         }
-        if sceneNumber == 9{
+        if sceneNumber == 8{
             self.addChild(menuControls.screamRedBackground)
             self.addChild(menuControls.screamRedPlay)
             self.addChild(menuControls.screamRedStore)
             self.addChild(menuControls.screamRedScore)
         }
-        if sceneNumber == 10{
+        if sceneNumber == 9{
             self.addChild(menuControls.screamGreenBackground)
             self.addChild(menuControls.screamGreenPlay)
             self.addChild(menuControls.screamGreenStore)
