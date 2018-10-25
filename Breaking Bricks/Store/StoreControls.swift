@@ -76,6 +76,16 @@ struct StoreControls {
     let screamGreenBackground: SKSpriteNode
     let screamGreenCurrent: SKSpriteNode
     
+    /// Dessert Skin
+    let dessertMenu: SKSpriteNode
+    let dessertBackground: SKSpriteNode
+    let dessertCurrent: SKSpriteNode
+    
+    /// Classy Skin
+    let classyMenu: SKSpriteNode
+    let classyBackground: SKSpriteNode
+    let classyCurrent: SKSpriteNode
+    
     init(inThisScene: StoreScene) {
         
         //Coin
@@ -277,6 +287,38 @@ struct StoreControls {
         screamGreenCurrent.zPosition = 2
         screamGreenCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
         
+        // Dessert skin
+        dessertBackground = SKSpriteNode.init(imageNamed: "Background Dessert")
+        dessertBackground.name = "backgroundLightSkin"
+        dessertBackground.zPosition = 1
+        dessertBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        dessertBackground.size  = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        //Menu
+        dessertMenu = SKSpriteNode.init(imageNamed: "MENU Dessert")
+        dessertMenu.name = "buttonSprite-Menu"
+        dessertMenu.zPosition = 2
+        dessertMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((16.15/100))))
+        //Current
+        dessertCurrent = SKSpriteNode.init(imageNamed: "Multipourpose Dessert")
+        dessertCurrent.zPosition = 2
+        dessertCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
+        
+        // Classy skin
+        classyBackground = SKSpriteNode.init(imageNamed: "Background Classy")
+        classyBackground.name = "backgroundLightSkin"
+        classyBackground.zPosition = 1
+        classyBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        classyBackground.size  = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        //Menu
+        classyMenu = SKSpriteNode.init(imageNamed: "MENU Classy")
+        classyMenu.name = "buttonSprite-Menu"
+        classyMenu.zPosition = 2
+        classyMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((16.15/100))))
+        //Current
+        classyCurrent = SKSpriteNode.init(imageNamed: "Multipurpose Classy")
+        classyCurrent.zPosition = 2
+        classyCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
+        
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
             //16:9
             coin.size = CGSize(
@@ -415,6 +457,28 @@ struct StoreControls {
                 width: (screamGreenCurrent.size.width * (inThisScene.size.width / screamGreenCurrent.size.width)*(37.04/100)),
                 height: (screamGreenCurrent.size.height * (inThisScene.size.height / screamGreenCurrent.size.height)*(10.42/100))
             )
+            /// Dessert Skin
+            //16:9
+            dessertMenu.size = CGSize(
+                width: (dessertMenu.size.width * (inThisScene.size.width / dessertMenu.size.width)*(37.04/100)),
+                height: (dessertMenu.size.height * (inThisScene.size.height / dessertMenu.size.height)*(10.42/100))
+            )
+            //16:9
+            dessertCurrent.size = CGSize(
+                width: (dessertCurrent.size.width * (inThisScene.size.width / dessertCurrent.size.width)*(37.04/100)),
+                height: (dessertCurrent.size.height * (inThisScene.size.height / dessertCurrent.size.height)*(10.42/100))
+            )
+            /// classy Skin
+            //16:9
+            classyMenu.size = CGSize(
+                width: (classyMenu.size.width * (inThisScene.size.width / classyMenu.size.width)*(37.04/100)),
+                height: (classyMenu.size.height * (inThisScene.size.height / classyMenu.size.height)*(10.42/100))
+            )
+            //16:9
+            classyCurrent.size = CGSize(
+                width: (classyCurrent.size.width * (inThisScene.size.width / classyCurrent.size.width)*(37.04/100)),
+                height: (classyCurrent.size.height * (inThisScene.size.height / classyCurrent.size.height)*(10.42/100))
+            )
             
         }else{
             //4:3
@@ -543,6 +607,28 @@ struct StoreControls {
             screamGreenCurrent.size  = CGSize(
                 width: (screamGreenCurrent.size.width * (inThisScene.size.width / screamGreenCurrent.size.width)*(29.3/100)),
                 height: (screamGreenCurrent.size.height * (inThisScene.size.height / screamGreenCurrent.size.height)*(11/100)))
+            
+            /// Dessert Skin
+            //4:3
+            dessertMenu.size  = CGSize(
+                width: (dessertMenu.size.width * (inThisScene.size.width / dessertMenu.size.width)*(29.3/100)),
+                height: (dessertMenu.size.height * (inThisScene.size.height / dessertMenu.size.height)*(11/100))
+            )
+            //4:3
+            dessertCurrent.size  = CGSize(
+                width: (dessertCurrent.size.width * (inThisScene.size.width / dessertCurrent.size.width)*(29.3/100)),
+                height: (dessertCurrent.size.height * (inThisScene.size.height / dessertCurrent.size.height)*(11/100)))
+            
+            /// Classy Skin
+            //4:3
+            classyMenu.size  = CGSize(
+                width: (classyMenu.size.width * (inThisScene.size.width / classyMenu.size.width)*(29.3/100)),
+                height: (classyMenu.size.height * (inThisScene.size.height / classyMenu.size.height)*(11/100))
+            )
+            //4:3
+            classyCurrent.size  = CGSize(
+                width: (classyCurrent.size.width * (inThisScene.size.width / classyCurrent.size.width)*(29.3/100)),
+                height: (classyCurrent.size.height * (inThisScene.size.height / classyCurrent.size.height)*(11/100)))
             
         }//End else
     }//END Init

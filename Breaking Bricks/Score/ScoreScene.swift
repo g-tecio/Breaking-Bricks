@@ -185,28 +185,6 @@ class ScoreScene: SKScene {
             scoreControls.scoreTimeLabel.fontColor = .white
             
         }
-//        if sceneNumber == 6{
-//
-//            /// Present Label and Button
-//            self.addChild(scoreControls.acidRainBackground)
-//            self.addChild(scoreControls.acidRainMenu)
-//            self.addChild(scoreControls.acidRainWin)
-//            self.addChild(scoreControls.acidRainWinLabel)
-//            self.addChild(scoreControls.acidRainLose)
-//            self.addChild(scoreControls.acidRainLoseLabel)
-//            self.addChild(scoreControls.acidRainTime)
-//            self.addChild(scoreControls.acidRainTimeLabel)
-//
-//
-//            self.addChild(scoreControls.scoreTimeLabel)
-//            self.addChild(scoreControls.scoreLoseLabel)
-//            self.addChild(scoreControls.scoreWinLabel)
-//
-//            scoreControls.scoreWinLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
-//            scoreControls.scoreLoseLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
-//            scoreControls.scoreTimeLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
-//
-//        }
         if sceneNumber == 6{
             
             /// Present Label and Button
@@ -295,7 +273,73 @@ class ScoreScene: SKScene {
             scoreControls.scoreTimeLabel.fontColor = .white
             
         }
-        
+        if sceneNumber == 10{
+            
+            /// Present Label and Button
+            self.addChild(scoreControls.acidRainBackground)
+            self.addChild(scoreControls.acidRainMenu)
+            self.addChild(scoreControls.acidRainWin)
+            self.addChild(scoreControls.acidRainWinLabel)
+            self.addChild(scoreControls.acidRainLose)
+            self.addChild(scoreControls.acidRainLoseLabel)
+            self.addChild(scoreControls.acidRainTime)
+            self.addChild(scoreControls.acidRainTimeLabel)
+            
+            
+            self.addChild(scoreControls.scoreTimeLabel)
+            self.addChild(scoreControls.scoreLoseLabel)
+            self.addChild(scoreControls.scoreWinLabel)
+            
+            scoreControls.scoreWinLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
+            scoreControls.scoreLoseLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
+            scoreControls.scoreTimeLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
+            
+        }
+        if sceneNumber == 11{
+            
+            /// Present Label and Button
+            self.addChild(scoreControls.dessertBackground)
+            self.addChild(scoreControls.dessertMenu)
+            self.addChild(scoreControls.dessertWin)
+            self.addChild(scoreControls.dessertWinLabel)
+            self.addChild(scoreControls.dessertLose)
+            self.addChild(scoreControls.dessertLoseLabel)
+            self.addChild(scoreControls.dessertTime)
+            self.addChild(scoreControls.dessertTimeLabel)
+            
+            
+            self.addChild(scoreControls.scoreTimeLabel)
+            self.addChild(scoreControls.scoreLoseLabel)
+            self.addChild(scoreControls.scoreWinLabel)
+            
+            scoreControls.scoreWinLabel.fontColor = .black
+            scoreControls.scoreLoseLabel.fontColor = .black
+            scoreControls.scoreTimeLabel.fontColor = .black
+            
+        }
+        if sceneNumber == 12{
+            
+            /// Present Label and Button
+            self.addChild(scoreControls.classyBackground)
+            self.addChild(scoreControls.classyMenu)
+            self.addChild(scoreControls.classyWin)
+            self.addChild(scoreControls.classyWinLabel)
+            self.addChild(scoreControls.classyLose)
+            self.addChild(scoreControls.classyLoseLabel)
+            self.addChild(scoreControls.classyTime)
+            self.addChild(scoreControls.classyTimeLabel)
+            
+            
+            self.addChild(scoreControls.scoreTimeLabel)
+            self.addChild(scoreControls.scoreLoseLabel)
+            self.addChild(scoreControls.scoreWinLabel)
+            
+            scoreControls.scoreWinLabel.fontColor = UIColor(red:0.95, green:0.75, blue:0.04, alpha:1.0)
+            scoreControls.scoreLoseLabel.fontColor = UIColor(red:0.95, green:0.75, blue:0.04, alpha:1.0)
+            scoreControls.scoreTimeLabel.fontColor = UIColor(red:0.95, green:0.75, blue:0.04, alpha:1.0)
+            
+        }
+
         
         scoreControls.scoreWinLabel.text = ("\(win)")
         scoreControls.scoreLoseLabel.text = ("\(lose)")

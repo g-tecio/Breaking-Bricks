@@ -27,6 +27,8 @@ struct BrickSpriteRow6 {
     let pumpkinSkin: SKSpriteNode!
     let screamRedSkin: SKSpriteNode!
     let screamGreenSkin: SKSpriteNode!
+    let dessertSkin: SKSpriteNode!
+    let classySkin: SKSpriteNode!
     
     //Array Bricks
     let classicblocks = ["Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic"]
@@ -82,6 +84,18 @@ struct BrickSpriteRow6 {
                              "Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green",
                              "Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green","Brick Scream_Green"]
     
+    let dessertBlocks = ["Brick Dessert","Brick Dessert","Brick Dessert","Brick Dessert","Brick Dessert",
+                         "Brick Dessert","Brick Dessert","Brick Dessert","Brick Dessert","Brick Dessert",
+                         "Brick Dessert","Brick Dessert","Brick Dessert","Brick Dessert","Brick Dessert",
+                         "Brick Dessert","Brick Dessert","Brick Dessert","Brick Dessert","Brick Dessert",
+                         "Brick Dessert","Brick Dessert","Brick Dessert","Brick Dessert","Brick Dessert",]
+    
+    let classyBlocks = ["Brick Classy","Brick Classy","Brick Classy","Brick Classy","Brick Classy",
+                        "Brick Classy","Brick Classy","Brick Classy","Brick Classy","Brick Classy",
+                        "Brick Classy","Brick Classy","Brick Classy","Brick Classy","Brick Classy",
+                        "Brick Classy","Brick Classy","Brick Classy","Brick Classy","Brick Classy",
+                        "Brick Classy","Brick Classy","Brick Classy","Brick Classy","Brick Classy",]
+    
     init (numBricks: Int, row: Int, col: Int , inThisScene: GameScene) {
         
         //classic
@@ -106,6 +120,10 @@ struct BrickSpriteRow6 {
         screamRedSkin = SKSpriteNode(imageNamed: screamRedBlocks[numBricks])
         // Scream Red Skin
         screamGreenSkin = SKSpriteNode(imageNamed: screamGreenBlocks[numBricks])
+        // Scream Green Skin
+        dessertSkin = SKSpriteNode(imageNamed: dessertBlocks[numBricks])
+        // Classy Skin
+        classySkin = SKSpriteNode(imageNamed: classyBlocks[numBricks])
 
 
 
@@ -330,6 +348,45 @@ struct BrickSpriteRow6 {
                 /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 79.95/100) - ((screamGreenSkin.size.height * (237.5/100) ) * CGFloat(row)))
             
+            /// Dessert Skin
+            //16:9
+            dessertSkin.size = CGSize(
+                width:(dessertSkin.size.width * (inThisScene.size.width / dessertSkin.size.width ) * (15/100)) ,
+                height: (dessertSkin.size.height * (inThisScene.size.height / dessertSkin.size.height ) * (4/100)))
+            dessertSkin.physicsBody = SKPhysicsBody(rectangleOf: dessertSkin.frame.size)
+            dessertSkin.physicsBody!.allowsRotation = false
+            dessertSkin.physicsBody!.friction = 0.0
+            dessertSkin.physicsBody!.affectedByGravity = false
+            dessertSkin.physicsBody!.isDynamic = false
+            dessertSkin.name = BlockCategoryName
+            dessertSkin.physicsBody!.categoryBitMask = BlockCategory
+            dessertSkin.zPosition = 2
+            //16:9
+            dessertSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (dessertSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((dessertSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            /// Classy Skin
+            //16:9
+            classySkin.size = CGSize(
+                width:(classySkin.size.width * (inThisScene.size.width / classySkin.size.width ) * (15/100)) ,
+                height: (classySkin.size.height * (inThisScene.size.height / classySkin.size.height ) * (4/100)))
+            classySkin.physicsBody = SKPhysicsBody(rectangleOf: classySkin.frame.size)
+            classySkin.physicsBody!.allowsRotation = false
+            classySkin.physicsBody!.friction = 0.0
+            classySkin.physicsBody!.affectedByGravity = false
+            classySkin.physicsBody!.isDynamic = false
+            classySkin.name = BlockCategoryName
+            classySkin.physicsBody!.categoryBitMask = BlockCategory
+            classySkin.zPosition = 2
+            //16:9
+            classySkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (classySkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((classySkin.size.height * (237.5/100) ) * CGFloat(row)))
             
         }else{
             /// Classic
@@ -552,6 +609,46 @@ struct BrickSpriteRow6 {
                 x: ((inThisScene.size.width * 13.38/100) + (screamGreenSkin.size.width * (106.25/100)) * CGFloat(col))
                 /// Offset value px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 81.7/100) - ((screamGreenSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            /// Dessert Skin
+            //4:3
+            dessertSkin.size = CGSize(
+                width:(dessertSkin.size.width * (inThisScene.size.width / dessertSkin.size.width ) * (13.67/100)) ,
+                height: (dessertSkin.size.height * (inThisScene.size.height / dessertSkin.size.height ) * (5.12/100)))
+            dessertSkin.physicsBody = SKPhysicsBody(rectangleOf: screamGreenSkin.frame.size)
+            dessertSkin.physicsBody!.allowsRotation = false
+            dessertSkin.physicsBody!.friction = 0.0
+            dessertSkin.physicsBody!.affectedByGravity = false
+            dessertSkin.physicsBody!.isDynamic = false
+            dessertSkin.name = BlockCategoryName
+            dessertSkin.physicsBody!.categoryBitMask = BlockCategory
+            dessertSkin.zPosition = 2
+            //4:3
+            dessertSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (dessertSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((dessertSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            /// Classy Skin
+            //4:3
+            classySkin.size = CGSize(
+                width:(classySkin.size.width * (inThisScene.size.width / classySkin.size.width ) * (13.67/100)) ,
+                height: (classySkin.size.height * (inThisScene.size.height / classySkin.size.height ) * (5.12/100)))
+            classySkin.physicsBody = SKPhysicsBody(rectangleOf: screamGreenSkin.frame.size)
+            classySkin.physicsBody!.allowsRotation = false
+            classySkin.physicsBody!.friction = 0.0
+            classySkin.physicsBody!.affectedByGravity = false
+            classySkin.physicsBody!.isDynamic = false
+            classySkin.name = BlockCategoryName
+            classySkin.physicsBody!.categoryBitMask = BlockCategory
+            classySkin.zPosition = 2
+            //4:3
+            classySkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (classySkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((classySkin.size.height * (228.57/100) ) * CGFloat(row)))
             
         }//End else
     }//END init

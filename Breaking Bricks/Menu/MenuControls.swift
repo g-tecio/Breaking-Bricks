@@ -124,6 +124,26 @@ struct MenuControls {
     /// Score Button
     let screamGreenScore:SKSpriteNode
     
+    /// Dessert Skin
+    // Background
+    let dessertBackground:SKSpriteNode
+    /// Game Button
+    let dessertPlay: SKSpriteNode
+    /// Store Button
+    let dessertStore:SKSpriteNode
+    /// Score Button
+    let dessertScore:SKSpriteNode
+    
+    /// Classy Skin
+    // Background
+    let classyBackground:SKSpriteNode
+    /// Game Button
+    let classyPlay: SKSpriteNode
+    /// Store Button
+    let classyStore:SKSpriteNode
+    /// Score Button
+    let classyScore:SKSpriteNode
+    
     init(inThisScene: MenuScene) {
         
         //Classic
@@ -380,6 +400,52 @@ struct MenuControls {
         screamGreenScore.zPosition = 2
         screamGreenScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
         
+        // Dessert
+        /// background
+        dessertBackground = SKSpriteNode.init(imageNamed: "Background Dessert")
+        dessertBackground.name = "background"
+        dessertBackground.zPosition = 1
+        dessertBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        dessertBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Play Button
+        dessertPlay = SKSpriteNode.init(imageNamed: "Play Dessert")
+        dessertPlay.name = "buttonSprite-Play"
+        dessertPlay.zPosition = 2
+        dessertPlay.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(61.20/100)))
+        /// Store Button
+        dessertStore = SKSpriteNode.init(imageNamed: "Store Dessert")
+        dessertStore.name = "buttonSprite-Store"
+        dessertStore.zPosition = 2
+        dessertStore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(34.64/100)))
+        /// Score Button
+        dessertScore = SKSpriteNode.init(imageNamed: "Score Dessert")
+        dessertScore.name = "buttonSprite-Score"
+        dessertScore.zPosition = 2
+        dessertScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
+        
+        // Classy
+        /// background
+        classyBackground = SKSpriteNode.init(imageNamed: "Background Classy")
+        classyBackground.name = "background"
+        classyBackground.zPosition = 1
+        classyBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        classyBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Play Button
+        classyPlay = SKSpriteNode.init(imageNamed: "Play Classy")
+        classyPlay.name = "buttonSprite-Play"
+        classyPlay.zPosition = 2
+        classyPlay.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(61.20/100)))
+        /// Store Button
+        classyStore = SKSpriteNode.init(imageNamed: "Store Classy")
+        classyStore.name = "buttonSprite-Store"
+        classyStore.zPosition = 2
+        classyStore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(34.64/100)))
+        /// Score Button
+        classyScore = SKSpriteNode.init(imageNamed: "Score Classy")
+        classyScore.name = "buttonSprite-Score"
+        classyScore.zPosition = 2
+        classyScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
+        
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
             //16:9
@@ -535,6 +601,33 @@ struct MenuControls {
                 width: (screamGreenScore.size.width * (inThisScene.size.width / screamGreenScore.size.width)*(37.04/100)),
                 height: (screamGreenScore.size.height * (inThisScene.size.height / screamGreenScore.size.height)*(10.42/100)))
             
+            /// Dessert Skin
+            //16:9
+            dessertPlay.size  = CGSize(
+                width: (dessertPlay.size.width * (inThisScene.size.width / dessertPlay.size.width)*(37.04/100)),
+                height: (dessertPlay.size.height * (inThisScene.size.height / dessertPlay.size.height)*(10.42/100)))
+            //16:9
+            dessertStore.size = CGSize(
+                width: (dessertStore.size.width * (inThisScene.size.width / dessertStore.size.width)*(37.04/100)),
+                height: (dessertStore.size.height * (inThisScene.size.height / dessertStore.size.height)*(10.42/100)))
+            //16:9
+            dessertScore.size = CGSize(
+                width: (dessertScore.size.width * (inThisScene.size.width / dessertScore.size.width)*(37.04/100)),
+                height: (dessertScore.size.height * (inThisScene.size.height / dessertScore.size.height)*(10.42/100)))
+            
+            /// Classy Skin
+            //16:9
+            classyPlay.size  = CGSize(
+                width: (classyPlay.size.width * (inThisScene.size.width / classyPlay.size.width)*(37.04/100)),
+                height: (classyPlay.size.height * (inThisScene.size.height / classyPlay.size.height)*(10.42/100)))
+            //16:9
+            classyStore.size = CGSize(
+                width: (classyStore.size.width * (inThisScene.size.width / classyStore.size.width)*(37.04/100)),
+                height: (classyStore.size.height * (inThisScene.size.height / classyStore.size.height)*(10.42/100)))
+            //16:9
+            classyScore.size = CGSize(
+                width: (classyScore.size.width * (inThisScene.size.width / classyScore.size.width)*(37.04/100)),
+                height: (classyScore.size.height * (inThisScene.size.height / classyScore.size.height)*(10.42/100)))
         }else{
             /// Classic
             //4:3
@@ -691,6 +784,33 @@ struct MenuControls {
                 width: (screamGreenScore.size.width * (inThisScene.size.width / screamGreenScore.size.width)*(29.3/100)),
                 height: (screamGreenScore.size.height * (inThisScene.size.height / screamGreenScore.size.height)*(11/100)))
             
+            /// Dessert Skin
+            //4:3
+            dessertPlay.size  = CGSize(
+                width: (dessertPlay.size.width * (inThisScene.size.width / dessertPlay.size.width)*(29.3/100)),
+                height: (dessertPlay.size.height * (inThisScene.size.height / dessertPlay.size.height)*(11/100)))
+            //4:3
+            dessertStore.size  = CGSize(
+                width: (dessertStore.size.width * (inThisScene.size.width / dessertStore.size.width)*(29.3/100)),
+                height: (dessertStore.size.height * (inThisScene.size.height / dessertStore.size.height)*(11/100)))
+            //4:3
+            dessertScore.size  = CGSize(
+                width: (dessertScore.size.width * (inThisScene.size.width / dessertScore.size.width)*(29.3/100)),
+                height: (dessertScore.size.height * (inThisScene.size.height / dessertScore.size.height)*(11/100)))
+            
+            /// Classy Skin
+            //4:3
+            classyPlay.size  = CGSize(
+                width: (classyPlay.size.width * (inThisScene.size.width / classyPlay.size.width)*(29.3/100)),
+                height: (classyPlay.size.height * (inThisScene.size.height / classyPlay.size.height)*(11/100)))
+            //4:3
+            classyStore.size  = CGSize(
+                width: (classyStore.size.width * (inThisScene.size.width / classyStore.size.width)*(29.3/100)),
+                height: (classyStore.size.height * (inThisScene.size.height / classyStore.size.height)*(11/100)))
+            //4:3
+            classyScore.size  = CGSize(
+                width: (classyScore.size.width * (inThisScene.size.width / classyScore.size.width)*(29.3/100)),
+                height: (classyScore.size.height * (inThisScene.size.height / classyScore.size.height)*(11/100)))
             
         }//End else
     }//END init

@@ -161,6 +161,32 @@ struct ScoreControls {
     let screamGreenTime: SKSpriteNode
     let screamGreenTimeLabel: SKSpriteNode
     
+    /// Dessert Skin
+    // Backgrounds
+    let dessertBackground: SKSpriteNode
+    // Menu Buttons
+    let dessertMenu: SKSpriteNode
+    // Win, Lose and Time
+    let dessertWin: SKSpriteNode
+    let dessertWinLabel: SKSpriteNode
+    let dessertLose: SKSpriteNode
+    let dessertLoseLabel: SKSpriteNode
+    let dessertTime: SKSpriteNode
+    let dessertTimeLabel: SKSpriteNode
+    
+    /// Classy Skin
+    // Backgrounds
+    let classyBackground: SKSpriteNode
+    // Menu Buttons
+    let classyMenu: SKSpriteNode
+    // Win, Lose and Time
+    let classyWin: SKSpriteNode
+    let classyWinLabel: SKSpriteNode
+    let classyLose: SKSpriteNode
+    let classyLoseLabel: SKSpriteNode
+    let classyTime: SKSpriteNode
+    let classyTimeLabel: SKSpriteNode
+    
     init(inThisScene: ScoreScene) {
         
         /// Score Win Label
@@ -607,6 +633,80 @@ struct ScoreControls {
         screamGreenMenu.zPosition = 2
         screamGreenMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
         
+        
+        // Dessert Skin
+        /// Backgrounds
+        dessertBackground = SKSpriteNode.init(imageNamed: "Background Dessert")
+        dessertBackground.name = "background"
+        dessertBackground.zPosition = 1
+        dessertBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        dessertBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Win
+        dessertWin = SKSpriteNode.init(imageNamed: "Wins Dessert")
+        dessertWin.name = "image-Win"
+        dessertWin.zPosition = 2
+        /// WinLabel
+        dessertWinLabel = SKSpriteNode.init(imageNamed: "Multipourpose Dessert")
+        dessertWinLabel.name = "Label-Win"
+        dessertWinLabel.zPosition = 2
+        /// Lose
+        dessertLose = SKSpriteNode.init(imageNamed: "Lose Dessert")
+        dessertLose.name = "image-Lose"
+        dessertLose.zPosition = 2
+        /// Loselabel
+        dessertLoseLabel = SKSpriteNode.init(imageNamed: "Multipourpose Dessert")
+        dessertLoseLabel.name = "Label-Lose"
+        dessertLoseLabel.zPosition = 2
+        /// Time
+        dessertTime = SKSpriteNode.init(imageNamed: "Time Dessert")
+        dessertTime.name = "image-Time"
+        dessertTime.zPosition = 2
+        /// Timelabel
+        dessertTimeLabel = SKSpriteNode.init(imageNamed: "Multipourpose Dessert")
+        dessertTimeLabel.name = "Label-Time"
+        dessertTimeLabel.zPosition = 2
+        /// Menu Button
+        dessertMenu = SKSpriteNode.init(imageNamed: "MENU Dessert")
+        dessertMenu.name = "buttonSprite-Menu"
+        dessertMenu.zPosition = 2
+        dessertMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
+
+        // Classy Skin
+        /// Backgrounds
+        classyBackground = SKSpriteNode.init(imageNamed: "Background Classy")
+        classyBackground.name = "background"
+        classyBackground.zPosition = 1
+        classyBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        classyBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Win
+        classyWin = SKSpriteNode.init(imageNamed: "Wins Classy")
+        classyWin.name = "image-Win"
+        classyWin.zPosition = 2
+        /// WinLabel
+        classyWinLabel = SKSpriteNode.init(imageNamed: "Multipurpose Classy")
+        classyWinLabel.name = "Label-Win"
+        classyWinLabel.zPosition = 2
+        /// Lose
+        classyLose = SKSpriteNode.init(imageNamed: "Lose Classy")
+        classyLose.name = "image-Lose"
+        classyLose.zPosition = 2
+        /// Loselabel
+        classyLoseLabel = SKSpriteNode.init(imageNamed: "Multipurpose Classy")
+        classyLoseLabel.name = "Label-Lose"
+        classyLoseLabel.zPosition = 2
+        /// Time
+        classyTime = SKSpriteNode.init(imageNamed: "Time Classy")
+        classyTime.name = "image-Time"
+        classyTime.zPosition = 2
+        /// Timelabel
+        classyTimeLabel = SKSpriteNode.init(imageNamed: "Multipurpose Classy")
+        classyTimeLabel.name = "Label-Time"
+        classyTimeLabel.zPosition = 2
+        /// Menu Button
+        classyMenu = SKSpriteNode.init(imageNamed: "MENU Classy")
+        classyMenu.name = "buttonSprite-Menu"
+        classyMenu.zPosition = 2
+        classyMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
         
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
             //16:9
@@ -1138,7 +1238,99 @@ struct ScoreControls {
                 height: (screamGreenMenu.size.height * (inThisScene.size.height / screamGreenMenu.size.height)*(10.42/100))
             )
             
+            /// Dessert Skin
+            //16:9
+            dessertWin.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            dessertWin.size = CGSize(
+                width: (dessertWin.size.width * (inThisScene.size.width / dessertWin.size.width)*(37.04/100)),
+                height: (dessertWin.size.height * (inThisScene.size.height / dessertWin.size.height)*(10.42/100)))
+            //16:9
+            dessertWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            dessertWinLabel.size = CGSize(
+                width: (dessertWinLabel.size.width * (inThisScene.size.width / dessertWinLabel.size.width)*(37.04/100)),
+                height: (dessertWinLabel.size.height * (inThisScene.size.height / dessertWinLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            dessertLose.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            dessertLose.size = CGSize(
+                width: (dessertLose.size.width * (inThisScene.size.width / dessertLose.size.width)*(37.04/100)),
+                height: (dessertLose.size.height * (inThisScene.size.height / dessertLose.size.height)*(10.42/100)))
+            //16:9
+            dessertLoseLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            dessertLoseLabel.size = CGSize(
+                width: (dessertLoseLabel.size.width * (inThisScene.size.width / dessertLoseLabel.size.width)*(37.04/100)),
+                height: (dessertLoseLabel.size.height * (inThisScene.size.height / dessertLoseLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            dessertTime.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            dessertTime.size = CGSize(
+                width: (dessertTime.size.width * (inThisScene.size.width / dessertTime.size.width)*(37.04/100)),
+                height: (dessertTime.size.height * (inThisScene.size.height / dessertTime.size.height)*(10.42/100))
+            )
+            //16:9
+            dessertTimeLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            dessertTimeLabel.size = CGSize(
+                width: (dessertTimeLabel.size.width * (inThisScene.size.width / dessertTimeLabel.size.width)*(37.04/100)),
+                height: (dessertTimeLabel.size.height * (inThisScene.size.height / dessertTimeLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            dessertMenu.size = CGSize(
+                width: (dessertMenu.size.width * (inThisScene.size.width / dessertMenu.size.width)*(37.04/100)),
+                height: (dessertMenu.size.height * (inThisScene.size.height / dessertMenu.size.height)*(10.42/100))
+            )
             
+            /// Classy Skin
+            //16:9
+            classyWin.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            classyWin.size = CGSize(
+                width: (classyWin.size.width * (inThisScene.size.width / classyWin.size.width)*(37.04/100)),
+                height: (classyWin.size.height * (inThisScene.size.height / classyWin.size.height)*(10.42/100)))
+            //16:9
+            classyWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            classyWinLabel.size = CGSize(
+                width: (classyWinLabel.size.width * (inThisScene.size.width / classyWinLabel.size.width)*(37.04/100)),
+                height: (classyWinLabel.size.height * (inThisScene.size.height / classyWinLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            classyLose.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            classyLose.size = CGSize(
+                width: (classyLose.size.width * (inThisScene.size.width / classyLose.size.width)*(37.04/100)),
+                height: (classyLose.size.height * (inThisScene.size.height / classyLose.size.height)*(10.42/100)))
+            //16:9
+            classyLoseLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            classyLoseLabel.size = CGSize(
+                width: (classyLoseLabel.size.width * (inThisScene.size.width / classyLoseLabel.size.width)*(37.04/100)),
+                height: (classyLoseLabel.size.height * (inThisScene.size.height / classyLoseLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            classyTime.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            classyTime.size = CGSize(
+                width: (classyTime.size.width * (inThisScene.size.width / classyTime.size.width)*(37.04/100)),
+                height: (classyTime.size.height * (inThisScene.size.height / classyTime.size.height)*(10.42/100))
+            )
+            //16:9
+            classyTimeLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            classyTimeLabel.size = CGSize(
+                width: (classyTimeLabel.size.width * (inThisScene.size.width / classyTimeLabel.size.width)*(37.04/100)),
+                height: (classyTimeLabel.size.height * (inThisScene.size.height / classyTimeLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            classyMenu.size = CGSize(
+                width: (classyMenu.size.width * (inThisScene.size.width / classyMenu.size.width)*(37.04/100)),
+                height: (classyMenu.size.height * (inThisScene.size.height / classyMenu.size.height)*(10.42/100))
+            )
             
         }else{
             //4:3
@@ -1610,6 +1802,90 @@ struct ScoreControls {
             screamGreenMenu.size  = CGSize(
                 width: (screamGreenMenu.size.width * (inThisScene.size.width / screamGreenMenu.size.width)*(29.3/100)),
                 height: (screamGreenMenu.size.height * (inThisScene.size.height / screamGreenMenu.size.height)*(11/100)))
+            
+            /// Dessert Skin
+            //4:3
+            dessertWin.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            dessertWin.size  = CGSize(
+                width: (dessertWin.size.width * (inThisScene.size.width / dessertWin.size.width)*(29.3/100)),
+                height: (dessertWin.size.height * (inThisScene.size.height / dessertWin.size.height)*(11/100)))
+            //4:3
+            dessertWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            dessertWinLabel.size  = CGSize(
+                width: (dessertWinLabel.size.width * (inThisScene.size.width / dessertWinLabel.size.width)*(29.3/100)),
+                height: (dessertWinLabel.size.height * (inThisScene.size.height / dessertWinLabel.size.height)*(11/100)))
+            //4:3
+            dessertLose.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            dessertLose.size  = CGSize(
+                width: (dessertLose.size.width * (inThisScene.size.width / dessertLose.size.width)*(29.3/100)),
+                height: (dessertLose.size.height * (inThisScene.size.height / dessertLose.size.height)*(11/100)))
+            //4:3
+            dessertLoseLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            dessertLoseLabel.size  = CGSize(
+                width: (dessertLoseLabel.size.width * (inThisScene.size.width / dessertLoseLabel.size.width)*(29.3/100)),
+                height: (dessertLoseLabel.size.height * (inThisScene.size.height / dessertLoseLabel.size.height)*(11/100)))
+            //4:3
+            dessertTime.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            dessertTime.size  = CGSize(
+                width: (dessertTime.size.width * (inThisScene.size.width / dessertTime.size.width)*(29.3/100)),
+                height: (dessertTime.size.height * (inThisScene.size.height / dessertTime.size.height)*(11/100)))
+            //4:3
+            dessertTimeLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            dessertTimeLabel.size  = CGSize(
+                width: (dessertTimeLabel.size.width * (inThisScene.size.width / dessertTimeLabel.size.width)*(29.3/100)),
+                height: (dessertTimeLabel.size.height * (inThisScene.size.height / dessertTimeLabel.size.height)*(11/100)))
+            //4:3
+            dessertMenu.size  = CGSize(
+                width: (dessertMenu.size.width * (inThisScene.size.width / dessertMenu.size.width)*(29.3/100)),
+                height: (dessertMenu.size.height * (inThisScene.size.height / dessertMenu.size.height)*(11/100)))
+            
+            /// Classy Skin
+            //4:3
+            classyWin.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            classyWin.size  = CGSize(
+                width: (classyWin.size.width * (inThisScene.size.width / classyWin.size.width)*(29.3/100)),
+                height: (classyWin.size.height * (inThisScene.size.height / classyWin.size.height)*(11/100)))
+            //4:3
+            classyWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            classyWinLabel.size  = CGSize(
+                width: (classyWinLabel.size.width * (inThisScene.size.width / classyWinLabel.size.width)*(29.3/100)),
+                height: (classyWinLabel.size.height * (inThisScene.size.height / classyWinLabel.size.height)*(11/100)))
+            //4:3
+            classyLose.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            classyLose.size  = CGSize(
+                width: (classyLose.size.width * (inThisScene.size.width / classyLose.size.width)*(29.3/100)),
+                height: (classyLose.size.height * (inThisScene.size.height / classyLose.size.height)*(11/100)))
+            //4:3
+            classyLoseLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            classyLoseLabel.size  = CGSize(
+                width: (classyLoseLabel.size.width * (inThisScene.size.width / classyLoseLabel.size.width)*(29.3/100)),
+                height: (classyLoseLabel.size.height * (inThisScene.size.height / classyLoseLabel.size.height)*(11/100)))
+            //4:3
+            classyTime.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            classyTime.size  = CGSize(
+                width: (classyTime.size.width * (inThisScene.size.width / classyTime.size.width)*(29.3/100)),
+                height: (classyTime.size.height * (inThisScene.size.height / classyTime.size.height)*(11/100)))
+            //4:3
+            classyTimeLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            classyTimeLabel.size  = CGSize(
+                width: (classyTimeLabel.size.width * (inThisScene.size.width / classyTimeLabel.size.width)*(29.3/100)),
+                height: (classyTimeLabel.size.height * (inThisScene.size.height / classyTimeLabel.size.height)*(11/100)))
+            //4:3
+            classyMenu.size  = CGSize(
+                width: (classyMenu.size.width * (inThisScene.size.width / classyMenu.size.width)*(29.3/100)),
+                height: (classyMenu.size.height * (inThisScene.size.height / classyMenu.size.height)*(11/100)))
             
         }// END Else
     }//END Init

@@ -150,6 +150,30 @@ struct GameControls {
     //Score
     let screamGreenScore: SKSpriteNode
 
+    /// Dessert Skin
+    // Backgrounds
+    let dessertBackground: SKSpriteNode
+    // Paddles
+    let dessertPaddle: SKSpriteNode
+    // Balls
+    let dessertBall: SKSpriteNode
+    //Timer
+    let dessertTimer: SKSpriteNode
+    //Score
+    let dessertScore: SKSpriteNode
+    
+    /// Classy Skin
+    // Backgrounds
+    let classyBackground: SKSpriteNode
+    // Paddles
+    let classyPaddle: SKSpriteNode
+    // Balls
+    let classyBall: SKSpriteNode
+    //Timer
+    let classyTimer: SKSpriteNode
+    //Score
+    let classyScore: SKSpriteNode
+    
     init(inThisScene: GameScene) {
         
         //Barrier
@@ -490,6 +514,62 @@ struct GameControls {
         screamGreenScore.zPosition = 3
         screamGreenScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
+        /// Dessert Skin
+        // Backgrounds
+        dessertBackground = SKSpriteNode.init(imageNamed: "Background Dessert")
+        dessertBackground.name = "background"
+        dessertBackground.zPosition = 1
+        dessertBackground.position = CGPoint(x: inThisScene.size.width/2, y: inThisScene.size.height/2)
+        dessertBackground.size = CGSize(
+            width: ((dessertBackground.size.width * (inThisScene.size.width / dessertBackground.size.width))),
+            height: (dessertBackground.size.height * (inThisScene.size.height / dessertBackground.size.height)))
+        //Paddles
+        dessertPaddle = SKSpriteNode.init(imageNamed: "Paddle Dessert")
+        dessertPaddle.name = "paddle"
+        dessertPaddle.zPosition = 3
+        dessertPaddle.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (12.29/100))
+        //Balls
+        dessertBall = SKSpriteNode.init(imageNamed: "Ball Dessert")
+        dessertBall.name = "ball"
+        dessertBall.zPosition = 2
+        dessertBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
+        //Timer Brick
+        dessertTimer = SKSpriteNode.init(imageNamed: "Timer_score Dessert")
+        dessertTimer.zPosition = 3
+        dessertTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
+        //Score Brick
+        dessertScore = SKSpriteNode.init(imageNamed: "Timer_score Dessert")
+        dessertScore.zPosition = 3
+        dessertScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
+        
+        /// Classy Skin
+        // Backgrounds
+        classyBackground = SKSpriteNode.init(imageNamed: "Background Classy")
+        classyBackground.name = "background"
+        classyBackground.zPosition = 1
+        classyBackground.position = CGPoint(x: inThisScene.size.width/2, y: inThisScene.size.height/2)
+        classyBackground.size = CGSize(
+            width: ((classyBackground.size.width * (inThisScene.size.width / classyBackground.size.width))),
+            height: (classyBackground.size.height * (inThisScene.size.height / classyBackground.size.height)))
+        //Paddles
+        classyPaddle = SKSpriteNode.init(imageNamed: "Paddle Classy")
+        classyPaddle.name = "paddle"
+        classyPaddle.zPosition = 3
+        classyPaddle.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (12.29/100))
+        //Balls
+        classyBall = SKSpriteNode.init(imageNamed: "Ball Classy")
+        classyBall.name = "ball"
+        classyBall.zPosition = 2
+        classyBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
+        //Timer Brick
+        classyTimer = SKSpriteNode.init(imageNamed: "Timer_Score Classy")
+        classyTimer.zPosition = 3
+        classyTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
+        //Score Brick
+        classyScore = SKSpriteNode.init(imageNamed: "Timer_Score Classy")
+        classyScore.zPosition = 3
+        classyScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
+        
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
             //16:9
@@ -822,6 +902,66 @@ struct GameControls {
                 width: (screamGreenScore.size.width * (inThisScene.size.width / screamGreenScore.size.width)*(22.22/100)),
                 height: (screamGreenScore.size.height * (inThisScene.size.height / screamGreenScore.size.height)*(4.17/100)))
             
+            /// Dessert  Skin
+            //16:9 pumpkinBall
+            dessertPaddle.size = CGSize(
+                width: ((dessertPaddle.size.width * (inThisScene.size.width / dessertPaddle.size.width)*(25/100))),
+                height: (dessertPaddle.size.height * (inThisScene.size.height / dessertPaddle.size.height)*(1.56/100)))
+            dessertPaddle.physicsBody = SKPhysicsBody(rectangleOf: dessertPaddle.size)
+            dessertPaddle.physicsBody?.isDynamic = false
+            dessertPaddle.physicsBody?.friction = 0
+            dessertPaddle.physicsBody?.restitution = 1
+            //16:9
+            dessertBall.size = CGSize(
+                width: (dessertBall.size.width * (inThisScene.size.width / dessertBall.size.width)*(4.63/100)),
+                height: (dessertBall.size.height * (inThisScene.size.height / dessertBall.size.height)*(2.6/100)))
+            dessertBall.physicsBody = SKPhysicsBody(circleOfRadius: ( dessertBall.size.width / 2))
+            dessertBall.physicsBody?.allowsRotation = false
+            dessertBall.physicsBody?.affectedByGravity = true
+            dessertBall.physicsBody?.friction = 0
+            dessertBall.physicsBody?.restitution = 1
+            dessertBall.physicsBody?.linearDamping = 0
+            dessertBall.physicsBody?.angularDamping = 0
+            dessertBall.physicsBody?.mass = 0.01
+            //16:9
+            dessertTimer.size = CGSize(
+                width: (dessertTimer.size.width * (inThisScene.size.width / dessertTimer.size.width)*(22/100)),
+                height: (dessertTimer.size.height * (inThisScene.size.height / dessertTimer.size.height)*(4/100)))
+            //16:9
+            dessertScore.size = CGSize(
+                width: (dessertScore.size.width * (inThisScene.size.width / dessertScore.size.width)*(22.22/100)),
+                height: (dessertScore.size.height * (inThisScene.size.height / dessertScore.size.height)*(4.17/100)))
+            
+            /// Classy  Skin
+            //16:9 pumpkinBall
+            classyPaddle.size = CGSize(
+                width: ((classyPaddle.size.width * (inThisScene.size.width / classyPaddle.size.width)*(25/100))),
+                height: (classyPaddle.size.height * (inThisScene.size.height / classyPaddle.size.height)*(1.56/100)))
+            classyPaddle.physicsBody = SKPhysicsBody(rectangleOf: classyPaddle.size)
+            classyPaddle.physicsBody?.isDynamic = false
+            classyPaddle.physicsBody?.friction = 0
+            classyPaddle.physicsBody?.restitution = 1
+            //16:9
+            classyBall.size = CGSize(
+                width: (classyBall.size.width * (inThisScene.size.width / classyBall.size.width)*(4.63/100)),
+                height: (classyBall.size.height * (inThisScene.size.height / classyBall.size.height)*(2.6/100)))
+            classyBall.physicsBody = SKPhysicsBody(circleOfRadius: ( classyBall.size.width / 2))
+            classyBall.physicsBody?.allowsRotation = false
+            classyBall.physicsBody?.affectedByGravity = true
+            classyBall.physicsBody?.friction = 0
+            classyBall.physicsBody?.restitution = 1
+            classyBall.physicsBody?.linearDamping = 0
+            classyBall.physicsBody?.angularDamping = 0
+            classyBall.physicsBody?.mass = 0.01
+            //16:9
+            classyTimer.size = CGSize(
+                width: (classyTimer.size.width * (inThisScene.size.width / classyTimer.size.width)*(22/100)),
+                height: (classyTimer.size.height * (inThisScene.size.height / classyTimer.size.height)*(4/100)))
+            //16:9
+            classyScore.size = CGSize(
+                width: (classyScore.size.width * (inThisScene.size.width / classyScore.size.width)*(22.22/100)),
+                height: (classyScore.size.height * (inThisScene.size.height / classyScore.size.height)*(4.17/100)))
+            
         }else{
             /// Classic
             //4:3
@@ -1153,6 +1293,66 @@ struct GameControls {
             screamGreenScore.size = CGSize(
                 width: (screamGreenScore.size.width * (inThisScene.size.width / screamGreenScore.size.width)*(17.57/100)),
                 height: (screamGreenScore.size.height * (inThisScene.size.height / screamGreenScore.size.height)*(4.49/100)))
+            
+            /// Dessert Skin
+            //4:3
+            dessertPaddle.size = CGSize(
+                width: ((dessertPaddle.size.width * (inThisScene.size.width / dessertPaddle.size.width)*(24.41/100))),
+                height: (dessertPaddle.size.height * (inThisScene.size.height / dessertPaddle.size.height)*(2.56/100)))
+            dessertPaddle.physicsBody = SKPhysicsBody(rectangleOf: dessertPaddle.size)
+            dessertPaddle.physicsBody?.isDynamic = false
+            dessertPaddle.physicsBody?.friction = 0
+            dessertPaddle.physicsBody?.restitution = 1
+            //4:3
+            dessertBall.size = CGSize(
+                width: (dessertBall.size.width * (inThisScene.size.width / dessertBall.size.width)*(3.91/100)),
+                height: (dessertBall.size.height * (inThisScene.size.height / dessertBall.size.height)*(2.93/100)))
+            dessertBall.physicsBody = SKPhysicsBody(circleOfRadius: (dessertBall.size.width / 2))
+            dessertBall.physicsBody?.allowsRotation = false
+            dessertBall.physicsBody?.affectedByGravity = true
+            dessertBall.physicsBody?.friction = 0
+            dessertBall.physicsBody?.restitution = 1
+            dessertBall.physicsBody?.linearDamping = 0
+            dessertBall.physicsBody?.angularDamping = 0
+            dessertBall.physicsBody?.mass = 0.01
+            //4:3
+            dessertTimer.size = CGSize(
+                width: (dessertTimer.size.width * (inThisScene.size.width / dessertTimer.size.width)*(17.57/100)),
+                height: (dessertTimer.size.height * (inThisScene.size.height / dessertTimer.size.height)*(4.49/100)))
+            //4:3
+            dessertScore.size = CGSize(
+                width: (dessertScore.size.width * (inThisScene.size.width / dessertScore.size.width)*(17.57/100)),
+                height: (dessertScore.size.height * (inThisScene.size.height / dessertScore.size.height)*(4.49/100)))
+            
+            /// Classy Skin
+            //4:3
+            classyPaddle.size = CGSize(
+                width: ((classyPaddle.size.width * (inThisScene.size.width / classyPaddle.size.width)*(24.41/100))),
+                height: (classyPaddle.size.height * (inThisScene.size.height / classyPaddle.size.height)*(2.56/100)))
+            classyPaddle.physicsBody = SKPhysicsBody(rectangleOf: classyPaddle.size)
+            classyPaddle.physicsBody?.isDynamic = false
+            classyPaddle.physicsBody?.friction = 0
+            classyPaddle.physicsBody?.restitution = 1
+            //4:3
+            classyBall.size = CGSize(
+                width: (classyBall.size.width * (inThisScene.size.width / classyBall.size.width)*(3.91/100)),
+                height: (classyBall.size.height * (inThisScene.size.height / classyBall.size.height)*(2.93/100)))
+            classyBall.physicsBody = SKPhysicsBody(circleOfRadius: (classyBall.size.width / 2))
+            classyBall.physicsBody?.allowsRotation = false
+            classyBall.physicsBody?.affectedByGravity = true
+            classyBall.physicsBody?.friction = 0
+            classyBall.physicsBody?.restitution = 1
+            classyBall.physicsBody?.linearDamping = 0
+            classyBall.physicsBody?.angularDamping = 0
+            classyBall.physicsBody?.mass = 0.01
+            //4:3
+            classyTimer.size = CGSize(
+                width: (classyTimer.size.width * (inThisScene.size.width / classyTimer.size.width)*(17.57/100)),
+                height: (classyTimer.size.height * (inThisScene.size.height / classyTimer.size.height)*(4.49/100)))
+            //4:3
+            classyScore.size = CGSize(
+                width: (classyScore.size.width * (inThisScene.size.width / classyScore.size.width)*(17.57/100)),
+                height: (classyScore.size.height * (inThisScene.size.height / classyScore.size.height)*(4.49/100)))
             
             
         }//End else

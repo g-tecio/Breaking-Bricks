@@ -92,12 +92,6 @@ class MenuScene: SKScene {
             self.addChild(menuControls.spaceDustScore)
             self.addChild(menuControls.spaceDustStore)
         }
-//        if sceneNumber == 6{
-//            self.addChild(menuControls.acidRainBackground)
-//            self.addChild(menuControls.acidRainPlay)
-//            self.addChild(menuControls.acidRainScore)
-//            self.addChild(menuControls.acidRainStore)
-//        }
         if sceneNumber == 6{
             self.addChild(menuControls.endTimesBackground)
             self.addChild(menuControls.endTimesPlay)
@@ -122,6 +116,25 @@ class MenuScene: SKScene {
             self.addChild(menuControls.screamGreenStore)
             self.addChild(menuControls.screamGreenScore)
         }
+        if sceneNumber == 10{
+            self.addChild(menuControls.acidRainBackground)
+            self.addChild(menuControls.acidRainPlay)
+            self.addChild(menuControls.acidRainScore)
+            self.addChild(menuControls.acidRainStore)
+        }
+        if sceneNumber == 11{
+            self.addChild(menuControls.dessertBackground)
+            self.addChild(menuControls.dessertPlay)
+            self.addChild(menuControls.dessertStore)
+            self.addChild(menuControls.dessertScore)
+        }
+        if sceneNumber == 12{
+            self.addChild(menuControls.classyBackground)
+            self.addChild(menuControls.classyPlay)
+            self.addChild(menuControls.classyStore)
+            self.addChild(menuControls.classyScore)
+        }
+
     }
     
     /// Before another Scence will be presented
