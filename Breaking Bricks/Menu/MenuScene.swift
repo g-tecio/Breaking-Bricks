@@ -134,6 +134,24 @@ class MenuScene: SKScene {
             self.addChild(menuControls.classyStore)
             self.addChild(menuControls.classyScore)
         }
+        if sceneNumber == 13{
+            self.addChild(menuControls.urbanicBackground)
+            self.addChild(menuControls.urbanicPlay)
+            self.addChild(menuControls.urbanicStore)
+            self.addChild(menuControls.urbanicScore)
+        }
+        if sceneNumber == 14{
+            self.addChild(menuControls.autumnBackground)
+            self.addChild(menuControls.autumnPlay)
+            self.addChild(menuControls.autumnStore)
+            self.addChild(menuControls.autumnScore)
+        }
+        if sceneNumber == 15{
+            self.addChild(menuControls.ocherBackground)
+            self.addChild(menuControls.ocherPlay)
+            self.addChild(menuControls.ocherStore)
+            self.addChild(menuControls.ocherScore)
+        }
 
     }
     

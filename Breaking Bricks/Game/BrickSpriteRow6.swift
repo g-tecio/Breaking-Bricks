@@ -29,6 +29,9 @@ struct BrickSpriteRow6 {
     let screamGreenSkin: SKSpriteNode!
     let dessertSkin: SKSpriteNode!
     let classySkin: SKSpriteNode!
+    let urbanicSkin: SKSpriteNode!
+    let autumnSkin: SKSpriteNode!
+    let ocherSkin: SKSpriteNode!
     
     //Array Bricks
     let classicblocks = ["Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic"]
@@ -96,6 +99,24 @@ struct BrickSpriteRow6 {
                         "Brick Classy","Brick Classy","Brick Classy","Brick Classy","Brick Classy",
                         "Brick Classy","Brick Classy","Brick Classy","Brick Classy","Brick Classy",]
     
+    let urbanicBlocks = ["Brick Urbanic","Brick Urbanic","Brick Urbanic","Brick Urbanic","Brick Urbanic",
+                         "Brick Urbanic","Brick Urbanic","Brick Urbanic","Brick Urbanic","Brick Urbanic",
+                         "Brick Urbanic","Brick Urbanic","Brick Urbanic","Brick Urbanic","Brick Urbanic",
+                         "Brick Urbanic","Brick Urbanic","Brick Urbanic","Brick Urbanic","Brick Urbanic",
+                         "Brick Urbanic","Brick Urbanic","Brick Urbanic","Brick Urbanic","Brick Urbanic",]
+    
+    let autumnBlocks = ["Brick Autumn","Brick Autumn","Brick Autumn","Brick Autumn","Brick Autumn",
+                        "Brick Autumn","Brick Autumn","Brick Autumn","Brick Autumn","Brick Autumn",
+                        "Brick Autumn","Brick Autumn","Brick Autumn","Brick Autumn","Brick Autumn",
+                        "Brick Autumn","Brick Autumn","Brick Autumn","Brick Autumn","Brick Autumn",
+                        "Brick Autumn","Brick Autumn","Brick Autumn","Brick Autumn","Brick Autumn",]
+    let ocherBlocks = ["BrickUp Ocher","BrickUp Ocher","BrickUp Ocher","BrickUp Ocher","BrickUp Ocher",
+                       "BrickUp Ocher",
+                       "BrickMiddle Ocher","BrickMiddle Ocher","BrickMiddle Ocher","BrickMiddle Ocher","BrickMiddle Ocher","BrickMiddle Ocher",
+                       "BrickMiddle Ocher","BrickMiddle Ocher","BrickMiddle Ocher","BrickMiddle Ocher","BrickMiddle Ocher","BrickMiddle Ocher",
+                       "BrickDown Ocher","BrickDown Ocher","BrickDown Ocher","BrickDown Ocher","BrickDown Ocher",
+                       "BrickDown Ocher",]
+    
     init (numBricks: Int, row: Int, col: Int , inThisScene: GameScene) {
         
         //classic
@@ -124,8 +145,12 @@ struct BrickSpriteRow6 {
         dessertSkin = SKSpriteNode(imageNamed: dessertBlocks[numBricks])
         // Classy Skin
         classySkin = SKSpriteNode(imageNamed: classyBlocks[numBricks])
-
-
+        // Urbanic Skin
+        urbanicSkin = SKSpriteNode(imageNamed: urbanicBlocks[numBricks])
+        // Autumn Skin
+        autumnSkin = SKSpriteNode(imageNamed: autumnBlocks[numBricks])
+        // Ocher Skin
+        ocherSkin = SKSpriteNode(imageNamed: ocherBlocks[numBricks])
 
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
@@ -388,6 +413,66 @@ struct BrickSpriteRow6 {
                 /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 79.95/100) - ((classySkin.size.height * (237.5/100) ) * CGFloat(row)))
             
+            /// Urbanic Skin
+            //16:9
+            urbanicSkin.size = CGSize(
+                width:(urbanicSkin.size.width * (inThisScene.size.width / urbanicSkin.size.width ) * (15/100)) ,
+                height: (urbanicSkin.size.height * (inThisScene.size.height / urbanicSkin.size.height ) * (4/100)))
+            urbanicSkin.physicsBody = SKPhysicsBody(rectangleOf: urbanicSkin.frame.size)
+            urbanicSkin.physicsBody!.allowsRotation = false
+            urbanicSkin.physicsBody!.friction = 0.0
+            urbanicSkin.physicsBody!.affectedByGravity = false
+            urbanicSkin.physicsBody!.isDynamic = false
+            urbanicSkin.name = BlockCategoryName
+            urbanicSkin.physicsBody!.categoryBitMask = BlockCategory
+            urbanicSkin.zPosition = 2
+            //16:9
+            urbanicSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (urbanicSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((urbanicSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            /// Autumn Skin
+            //16:9
+            autumnSkin.size = CGSize(
+                width:(autumnSkin.size.width * (inThisScene.size.width / autumnSkin.size.width ) * (15/100)) ,
+                height: (autumnSkin.size.height * (inThisScene.size.height / autumnSkin.size.height ) * (4/100)))
+            autumnSkin.physicsBody = SKPhysicsBody(rectangleOf: autumnSkin.frame.size)
+            autumnSkin.physicsBody!.allowsRotation = false
+            autumnSkin.physicsBody!.friction = 0.0
+            autumnSkin.physicsBody!.affectedByGravity = false
+            autumnSkin.physicsBody!.isDynamic = false
+            autumnSkin.name = BlockCategoryName
+            autumnSkin.physicsBody!.categoryBitMask = BlockCategory
+            autumnSkin.zPosition = 2
+            //16:9
+            autumnSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (autumnSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((autumnSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            /// Ocher Skin
+            //16:9
+            ocherSkin.size = CGSize(
+                width:(ocherSkin.size.width * (inThisScene.size.width / ocherSkin.size.width ) * (15/100)) ,
+                height: (ocherSkin.size.height * (inThisScene.size.height / ocherSkin.size.height ) * (4/100)))
+            ocherSkin.physicsBody = SKPhysicsBody(rectangleOf: ocherSkin.frame.size)
+            ocherSkin.physicsBody!.allowsRotation = false
+            ocherSkin.physicsBody!.friction = 0.0
+            ocherSkin.physicsBody!.affectedByGravity = false
+            ocherSkin.physicsBody!.isDynamic = false
+            ocherSkin.name = BlockCategoryName
+            ocherSkin.physicsBody!.categoryBitMask = BlockCategory
+            ocherSkin.zPosition = 2
+            //16:9
+            ocherSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (ocherSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((ocherSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
         }else{
             /// Classic
             //4:3
@@ -615,7 +700,7 @@ struct BrickSpriteRow6 {
             dessertSkin.size = CGSize(
                 width:(dessertSkin.size.width * (inThisScene.size.width / dessertSkin.size.width ) * (13.67/100)) ,
                 height: (dessertSkin.size.height * (inThisScene.size.height / dessertSkin.size.height ) * (5.12/100)))
-            dessertSkin.physicsBody = SKPhysicsBody(rectangleOf: screamGreenSkin.frame.size)
+            dessertSkin.physicsBody = SKPhysicsBody(rectangleOf: dessertSkin.frame.size)
             dessertSkin.physicsBody!.allowsRotation = false
             dessertSkin.physicsBody!.friction = 0.0
             dessertSkin.physicsBody!.affectedByGravity = false
@@ -635,7 +720,7 @@ struct BrickSpriteRow6 {
             classySkin.size = CGSize(
                 width:(classySkin.size.width * (inThisScene.size.width / classySkin.size.width ) * (13.67/100)) ,
                 height: (classySkin.size.height * (inThisScene.size.height / classySkin.size.height ) * (5.12/100)))
-            classySkin.physicsBody = SKPhysicsBody(rectangleOf: screamGreenSkin.frame.size)
+            classySkin.physicsBody = SKPhysicsBody(rectangleOf: classySkin.frame.size)
             classySkin.physicsBody!.allowsRotation = false
             classySkin.physicsBody!.friction = 0.0
             classySkin.physicsBody!.affectedByGravity = false
@@ -649,6 +734,66 @@ struct BrickSpriteRow6 {
                 x: ((inThisScene.size.width * 13.38/100) + (classySkin.size.width * (106.25/100)) * CGFloat(col))
                 /// Offset value px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 81.7/100) - ((classySkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            /// Urbanic Skin
+            //4:3
+            urbanicSkin.size = CGSize(
+                width:(urbanicSkin.size.width * (inThisScene.size.width / urbanicSkin.size.width ) * (13.67/100)) ,
+                height: (urbanicSkin.size.height * (inThisScene.size.height / urbanicSkin.size.height ) * (5.12/100)))
+            urbanicSkin.physicsBody = SKPhysicsBody(rectangleOf: urbanicSkin.frame.size)
+            urbanicSkin.physicsBody!.allowsRotation = false
+            urbanicSkin.physicsBody!.friction = 0.0
+            urbanicSkin.physicsBody!.affectedByGravity = false
+            urbanicSkin.physicsBody!.isDynamic = false
+            urbanicSkin.name = BlockCategoryName
+            urbanicSkin.physicsBody!.categoryBitMask = BlockCategory
+            urbanicSkin.zPosition = 2
+            //4:3
+            urbanicSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (urbanicSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((urbanicSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            /// Autumn Skin
+            //4:3
+            autumnSkin.size = CGSize(
+                width:(autumnSkin.size.width * (inThisScene.size.width / autumnSkin.size.width ) * (13.67/100)) ,
+                height: (autumnSkin.size.height * (inThisScene.size.height / autumnSkin.size.height ) * (5.12/100)))
+            autumnSkin.physicsBody = SKPhysicsBody(rectangleOf: autumnSkin.frame.size)
+            autumnSkin.physicsBody!.allowsRotation = false
+            autumnSkin.physicsBody!.friction = 0.0
+            autumnSkin.physicsBody!.affectedByGravity = false
+            autumnSkin.physicsBody!.isDynamic = false
+            autumnSkin.name = BlockCategoryName
+            autumnSkin.physicsBody!.categoryBitMask = BlockCategory
+            autumnSkin.zPosition = 2
+            //4:3
+            autumnSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (autumnSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((autumnSkin.size.height * (228.57/100) ) * CGFloat(row)))
+
+            /// Ocher Skin
+            //4:3
+            ocherSkin.size = CGSize(
+                width:(ocherSkin.size.width * (inThisScene.size.width / ocherSkin.size.width ) * (13.67/100)) ,
+                height: (ocherSkin.size.height * (inThisScene.size.height / ocherSkin.size.height ) * (5.12/100)))
+            ocherSkin.physicsBody = SKPhysicsBody(rectangleOf: ocherSkin.frame.size)
+            ocherSkin.physicsBody!.allowsRotation = false
+            ocherSkin.physicsBody!.friction = 0.0
+            ocherSkin.physicsBody!.affectedByGravity = false
+            ocherSkin.physicsBody!.isDynamic = false
+            ocherSkin.name = BlockCategoryName
+            ocherSkin.physicsBody!.categoryBitMask = BlockCategory
+            ocherSkin.zPosition = 2
+            //4:3
+            ocherSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (ocherSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((ocherSkin.size.height * (228.57/100) ) * CGFloat(row)))
             
         }//End else
     }//END init

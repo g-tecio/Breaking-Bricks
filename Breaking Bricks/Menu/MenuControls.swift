@@ -144,6 +144,36 @@ struct MenuControls {
     /// Score Button
     let classyScore:SKSpriteNode
     
+    /// Urbanic Skin
+    // Background
+    let urbanicBackground:SKSpriteNode
+    /// Game Button
+    let urbanicPlay: SKSpriteNode
+    /// Store Button
+    let urbanicStore:SKSpriteNode
+    /// Score Button
+    let urbanicScore:SKSpriteNode
+
+    /// Autumn Skin
+    // Background
+    let autumnBackground:SKSpriteNode
+    /// Game Button
+    let autumnPlay: SKSpriteNode
+    /// Store Button
+    let autumnStore:SKSpriteNode
+    /// Score Button
+    let autumnScore:SKSpriteNode
+    
+    /// Ocher Skin
+    // Background
+    let ocherBackground:SKSpriteNode
+    /// Game Button
+    let ocherPlay: SKSpriteNode
+    /// Store Button
+    let ocherStore:SKSpriteNode
+    /// Score Button
+    let ocherScore:SKSpriteNode
+    
     init(inThisScene: MenuScene) {
         
         //Classic
@@ -446,6 +476,75 @@ struct MenuControls {
         classyScore.zPosition = 2
         classyScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
         
+        // Urbanic
+        /// background
+        urbanicBackground = SKSpriteNode.init(imageNamed: "Background Urbanic")
+        urbanicBackground.name = "background"
+        urbanicBackground.zPosition = 1
+        urbanicBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        urbanicBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Play Button
+        urbanicPlay = SKSpriteNode.init(imageNamed: "Play Urbanic")
+        urbanicPlay.name = "buttonSprite-Play"
+        urbanicPlay.zPosition = 2
+        urbanicPlay.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(61.20/100)))
+        /// Store Button
+        urbanicStore = SKSpriteNode.init(imageNamed: "Store Urbanic")
+        urbanicStore.name = "buttonSprite-Store"
+        urbanicStore.zPosition = 2
+        urbanicStore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(34.64/100)))
+        /// Score Button
+        urbanicScore = SKSpriteNode.init(imageNamed: "Score Urbanic")
+        urbanicScore.name = "buttonSprite-Score"
+        urbanicScore.zPosition = 2
+        urbanicScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
+        
+        // Autumn
+        /// background
+        autumnBackground = SKSpriteNode.init(imageNamed: "Background Autumn")
+        autumnBackground.name = "background"
+        autumnBackground.zPosition = 1
+        autumnBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        autumnBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Play Button
+        autumnPlay = SKSpriteNode.init(imageNamed: "Play Autumn")
+        autumnPlay.name = "buttonSprite-Play"
+        autumnPlay.zPosition = 2
+        autumnPlay.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(61.20/100)))
+        /// Store Button
+        autumnStore = SKSpriteNode.init(imageNamed: "Store Autumn")
+        autumnStore.name = "buttonSprite-Store"
+        autumnStore.zPosition = 2
+        autumnStore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(34.64/100)))
+        /// Score Button
+        autumnScore = SKSpriteNode.init(imageNamed: "Score Autumn")
+        autumnScore.name = "buttonSprite-Score"
+        autumnScore.zPosition = 2
+        autumnScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
+        
+        // Ocher
+        /// background
+        ocherBackground = SKSpriteNode.init(imageNamed: "Background Ocher")
+        ocherBackground.name = "background"
+        ocherBackground.zPosition = 1
+        ocherBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        ocherBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Play Button
+        ocherPlay = SKSpriteNode.init(imageNamed: "Play Ocher")
+        ocherPlay.name = "buttonSprite-Play"
+        ocherPlay.zPosition = 2
+        ocherPlay.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(61.20/100)))
+        /// Store Button
+        ocherStore = SKSpriteNode.init(imageNamed: "Store Ocher")
+        ocherStore.name = "buttonSprite-Store"
+        ocherStore.zPosition = 2
+        ocherStore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(34.64/100)))
+        /// Score Button
+        ocherScore = SKSpriteNode.init(imageNamed: "Score Ocher")
+        ocherScore.name = "buttonSprite-Score"
+        ocherScore.zPosition = 2
+        ocherScore.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(47.92/100)))
+        
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
             //16:9
@@ -628,6 +727,49 @@ struct MenuControls {
             classyScore.size = CGSize(
                 width: (classyScore.size.width * (inThisScene.size.width / classyScore.size.width)*(37.04/100)),
                 height: (classyScore.size.height * (inThisScene.size.height / classyScore.size.height)*(10.42/100)))
+            
+            /// Urbanic Skin
+            //16:9
+            urbanicPlay.size  = CGSize(
+                width: (urbanicPlay.size.width * (inThisScene.size.width / urbanicPlay.size.width)*(37.04/100)),
+                height: (urbanicPlay.size.height * (inThisScene.size.height / urbanicPlay.size.height)*(10.42/100)))
+            //16:9
+            urbanicStore.size = CGSize(
+                width: (urbanicStore.size.width * (inThisScene.size.width / urbanicStore.size.width)*(37.04/100)),
+                height: (urbanicStore.size.height * (inThisScene.size.height / urbanicStore.size.height)*(10.42/100)))
+            //16:9
+            urbanicScore.size = CGSize(
+                width: (urbanicScore.size.width * (inThisScene.size.width / urbanicScore.size.width)*(37.04/100)),
+                height: (urbanicScore.size.height * (inThisScene.size.height / urbanicScore.size.height)*(10.42/100)))
+            
+            /// Autumn Skin
+            //16:9
+            autumnPlay.size  = CGSize(
+                width: (autumnPlay.size.width * (inThisScene.size.width / autumnPlay.size.width)*(37.04/100)),
+                height: (autumnPlay.size.height * (inThisScene.size.height / autumnPlay.size.height)*(10.42/100)))
+            //16:9
+            autumnStore.size = CGSize(
+                width: (autumnStore.size.width * (inThisScene.size.width / autumnStore.size.width)*(37.04/100)),
+                height: (autumnStore.size.height * (inThisScene.size.height / autumnStore.size.height)*(10.42/100)))
+            //16:9
+            autumnScore.size = CGSize(
+                width: (autumnScore.size.width * (inThisScene.size.width / autumnScore.size.width)*(37.04/100)),
+                height: (autumnScore.size.height * (inThisScene.size.height / autumnScore.size.height)*(10.42/100)))
+            
+            /// Ocher Skin
+            //16:9
+            ocherPlay.size  = CGSize(
+                width: (ocherPlay.size.width * (inThisScene.size.width / ocherPlay.size.width)*(37.04/100)),
+                height: (ocherPlay.size.height * (inThisScene.size.height / ocherPlay.size.height)*(10.42/100)))
+            //16:9
+            ocherStore.size = CGSize(
+                width: (ocherStore.size.width * (inThisScene.size.width / ocherStore.size.width)*(37.04/100)),
+                height: (ocherStore.size.height * (inThisScene.size.height / ocherStore.size.height)*(10.42/100)))
+            //16:9
+            ocherScore.size = CGSize(
+                width: (ocherScore.size.width * (inThisScene.size.width / ocherScore.size.width)*(37.04/100)),
+                height: (ocherScore.size.height * (inThisScene.size.height / ocherScore.size.height)*(10.42/100)))
+            
         }else{
             /// Classic
             //4:3
@@ -811,6 +953,48 @@ struct MenuControls {
             classyScore.size  = CGSize(
                 width: (classyScore.size.width * (inThisScene.size.width / classyScore.size.width)*(29.3/100)),
                 height: (classyScore.size.height * (inThisScene.size.height / classyScore.size.height)*(11/100)))
+            
+            /// Urbanic Skin
+            //4:3
+            urbanicPlay.size  = CGSize(
+                width: (urbanicPlay.size.width * (inThisScene.size.width / urbanicPlay.size.width)*(29.3/100)),
+                height: (urbanicPlay.size.height * (inThisScene.size.height / urbanicPlay.size.height)*(11/100)))
+            //4:3
+            urbanicStore.size  = CGSize(
+                width: (urbanicStore.size.width * (inThisScene.size.width / urbanicStore.size.width)*(29.3/100)),
+                height: (urbanicStore.size.height * (inThisScene.size.height / urbanicStore.size.height)*(11/100)))
+            //4:3
+            urbanicScore.size  = CGSize(
+                width: (urbanicScore.size.width * (inThisScene.size.width / urbanicScore.size.width)*(29.3/100)),
+                height: (urbanicScore.size.height * (inThisScene.size.height / urbanicScore.size.height)*(11/100)))
+            
+            /// Autumn Skin
+            //4:3
+            autumnPlay.size  = CGSize(
+                width: (autumnPlay.size.width * (inThisScene.size.width / autumnPlay.size.width)*(29.3/100)),
+                height: (autumnPlay.size.height * (inThisScene.size.height / autumnPlay.size.height)*(11/100)))
+            //4:3
+            autumnStore.size  = CGSize(
+                width: (autumnStore.size.width * (inThisScene.size.width / autumnStore.size.width)*(29.3/100)),
+                height: (autumnStore.size.height * (inThisScene.size.height / autumnStore.size.height)*(11/100)))
+            //4:3
+            autumnScore.size  = CGSize(
+                width: (autumnScore.size.width * (inThisScene.size.width / autumnScore.size.width)*(29.3/100)),
+                height: (autumnScore.size.height * (inThisScene.size.height / autumnScore.size.height)*(11/100)))
+
+            /// Ocher Skin
+            //4:3
+            ocherPlay.size  = CGSize(
+                width: (ocherPlay.size.width * (inThisScene.size.width / ocherPlay.size.width)*(29.3/100)),
+                height: (ocherPlay.size.height * (inThisScene.size.height / ocherPlay.size.height)*(11/100)))
+            //4:3
+            ocherStore.size  = CGSize(
+                width: (ocherStore.size.width * (inThisScene.size.width / ocherStore.size.width)*(29.3/100)),
+                height: (ocherStore.size.height * (inThisScene.size.height / ocherStore.size.height)*(11/100)))
+            //4:3
+            ocherScore.size  = CGSize(
+                width: (ocherScore.size.width * (inThisScene.size.width / ocherScore.size.width)*(29.3/100)),
+                height: (ocherScore.size.height * (inThisScene.size.height / ocherScore.size.height)*(11/100)))
             
         }//End else
     }//END init

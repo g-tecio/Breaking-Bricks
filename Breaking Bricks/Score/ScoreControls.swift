@@ -187,6 +187,45 @@ struct ScoreControls {
     let classyTime: SKSpriteNode
     let classyTimeLabel: SKSpriteNode
     
+    /// Urbanic Skin
+    // Backgrounds
+    let urbanicBackground: SKSpriteNode
+    // Menu Buttons
+    let urbanicMenu: SKSpriteNode
+    // Win, Lose and Time
+    let urbanicWin: SKSpriteNode
+    let urbanicWinLabel: SKSpriteNode
+    let urbanicLose: SKSpriteNode
+    let urbanicLoseLabel: SKSpriteNode
+    let urbanicTime: SKSpriteNode
+    let urbanicTimeLabel: SKSpriteNode
+    
+    /// Autumn Skin
+    // Backgrounds
+    let autumnBackground: SKSpriteNode
+    // Menu Buttons
+    let autumnMenu: SKSpriteNode
+    // Win, Lose and Time
+    let autumnWin: SKSpriteNode
+    let autumnWinLabel: SKSpriteNode
+    let autumnLose: SKSpriteNode
+    let autumnLoseLabel: SKSpriteNode
+    let autumnTime: SKSpriteNode
+    let autumnTimeLabel: SKSpriteNode
+    
+    /// Ocher Skin
+    // Backgrounds
+    let ocherBackground: SKSpriteNode
+    // Menu Buttons
+    let ocherMenu: SKSpriteNode
+    // Win, Lose and Time
+    let ocherWin: SKSpriteNode
+    let ocherWinLabel: SKSpriteNode
+    let ocherLose: SKSpriteNode
+    let ocherLoseLabel: SKSpriteNode
+    let ocherTime: SKSpriteNode
+    let ocherTimeLabel: SKSpriteNode
+    
     init(inThisScene: ScoreScene) {
         
         /// Score Win Label
@@ -707,6 +746,117 @@ struct ScoreControls {
         classyMenu.name = "buttonSprite-Menu"
         classyMenu.zPosition = 2
         classyMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
+        
+        // Urbanic Skin
+        /// Backgrounds
+        urbanicBackground = SKSpriteNode.init(imageNamed: "Background Urbanic")
+        urbanicBackground.name = "background"
+        urbanicBackground.zPosition = 1
+        urbanicBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        urbanicBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Win
+        urbanicWin = SKSpriteNode.init(imageNamed: "Wins Urbanic")
+        urbanicWin.name = "image-Win"
+        urbanicWin.zPosition = 2
+        /// WinLabel
+        urbanicWinLabel = SKSpriteNode.init(imageNamed: "Multipurpose Urbanic")
+        urbanicWinLabel.name = "Label-Win"
+        urbanicWinLabel.zPosition = 2
+        /// Lose
+        urbanicLose = SKSpriteNode.init(imageNamed: "Lose Urbanic")
+        urbanicLose.name = "image-Lose"
+        urbanicLose.zPosition = 2
+        /// Loselabel
+        urbanicLoseLabel = SKSpriteNode.init(imageNamed: "Multipurpose Urbanic")
+        urbanicLoseLabel.name = "Label-Lose"
+        urbanicLoseLabel.zPosition = 2
+        /// Time
+        urbanicTime = SKSpriteNode.init(imageNamed: "Time Urbanic")
+        urbanicTime.name = "image-Time"
+        urbanicTime.zPosition = 2
+        /// Timelabel
+        urbanicTimeLabel = SKSpriteNode.init(imageNamed: "Multipurpose Urbanic")
+        urbanicTimeLabel.name = "Label-Time"
+        urbanicTimeLabel.zPosition = 2
+        /// Menu Button
+        urbanicMenu = SKSpriteNode.init(imageNamed: "MENU Urbanic")
+        urbanicMenu.name = "buttonSprite-Menu"
+        urbanicMenu.zPosition = 2
+        urbanicMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
+        
+        // Autumn Skin
+        /// Backgrounds
+        autumnBackground = SKSpriteNode.init(imageNamed: "Background Autumn")
+        autumnBackground.name = "background"
+        autumnBackground.zPosition = 1
+        autumnBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        autumnBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Win
+        autumnWin = SKSpriteNode.init(imageNamed: "Wins Autumn")
+        autumnWin.name = "image-Win"
+        autumnWin.zPosition = 2
+        /// WinLabel
+        autumnWinLabel = SKSpriteNode.init(imageNamed: "Multipurpose Autumn")
+        autumnWinLabel.name = "Label-Win"
+        autumnWinLabel.zPosition = 2
+        /// Lose
+        autumnLose = SKSpriteNode.init(imageNamed: "Lose Autumn")
+        autumnLose.name = "image-Lose"
+        autumnLose.zPosition = 2
+        /// Loselabel
+        autumnLoseLabel = SKSpriteNode.init(imageNamed: "Multipurpose Autumn")
+        autumnLoseLabel.name = "Label-Lose"
+        autumnLoseLabel.zPosition = 2
+        /// Time
+        autumnTime = SKSpriteNode.init(imageNamed: "Time Autumn")
+        autumnTime.name = "image-Time"
+        autumnTime.zPosition = 2
+        /// Timelabel
+        autumnTimeLabel = SKSpriteNode.init(imageNamed: "Multipurpose Autumn")
+        autumnTimeLabel.name = "Label-Time"
+        autumnTimeLabel.zPosition = 2
+        /// Menu Button
+        autumnMenu = SKSpriteNode.init(imageNamed: "Menu Autumn")
+        autumnMenu.name = "buttonSprite-Menu"
+        autumnMenu.zPosition = 2
+        autumnMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
+        
+        // Ocher Skin
+        /// Backgrounds
+        ocherBackground = SKSpriteNode.init(imageNamed: "Background Ocher")
+        ocherBackground.name = "background"
+        ocherBackground.zPosition = 1
+        ocherBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        ocherBackground.size = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        /// Win
+        ocherWin = SKSpriteNode.init(imageNamed: "Wins Ocher")
+        ocherWin.name = "image-Win"
+        ocherWin.zPosition = 2
+        /// WinLabel
+        ocherWinLabel = SKSpriteNode.init(imageNamed: "Multipurpose Ocher")
+        ocherWinLabel.name = "Label-Win"
+        ocherWinLabel.zPosition = 2
+        /// Lose
+        ocherLose = SKSpriteNode.init(imageNamed: "Lose Ocher")
+        ocherLose.name = "image-Lose"
+        ocherLose.zPosition = 2
+        /// Loselabel
+        ocherLoseLabel = SKSpriteNode.init(imageNamed: "Multipurpose Ocher")
+        ocherLoseLabel.name = "Label-Lose"
+        ocherLoseLabel.zPosition = 2
+        /// Time
+        ocherTime = SKSpriteNode.init(imageNamed: "Time Ocher")
+        ocherTime.name = "image-Time"
+        ocherTime.zPosition = 2
+        /// Timelabel
+        ocherTimeLabel = SKSpriteNode.init(imageNamed: "Multipurpose Ocher")
+        ocherTimeLabel.name = "Label-Time"
+        ocherTimeLabel.zPosition = 2
+        /// Menu Button
+        ocherMenu = SKSpriteNode.init(imageNamed: "Menu Ocher")
+        ocherMenu.name = "buttonSprite-Menu"
+        ocherMenu.zPosition = 2
+        ocherMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*(16.15/100)))
         
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
             //16:9
@@ -1332,6 +1482,147 @@ struct ScoreControls {
                 height: (classyMenu.size.height * (inThisScene.size.height / classyMenu.size.height)*(10.42/100))
             )
             
+            /// Urbanic Skin
+            //16:9
+            urbanicWin.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            urbanicWin.size = CGSize(
+                width: (urbanicWin.size.width * (inThisScene.size.width / urbanicWin.size.width)*(37.04/100)),
+                height: (urbanicWin.size.height * (inThisScene.size.height / urbanicWin.size.height)*(10.42/100)))
+            //16:9
+            urbanicWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            urbanicWinLabel.size = CGSize(
+                width: (urbanicWinLabel.size.width * (inThisScene.size.width / urbanicWinLabel.size.width)*(37.04/100)),
+                height: (urbanicWinLabel.size.height * (inThisScene.size.height / urbanicWinLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            urbanicLose.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            urbanicLose.size = CGSize(
+                width: (urbanicLose.size.width * (inThisScene.size.width / urbanicLose.size.width)*(37.04/100)),
+                height: (urbanicLose.size.height * (inThisScene.size.height / urbanicLose.size.height)*(10.42/100)))
+            //16:9
+            urbanicLoseLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            urbanicLoseLabel.size = CGSize(
+                width: (urbanicLoseLabel.size.width * (inThisScene.size.width / urbanicLoseLabel.size.width)*(37.04/100)),
+                height: (urbanicLoseLabel.size.height * (inThisScene.size.height / urbanicLoseLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            urbanicTime.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            urbanicTime.size = CGSize(
+                width: (urbanicTime.size.width * (inThisScene.size.width / urbanicTime.size.width)*(37.04/100)),
+                height: (urbanicTime.size.height * (inThisScene.size.height / urbanicTime.size.height)*(10.42/100))
+            )
+            //16:9
+            urbanicTimeLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            urbanicTimeLabel.size = CGSize(
+                width: (urbanicTimeLabel.size.width * (inThisScene.size.width / urbanicTimeLabel.size.width)*(37.04/100)),
+                height: (urbanicTimeLabel.size.height * (inThisScene.size.height / urbanicTimeLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            urbanicMenu.size = CGSize(
+                width: (urbanicMenu.size.width * (inThisScene.size.width / urbanicMenu.size.width)*(37.04/100)),
+                height: (urbanicMenu.size.height * (inThisScene.size.height / urbanicMenu.size.height)*(10.42/100))
+            )
+            
+            /// Autumn Skin
+            //16:9
+            autumnWin.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            autumnWin.size = CGSize(
+                width: (autumnWin.size.width * (inThisScene.size.width / autumnWin.size.width)*(37.04/100)),
+                height: (autumnWin.size.height * (inThisScene.size.height / autumnWin.size.height)*(10.42/100)))
+            //16:9
+            autumnWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            autumnWinLabel.size = CGSize(
+                width: (autumnWinLabel.size.width * (inThisScene.size.width / autumnWinLabel.size.width)*(37.04/100)),
+                height: (autumnWinLabel.size.height * (inThisScene.size.height / autumnWinLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            autumnLose.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            autumnLose.size = CGSize(
+                width: (autumnLose.size.width * (inThisScene.size.width / autumnLose.size.width)*(37.04/100)),
+                height: (autumnLose.size.height * (inThisScene.size.height / autumnLose.size.height)*(10.42/100)))
+            //16:9
+            autumnLoseLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            autumnLoseLabel.size = CGSize(
+                width: (autumnLoseLabel.size.width * (inThisScene.size.width / autumnLoseLabel.size.width)*(37.04/100)),
+                height: (autumnLoseLabel.size.height * (inThisScene.size.height / autumnLoseLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            autumnTime.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            autumnTime.size = CGSize(
+                width: (autumnTime.size.width * (inThisScene.size.width / autumnTime.size.width)*(37.04/100)),
+                height: (autumnTime.size.height * (inThisScene.size.height / autumnTime.size.height)*(10.42/100))
+            )
+            //16:9
+            autumnTimeLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            autumnTimeLabel.size = CGSize(
+                width: (autumnTimeLabel.size.width * (inThisScene.size.width / autumnTimeLabel.size.width)*(37.04/100)),
+                height: (autumnTimeLabel.size.height * (inThisScene.size.height / autumnTimeLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            autumnMenu.size = CGSize(
+                width: (autumnMenu.size.width * (inThisScene.size.width / autumnMenu.size.width)*(37.04/100)),
+                height: (autumnMenu.size.height * (inThisScene.size.height / autumnMenu.size.height)*(10.42/100))
+            )
+            
+            /// Ocher Skin
+            //16:9
+            ocherWin.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            ocherWin.size = CGSize(
+                width: (ocherWin.size.width * (inThisScene.size.width / ocherWin.size.width)*(37.04/100)),
+                height: (ocherWin.size.height * (inThisScene.size.height / ocherWin.size.height)*(10.42/100)))
+            //16:9
+            ocherWinLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(73.44/100)))
+            //16:9
+            ocherWinLabel.size = CGSize(
+                width: (ocherWinLabel.size.width * (inThisScene.size.width / ocherWinLabel.size.width)*(37.04/100)),
+                height: (ocherWinLabel.size.height * (inThisScene.size.height / ocherWinLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            ocherLose.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            ocherLose.size = CGSize(
+                width: (ocherLose.size.width * (inThisScene.size.width / ocherLose.size.width)*(37.04/100)),
+                height: (ocherLose.size.height * (inThisScene.size.height / ocherLose.size.height)*(10.42/100)))
+            //16:9
+            ocherLoseLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(54.79/100)))
+            //16:9
+            ocherLoseLabel.size = CGSize(
+                width: (ocherLoseLabel.size.width * (inThisScene.size.width / ocherLoseLabel.size.width)*(37.04/100)),
+                height: (ocherLoseLabel.size.height * (inThisScene.size.height / ocherLoseLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            ocherTime.position = CGPoint(x: inThisScene.size.width*(29.63/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            ocherTime.size = CGSize(
+                width: (ocherTime.size.width * (inThisScene.size.width / ocherTime.size.width)*(37.04/100)),
+                height: (ocherTime.size.height * (inThisScene.size.height / ocherTime.size.height)*(10.42/100))
+            )
+            //16:9
+            ocherTimeLabel.position = CGPoint(x: inThisScene.size.width*(70.37/100), y: (inThisScene.size.height*(36.15/100)))
+            //16:9
+            ocherTimeLabel.size = CGSize(
+                width: (ocherTimeLabel.size.width * (inThisScene.size.width / ocherTimeLabel.size.width)*(37.04/100)),
+                height: (ocherTimeLabel.size.height * (inThisScene.size.height / ocherTimeLabel.size.height)*(10.42/100))
+            )
+            //16:9
+            ocherMenu.size = CGSize(
+                width: (ocherMenu.size.width * (inThisScene.size.width / ocherMenu.size.width)*(37.04/100)),
+                height: (ocherMenu.size.height * (inThisScene.size.height / ocherMenu.size.height)*(10.42/100))
+            )
+            
         }else{
             //4:3
             scoreWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
@@ -1886,6 +2177,132 @@ struct ScoreControls {
             classyMenu.size  = CGSize(
                 width: (classyMenu.size.width * (inThisScene.size.width / classyMenu.size.width)*(29.3/100)),
                 height: (classyMenu.size.height * (inThisScene.size.height / classyMenu.size.height)*(11/100)))
+            
+            /// Urbanic Skin
+            //4:3
+            urbanicWin.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            urbanicWin.size  = CGSize(
+                width: (urbanicWin.size.width * (inThisScene.size.width / urbanicWin.size.width)*(29.3/100)),
+                height: (urbanicWin.size.height * (inThisScene.size.height / urbanicWin.size.height)*(11/100)))
+            //4:3
+            urbanicWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            urbanicWinLabel.size  = CGSize(
+                width: (urbanicWinLabel.size.width * (inThisScene.size.width / urbanicWinLabel.size.width)*(29.3/100)),
+                height: (urbanicWinLabel.size.height * (inThisScene.size.height / urbanicWinLabel.size.height)*(11/100)))
+            //4:3
+            urbanicLose.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            urbanicLose.size  = CGSize(
+                width: (urbanicLose.size.width * (inThisScene.size.width / urbanicLose.size.width)*(29.3/100)),
+                height: (urbanicLose.size.height * (inThisScene.size.height / urbanicLose.size.height)*(11/100)))
+            //4:3
+            urbanicLoseLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            urbanicLoseLabel.size  = CGSize(
+                width: (urbanicLoseLabel.size.width * (inThisScene.size.width / urbanicLoseLabel.size.width)*(29.3/100)),
+                height: (urbanicLoseLabel.size.height * (inThisScene.size.height / urbanicLoseLabel.size.height)*(11/100)))
+            //4:3
+            urbanicTime.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            urbanicTime.size  = CGSize(
+                width: (urbanicTime.size.width * (inThisScene.size.width / urbanicTime.size.width)*(29.3/100)),
+                height: (urbanicTime.size.height * (inThisScene.size.height / urbanicTime.size.height)*(11/100)))
+            //4:3
+            urbanicTimeLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            urbanicTimeLabel.size  = CGSize(
+                width: (urbanicTimeLabel.size.width * (inThisScene.size.width / urbanicTimeLabel.size.width)*(29.3/100)),
+                height: (urbanicTimeLabel.size.height * (inThisScene.size.height / urbanicTimeLabel.size.height)*(11/100)))
+            //4:3
+            urbanicMenu.size  = CGSize(
+                width: (urbanicMenu.size.width * (inThisScene.size.width / urbanicMenu.size.width)*(29.3/100)),
+                height: (urbanicMenu.size.height * (inThisScene.size.height / urbanicMenu.size.height)*(11/100)))
+            
+            /// Autumn Skin
+            //4:3
+            autumnWin.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            autumnWin.size  = CGSize(
+                width: (autumnWin.size.width * (inThisScene.size.width / autumnWin.size.width)*(29.3/100)),
+                height: (autumnWin.size.height * (inThisScene.size.height / autumnWin.size.height)*(11/100)))
+            //4:3
+            autumnWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            autumnWinLabel.size  = CGSize(
+                width: (autumnWinLabel.size.width * (inThisScene.size.width / autumnWinLabel.size.width)*(29.3/100)),
+                height: (autumnWinLabel.size.height * (inThisScene.size.height / autumnWinLabel.size.height)*(11/100)))
+            //4:3
+            autumnLose.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            autumnLose.size  = CGSize(
+                width: (autumnLose.size.width * (inThisScene.size.width / autumnLose.size.width)*(29.3/100)),
+                height: (autumnLose.size.height * (inThisScene.size.height / autumnLose.size.height)*(11/100)))
+            //4:3
+            autumnLoseLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            autumnLoseLabel.size  = CGSize(
+                width: (autumnLoseLabel.size.width * (inThisScene.size.width / autumnLoseLabel.size.width)*(29.3/100)),
+                height: (autumnLoseLabel.size.height * (inThisScene.size.height / autumnLoseLabel.size.height)*(11/100)))
+            //4:3
+            autumnTime.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            autumnTime.size  = CGSize(
+                width: (autumnTime.size.width * (inThisScene.size.width / autumnTime.size.width)*(29.3/100)),
+                height: (autumnTime.size.height * (inThisScene.size.height / autumnTime.size.height)*(11/100)))
+            //4:3
+            autumnTimeLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            autumnTimeLabel.size  = CGSize(
+                width: (autumnTimeLabel.size.width * (inThisScene.size.width / autumnTimeLabel.size.width)*(29.3/100)),
+                height: (autumnTimeLabel.size.height * (inThisScene.size.height / autumnTimeLabel.size.height)*(11/100)))
+            //4:3
+            autumnMenu.size  = CGSize(
+                width: (autumnMenu.size.width * (inThisScene.size.width / autumnMenu.size.width)*(29.3/100)),
+                height: (autumnMenu.size.height * (inThisScene.size.height / autumnMenu.size.height)*(11/100)))
+            
+            /// Ocher Skin
+            //4:3
+            ocherWin.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            ocherWin.size  = CGSize(
+                width: (ocherWin.size.width * (inThisScene.size.width / ocherWin.size.width)*(29.3/100)),
+                height: (ocherWin.size.height * (inThisScene.size.height / ocherWin.size.height)*(11/100)))
+            //4:3
+            ocherWinLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(73.44/100)))
+            //4:3
+            ocherWinLabel.size  = CGSize(
+                width: (ocherWinLabel.size.width * (inThisScene.size.width / ocherWinLabel.size.width)*(29.3/100)),
+                height: (ocherWinLabel.size.height * (inThisScene.size.height / ocherWinLabel.size.height)*(11/100)))
+            //4:3
+            ocherLose.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            ocherLose.size  = CGSize(
+                width: (ocherLose.size.width * (inThisScene.size.width / ocherLose.size.width)*(29.3/100)),
+                height: (ocherLose.size.height * (inThisScene.size.height / ocherLose.size.height)*(11/100)))
+            //4:3
+            ocherLoseLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(54.79/100)))
+            //4:3
+            ocherLoseLabel.size  = CGSize(
+                width: (ocherLoseLabel.size.width * (inThisScene.size.width / ocherLoseLabel.size.width)*(29.3/100)),
+                height: (ocherLoseLabel.size.height * (inThisScene.size.height / ocherLoseLabel.size.height)*(11/100)))
+            //4:3
+            ocherTime.position = CGPoint(x: inThisScene.size.width*(32.91/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            ocherTime.size  = CGSize(
+                width: (ocherTime.size.width * (inThisScene.size.width / ocherTime.size.width)*(29.3/100)),
+                height: (ocherTime.size.height * (inThisScene.size.height / ocherTime.size.height)*(11/100)))
+            //4:3
+            ocherTimeLabel.position = CGPoint(x: inThisScene.size.width*(67.09/100), y: (inThisScene.size.height*(36.15/100)))
+            //4:3
+            ocherTimeLabel.size  = CGSize(
+                width: (ocherTimeLabel.size.width * (inThisScene.size.width / ocherTimeLabel.size.width)*(29.3/100)),
+                height: (ocherTimeLabel.size.height * (inThisScene.size.height / ocherTimeLabel.size.height)*(11/100)))
+            //4:3
+            ocherMenu.size  = CGSize(
+                width: (ocherMenu.size.width * (inThisScene.size.width / ocherMenu.size.width)*(29.3/100)),
+                height: (ocherMenu.size.height * (inThisScene.size.height / ocherMenu.size.height)*(11/100)))
             
         }// END Else
     }//END Init

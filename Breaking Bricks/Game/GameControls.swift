@@ -174,6 +174,42 @@ struct GameControls {
     //Score
     let classyScore: SKSpriteNode
     
+    /// Urbanic Skin
+    // Backgrounds
+    let urbanicBackground: SKSpriteNode
+    // Paddles
+    let urbanicPaddle: SKSpriteNode
+    // Balls
+    let urbanicBall: SKSpriteNode
+    //Timer
+    let urbanicTimer: SKSpriteNode
+    //Score
+    let urbanicScore: SKSpriteNode
+    
+    /// Autumn Skin
+    // Backgrounds
+    let autumnBackground: SKSpriteNode
+    // Paddles
+    let autumnPaddle: SKSpriteNode
+    // Balls
+    let autumnBall: SKSpriteNode
+    //Timer
+    let autumnTimer: SKSpriteNode
+    //Score
+    let autumnScore: SKSpriteNode
+    
+    /// Ocher Skin
+    // Backgrounds
+    let ocherBackground: SKSpriteNode
+    // Paddles
+    let ocherPaddle: SKSpriteNode
+    // Balls
+    let ocherBall: SKSpriteNode
+    //Timer
+    let ocherTimer: SKSpriteNode
+    //Score
+    let ocherScore: SKSpriteNode
+    
     init(inThisScene: GameScene) {
         
         //Barrier
@@ -570,6 +606,90 @@ struct GameControls {
         classyScore.zPosition = 3
         classyScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
+        /// Urbanic Skin
+        // Backgrounds
+        urbanicBackground = SKSpriteNode.init(imageNamed: "Background Urbanic")
+        urbanicBackground.name = "background"
+        urbanicBackground.zPosition = 1
+        urbanicBackground.position = CGPoint(x: inThisScene.size.width/2, y: inThisScene.size.height/2)
+        urbanicBackground.size = CGSize(
+            width: ((urbanicBackground.size.width * (inThisScene.size.width / urbanicBackground.size.width))),
+            height: (urbanicBackground.size.height * (inThisScene.size.height / urbanicBackground.size.height)))
+        //Paddles
+        urbanicPaddle = SKSpriteNode.init(imageNamed: "Paddle Urbanic")
+        urbanicPaddle.name = "paddle"
+        urbanicPaddle.zPosition = 3
+        urbanicPaddle.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (12.29/100))
+        //Balls
+        urbanicBall = SKSpriteNode.init(imageNamed: "Ball Urbanic")
+        urbanicBall.name = "ball"
+        urbanicBall.zPosition = 2
+        urbanicBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
+        //Timer Brick
+        urbanicTimer = SKSpriteNode.init(imageNamed: "Timer_Score Urbanic")
+        urbanicTimer.zPosition = 3
+        urbanicTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
+        //Score Brick
+        urbanicScore = SKSpriteNode.init(imageNamed: "Timer_Score Urbanic")
+        urbanicScore.zPosition = 3
+        urbanicScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
+        
+        /// Autumn Skin
+        // Backgrounds
+        autumnBackground = SKSpriteNode.init(imageNamed: "Background Autumn")
+        autumnBackground.name = "background"
+        autumnBackground.zPosition = 1
+        autumnBackground.position = CGPoint(x: inThisScene.size.width/2, y: inThisScene.size.height/2)
+        autumnBackground.size = CGSize(
+            width: ((autumnBackground.size.width * (inThisScene.size.width / autumnBackground.size.width))),
+            height: (autumnBackground.size.height * (inThisScene.size.height / autumnBackground.size.height)))
+        //Paddles
+        autumnPaddle = SKSpriteNode.init(imageNamed: "Paddle Autumn")
+        autumnPaddle.name = "paddle"
+        autumnPaddle.zPosition = 3
+        autumnPaddle.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (12.29/100))
+        //Balls
+        autumnBall = SKSpriteNode.init(imageNamed: "Ball Autumn")
+        autumnBall.name = "ball"
+        autumnBall.zPosition = 2
+        autumnBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
+        //Timer Brick
+        autumnTimer = SKSpriteNode.init(imageNamed: "Timer_Score Autumn")
+        autumnTimer.zPosition = 3
+        autumnTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
+        //Score Brick
+        autumnScore = SKSpriteNode.init(imageNamed: "Timer_Score Autumn")
+        autumnScore.zPosition = 3
+        autumnScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
+        
+        /// Ocher Skin
+        // Backgrounds
+        ocherBackground = SKSpriteNode.init(imageNamed: "Background Ocher")
+        ocherBackground.name = "background"
+        ocherBackground.zPosition = 1
+        ocherBackground.position = CGPoint(x: inThisScene.size.width/2, y: inThisScene.size.height/2)
+        ocherBackground.size = CGSize(
+            width: ((ocherBackground.size.width * (inThisScene.size.width / ocherBackground.size.width))),
+            height: (ocherBackground.size.height * (inThisScene.size.height / ocherBackground.size.height)))
+        //Paddles
+        ocherPaddle = SKSpriteNode.init(imageNamed: "Paddle Ocher")
+        ocherPaddle.name = "paddle"
+        ocherPaddle.zPosition = 3
+        ocherPaddle.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (12.29/100))
+        //Balls
+        ocherBall = SKSpriteNode.init(imageNamed: "Ball Ocher")
+        ocherBall.name = "ball"
+        ocherBall.zPosition = 2
+        ocherBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
+        //Timer Brick
+        ocherTimer = SKSpriteNode.init(imageNamed: "Timer_Score Ocher")
+        ocherTimer.zPosition = 3
+        ocherTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
+        //Score Brick
+        ocherScore = SKSpriteNode.init(imageNamed: "Timer_Score Ocher")
+        ocherScore.zPosition = 3
+        ocherScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
+        
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
             //16:9
@@ -961,6 +1081,96 @@ struct GameControls {
             classyScore.size = CGSize(
                 width: (classyScore.size.width * (inThisScene.size.width / classyScore.size.width)*(22.22/100)),
                 height: (classyScore.size.height * (inThisScene.size.height / classyScore.size.height)*(4.17/100)))
+            
+            /// Urbanic  Skin
+            //16:9 pumpkinBall
+            urbanicPaddle.size = CGSize(
+                width: ((urbanicPaddle.size.width * (inThisScene.size.width / urbanicPaddle.size.width)*(25/100))),
+                height: (urbanicPaddle.size.height * (inThisScene.size.height / urbanicPaddle.size.height)*(1.56/100)))
+            urbanicPaddle.physicsBody = SKPhysicsBody(rectangleOf: urbanicPaddle.size)
+            urbanicPaddle.physicsBody?.isDynamic = false
+            urbanicPaddle.physicsBody?.friction = 0
+            urbanicPaddle.physicsBody?.restitution = 1
+            //16:9
+            urbanicBall.size = CGSize(
+                width: (urbanicBall.size.width * (inThisScene.size.width / urbanicBall.size.width)*(4.63/100)),
+                height: (urbanicBall.size.height * (inThisScene.size.height / urbanicBall.size.height)*(2.6/100)))
+            urbanicBall.physicsBody = SKPhysicsBody(circleOfRadius: ( urbanicBall.size.width / 2))
+            urbanicBall.physicsBody?.allowsRotation = false
+            urbanicBall.physicsBody?.affectedByGravity = true
+            urbanicBall.physicsBody?.friction = 0
+            urbanicBall.physicsBody?.restitution = 1
+            urbanicBall.physicsBody?.linearDamping = 0
+            urbanicBall.physicsBody?.angularDamping = 0
+            urbanicBall.physicsBody?.mass = 0.01
+            //16:9
+            urbanicTimer.size = CGSize(
+                width: (urbanicTimer.size.width * (inThisScene.size.width / urbanicTimer.size.width)*(22/100)),
+                height: (urbanicTimer.size.height * (inThisScene.size.height / urbanicTimer.size.height)*(4/100)))
+            //16:9
+            urbanicScore.size = CGSize(
+                width: (urbanicScore.size.width * (inThisScene.size.width / urbanicScore.size.width)*(22.22/100)),
+                height: (urbanicScore.size.height * (inThisScene.size.height / urbanicScore.size.height)*(4.17/100)))
+            
+            /// Autumn  Skin
+            //16:9 pumpkinBall
+            autumnPaddle.size = CGSize(
+                width: ((autumnPaddle.size.width * (inThisScene.size.width / autumnPaddle.size.width)*(25/100))),
+                height: (autumnPaddle.size.height * (inThisScene.size.height / autumnPaddle.size.height)*(1.56/100)))
+            autumnPaddle.physicsBody = SKPhysicsBody(rectangleOf: autumnPaddle.size)
+            autumnPaddle.physicsBody?.isDynamic = false
+            autumnPaddle.physicsBody?.friction = 0
+            autumnPaddle.physicsBody?.restitution = 1
+            //16:9
+            autumnBall.size = CGSize(
+                width: (autumnBall.size.width * (inThisScene.size.width / autumnBall.size.width)*(4.63/100)),
+                height: (autumnBall.size.height * (inThisScene.size.height / autumnBall.size.height)*(2.6/100)))
+            autumnBall.physicsBody = SKPhysicsBody(circleOfRadius: ( autumnBall.size.width / 2))
+            autumnBall.physicsBody?.allowsRotation = false
+            autumnBall.physicsBody?.affectedByGravity = true
+            autumnBall.physicsBody?.friction = 0
+            autumnBall.physicsBody?.restitution = 1
+            autumnBall.physicsBody?.linearDamping = 0
+            autumnBall.physicsBody?.angularDamping = 0
+            autumnBall.physicsBody?.mass = 0.01
+            //16:9
+            autumnTimer.size = CGSize(
+                width: (autumnTimer.size.width * (inThisScene.size.width / autumnTimer.size.width)*(22/100)),
+                height: (autumnTimer.size.height * (inThisScene.size.height / autumnTimer.size.height)*(4/100)))
+            //16:9
+            autumnScore.size = CGSize(
+                width: (autumnScore.size.width * (inThisScene.size.width / autumnScore.size.width)*(22.22/100)),
+                height: (autumnScore.size.height * (inThisScene.size.height / autumnScore.size.height)*(4.17/100)))
+            
+            /// Ocher  Skin
+            //16:9 pumpkinBall
+            ocherPaddle.size = CGSize(
+                width: ((ocherPaddle.size.width * (inThisScene.size.width / ocherPaddle.size.width)*(25/100))),
+                height: (ocherPaddle.size.height * (inThisScene.size.height / ocherPaddle.size.height)*(1.56/100)))
+            ocherPaddle.physicsBody = SKPhysicsBody(rectangleOf: ocherPaddle.size)
+            ocherPaddle.physicsBody?.isDynamic = false
+            ocherPaddle.physicsBody?.friction = 0
+            ocherPaddle.physicsBody?.restitution = 1
+            //16:9
+            ocherBall.size = CGSize(
+                width: (ocherBall.size.width * (inThisScene.size.width / ocherBall.size.width)*(4.63/100)),
+                height: (ocherBall.size.height * (inThisScene.size.height / ocherBall.size.height)*(2.6/100)))
+            ocherBall.physicsBody = SKPhysicsBody(circleOfRadius: ( ocherBall.size.width / 2))
+            ocherBall.physicsBody?.allowsRotation = false
+            ocherBall.physicsBody?.affectedByGravity = true
+            ocherBall.physicsBody?.friction = 0
+            ocherBall.physicsBody?.restitution = 1
+            ocherBall.physicsBody?.linearDamping = 0
+            ocherBall.physicsBody?.angularDamping = 0
+            ocherBall.physicsBody?.mass = 0.01
+            //16:9
+            ocherTimer.size = CGSize(
+                width: (ocherTimer.size.width * (inThisScene.size.width / ocherTimer.size.width)*(22/100)),
+                height: (ocherTimer.size.height * (inThisScene.size.height / ocherTimer.size.height)*(4/100)))
+            //16:9
+            ocherScore.size = CGSize(
+                width: (ocherScore.size.width * (inThisScene.size.width / ocherScore.size.width)*(22.22/100)),
+                height: (ocherScore.size.height * (inThisScene.size.height / ocherScore.size.height)*(4.17/100)))
             
         }else{
             /// Classic
@@ -1354,6 +1564,96 @@ struct GameControls {
                 width: (classyScore.size.width * (inThisScene.size.width / classyScore.size.width)*(17.57/100)),
                 height: (classyScore.size.height * (inThisScene.size.height / classyScore.size.height)*(4.49/100)))
             
+            
+            /// Urbanic Skin
+            //4:3
+            urbanicPaddle.size = CGSize(
+                width: ((urbanicPaddle.size.width * (inThisScene.size.width / urbanicPaddle.size.width)*(24.41/100))),
+                height: (urbanicPaddle.size.height * (inThisScene.size.height / urbanicPaddle.size.height)*(2.56/100)))
+            urbanicPaddle.physicsBody = SKPhysicsBody(rectangleOf: urbanicPaddle.size)
+            urbanicPaddle.physicsBody?.isDynamic = false
+            urbanicPaddle.physicsBody?.friction = 0
+            urbanicPaddle.physicsBody?.restitution = 1
+            //4:3
+            urbanicBall.size = CGSize(
+                width: (urbanicBall.size.width * (inThisScene.size.width / urbanicBall.size.width)*(3.91/100)),
+                height: (urbanicBall.size.height * (inThisScene.size.height / urbanicBall.size.height)*(2.93/100)))
+            urbanicBall.physicsBody = SKPhysicsBody(circleOfRadius: (urbanicBall.size.width / 2))
+            urbanicBall.physicsBody?.allowsRotation = false
+            urbanicBall.physicsBody?.affectedByGravity = true
+            urbanicBall.physicsBody?.friction = 0
+            urbanicBall.physicsBody?.restitution = 1
+            urbanicBall.physicsBody?.linearDamping = 0
+            urbanicBall.physicsBody?.angularDamping = 0
+            urbanicBall.physicsBody?.mass = 0.01
+            //4:3
+            urbanicTimer.size = CGSize(
+                width: (urbanicTimer.size.width * (inThisScene.size.width / urbanicTimer.size.width)*(17.57/100)),
+                height: (urbanicTimer.size.height * (inThisScene.size.height / urbanicTimer.size.height)*(4.49/100)))
+            //4:3
+            urbanicScore.size = CGSize(
+                width: (urbanicScore.size.width * (inThisScene.size.width / urbanicScore.size.width)*(17.57/100)),
+                height: (urbanicScore.size.height * (inThisScene.size.height / urbanicScore.size.height)*(4.49/100)))
+            
+            /// Autumn Skin
+            //4:3
+            autumnPaddle.size = CGSize(
+                width: ((autumnPaddle.size.width * (inThisScene.size.width / autumnPaddle.size.width)*(24.41/100))),
+                height: (autumnPaddle.size.height * (inThisScene.size.height / autumnPaddle.size.height)*(2.56/100)))
+            autumnPaddle.physicsBody = SKPhysicsBody(rectangleOf: autumnPaddle.size)
+            autumnPaddle.physicsBody?.isDynamic = false
+            autumnPaddle.physicsBody?.friction = 0
+            autumnPaddle.physicsBody?.restitution = 1
+            //4:3
+            autumnBall.size = CGSize(
+                width: (autumnBall.size.width * (inThisScene.size.width / autumnBall.size.width)*(3.91/100)),
+                height: (autumnBall.size.height * (inThisScene.size.height / autumnBall.size.height)*(2.93/100)))
+            autumnBall.physicsBody = SKPhysicsBody(circleOfRadius: (autumnBall.size.width / 2))
+            autumnBall.physicsBody?.allowsRotation = false
+            autumnBall.physicsBody?.affectedByGravity = true
+            autumnBall.physicsBody?.friction = 0
+            autumnBall.physicsBody?.restitution = 1
+            autumnBall.physicsBody?.linearDamping = 0
+            autumnBall.physicsBody?.angularDamping = 0
+            autumnBall.physicsBody?.mass = 0.01
+            //4:3
+            autumnTimer.size = CGSize(
+                width: (autumnTimer.size.width * (inThisScene.size.width / autumnTimer.size.width)*(17.57/100)),
+                height: (autumnTimer.size.height * (inThisScene.size.height / autumnTimer.size.height)*(4.49/100)))
+            //4:3
+            autumnScore.size = CGSize(
+                width: (autumnScore.size.width * (inThisScene.size.width / autumnScore.size.width)*(17.57/100)),
+                height: (autumnScore.size.height * (inThisScene.size.height / autumnScore.size.height)*(4.49/100)))
+            
+            /// Ocher Skin
+            //4:3
+            ocherPaddle.size = CGSize(
+                width: ((ocherPaddle.size.width * (inThisScene.size.width / ocherPaddle.size.width)*(24.41/100))),
+                height: (ocherPaddle.size.height * (inThisScene.size.height / ocherPaddle.size.height)*(2.56/100)))
+            ocherPaddle.physicsBody = SKPhysicsBody(rectangleOf: ocherPaddle.size)
+            ocherPaddle.physicsBody?.isDynamic = false
+            ocherPaddle.physicsBody?.friction = 0
+            ocherPaddle.physicsBody?.restitution = 1
+            //4:3
+            ocherBall.size = CGSize(
+                width: (ocherBall.size.width * (inThisScene.size.width / ocherBall.size.width)*(3.91/100)),
+                height: (ocherBall.size.height * (inThisScene.size.height / ocherBall.size.height)*(2.93/100)))
+            ocherBall.physicsBody = SKPhysicsBody(circleOfRadius: (ocherBall.size.width / 2))
+            ocherBall.physicsBody?.allowsRotation = false
+            ocherBall.physicsBody?.affectedByGravity = true
+            ocherBall.physicsBody?.friction = 0
+            ocherBall.physicsBody?.restitution = 1
+            ocherBall.physicsBody?.linearDamping = 0
+            ocherBall.physicsBody?.angularDamping = 0
+            ocherBall.physicsBody?.mass = 0.01
+            //4:3
+            ocherTimer.size = CGSize(
+                width: (ocherTimer.size.width * (inThisScene.size.width / ocherTimer.size.width)*(17.57/100)),
+                height: (ocherTimer.size.height * (inThisScene.size.height / ocherTimer.size.height)*(4.49/100)))
+            //4:3
+            ocherScore.size = CGSize(
+                width: (ocherScore.size.width * (inThisScene.size.width / ocherScore.size.width)*(17.57/100)),
+                height: (ocherScore.size.height * (inThisScene.size.height / ocherScore.size.height)*(4.49/100)))
             
         }//End else
     }//END Init

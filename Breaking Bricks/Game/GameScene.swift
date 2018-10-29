@@ -987,6 +987,201 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             gameState.enter(WaitingForTap.self)
         }//END SCENENUMBER
+        if(sceneNumber == 13 ){
+            
+            // Background and paddle
+            self.addChild(gameControls.urbanicBackground)
+            self.addChild(gameControls.urbanicPaddle)
+            // Bricks
+            self.addChild(gameControls.urbanicScore)
+            self.addChild(gameControls.urbanicTimer)
+            // Label
+            self.addChild(gameControls.timerLabel)
+            self.addChild(gameControls.scoreLabel)
+            // Color label
+            gameControls.timerLabel.fontColor = .black
+            gameControls.scoreLabel.fontColor = .black
+            
+            //Bricks
+            for brick in 0...24{
+                self.addChild(brickSprite[brick].urbanicSkin)
+            }
+            
+            //Bricks 6
+            for brick6 in 0...23{
+                self.addChild(brickSpriteRow6[brick6].urbanicSkin)
+            }
+            
+            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
+            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
+            
+            //Paddle and ball
+            let ball = gameControls.urbanicBall
+            let paddle = gameControls.urbanicPaddle
+            
+            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
+            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
+            
+            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
+            
+            let bottom = SKNode()
+            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
+            addChild(bottom)
+            
+            
+            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
+            
+            bottom.physicsBody!.categoryBitMask = BottomCategory
+            ball.physicsBody!.categoryBitMask = BallCategory
+            paddle.physicsBody!.categoryBitMask = PaddleCategory
+            gameControls.borderBody.categoryBitMask = BorderCategory
+            
+            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
+            
+            //Timer Line
+            seconds = timeSeconds
+            //Score Line
+            score = points
+            
+            
+            //Timer And Score
+            gameControls.scoreLabel.text = pointsCount
+            gameControls.timerLabel.text = timerSeconds
+            
+            self.addChild(gameControls.urbanicBall)
+            
+            gameState.enter(WaitingForTap.self)
+        }//END SCENENUMBER
+        if(sceneNumber == 14 ){
+            
+            // Background and paddle
+            self.addChild(gameControls.autumnBackground)
+            self.addChild(gameControls.autumnPaddle)
+            // Bricks
+            self.addChild(gameControls.autumnScore)
+            self.addChild(gameControls.autumnTimer)
+            // Label
+            self.addChild(gameControls.timerLabel)
+            self.addChild(gameControls.scoreLabel)
+            // Color label
+            gameControls.timerLabel.fontColor = .white
+            gameControls.scoreLabel.fontColor = .white
+            
+            //Bricks
+            for brick in 0...24{
+                self.addChild(brickSprite[brick].autumnSkin)
+            }
+            
+            //Bricks 6
+            for brick6 in 0...23{
+                self.addChild(brickSpriteRow6[brick6].autumnSkin)
+            }
+            
+            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
+            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
+            
+            //Paddle and ball
+            let ball = gameControls.autumnBall
+            let paddle = gameControls.autumnPaddle
+            
+            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
+            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
+            
+            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
+            
+            let bottom = SKNode()
+            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
+            addChild(bottom)
+            
+            
+            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
+            
+            bottom.physicsBody!.categoryBitMask = BottomCategory
+            ball.physicsBody!.categoryBitMask = BallCategory
+            paddle.physicsBody!.categoryBitMask = PaddleCategory
+            gameControls.borderBody.categoryBitMask = BorderCategory
+            
+            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
+            
+            //Timer Line
+            seconds = timeSeconds
+            //Score Line
+            score = points
+            
+            
+            //Timer And Score
+            gameControls.scoreLabel.text = pointsCount
+            gameControls.timerLabel.text = timerSeconds
+            
+            self.addChild(gameControls.autumnBall)
+            
+            gameState.enter(WaitingForTap.self)
+        }//END SCENENUMBER
+        if(sceneNumber == 15 ){
+            
+            // Background and paddle
+            self.addChild(gameControls.ocherBackground)
+            self.addChild(gameControls.ocherPaddle)
+            // Bricks
+            self.addChild(gameControls.ocherScore)
+            self.addChild(gameControls.ocherTimer)
+            // Label
+            self.addChild(gameControls.timerLabel)
+            self.addChild(gameControls.scoreLabel)
+            // Color label
+            gameControls.timerLabel.fontColor = .black
+            gameControls.scoreLabel.fontColor = .black
+            
+            //Bricks
+            for brick in 0...24{
+                self.addChild(brickSprite[brick].ocherSkin)
+            }
+            
+            //Bricks 6
+            for brick6 in 0...23{
+                self.addChild(brickSpriteRow6[brick6].ocherSkin)
+            }
+            
+            physicsWorld.gravity = CGVector(dx: 0.0, dy: 0.0)
+            physicsWorld.contactDelegate = self as? SKPhysicsContactDelegate
+            
+            //Paddle and ball
+            let ball = gameControls.ocherBall
+            let paddle = gameControls.ocherPaddle
+            
+            ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
+            ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
+            
+            let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
+            
+            let bottom = SKNode()
+            bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
+            addChild(bottom)
+            
+            
+            paddle.position = CGPoint(x: self.size.width/2 , y: self.size.height * (12.29/100))
+            
+            bottom.physicsBody!.categoryBitMask = BottomCategory
+            ball.physicsBody!.categoryBitMask = BallCategory
+            paddle.physicsBody!.categoryBitMask = PaddleCategory
+            gameControls.borderBody.categoryBitMask = BorderCategory
+            
+            ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
+            
+            //Timer Line
+            seconds = timeSeconds
+            //Score Line
+            score = points
+            
+            
+            //Timer And Score
+            gameControls.scoreLabel.text = pointsCount
+            gameControls.timerLabel.text = timerSeconds
+            
+            self.addChild(gameControls.ocherBall)
+            
+            gameState.enter(WaitingForTap.self)
+        }//END SCENENUMBER
     }//END didMove
     
     lazy var gameState: GKStateMachine = GKStateMachine(states: [

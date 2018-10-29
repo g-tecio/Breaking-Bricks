@@ -339,6 +339,74 @@ class ScoreScene: SKScene {
             scoreControls.scoreTimeLabel.fontColor = UIColor(red:0.95, green:0.75, blue:0.04, alpha:1.0)
             
         }
+        if sceneNumber == 13{
+            
+            /// Present Label and Button
+            self.addChild(scoreControls.urbanicBackground)
+            self.addChild(scoreControls.urbanicMenu)
+            self.addChild(scoreControls.urbanicWin)
+            self.addChild(scoreControls.urbanicWinLabel)
+            self.addChild(scoreControls.urbanicLose)
+            self.addChild(scoreControls.urbanicLoseLabel)
+            self.addChild(scoreControls.urbanicTime)
+            self.addChild(scoreControls.urbanicTimeLabel)
+            
+            
+            self.addChild(scoreControls.scoreTimeLabel)
+            self.addChild(scoreControls.scoreLoseLabel)
+            self.addChild(scoreControls.scoreWinLabel)
+            
+            scoreControls.scoreWinLabel.fontColor = .black
+            scoreControls.scoreLoseLabel.fontColor = .black
+            scoreControls.scoreTimeLabel.fontColor = .black
+            
+        }
+        if sceneNumber == 14{
+            
+            /// Present Label and Button
+            self.addChild(scoreControls.autumnBackground)
+            self.addChild(scoreControls.autumnMenu)
+            self.addChild(scoreControls.autumnWin)
+            self.addChild(scoreControls.autumnWinLabel)
+            self.addChild(scoreControls.autumnLose)
+            self.addChild(scoreControls.autumnLoseLabel)
+            self.addChild(scoreControls.autumnTime)
+            self.addChild(scoreControls.autumnTimeLabel)
+            
+            
+            self.addChild(scoreControls.scoreTimeLabel)
+            self.addChild(scoreControls.scoreLoseLabel)
+            self.addChild(scoreControls.scoreWinLabel)
+            
+            scoreControls.scoreWinLabel.fontColor = .white
+            scoreControls.scoreLoseLabel.fontColor = .white
+            scoreControls.scoreTimeLabel.fontColor = .white
+            
+            
+        }
+        if sceneNumber == 15{
+            
+            /// Present Label and Button
+            self.addChild(scoreControls.ocherBackground)
+            self.addChild(scoreControls.ocherMenu)
+            self.addChild(scoreControls.ocherWin)
+            self.addChild(scoreControls.ocherWinLabel)
+            self.addChild(scoreControls.ocherLose)
+            self.addChild(scoreControls.ocherLoseLabel)
+            self.addChild(scoreControls.ocherTime)
+            self.addChild(scoreControls.ocherTimeLabel)
+            
+            
+            self.addChild(scoreControls.scoreTimeLabel)
+            self.addChild(scoreControls.scoreLoseLabel)
+            self.addChild(scoreControls.scoreWinLabel)
+            
+            scoreControls.scoreWinLabel.fontColor = .black
+            scoreControls.scoreLoseLabel.fontColor = .black
+            scoreControls.scoreTimeLabel.fontColor = .black
+            
+            
+        }
 
         
         scoreControls.scoreWinLabel.text = ("\(win)")

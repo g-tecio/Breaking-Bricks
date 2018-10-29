@@ -86,6 +86,21 @@ struct StoreControls {
     let classyBackground: SKSpriteNode
     let classyCurrent: SKSpriteNode
     
+    /// Urbanic Skin
+    let urbanicMenu: SKSpriteNode
+    let urbanicBackground: SKSpriteNode
+    let urbanicCurrent: SKSpriteNode
+    
+    /// Autumn Skin
+    let autumnMenu: SKSpriteNode
+    let autumnBackground: SKSpriteNode
+    let autumnCurrent: SKSpriteNode
+    
+    /// Ocher Skin
+    let ocherMenu: SKSpriteNode
+    let ocherBackground: SKSpriteNode
+    let ocherCurrent: SKSpriteNode
+    
     init(inThisScene: StoreScene) {
         
         //Coin
@@ -319,6 +334,54 @@ struct StoreControls {
         classyCurrent.zPosition = 2
         classyCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
         
+        // Urbanic skin
+        urbanicBackground = SKSpriteNode.init(imageNamed: "Background Urbanic")
+        urbanicBackground.name = "backgroundLightSkin"
+        urbanicBackground.zPosition = 1
+        urbanicBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        urbanicBackground.size  = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        //Menu
+        urbanicMenu = SKSpriteNode.init(imageNamed: "MENU Urbanic")
+        urbanicMenu.name = "buttonSprite-Menu"
+        urbanicMenu.zPosition = 2
+        urbanicMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((16.15/100))))
+        //Current
+        urbanicCurrent = SKSpriteNode.init(imageNamed: "Multipurpose Urbanic")
+        urbanicCurrent.zPosition = 2
+        urbanicCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
+        
+        // Autumn skin
+        autumnBackground = SKSpriteNode.init(imageNamed: "Background Autumn")
+        autumnBackground.name = "backgroundLightSkin"
+        autumnBackground.zPosition = 1
+        autumnBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        autumnBackground.size  = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        //Menu
+        autumnMenu = SKSpriteNode.init(imageNamed: "Menu Autumn")
+        autumnMenu.name = "buttonSprite-Menu"
+        autumnMenu.zPosition = 2
+        autumnMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((16.15/100))))
+        //Current
+        autumnCurrent = SKSpriteNode.init(imageNamed: "Multipurpose Autumn")
+        autumnCurrent.zPosition = 2
+        autumnCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
+        
+        // Ocher skin
+        ocherBackground = SKSpriteNode.init(imageNamed: "Background Ocher")
+        ocherBackground.name = "backgroundLightSkin"
+        ocherBackground.zPosition = 1
+        ocherBackground.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height/2))
+        ocherBackground.size  = CGSize(width: inThisScene.size.width, height: inThisScene.size.height)
+        //Menu
+        ocherMenu = SKSpriteNode.init(imageNamed: "Menu Ocher")
+        ocherMenu.name = "buttonSprite-Menu"
+        ocherMenu.zPosition = 2
+        ocherMenu.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((16.15/100))))
+        //Current
+        ocherCurrent = SKSpriteNode.init(imageNamed: "Multipurpose Ocher")
+        ocherCurrent.zPosition = 2
+        ocherCurrent.position = CGPoint(x: inThisScene.size.width/2, y: (inThisScene.size.height*((83.85/100))))
+        
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
             //16:9
             coin.size = CGSize(
@@ -480,6 +543,42 @@ struct StoreControls {
                 height: (classyCurrent.size.height * (inThisScene.size.height / classyCurrent.size.height)*(10.42/100))
             )
             
+            /// Urbanic Skin
+            //16:9
+            urbanicMenu.size = CGSize(
+                width: (urbanicMenu.size.width * (inThisScene.size.width / urbanicMenu.size.width)*(37.04/100)),
+                height: (urbanicMenu.size.height * (inThisScene.size.height / urbanicMenu.size.height)*(10.42/100))
+            )
+            //16:9
+            urbanicCurrent.size = CGSize(
+                width: (urbanicCurrent.size.width * (inThisScene.size.width / urbanicCurrent.size.width)*(37.04/100)),
+                height: (urbanicCurrent.size.height * (inThisScene.size.height / urbanicCurrent.size.height)*(10.42/100))
+            )
+            
+            /// Autumn Skin
+            //16:9
+            autumnMenu.size = CGSize(
+                width: (autumnMenu.size.width * (inThisScene.size.width / autumnMenu.size.width)*(37.04/100)),
+                height: (autumnMenu.size.height * (inThisScene.size.height / autumnMenu.size.height)*(10.42/100))
+            )
+            //16:9
+            autumnCurrent.size = CGSize(
+                width: (autumnCurrent.size.width * (inThisScene.size.width / autumnCurrent.size.width)*(37.04/100)),
+                height: (autumnCurrent.size.height * (inThisScene.size.height / autumnCurrent.size.height)*(10.42/100))
+            )
+            
+            /// Ocher Skin
+            //16:9
+            ocherMenu.size = CGSize(
+                width: (ocherMenu.size.width * (inThisScene.size.width / ocherMenu.size.width)*(37.04/100)),
+                height: (ocherMenu.size.height * (inThisScene.size.height / ocherMenu.size.height)*(10.42/100))
+            )
+            //16:9
+            ocherCurrent.size = CGSize(
+                width: (ocherCurrent.size.width * (inThisScene.size.width / ocherCurrent.size.width)*(37.04/100)),
+                height: (ocherCurrent.size.height * (inThisScene.size.height / ocherCurrent.size.height)*(10.42/100))
+            )
+            
         }else{
             //4:3
             coin.size = CGSize(
@@ -629,6 +728,40 @@ struct StoreControls {
             classyCurrent.size  = CGSize(
                 width: (classyCurrent.size.width * (inThisScene.size.width / classyCurrent.size.width)*(29.3/100)),
                 height: (classyCurrent.size.height * (inThisScene.size.height / classyCurrent.size.height)*(11/100)))
+            
+            /// Urbanic Skin
+            //4:3
+            urbanicMenu.size  = CGSize(
+                width: (urbanicMenu.size.width * (inThisScene.size.width / urbanicMenu.size.width)*(29.3/100)),
+                height: (urbanicMenu.size.height * (inThisScene.size.height / urbanicMenu.size.height)*(11/100))
+            )
+            //4:3
+            urbanicCurrent.size  = CGSize(
+                width: (urbanicCurrent.size.width * (inThisScene.size.width / urbanicCurrent.size.width)*(29.3/100)),
+                height: (urbanicCurrent.size.height * (inThisScene.size.height / urbanicCurrent.size.height)*(11/100)))
+            
+            /// Autumn Skin
+            //4:3
+            autumnMenu.size  = CGSize(
+                width: (autumnMenu.size.width * (inThisScene.size.width / autumnMenu.size.width)*(29.3/100)),
+                height: (autumnMenu.size.height * (inThisScene.size.height / autumnMenu.size.height)*(11/100))
+            )
+            //4:3
+            autumnCurrent.size  = CGSize(
+                width: (autumnCurrent.size.width * (inThisScene.size.width / autumnCurrent.size.width)*(29.3/100)),
+                height: (autumnCurrent.size.height * (inThisScene.size.height / autumnCurrent.size.height)*(11/100)))
+            
+            /// Ocher Skin
+            //4:3
+            ocherMenu.size  = CGSize(
+                width: (ocherMenu.size.width * (inThisScene.size.width / ocherMenu.size.width)*(29.3/100)),
+                height: (ocherMenu.size.height * (inThisScene.size.height / ocherMenu.size.height)*(11/100))
+            )
+            //4:3
+            ocherCurrent.size  = CGSize(
+                width: (ocherCurrent.size.width * (inThisScene.size.width / ocherCurrent.size.width)*(29.3/100)),
+                height: (ocherCurrent.size.height * (inThisScene.size.height / ocherCurrent.size.height)*(11/100)))
+            
             
         }//End else
     }//END Init

@@ -27,15 +27,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var oldCostSoccerB : Bool = UserDefaults.standard.bool(forKey: "costSoccerB")
     
     var oldCostSpaceDustB : Bool = UserDefaults.standard.bool(forKey: "costSpaceDustB")
-    var oldCostAcidB : Bool = UserDefaults.standard.bool(forKey: "costAcidB")
     var oldcostEndTimeB : Bool = UserDefaults.standard.bool(forKey: "costEndTimeB")
     var oldcostPumpkinB : Bool = UserDefaults.standard.bool(forKey: "costPumpkinB")
-    
     var oldcostScreamRedB : Bool = UserDefaults.standard.bool(forKey: "costScreamRedB")
-    
     var oldcostScreamGreenB : Bool = UserDefaults.standard.bool(forKey: "costScreamGreenB")
+    
     var oldcostDessertB : Bool = UserDefaults.standard.bool(forKey: "costDessertB")
     var oldcostClassyB : Bool = UserDefaults.standard.bool(forKey: "costClassyB")
+    var oldcostUrbanicB : Bool = UserDefaults.standard.bool(forKey: "costUrbanicB")
+    var oldCostAcidB : Bool = UserDefaults.standard.bool(forKey: "costAcidB")
+    var oldcostAutumnB : Bool = UserDefaults.standard.bool(forKey: "costAutumnB")
+    var oldcostOcherB : Bool = UserDefaults.standard.bool(forKey: "costOcherB")
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -49,19 +51,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         costRainbowB = oldCostRainbowB
         costLightB = oldCostLightB
         costSoccerB = oldCostSoccerB
-        
         costSpaceDustB = oldCostSpaceDustB
         costAcidB = oldCostAcidB
         costEndTimeB = oldcostEndTimeB
         costPumpkinB = oldcostPumpkinB
-       
         costScreamRedB = oldcostScreamRedB
         costScreamGreenB = oldcostScreamGreenB
         costDessertB  = oldcostDessertB
-        
         costClassyB = oldcostClassyB
-            
-            
+        costUrbanicB = oldcostUrbanicB
+        costAutumnB = oldcostAutumnB
+        costOcherB = oldcostOcherB
+        
+        
         //STORE VALUES
         coin = oldCoinStore
         
