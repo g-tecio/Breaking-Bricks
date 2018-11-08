@@ -3,7 +3,7 @@
 //  Breaking Bricks
 //
 //  Created by Luis Reyes on 8/22/18.
-//  Copyright © 2018 Luis Reyes. All rights reserved.
+//  Copyright © 2018 Cartwheel Galaxy Inc. All rights reserved.
 //
 
 import SpriteKit

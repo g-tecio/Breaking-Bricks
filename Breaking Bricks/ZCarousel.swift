@@ -3,7 +3,7 @@
 //  Breaking Bricks
 //
 //  Created by Alejandro Solis on 8/31/18.
-//  Copyright © 2018 Luis Reyes. All rights reserved.
+//  Copyright © 2018 Cartwheel Galaxy Inc. All rights reserved.
 //
 
 import UIKit
@@ -132,7 +132,7 @@ class ZCarousel: UIScrollView, UIScrollViewDelegate {
         
         isImage = true
         //Change the image in the center 
-        let middleImage = images[4]
+        let middleImage = images[2]
         self.scrollRectToVisible(middleImage.frame, animated: false)
     }
     

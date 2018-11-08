@@ -13,7 +13,6 @@
 		8D88F035212C7C9A0077D7C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F034212C7C9A0077D7C7 /* AppDelegate.swift */; };
 		8D88F03D212C7C9A0077D7C7 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F03C212C7C9A0077D7C7 /* GameViewController.swift */; };
 		8D88F040212C7C9A0077D7C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D88F03E212C7C9A0077D7C7 /* Main.storyboard */; };
-		8D88F042212C7C9E0077D7C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D88F041212C7C9E0077D7C7 /* Assets.xcassets */; };
 		8D88F045212C7C9E0077D7C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D88F043212C7C9E0077D7C7 /* LaunchScreen.storyboard */; };
 		8D88F04D212C7D750077D7C7 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D88F04C212C7D750077D7C7 /* Roboto-Regular.ttf */; };
 		8D88F059212C7F030077D7C7 /* MenuControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D88F058212C7F030077D7C7 /* MenuControls.swift */; };
@@ -33,6 +32,7 @@
 		F46DCA042150188900399FE6 /* BallPadle_Sample.wav in Resources */ = {isa = PBXBuildFile; fileRef = F46DCA012150188800399FE6 /* BallPadle_Sample.wav */; };
 		F46DCA052150188900399FE6 /* HitBox_1.2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F46DCA022150188800399FE6 /* HitBox_1.2.wav */; };
 		F46DCA062150188900399FE6 /* WallBounce_2.2.wav in Resources */ = {isa = PBXBuildFile; fileRef = F46DCA032150188800399FE6 /* WallBounce_2.2.wav */; };
+		F4C4757421934736001ED95A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C4757321934736001ED95A /* Assets.xcassets */; };
 		F4FA1E8D216FF52400598E07 /* Intro_iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1E8B216FF52400598E07 /* Intro_iPhone.png */; };
 		F4FA1E8E216FF52400598E07 /* Intro_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = F4FA1E8C216FF52400598E07 /* Intro_iPad.png */; };
 /* End PBXBuildFile section */
@@ -46,7 +46,6 @@
 		8D88F034212C7C9A0077D7C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D88F03C212C7C9A0077D7C7 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8D88F03F212C7C9A0077D7C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8D88F041212C7C9E0077D7C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8D88F044212C7C9E0077D7C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8D88F046212C7C9E0077D7C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D88F04C212C7D750077D7C7 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -68,6 +67,7 @@
 		F46DCA012150188800399FE6 /* BallPadle_Sample.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BallPadle_Sample.wav; sourceTree = "<group>"; };
 		F46DCA022150188800399FE6 /* HitBox_1.2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = HitBox_1.2.wav; sourceTree = "<group>"; };
 		F46DCA032150188800399FE6 /* WallBounce_2.2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = WallBounce_2.2.wav; sourceTree = "<group>"; };
+		F4C4757321934736001ED95A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4FA1E8B216FF52400598E07 /* Intro_iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Intro_iPhone.png; sourceTree = "<group>"; };
 		F4FA1E8C216FF52400598E07 /* Intro_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Intro_iPad.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,12 +132,12 @@
 				8D88F06A212C9BCB0077D7C7 /* Store */,
 				8D88F05C212C7FCE0077D7C7 /* Game */,
 				8D88F03E212C7C9A0077D7C7 /* Main.storyboard */,
-				8D88F041212C7C9E0077D7C7 /* Assets.xcassets */,
 				8D88F04C212C7D750077D7C7 /* Roboto-Regular.ttf */,
 				8D88F043212C7C9E0077D7C7 /* LaunchScreen.storyboard */,
 				8DB1624A2142F8C50064DFCD /* LaunchScreeniPad.storyboard */,
 				8D88F046212C7C9E0077D7C7 /* Info.plist */,
 				DE0BAEEE2139C45300FD2398 /* ZCarousel.swift */,
+				F4C4757321934736001ED95A /* Assets.xcassets */,
 			);
 			path = "Breaking Bricks";
 			sourceTree = "<group>";
@@ -264,9 +264,9 @@
 			files = (
 				57A714F021669A9200BE8786 /* GoogleService-Info.plist in Resources */,
 				F4FA1E8D216FF52400598E07 /* Intro_iPhone.png in Resources */,
+				F4C4757421934736001ED95A /* Assets.xcassets in Resources */,
 				F46DCA042150188900399FE6 /* BallPadle_Sample.wav in Resources */,
 				8D88F040212C7C9A0077D7C7 /* Main.storyboard in Resources */,
-				8D88F042212C7C9E0077D7C7 /* Assets.xcassets in Resources */,
 				F46DCA052150188900399FE6 /* HitBox_1.2.wav in Resources */,
 				8DB1624C2142F8C50064DFCD /* LaunchScreeniPad.storyboard in Resources */,
 				8D88F04D212C7D750077D7C7 /* Roboto-Regular.ttf in Resources */,

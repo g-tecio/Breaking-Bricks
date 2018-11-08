@@ -3,7 +3,7 @@
 //  Breaking Bricks
 //
 //  Created by Luis Reyes on 8/21/18.
-//  Copyright © 2018 Luis Reyes. All rights reserved.
+//  Copyright © 2018 Cartwheel Galaxy Inc. All rights reserved.
 //
 
 import SpriteKit
@@ -140,6 +140,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         catch{
             print(error)
         }
+
+        //            //Mute Button
+        //            hitWall.volume = 0
+        //            hitBlock.volume = 0
+        //            ballPaddle.volume = 0
         
         if sceneNumber == 0{
             
@@ -177,6 +182,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
             
             let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
+            //let bottomRect = CGRect(x: 0, y: 0, width: frame.size.width, height: 1)
             
             let bottom = SKNode()
             bottom.physicsBody = SKPhysicsBody(edgeLoopFrom: bottomRect)
@@ -1227,6 +1233,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         case is Playing:
             let touch = touches.first
             let touchLocation = touch!.location(in: self)
+            let item = atPoint(touchLocation)
+            
+            if item.name == "paddle"{
+                isFingerOnPaddle = true
+            }
             
             if let body = physicsWorld.body(at: touchLocation) {
                 
@@ -1273,6 +1284,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             paddleX = min(paddleX, size.width - paddle.size.width/2)
             //6
             paddle.position = CGPoint(x: paddleX, y: paddle.position.y)
+            
+            
+            print("AQUI AQUI AQUI AQUI")
+            print("AQUI AQUI AQUI AQUI")
+            print("AQUI AQUI AQUI AQUI")
+            print("AQUI AQUI AQUI AQUI")
+            print("AQUI AQUI AQUI AQUI")
+            print(touchLocation.x)
         }
     }//END TouchesMoved
     

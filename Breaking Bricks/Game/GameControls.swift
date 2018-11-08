@@ -3,7 +3,7 @@
 //  Breaking Bricks
 //
 //  Created by Luis Reyes on 8/21/18.
-//  Copyright © 2018 Luis Reyes. All rights reserved.
+//  Copyright © 2018 Cartwheel Galaxy Inc. All rights reserved.
 //
 
 import SpriteKit
@@ -225,7 +225,7 @@ struct GameControls {
         timerLabel.verticalAlignmentMode = .center
         timerLabel.fontColor = .white
         timerLabel.fontSize = 21
-        timerLabel.zPosition = 4
+        timerLabel.zPosition = 8
         timerLabel.position = CGPoint(x: inThisScene.size.width*(79.73/100), y: inThisScene.size.height * (95.31/100))
         let resizeFactorFont:CGFloat = inThisScene.size.width / 407.0
         timerLabel.fontSize *= resizeFactorFont
@@ -238,7 +238,7 @@ struct GameControls {
         scoreLabel.verticalAlignmentMode = .center
         scoreLabel.fontColor = .white
         scoreLabel.fontSize = 21
-        scoreLabel.zPosition = 4
+        scoreLabel.zPosition = 8
         scoreLabel.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         scoreLabel.fontSize *= resizeFactorFont
         
@@ -263,11 +263,11 @@ struct GameControls {
         ballclassic.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         timerBrick = SKSpriteNode.init(imageNamed: "Timer_score Classic")
-        timerBrick.zPosition = 3
+        timerBrick.zPosition = 7
         timerBrick.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         scoreBrick = SKSpriteNode.init(imageNamed: "Timer_score Classic")
-        scoreBrick.zPosition = 3
+        scoreBrick.zPosition = 7
         scoreBrick.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Retro Life Skin
@@ -291,11 +291,11 @@ struct GameControls {
         retroLifeSkinBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         retroLifeSkinTimer = SKSpriteNode.init(imageNamed: "Timer_Score Retro")
-        retroLifeSkinTimer.zPosition = 3
+        retroLifeSkinTimer.zPosition = 7
         retroLifeSkinTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         retroLifeSkinScore = SKSpriteNode.init(imageNamed: "Timer_Score Retro")
-        retroLifeSkinScore.zPosition = 3
+        retroLifeSkinScore.zPosition = 7
         retroLifeSkinScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Rainbow Skin
@@ -319,11 +319,11 @@ struct GameControls {
         rainbowBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         rainbowTimer = SKSpriteNode.init(imageNamed: "Timer_score Rainbow")
-        rainbowTimer.zPosition = 3
+        rainbowTimer.zPosition = 7
         rainbowTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         rainbowScore = SKSpriteNode.init(imageNamed: "Timer_score Rainbow")
-        rainbowScore.zPosition = 3
+        rainbowScore.zPosition = 7
         rainbowScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Light Skin
@@ -347,11 +347,11 @@ struct GameControls {
         lightBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         lightTimer = SKSpriteNode.init(imageNamed: "Timer_score Light")
-        lightTimer.zPosition = 3
+        lightTimer.zPosition = 7
         lightTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         lightScore = SKSpriteNode.init(imageNamed: "Timer_score Light")
-        lightScore.zPosition = 3
+        lightScore.zPosition = 7
         lightScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Soccer
@@ -375,11 +375,11 @@ struct GameControls {
         soccerBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         soccerTimer = SKSpriteNode.init(imageNamed: "Timer_Score Soccer")
-        soccerTimer.zPosition = 3
+        soccerTimer.zPosition = 7
         soccerTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         soccerScore = SKSpriteNode.init(imageNamed: "Timer_Score Soccer")
-        soccerScore.zPosition = 3
+        soccerScore.zPosition = 7
         soccerScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Space Dust Skin
@@ -403,11 +403,11 @@ struct GameControls {
         spaceDustBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         spaceDustTimer = SKSpriteNode.init(imageNamed: "Timer_Score Dust")
-        spaceDustTimer.zPosition = 3
+        spaceDustTimer.zPosition = 7
         spaceDustTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         spaceDustScore = SKSpriteNode.init(imageNamed: "Timer_Score Dust")
-        spaceDustScore.zPosition = 3
+        spaceDustScore.zPosition = 7
         spaceDustScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Acid Rain Skin
@@ -431,11 +431,11 @@ struct GameControls {
         acidRainBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         acidRainTimer = SKSpriteNode.init(imageNamed: "Timer_score Acid")
-        acidRainTimer.zPosition = 3
+        acidRainTimer.zPosition = 7
         acidRainTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         acidRainScore = SKSpriteNode.init(imageNamed: "Timer_score Acid")
-        acidRainScore.zPosition = 3
+        acidRainScore.zPosition = 7
         acidRainScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// End Times Skin
@@ -459,11 +459,11 @@ struct GameControls {
         endTimesBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         endTimesTimer = SKSpriteNode.init(imageNamed: "Timer_Score End_Times")
-        endTimesTimer.zPosition = 3
+        endTimesTimer.zPosition = 7
         endTimesTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         endTimesScore = SKSpriteNode.init(imageNamed: "Timer_Score End_Times")
-        endTimesScore.zPosition = 3
+        endTimesScore.zPosition = 7
         endTimesScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Pumpkin Skin
@@ -487,11 +487,11 @@ struct GameControls {
         pumpkinBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         pumpkinTimer = SKSpriteNode.init(imageNamed: "Timer_Score Pumpkin")
-        pumpkinTimer.zPosition = 3
+        pumpkinTimer.zPosition = 7
         pumpkinTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         pumpkinScore = SKSpriteNode.init(imageNamed: "Timer_Score Pumpkin")
-        pumpkinScore.zPosition = 3
+        pumpkinScore.zPosition = 7
         pumpkinScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Scream Red Skin
@@ -515,11 +515,11 @@ struct GameControls {
         screamRedBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         screamRedTimer = SKSpriteNode.init(imageNamed: "Timer_Score Scream_Red")
-        screamRedTimer.zPosition = 3
+        screamRedTimer.zPosition = 7
         screamRedTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         screamRedScore = SKSpriteNode.init(imageNamed: "Timer_Score Scream_Red")
-        screamRedScore.zPosition = 3
+        screamRedScore.zPosition = 7
         screamRedScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Scream Green Skin
@@ -543,11 +543,11 @@ struct GameControls {
         screamGreenBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         screamGreenTimer = SKSpriteNode.init(imageNamed: "Timer_Score Scream_Green")
-        screamGreenTimer.zPosition = 3
+        screamGreenTimer.zPosition = 7
         screamGreenTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         screamGreenScore = SKSpriteNode.init(imageNamed: "Timer_Score Scream_Green")
-        screamGreenScore.zPosition = 3
+        screamGreenScore.zPosition = 7
         screamGreenScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Dessert Skin
@@ -571,11 +571,11 @@ struct GameControls {
         dessertBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         dessertTimer = SKSpriteNode.init(imageNamed: "Timer_score Dessert")
-        dessertTimer.zPosition = 3
+        dessertTimer.zPosition = 7
         dessertTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         dessertScore = SKSpriteNode.init(imageNamed: "Timer_score Dessert")
-        dessertScore.zPosition = 3
+        dessertScore.zPosition = 7
         dessertScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Classy Skin
@@ -599,11 +599,11 @@ struct GameControls {
         classyBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         classyTimer = SKSpriteNode.init(imageNamed: "Timer_Score Classy")
-        classyTimer.zPosition = 3
+        classyTimer.zPosition = 7
         classyTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         classyScore = SKSpriteNode.init(imageNamed: "Timer_Score Classy")
-        classyScore.zPosition = 3
+        classyScore.zPosition = 7
         classyScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Urbanic Skin
@@ -627,11 +627,11 @@ struct GameControls {
         urbanicBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         urbanicTimer = SKSpriteNode.init(imageNamed: "Timer_Score Urbanic")
-        urbanicTimer.zPosition = 3
+        urbanicTimer.zPosition = 7
         urbanicTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         urbanicScore = SKSpriteNode.init(imageNamed: "Timer_Score Urbanic")
-        urbanicScore.zPosition = 3
+        urbanicScore.zPosition = 7
         urbanicScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Autumn Skin
@@ -655,11 +655,11 @@ struct GameControls {
         autumnBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         autumnTimer = SKSpriteNode.init(imageNamed: "Timer_Score Autumn")
-        autumnTimer.zPosition = 3
+        autumnTimer.zPosition = 7
         autumnTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         autumnScore = SKSpriteNode.init(imageNamed: "Timer_Score Autumn")
-        autumnScore.zPosition = 3
+        autumnScore.zPosition = 7
         autumnScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         /// Ocher Skin
@@ -683,11 +683,11 @@ struct GameControls {
         ocherBall.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
         //Timer Brick
         ocherTimer = SKSpriteNode.init(imageNamed: "Timer_Score Ocher")
-        ocherTimer.zPosition = 3
+        ocherTimer.zPosition = 7
         ocherTimer.position = CGPoint(x: inThisScene.size.width*(79.63/100), y: inThisScene.size.height * (95.31/100))
         //Score Brick
         ocherScore = SKSpriteNode.init(imageNamed: "Timer_Score Ocher")
-        ocherScore.zPosition = 3
+        ocherScore.zPosition = 7
         ocherScore.position = CGPoint(x: inThisScene.size.width*(20.37/100), y: inThisScene.size.height * (95.31/100))
         
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){

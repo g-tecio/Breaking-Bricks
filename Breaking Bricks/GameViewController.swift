@@ -3,7 +3,7 @@
 //  Breaking Bricks
 //
 //  Created by Luis Reyes on 8/21/18.
-//  Copyright © 2018 Luis Reyes. All rights reserved.
+//  Copyright © 2018 Cartwheel Galaxy Inc. All rights reserved.
 //
 
 import UIKit
@@ -82,6 +82,8 @@ class GameViewController: UIViewController, GADInterstitialDelegate, GADRewardBa
         
         //load the videoreward
         loadVideoReward()
+        
+        //skView.showsPhysics = true
         
         skView.presentScene(menuScene)
         view.addSubview(skView)

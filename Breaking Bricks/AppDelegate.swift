@@ -3,11 +3,12 @@
 //  Breaking Bricks
 //
 //  Created by Luis Reyes on 8/21/18.
-//  Copyright © 2018 Luis Reyes. All rights reserved.
+//  Copyright © 2018 Cartwheel Galaxy Inc. All rights reserved.
 //
 
 import UIKit
 import Firebase
+import AVFoundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -72,6 +73,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         GADMobileAds.configure(withApplicationID: "ca-app-pub-5267056163100832~7841072325")
+        
+        try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryAmbient)
+        try? AVAudioSession.sharedInstance().setActive(true)
+        
         return true
     }
     

@@ -3,7 +3,7 @@
 //  Breaking Bricks
 //
 //  Created by Luis Reyes on 8/21/18.
-//  Copyright © 2018 Luis Reyes. All rights reserved.
+//  Copyright © 2018 Cartwheel Galaxy Inc. All rights reserved.
 //
 
 import SpriteKit
@@ -17,11 +17,11 @@ var costSoccerF = 5
 var costSpaceDust = 5
 var costAcidF = 3
 var costEndTime = 5
-var costPumpkin = 4
-var costScreamRed = 3
+var costPumpkin = 3
+var costScreamRed = 2
 var costScreamGreen = 2
 var costDessert = 3
-var costClassy = 3
+var costClassy = 4
 var costUrbanic = 3
 var costAutumn = 3
 var costOcher = 3
@@ -42,12 +42,12 @@ var costUrbanicB = false
 var costAutumnB = false
 var costOcherB = false
 
-var storeImages = ["RainbowBuy","RetroBuy","ClassicOwned","LightBuy","SoccerBuy",
-                   "SpaceDustBuy","EndTimesBuy","PumpkinBuy","ScreamRedBuy","ScreamGreenBuy","AcidBuy","DessertBuy","ClassyBuy","UrbanicBuy","AutumnBuy","OcherBuy"]
+var storeImages = ["ClassicOwned","OcherBuy","UrbanicBuy","AcidBuy","ScreamRedBuy","EndTimesBuy","RetroBuy","RainbowBuy","LightBuy","SoccerBuy",
+                   "SpaceDustBuy","PumpkinBuy","ScreamGreenBuy","DessertBuy","ClassyBuy","AutumnBuy"]
 
 
-var storeImagesiPad = ["RainbowBuyiPad","RetroBuyiPad","ClassicOwnediPad","LightBuyiPad","SoccerBuyiPad",
-                       "SpaceDustBuyiPad","EndTimesBuyiPad","PumpkinBuyiPad","ScreamRedBuyiPad","ScreamGreenBuyiPad","AcidBuyiPad","DessertBuyiPad","ClassyBuyiPad","UrbanicBuyiPad","AutumnBuyiPad","OcherBuyiPad"]
+var storeImagesiPad = ["ClassicOwnediPad","OcherBuyiPad","UrbanicBuyiPad","AcidBuyiPad","ScreamRedBuyiPad","EndTimesBuyiPad","RetroBuyiPad","RainbowBuyiPad","LightBuyiPad","SoccerBuyiPad",
+                       "SpaceDustBuyiPad","PumpkinBuyiPad","ScreamGreenBuyiPad","DessertBuyiPad","ClassyBuyiPad","AutumnBuyiPad"]
 
 class StoreScene: SKScene, ZCarouselDelegate {
     
@@ -78,7 +78,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
     let deviceType = UIDevice.current.deviceType
     
     var images: ZCarousel!
-    var index = 2
+    var index = 0
     /// GameViewControl setup as reference to handle SceneStates
     var gameViewController: GameViewController!
     
@@ -94,138 +94,138 @@ class StoreScene: SKScene, ZCarouselDelegate {
         
         // Rainbow
         if(costRainbowB == true){
-            storeImages.remove(at: 0)
-            storeImages.insert("RainbowOwned", at: 0)
+            storeImages.remove(at: 7)
+            storeImages.insert("RainbowOwned", at: 7)
         }
         if(costRainbowB == true){
-            storeImagesiPad.remove(at: 0)
-            storeImagesiPad.insert("RainbowOwnediPad", at: 0)
+            storeImagesiPad.remove(at: 7)
+            storeImagesiPad.insert("RainbowOwnediPad", at: 7)
         }
         // Retro
         if(costRetroB == true){
-            storeImages.remove(at: 1)
-            storeImages.insert("RetroOwned", at: 1)
+            storeImages.remove(at: 6)
+            storeImages.insert("RetroOwned", at: 6)
         }
         if(costRetroB == true){
-            storeImagesiPad.remove(at: 1)
-            storeImagesiPad.insert("RetroOwnediPad", at: 1)
+            storeImagesiPad.remove(at: 6)
+            storeImagesiPad.insert("RetroOwnediPad", at: 6)
         }
         
         //Light
         if(costLightB == true){
-            storeImages.remove(at: 3)
-            storeImages.insert("LightOwned", at: 3)
+            storeImages.remove(at: 8)
+            storeImages.insert("LightOwned", at: 8)
         }
         if(costLightB == true){
-            storeImagesiPad.remove(at: 3)
-            storeImagesiPad.insert("LightOwnediPad", at: 3)
+            storeImagesiPad.remove(at: 8)
+            storeImagesiPad.insert("LightOwnediPad", at: 8)
         }
         
         //Soccer
         if(costSoccerB == true){
-            storeImages.remove(at: 4)
-            storeImages.insert("SoccerOwned", at: 4)
+            storeImages.remove(at: 9)
+            storeImages.insert("SoccerOwned", at: 9)
         }
         if(costSoccerB == true){
-            storeImagesiPad.remove(at: 4)
-            storeImagesiPad.insert("SoccerOwnediPad", at: 4)
+            storeImagesiPad.remove(at: 9)
+            storeImagesiPad.insert("SoccerOwnediPad", at: 9)
         }
         
         //Space Dust
         if(costSpaceDustB == true){
-            storeImages.remove(at: 5)
-            storeImages.insert("SpaceDustOwned", at: 5)
+            storeImages.remove(at: 10)
+            storeImages.insert("SpaceDustOwned", at: 10)
         }
         if(costSpaceDustB == true){
-            storeImagesiPad.remove(at: 5)
-            storeImagesiPad.insert("SpaceDustOwnediPad", at: 5)
+            storeImagesiPad.remove(at: 10)
+            storeImagesiPad.insert("SpaceDustOwnediPad", at: 10)
         }
         // End Times
         if(costEndTimeB == true){
-            storeImages.remove(at: 6)
-            storeImages.insert("EndTimesOwned", at: 6)
+            storeImages.remove(at: 5)
+            storeImages.insert("EndTimesOwned", at: 5)
         }
         if(costEndTimeB == true){
-            storeImagesiPad.remove(at: 6)
-            storeImagesiPad.insert("EndTimesOwnediPad", at: 6)
+            storeImagesiPad.remove(at: 5)
+            storeImagesiPad.insert("EndTimesOwnediPad", at: 5)
         }
         
         // Pumpkin
         if(costPumpkinB == true){
-            storeImages.remove(at: 7)
-            storeImages.insert("PumpkinOwned", at: 7)
+            storeImages.remove(at: 11)
+            storeImages.insert("PumpkinOwned", at: 11)
         }
         if(costPumpkinB == true){
-            storeImagesiPad.remove(at: 7)
-            storeImagesiPad.insert("PumpkinOwnediPad", at: 7)
+            storeImagesiPad.remove(at: 11)
+            storeImagesiPad.insert("PumpkinOwnediPad", at: 11)
         }
         
         // Scream Red
         if(costScreamRedB == true){
-            storeImages.remove(at: 8)
-            storeImages.insert("ScreamRedOwned", at: 8)
+            storeImages.remove(at: 4)
+            storeImages.insert("ScreamRedOwned", at: 4)
         }
         if(costScreamRedB == true){
-            storeImagesiPad.remove(at: 8)
-            storeImagesiPad.insert("ScreamRedOwnediPad", at: 8)
+            storeImagesiPad.remove(at: 4)
+            storeImagesiPad.insert("ScreamRedOwnediPad", at: 4)
         }
         //Scream Green
         if(costScreamGreenB == true){
-            storeImagesiPad.remove(at: 9)
-            storeImagesiPad.insert("ScreamGreenOwnediPad", at: 9)
+            storeImagesiPad.remove(at: 12)
+            storeImagesiPad.insert("ScreamGreenOwnediPad", at: 12)
         }
         if(costScreamGreenB == true){
-            storeImages.remove(at: 9)
-            storeImages.insert("ScreamGreenOwned", at: 9)
+            storeImages.remove(at: 12)
+            storeImages.insert("ScreamGreenOwned", at: 12)
         }
         //Acid Rain
         if(costAcidB == true){
-            storeImages.remove(at: 10)
-            storeImages.insert("AcidOwned", at: 10)
+            storeImages.remove(at: 3)
+            storeImages.insert("AcidOwned", at: 3)
         }
         if(costAcidB == true){
-            storeImagesiPad.remove(at: 10)
-            storeImagesiPad.insert("AcidOwnediPad", at: 10)
+            storeImagesiPad.remove(at: 3)
+            storeImagesiPad.insert("AcidOwnediPad", at: 3)
         }
         if(costDessertB == true){
-            storeImages.remove(at: 11)
-            storeImages.insert("DessertOwned", at: 11)
-        }
-        if(costDessertB == true){
-        storeImagesiPad.remove(at: 11)
-        storeImagesiPad.insert("DessertOwnediPad", at: 11)
-        }
-        if(costClassyB == true){
-            storeImages.remove(at: 12)
-            storeImages.insert("ClassyOwned", at: 12)
-        }
-        if(costClassyB == true){
-            storeImagesiPad.remove(at: 12)
-            storeImagesiPad.insert("ClassyOwnediPad", at: 12)
-        }
-        if(costUrbanicB == true){
             storeImages.remove(at: 13)
-            storeImages.insert("UrbanicOwned", at: 13)
+            storeImages.insert("DessertOwned", at: 13)
+        }
+        if(costDessertB == true){
+        storeImagesiPad.remove(at: 13)
+        storeImagesiPad.insert("DessertOwnediPad", at: 13)
+        }
+        if(costClassyB == true){
+            storeImages.remove(at: 14)
+            storeImages.insert("ClassyOwned", at: 14)
+        }
+        if(costClassyB == true){
+            storeImagesiPad.remove(at: 14)
+            storeImagesiPad.insert("ClassyOwnediPad", at: 14)
         }
         if(costUrbanicB == true){
-            storeImagesiPad.remove(at: 13)
-            storeImagesiPad.insert("UrbanicOwnediPad", at: 13)
+            storeImages.remove(at: 2)
+            storeImages.insert("UrbanicOwned", at: 2)
+        }
+        if(costUrbanicB == true){
+            storeImagesiPad.remove(at: 2)
+            storeImagesiPad.insert("UrbanicOwnediPad", at: 2)
         }
         if(costAutumnB == true){
-            storeImages.remove(at: 14)
-            storeImages.insert("AutumnOwned", at: 14)
-        }
-        if(costAutumnB == true){
-            storeImagesiPad.remove(at: 14)
-            storeImagesiPad.insert("AutumnOwnediPad", at: 14)
-        }
-        if(costOcherB == true){
             storeImages.remove(at: 15)
-            storeImages.insert("OcherOwned", at: 15)
+            storeImages.insert("AutumnOwned", at: 15)
+        }
+        if(costAutumnB == true){
+            storeImagesiPad.remove(at: 15)
+            storeImagesiPad.insert("AutumnOwnediPad", at: 15)
         }
         if(costOcherB == true){
-            storeImagesiPad.remove(at: 15)
-            storeImagesiPad.insert("OcherOwnediPad", at: 15)
+            storeImages.remove(at: 1)
+            storeImages.insert("OcherOwned", at: 1)
+        }
+        if(costOcherB == true){
+            storeImagesiPad.remove(at: 1)
+            storeImagesiPad.insert("OcherOwnediPad", at: 1)
         }
         
         
@@ -239,11 +239,11 @@ class StoreScene: SKScene, ZCarouselDelegate {
         costSpaceDust = 5
         costAcidF = 3
         costEndTime = 5
-        costPumpkin = 4
-        costScreamRed = 3
+        costPumpkin = 3
+        costScreamRed = 2
         costScreamGreen = 2
         costDessert = 3
-        costClassy = 3
+        costClassy = 4
         costUrbanic = 3
         costAutumn = 3
         costOcher = 3
@@ -274,7 +274,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
     
     @objc func tappedMe()
     {
-        if index == 0{
+        if index == 7{
             if(costRainbowB == false){
                 if coin >= costRainbowF{
                     coin = coin - costRainbowF
@@ -287,13 +287,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
                         if(costRainbowB == true){
-                            storeImages.remove(at: 0)
-                            storeImages.insert("RainbowOwned", at: 0)
+                            storeImages.remove(at: 7)
+                            storeImages.insert("RainbowOwned", at: 7)
                         }
                     }else{
                         if(costRainbowB == true){
-                            storeImagesiPad.remove(at: 0)
-                            storeImagesiPad.insert("RainbowOwnediPad", at: 0)
+                            storeImagesiPad.remove(at: 7)
+                            storeImagesiPad.insert("RainbowOwnediPad", at: 7)
                         }
                     }
                 }else{
@@ -306,7 +306,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
             }
             
         }
-        if index == 1{
+        if index == 6{
             if(costRetroB == false){
                 if coin >= costRetroF{
                     coin = coin - costRetroF
@@ -319,13 +319,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
                         if(costRetroB == true){
-                            storeImages.remove(at: 1)
-                            storeImages.insert("RetroOwned", at: 1)
+                            storeImages.remove(at: 6)
+                            storeImages.insert("RetroOwned", at: 6)
                         }
                     }else{
                         if(costRetroB == true){
-                            storeImagesiPad.remove(at: 1)
-                            storeImagesiPad.insert("RetroOwnediPad", at: 1)
+                            storeImagesiPad.remove(at: 6)
+                            storeImagesiPad.insert("RetroOwnediPad", at: 6)
                         }
                     }
                 }else{
@@ -337,7 +337,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
             }
         }
-        if index == 2{
+        if index == 0{
             if coin >= 0{
                 coin = coin - 0
                 gameViewController.menuScene.sceneNumber = 0
@@ -349,7 +349,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 print("NO TE ALCANZA POBRETÓN")
             }
         }
-        if index == 3{
+        if index == 8{
             if(costLightB == false){
                 if coin >= costLightF{
                     coin = coin - costLightF
@@ -362,13 +362,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costLightB == true){
-                            storeImages.remove(at: 3)
-                            storeImages.insert("LightOwned", at: 3)
+                            storeImages.remove(at: 8)
+                            storeImages.insert("LightOwned", at: 8)
                         }
                     }else{
                         if(costLightB == true){
-                            storeImagesiPad.remove(at: 3)
-                            storeImagesiPad.insert("LightOwnediPad", at: 3)
+                            storeImagesiPad.remove(at: 8)
+                            storeImagesiPad.insert("LightOwnediPad", at: 8)
                         }
                     }
                 }else{
@@ -382,7 +382,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
             
             
         }
-        if index == 4{
+        if index == 9{
             if(costSoccerB == false){
                 if coin >= costSoccerF{
                     coin = coin - costSoccerF
@@ -395,13 +395,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costSoccerB == true){
-                            storeImages.remove(at: 4)
-                            storeImages.insert("SoccerOwned", at: 4)
+                            storeImages.remove(at: 9)
+                            storeImages.insert("SoccerOwned", at: 9)
                         }
                     }else{
                         if(costSoccerB == true){
-                            storeImagesiPad.remove(at: 4)
-                            storeImagesiPad.insert("SoccerOwnediPad", at: 4)
+                            storeImagesiPad.remove(at: 9)
+                            storeImagesiPad.insert("SoccerOwnediPad", at: 9)
                         }
                     }
                 }else{
@@ -413,7 +413,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 5{
+        if index == 10{
             if(costSpaceDustB == false){
                 if coin >= costSpaceDust{
                     coin = coin - costSpaceDust
@@ -426,13 +426,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costSpaceDustB == true){
-                            storeImages.remove(at: 5)
-                            storeImages.insert("SpaceDustOwned", at: 5)
+                            storeImages.remove(at: 10)
+                            storeImages.insert("SpaceDustOwned", at: 10)
                         }
                     }else{
                         if(costSpaceDustB == true){
-                            storeImagesiPad.remove(at: 5)
-                            storeImagesiPad.insert("SpaceDustOwnediPad", at: 5)
+                            storeImagesiPad.remove(at: 10)
+                            storeImagesiPad.insert("SpaceDustOwnediPad", at: 10)
                         }
                     }
                 }else{
@@ -444,7 +444,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 6{
+        if index == 5{
             if(costEndTimeB == false){
                 if coin >= costEndTime{
                     coin = coin - costEndTime
@@ -457,13 +457,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costEndTimeB == true){
-                            storeImages.remove(at: 6)
-                            storeImages.insert("EndTimesOwned", at: 6)
+                            storeImages.remove(at: 5)
+                            storeImages.insert("EndTimesOwned", at: 5)
                         }
                     }else{
                         if(costEndTimeB == true){
-                            storeImagesiPad.remove(at: 6)
-                            storeImagesiPad.insert("EndTimesOwnediPad", at: 6)
+                            storeImagesiPad.remove(at: 5)
+                            storeImagesiPad.insert("EndTimesOwnediPad", at: 5)
                         }
                     }
                 }else{
@@ -475,7 +475,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 7{
+        if index == 11{
             if(costPumpkinB == false){
                 if coin >= costPumpkin{
                     coin = coin - costPumpkin
@@ -488,13 +488,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costPumpkinB == true){
-                            storeImages.remove(at: 7)
-                            storeImages.insert("PumpkinOwned", at: 7)
+                            storeImages.remove(at: 11)
+                            storeImages.insert("PumpkinOwned", at: 11)
                         }
                     }else{
                         if(costPumpkinB == true){
-                            storeImagesiPad.remove(at: 7)
-                            storeImagesiPad.insert("PumpkinOwnediPad", at: 7)
+                            storeImagesiPad.remove(at: 11)
+                            storeImagesiPad.insert("PumpkinOwnediPad", at: 11)
                         }
                     }
                 }else{
@@ -506,7 +506,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 8{
+        if index == 4{
             if(costScreamRedB == false){
                 if coin >= costScreamRed{
                     coin = coin - costScreamRed
@@ -519,13 +519,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costScreamRedB == true){
-                            storeImages.remove(at: 8)
-                            storeImages.insert("ScreamRedOwned", at: 8)
+                            storeImages.remove(at: 4)
+                            storeImages.insert("ScreamRedOwned", at: 4)
                         }
                     }else{
                         if(costScreamRedB == true){
-                            storeImagesiPad.remove(at: 8)
-                            storeImagesiPad.insert("ScreamRedOwnediPad", at: 8)
+                            storeImagesiPad.remove(at: 4)
+                            storeImagesiPad.insert("ScreamRedOwnediPad", at: 4)
                         }
                     }
                 }else{
@@ -537,7 +537,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 9{
+        if index == 12{
             if(costScreamGreenB == false){
                 if coin >= costScreamGreen{
                     coin = coin - costScreamGreen
@@ -550,13 +550,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costScreamGreenB == true){
-                            storeImages.remove(at: 9)
-                            storeImages.insert("ScreamGreenOwned", at: 9)
+                            storeImages.remove(at: 12)
+                            storeImages.insert("ScreamGreenOwned", at: 12)
                         }
                     }else{
                         if(costScreamGreenB == true){
-                            storeImagesiPad.remove(at: 9)
-                            storeImagesiPad.insert("ScreamGreenOwnediPad", at: 9)
+                            storeImagesiPad.remove(at: 12)
+                            storeImagesiPad.insert("ScreamGreenOwnediPad", at: 12)
                         }
                     }
                 }else{
@@ -568,7 +568,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 10{
+        if index == 3{
             if(costAcidB == false){
                 if coin >= costAcidF{
                     coin = coin - costAcidF
@@ -581,13 +581,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costAcidB == true){
-                            storeImages.remove(at: 10)
-                            storeImages.insert("AcidOwned", at: 10)
+                            storeImages.remove(at: 3)
+                            storeImages.insert("AcidOwned", at: 3)
                         }
                     }else{
                         if(costAcidB == true){
-                            storeImagesiPad.remove(at: 10)
-                            storeImagesiPad.insert("AcidOwnediPad", at: 10)
+                            storeImagesiPad.remove(at: 3)
+                            storeImagesiPad.insert("AcidOwnediPad", at: 3)
                         }
                     }
                 }else{
@@ -599,7 +599,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 11{
+        if index == 13{
             if(costDessertB == false){
                 if coin >= costDessert{
                     coin = coin - costDessert
@@ -612,13 +612,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costDessertB == true){
-                            storeImages.remove(at: 11)
-                            storeImages.insert("DessertOwned", at: 11)
+                            storeImages.remove(at: 13)
+                            storeImages.insert("DessertOwned", at: 13)
                         }
                     }else{
                         if(costDessertB == true){
-                            storeImagesiPad.remove(at: 11)
-                            storeImagesiPad.insert("DessertOwnediPad", at: 11)
+                            storeImagesiPad.remove(at: 13)
+                            storeImagesiPad.insert("DessertOwnediPad", at: 13)
                         }
                     }
                 }else{
@@ -630,7 +630,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 12{
+        if index == 14{
             if(costClassyB == false){
                 if coin >= costClassy{
                     coin = coin - costClassy
@@ -643,13 +643,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costClassyB == true){
-                            storeImages.remove(at: 12)
-                            storeImages.insert("ClassyOwned", at: 12)
+                            storeImages.remove(at: 14)
+                            storeImages.insert("ClassyOwned", at: 14)
                         }
                     }else{
                         if(costClassyB == true){
-                            storeImagesiPad.remove(at: 12)
-                            storeImagesiPad.insert("ClassyOwnediPad", at: 12)
+                            storeImagesiPad.remove(at: 14)
+                            storeImagesiPad.insert("ClassyOwnediPad", at: 14)
                         }
                     }
                 }else{
@@ -661,7 +661,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 13{
+        if index == 2{
             if(costUrbanicB == false){
                 if coin >= costUrbanic{
                     coin = coin - costUrbanic
@@ -674,13 +674,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costUrbanicB == true){
-                            storeImages.remove(at: 13)
-                            storeImages.insert("UrbanicOwned", at: 13)
+                            storeImages.remove(at: 2)
+                            storeImages.insert("UrbanicOwned", at: 2)
                         }
                     }else{
                         if(costUrbanicB == true){
-                            storeImagesiPad.remove(at: 13)
-                            storeImagesiPad.insert("UrbanicOwnediPad", at: 13)
+                            storeImagesiPad.remove(at: 2)
+                            storeImagesiPad.insert("UrbanicOwnediPad", at: 2)
                         }
                     }
                 }else{
@@ -692,7 +692,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 14{
+        if index == 15{
             if(costAutumnB == false){
                 if coin >= costAutumn{
                     coin = coin - costAutumn
@@ -705,13 +705,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costAutumnB == true){
-                            storeImages.remove(at: 14)
-                            storeImages.insert("AutumnOwned", at: 14)
+                            storeImages.remove(at: 15)
+                            storeImages.insert("AutumnOwned", at: 15)
                         }
                     }else{
                         if(costAutumnB == true){
-                            storeImagesiPad.remove(at: 14)
-                            storeImagesiPad.insert("AutumnOwnediPad", at: 14)
+                            storeImagesiPad.remove(at: 15)
+                            storeImagesiPad.insert("AutumnOwnediPad", at: 15)
                         }
                     }
                 }else{
@@ -723,7 +723,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 15{
+        if index == 1{
             if(costOcherB == false){
                 if coin >= costOcher{
                     coin = coin - costOcher
@@ -736,13 +736,13 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                     if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
                         if(costOcherB == true){
-                            storeImages.remove(at: 15)
-                            storeImages.insert("OcherOwned", at: 15)
+                            storeImages.remove(at: 1)
+                            storeImages.insert("OcherOwned", at: 1)
                         }
                     }else{
                         if(costOcherB == true){
-                            storeImagesiPad.remove(at: 15)
-                            storeImagesiPad.insert("OcherOwnediPad", at: 15)
+                            storeImagesiPad.remove(at: 1)
+                            storeImagesiPad.insert("OcherOwnediPad", at: 1)
                         }
                     }
                 }else{
@@ -760,7 +760,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
     override func didMove(to view: SKView) {
         
         
-        index = 2
+        index = 0
         savedValues()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(tappedMe))
