@@ -10,20 +10,20 @@ import SpriteKit
 import GameplayKit
 import Device_swift
 
-var costRetroF = 3
+var costRetroF = 2
 var costRainbowF = 3
-var costLightF = 2
-var costSoccerF = 5
-var costSpaceDust = 5
+var costLightF = 1
+var costSoccerF = 3
+var costSpaceDust = 4
 var costAcidF = 3
-var costEndTime = 5
+var costEndTime = 4
 var costPumpkin = 3
 var costScreamRed = 2
 var costScreamGreen = 2
 var costDessert = 3
 var costClassy = 4
 var costUrbanic = 3
-var costAutumn = 3
+var costAutumn = 2
 var costOcher = 3
 
 var costRetroB = false
@@ -232,20 +232,20 @@ class StoreScene: SKScene, ZCarouselDelegate {
         /// Set reference of GameViewControl
         gameViewController = referenceGVC
         
-        costRetroF = 3
+        costRetroF = 2
         costRainbowF = 3
-        costLightF = 2
-        costSoccerF = 5
-        costSpaceDust = 5
+        costLightF = 1
+        costSoccerF = 3
+        costSpaceDust = 4
         costAcidF = 3
-        costEndTime = 5
+        costEndTime = 4
         costPumpkin = 3
         costScreamRed = 2
         costScreamGreen = 2
         costDessert = 3
         costClassy = 4
         costUrbanic = 3
-        costAutumn = 3
+        costAutumn = 2
         costOcher = 3
         
         /// Create scene from code

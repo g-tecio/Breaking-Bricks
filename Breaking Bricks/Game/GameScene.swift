@@ -1284,13 +1284,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             paddleX = min(paddleX, size.width - paddle.size.width/2)
             //6
             paddle.position = CGPoint(x: paddleX, y: paddle.position.y)
-            
-            
-            print("AQUI AQUI AQUI AQUI")
-            print("AQUI AQUI AQUI AQUI")
-            print("AQUI AQUI AQUI AQUI")
-            print("AQUI AQUI AQUI AQUI")
-            print("AQUI AQUI AQUI AQUI")
+
             print(touchLocation.x)
         }
     }//END TouchesMoved
