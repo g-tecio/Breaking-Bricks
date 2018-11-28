@@ -97,9 +97,9 @@ struct StoreControls {
     let autumnCurrent: SKSpriteNode
     
     /// Ocher Skin
-    let ocherMenu: SKSpriteNode
-    let ocherBackground: SKSpriteNode
-    let ocherCurrent: SKSpriteNode
+    var ocherMenu: SKSpriteNode
+    var ocherBackground: SKSpriteNode
+    var ocherCurrent: SKSpriteNode
     
     init(inThisScene: StoreScene) {
         

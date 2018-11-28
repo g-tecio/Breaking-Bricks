@@ -152,6 +152,17 @@ class MenuScene: SKScene {
             self.addChild(menuControls.ocherStore)
             self.addChild(menuControls.ocherScore)
         }
+        if sceneNumber == 21{
+            self.addChild(menuControls.ocherBackground)
+            self.addChild(menuControls.ocherPlay)
+            self.addChild(menuControls.ocherStore)
+            self.addChild(menuControls.ocherScore)
+            
+            menuControls.ocherBackground.texture = SKTexture(imageNamed: "Background Christmas")
+            menuControls.ocherPlay.texture = SKTexture(imageNamed: "Play Christmas")
+            menuControls.ocherStore.texture = SKTexture(imageNamed: "Store Christmas")
+            menuControls.ocherScore.texture = SKTexture(imageNamed: "Score Christmas")
+        }
 
     }
     

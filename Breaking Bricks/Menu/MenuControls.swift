@@ -166,13 +166,13 @@ struct MenuControls {
     
     /// Ocher Skin
     // Background
-    let ocherBackground:SKSpriteNode
+    var ocherBackground:SKSpriteNode
     /// Game Button
-    let ocherPlay: SKSpriteNode
+    var ocherPlay: SKSpriteNode
     /// Store Button
-    let ocherStore:SKSpriteNode
+    var ocherStore:SKSpriteNode
     /// Score Button
-    let ocherScore:SKSpriteNode
+    var ocherScore:SKSpriteNode
     
     init(inThisScene: MenuScene) {
         

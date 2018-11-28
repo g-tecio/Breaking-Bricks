@@ -25,29 +25,108 @@ var costClassy = 4
 var costUrbanic = 3
 var costAutumn = 2
 var costOcher = 3
+var cost2019 = 2
+var costHanukkah = 2
+var costSnowflake = 2
+var costKwanza = 2
+var costNewYear = 3
+var costChristmas = 3
 
+//ClassicB
+var cost2019B = false
+var costHanukkahB = false
+var costSnowflakeB = false
+var costOcherB = false
+var costUrbanicB = false
+var costAcidB = false
+var costScreamRedB = false
+var costEndTimeB = false
 var costRetroB = false
 var costRainbowB = false
 var costLightB = false
 var costSoccerB = false
 var costSpaceDustB = false
-var costAcidB = false
-var costEndTimeB = false
 var costPumpkinB = false
-var costScreamRedB = false
 var costScreamGreenB = false
 var costDessertB = false
 var costClassyB = false
-var costUrbanicB = false
 var costAutumnB = false
-var costOcherB = false
+var costKwanzaB = false
+var costNewYearB = false
+var costChristmasB = false
 
-var storeImages = ["ClassicOwned","OcherBuy","UrbanicBuy","AcidBuy","ScreamRedBuy","EndTimesBuy","RetroBuy","RainbowBuy","LightBuy","SoccerBuy",
-                   "SpaceDustBuy","PumpkinBuy","ScreamGreenBuy","DessertBuy","ClassyBuy","AutumnBuy"]
+var storeImages = [
+//0-
+"ClassicOwned",
+//1//18-
+"2019Buy",
+//2//17-
+"HanukkahBuy",
+//3//16-
+"SnowflakeBuy",
+//4-
+"OcherBuy",
+//5-
+"UrbanicBuy",
+//6-
+"AcidBuy",
+//7-
+"ScreamRedBuy",
+//8-
+"EndTimesBuy",
+//9-
+"RetroBuy",
+//10-
+"RainbowBuy",
+//11-
+"LightBuy",
+//12-
+"SoccerBuy",
+//13-
+"SpaceDustBuy",
+//14-
+"PumpkinBuy",
+//15-
+"ScreamGreenBuy",
+//16-
+"DessertBuy",
+//17-
+"ClassyBuy",
+//18-
+"AutumnBuy",
+//19//19
+"KwanzaBuy",
+//20//20
+"NewYearBuy",
+//21//21
+"ChristmasBuy",
+]
 
 
-var storeImagesiPad = ["ClassicOwnediPad","OcherBuyiPad","UrbanicBuyiPad","AcidBuyiPad","ScreamRedBuyiPad","EndTimesBuyiPad","RetroBuyiPad","RainbowBuyiPad","LightBuyiPad","SoccerBuyiPad",
-                       "SpaceDustBuyiPad","PumpkinBuyiPad","ScreamGreenBuyiPad","DessertBuyiPad","ClassyBuyiPad","AutumnBuyiPad"]
+var storeImagesiPad = [
+"ClassicOwnediPad",
+"2019BuyiPad",
+"HanukkahBuyiPad",
+"SnowflakeBuyiPad",
+"OcherBuyiPad",
+"UrbanicBuyiPad",
+"AcidBuyiPad",
+"ScreamRedBuyiPad",
+"EndTimesBuyiPad",
+"RetroBuyiPad",
+"RainbowBuyiPad",
+"LightBuyiPad",
+"SoccerBuyiPad",
+"SpaceDustBuyiPad",
+"PumpkinBuyiPad",
+"ScreamGreenBuyiPad",
+"DessertBuyiPad",
+"ClassyBuyiPad",
+"AutumnBuyiPad",
+"KwanzaBuyiPad",
+"NewYearBuyiPad",
+"ChristmasBuyiPad",
+]
 
 class StoreScene: SKScene, ZCarouselDelegate {
     
@@ -92,143 +171,196 @@ class StoreScene: SKScene, ZCarouselDelegate {
     /// Custom Initializer
     init(sceneSize: CGSize, referenceGVC: GameViewController) {
         
-        // Rainbow
-        if(costRainbowB == true){
-            storeImages.remove(at: 7)
-            storeImages.insert("RainbowOwned", at: 7)
+        // 2019
+        if(cost2019B == true){
+            storeImages.remove(at: 1)
+            storeImages.insert("2019Owned", at: 1)
         }
-        if(costRainbowB == true){
-            storeImagesiPad.remove(at: 7)
-            storeImagesiPad.insert("RainbowOwnediPad", at: 7)
+        if(cost2019B == true){
+            storeImagesiPad.remove(at: 1)
+            storeImagesiPad.insert("2019OwnediPad", at: 1)
         }
-        // Retro
-        if(costRetroB == true){
+        //Hanukkah
+        if(costHanukkahB == true){
+            storeImages.remove(at: 2)
+            storeImages.insert("HanukkahOwned", at: 2)
+        }
+        if(costHanukkahB == true){
+            storeImagesiPad.remove(at: 2)
+            storeImagesiPad.insert("HanukkahOwnediPad", at: 2)
+        }
+        //SnowFlake
+        if(costSnowflakeB == true){
+            storeImages.remove(at: 3)
+            storeImages.insert("SnowflakeOwned", at: 3)
+        }
+        if(costSnowflakeB == true){
+            storeImagesiPad.remove(at: 3)
+            storeImagesiPad.insert("SnowflakeOwnediPad", at: 3)
+        }
+        //Ocher
+        if(costOcherB == true){
+            storeImages.remove(at: 4)
+            storeImages.insert("OcherOwned", at: 4)
+        }
+        if(costOcherB == true){
+            storeImagesiPad.remove(at: 4)
+            storeImagesiPad.insert("OcherOwnediPad", at: 4)
+        }
+        //Urbanic
+        if(costUrbanicB == true){
+            storeImages.remove(at: 5)
+            storeImages.insert("UrbanicOwned", at: 5)
+        }
+        if(costUrbanicB == true){
+            storeImagesiPad.remove(at: 5)
+            storeImagesiPad.insert("UrbanicOwnediPad", at: 5)
+        }
+        //Acid
+        if(costAcidB == true){
             storeImages.remove(at: 6)
-            storeImages.insert("RetroOwned", at: 6)
+            storeImages.insert("AcidOwned", at: 6)
+        }
+        if(costAcidB == true){
+            storeImagesiPad.remove(at: 6)
+            storeImagesiPad.insert("AcidOwnediPad", at: 6)
+        }
+        //ScreamRed
+        if(costScreamRedB == true){
+            storeImages.remove(at: 7)
+            storeImages.insert("ScreamRedOwned", at: 7)
+        }
+        if(costScreamRedB == true){
+            storeImagesiPad.remove(at: 7)
+            storeImagesiPad.insert("ScreamRedOwnediPad", at: 7)
+        }
+        //EndTimes
+        if(costEndTimeB == true){
+            storeImages.remove(at: 8)
+            storeImages.insert("EndTimeOwned", at: 8)
+        }
+        if(costEndTimeB == true){
+            storeImagesiPad.remove(at: 8)
+            storeImagesiPad.insert("EndTimeOwnediPad", at: 8)
+        }
+        //Retro
+        if(costRetroB == true){
+            storeImages.remove(at: 9)
+            storeImages.insert("RetroOwned", at: 9)
         }
         if(costRetroB == true){
-            storeImagesiPad.remove(at: 6)
-            storeImagesiPad.insert("RetroOwnediPad", at: 6)
+            storeImagesiPad.remove(at: 9)
+            storeImagesiPad.insert("RetroOwnediPad", at: 9)
         }
-        
+        //Rainbow
+        if(costRainbowB == true){
+            storeImages.remove(at: 10)
+            storeImages.insert("RainbowOwned", at: 10)
+        }
+        if(costRainbowB == true){
+            storeImagesiPad.remove(at: 10)
+            storeImagesiPad.insert("RainbowOwnediPad", at: 10)
+        }
         //Light
         if(costLightB == true){
-            storeImages.remove(at: 8)
-            storeImages.insert("LightOwned", at: 8)
+            storeImages.remove(at: 11)
+            storeImages.insert("LightOwned", at: 11)
         }
         if(costLightB == true){
-            storeImagesiPad.remove(at: 8)
-            storeImagesiPad.insert("LightOwnediPad", at: 8)
+            storeImagesiPad.remove(at: 11)
+            storeImagesiPad.insert("LightOwnediPad", at: 11)
         }
-        
         //Soccer
         if(costSoccerB == true){
-            storeImages.remove(at: 9)
-            storeImages.insert("SoccerOwned", at: 9)
+            storeImages.remove(at: 12)
+            storeImages.insert("SoccerOwned", at: 12)
         }
         if(costSoccerB == true){
-            storeImagesiPad.remove(at: 9)
-            storeImagesiPad.insert("SoccerOwnediPad", at: 9)
-        }
-        
-        //Space Dust
-        if(costSpaceDustB == true){
-            storeImages.remove(at: 10)
-            storeImages.insert("SpaceDustOwned", at: 10)
-        }
-        if(costSpaceDustB == true){
-            storeImagesiPad.remove(at: 10)
-            storeImagesiPad.insert("SpaceDustOwnediPad", at: 10)
-        }
-        // End Times
-        if(costEndTimeB == true){
-            storeImages.remove(at: 5)
-            storeImages.insert("EndTimesOwned", at: 5)
-        }
-        if(costEndTimeB == true){
-            storeImagesiPad.remove(at: 5)
-            storeImagesiPad.insert("EndTimesOwnediPad", at: 5)
-        }
-        
-        // Pumpkin
-        if(costPumpkinB == true){
-            storeImages.remove(at: 11)
-            storeImages.insert("PumpkinOwned", at: 11)
-        }
-        if(costPumpkinB == true){
-            storeImagesiPad.remove(at: 11)
-            storeImagesiPad.insert("PumpkinOwnediPad", at: 11)
-        }
-        
-        // Scream Red
-        if(costScreamRedB == true){
-            storeImages.remove(at: 4)
-            storeImages.insert("ScreamRedOwned", at: 4)
-        }
-        if(costScreamRedB == true){
-            storeImagesiPad.remove(at: 4)
-            storeImagesiPad.insert("ScreamRedOwnediPad", at: 4)
-        }
-        //Scream Green
-        if(costScreamGreenB == true){
             storeImagesiPad.remove(at: 12)
-            storeImagesiPad.insert("ScreamGreenOwnediPad", at: 12)
+            storeImagesiPad.insert("SoccerOwnediPad", at: 12)
+        }
+        //SpaceDust
+        if(costSpaceDustB == true){
+            storeImages.remove(at: 13)
+            storeImages.insert("SpaceDustOwned", at: 13)
+        }
+        if(costSpaceDustB == true){
+            storeImagesiPad.remove(at: 13)
+            storeImagesiPad.insert("SpaceDustOwnediPad", at: 13)
+        }
+        //Pumpkin
+        if(costPumpkinB == true){
+            storeImages.remove(at: 14)
+            storeImages.insert("PumpkinOwned", at: 14)
+        }
+        if(costPumpkinB == true){
+            storeImagesiPad.remove(at: 14)
+            storeImagesiPad.insert("PumpkinOwnediPad", at: 14)
+        }
+        //ScreemGreen
+        if(costScreamGreenB == true){
+            storeImages.remove(at: 15)
+            storeImages.insert("ScreamGreenOwned", at: 15)
         }
         if(costScreamGreenB == true){
-            storeImages.remove(at: 12)
-            storeImages.insert("ScreamGreenOwned", at: 12)
-        }
-        //Acid Rain
-        if(costAcidB == true){
-            storeImages.remove(at: 3)
-            storeImages.insert("AcidOwned", at: 3)
-        }
-        if(costAcidB == true){
-            storeImagesiPad.remove(at: 3)
-            storeImagesiPad.insert("AcidOwnediPad", at: 3)
-        }
-        if(costDessertB == true){
-            storeImages.remove(at: 13)
-            storeImages.insert("DessertOwned", at: 13)
-        }
-        if(costDessertB == true){
-        storeImagesiPad.remove(at: 13)
-        storeImagesiPad.insert("DessertOwnediPad", at: 13)
-        }
-        if(costClassyB == true){
-            storeImages.remove(at: 14)
-            storeImages.insert("ClassyOwned", at: 14)
-        }
-        if(costClassyB == true){
-            storeImagesiPad.remove(at: 14)
-            storeImagesiPad.insert("ClassyOwnediPad", at: 14)
-        }
-        if(costUrbanicB == true){
-            storeImages.remove(at: 2)
-            storeImages.insert("UrbanicOwned", at: 2)
-        }
-        if(costUrbanicB == true){
-            storeImagesiPad.remove(at: 2)
-            storeImagesiPad.insert("UrbanicOwnediPad", at: 2)
-        }
-        if(costAutumnB == true){
-            storeImages.remove(at: 15)
-            storeImages.insert("AutumnOwned", at: 15)
-        }
-        if(costAutumnB == true){
             storeImagesiPad.remove(at: 15)
-            storeImagesiPad.insert("AutumnOwnediPad", at: 15)
+            storeImagesiPad.insert("ScreamGreenOwnediPad", at: 15)
         }
-        if(costOcherB == true){
-            storeImages.remove(at: 1)
-            storeImages.insert("OcherOwned", at: 1)
+        //Dessert
+        if(costDessertB == true){
+            storeImages.remove(at: 16)
+            storeImages.insert("DessertOwned", at: 16)
         }
-        if(costOcherB == true){
-            storeImagesiPad.remove(at: 1)
-            storeImagesiPad.insert("OcherOwnediPad", at: 1)
+        if(costDessertB == true){
+            storeImagesiPad.remove(at: 16)
+            storeImagesiPad.insert("DessertOwnediPad", at: 16)
         }
-        
-        
+        //Classy
+        if(costClassyB == true){
+            storeImages.remove(at: 17)
+            storeImages.insert("ClassyOwned", at: 17)
+        }
+        if(costClassyB == true){
+            storeImagesiPad.remove(at: 17)
+            storeImagesiPad.insert("ClassyOwnediPad", at: 17)
+        }
+        //Autumn
+        if(costAutumnB == true){
+            storeImages.remove(at: 18)
+            storeImages.insert("AutumnOwned", at: 18)
+        }
+        if(costAutumnB == true){
+            storeImagesiPad.remove(at: 18)
+            storeImagesiPad.insert("AutumnOwnediPad", at: 18)
+        }
+        //Kwanza
+        if(costKwanzaB == true){
+            storeImages.remove(at: 19)
+            storeImages.insert("KwanzaOwned", at: 19)
+        }
+        if(costKwanzaB == true){
+            storeImagesiPad.remove(at: 19)
+            storeImagesiPad.insert("KwanzaOwnediPad", at: 19)
+        }
+        //NewYear
+        if(costNewYearB == true){
+            storeImages.remove(at: 20)
+            storeImages.insert("NewYearOwned", at: 20)
+        }
+        if(costNewYearB == true){
+            storeImagesiPad.remove(at: 20)
+            storeImagesiPad.insert("NewYearOwnediPad", at: 20)
+        }
+        //Chrismas
+        if(costChristmasB == true){
+            storeImages.remove(at: 21)
+            storeImages.insert("ChristmasOwned", at: 21)
+        }
+        if(costChristmasB == true){
+            storeImagesiPad.remove(at: 21)
+            storeImagesiPad.insert("ChristmasOwnediPad", at: 21)
+        }
+
         /// Set reference of GameViewControl
         gameViewController = referenceGVC
         
@@ -247,6 +379,12 @@ class StoreScene: SKScene, ZCarouselDelegate {
         costUrbanic = 3
         costAutumn = 2
         costOcher = 3
+        cost2019 = 2
+        costHanukkah = 2
+        costSnowflake = 2
+        costKwanza = 2
+        costNewYear = 3
+        costChristmas = 3
         
         /// Create scene from code
         super.init(size: sceneSize)
@@ -272,71 +410,8 @@ class StoreScene: SKScene, ZCarouselDelegate {
         fatalError("init(coder:) has not been implemented")
     }
     
-    @objc func tappedMe()
-    {
-        if index == 7{
-            if(costRainbowB == false){
-                if coin >= costRainbowF{
-                    coin = coin - costRainbowF
-                    costRainbowB = true
-                    savedValues()
-                    gameViewController.menuScene.sceneNumber = 2
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
-                    images.removeFromSuperview()
-                    print("MONEDAS", coin)
-                    print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
-                        if(costRainbowB == true){
-                            storeImages.remove(at: 7)
-                            storeImages.insert("RainbowOwned", at: 7)
-                        }
-                    }else{
-                        if(costRainbowB == true){
-                            storeImagesiPad.remove(at: 7)
-                            storeImagesiPad.insert("RainbowOwnediPad", at: 7)
-                        }
-                    }
-                }else{
-                    print("NO TE ALCANZA POBRETÓN")
-                }
-            }else{
-                gameViewController.menuScene.sceneNumber = 2
-                gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-            }
-            
-        }
-        if index == 6{
-            if(costRetroB == false){
-                if coin >= costRetroF{
-                    coin = coin - costRetroF
-                    costRetroB = true
-                    savedValues()
-                    gameViewController.menuScene.sceneNumber = 1
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
-                    images.removeFromSuperview()
-                    print("MONEDAS", coin)
-                    print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone  ){
-                        if(costRetroB == true){
-                            storeImages.remove(at: 6)
-                            storeImages.insert("RetroOwned", at: 6)
-                        }
-                    }else{
-                        if(costRetroB == true){
-                            storeImagesiPad.remove(at: 6)
-                            storeImagesiPad.insert("RetroOwnediPad", at: 6)
-                        }
-                    }
-                }else{
-                    print("NO TE ALCANZA POBRETÓN")
-                }
-            } else{
-                gameViewController.menuScene.sceneNumber = 1
-                gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-            }
-        }
+    @objc func tappedMe(){
+        
         if index == 0{
             if coin >= 0{
                 coin = coin - 0
@@ -349,381 +424,67 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 print("NO TE ALCANZA POBRETÓN")
             }
         }
-        if index == 8{
-            if(costLightB == false){
-                if coin >= costLightF{
-                    coin = coin - costLightF
-                    costLightB = true
+        if index == 1{
+            if(cost2019B == false){
+                if coin >= cost2019{
+                    coin = coin - cost2019
+                    cost2019B = true
                     savedValues()
-                    gameViewController.menuScene.sceneNumber = 3
+                    gameViewController.menuScene.sceneNumber = 18
                     gameViewController.skView.presentScene(gameViewController.menuScene)
                     images.removeFromSuperview()
                     print("MONEDAS", coin)
                     print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costLightB == true){
-                            storeImages.remove(at: 8)
-                            storeImages.insert("LightOwned", at: 8)
-                        }
-                    }else{
-                        if(costLightB == true){
-                            storeImagesiPad.remove(at: 8)
-                            storeImagesiPad.insert("LightOwnediPad", at: 8)
-                        }
-                    }
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
             }else{
-                gameViewController.menuScene.sceneNumber = 3
-                gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-            }
-            
-            
-        }
-        if index == 9{
-            if(costSoccerB == false){
-                if coin >= costSoccerF{
-                    coin = coin - costSoccerF
-                    costSoccerB = true
-                    savedValues()
-                    gameViewController.menuScene.sceneNumber = 4
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
-                    images.removeFromSuperview()
-                    print("MONEDAS", coin)
-                    print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costSoccerB == true){
-                            storeImages.remove(at: 9)
-                            storeImages.insert("SoccerOwned", at: 9)
-                        }
-                    }else{
-                        if(costSoccerB == true){
-                            storeImagesiPad.remove(at: 9)
-                            storeImagesiPad.insert("SoccerOwnediPad", at: 9)
-                        }
-                    }
-                }else{
-                    print("NO TE ALCANZA POBRETÓN")
-                }
-            }else{
-                gameViewController.menuScene.sceneNumber = 4
-                gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-            }
-        }//END if
-        if index == 10{
-            if(costSpaceDustB == false){
-                if coin >= costSpaceDust{
-                    coin = coin - costSpaceDust
-                    costSpaceDustB = true
-                    savedValues()
-                    gameViewController.menuScene.sceneNumber = 5
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
-                    images.removeFromSuperview()
-                    print("MONEDAS", coin)
-                    print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costSpaceDustB == true){
-                            storeImages.remove(at: 10)
-                            storeImages.insert("SpaceDustOwned", at: 10)
-                        }
-                    }else{
-                        if(costSpaceDustB == true){
-                            storeImagesiPad.remove(at: 10)
-                            storeImagesiPad.insert("SpaceDustOwnediPad", at: 10)
-                        }
-                    }
-                }else{
-                    print("NO TE ALCANZA POBRETÓN")
-                }
-            }else{
-                gameViewController.menuScene.sceneNumber = 5
-                gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-            }
-        }//END if
-        if index == 5{
-            if(costEndTimeB == false){
-                if coin >= costEndTime{
-                    coin = coin - costEndTime
-                    costEndTimeB = true
-                    savedValues()
-                    gameViewController.menuScene.sceneNumber = 6
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
-                    images.removeFromSuperview()
-                    print("MONEDAS", coin)
-                    print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costEndTimeB == true){
-                            storeImages.remove(at: 5)
-                            storeImages.insert("EndTimesOwned", at: 5)
-                        }
-                    }else{
-                        if(costEndTimeB == true){
-                            storeImagesiPad.remove(at: 5)
-                            storeImagesiPad.insert("EndTimesOwnediPad", at: 5)
-                        }
-                    }
-                }else{
-                    print("NO TE ALCANZA POBRETÓN")
-                }
-            }else{
-                gameViewController.menuScene.sceneNumber = 6
-                gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-            }
-        }//END if
-        if index == 11{
-            if(costPumpkinB == false){
-                if coin >= costPumpkin{
-                    coin = coin - costPumpkin
-                    costPumpkinB = true
-                    savedValues()
-                    gameViewController.menuScene.sceneNumber = 7
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
-                    images.removeFromSuperview()
-                    print("MONEDAS", coin)
-                    print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costPumpkinB == true){
-                            storeImages.remove(at: 11)
-                            storeImages.insert("PumpkinOwned", at: 11)
-                        }
-                    }else{
-                        if(costPumpkinB == true){
-                            storeImagesiPad.remove(at: 11)
-                            storeImagesiPad.insert("PumpkinOwnediPad", at: 11)
-                        }
-                    }
-                }else{
-                    print("NO TE ALCANZA POBRETÓN")
-                }
-            }else{
-                gameViewController.menuScene.sceneNumber = 7
-                gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-            }
-        }//END if
-        if index == 4{
-            if(costScreamRedB == false){
-                if coin >= costScreamRed{
-                    coin = coin - costScreamRed
-                    costScreamRedB = true
-                    savedValues()
-                    gameViewController.menuScene.sceneNumber = 8
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
-                    images.removeFromSuperview()
-                    print("MONEDAS", coin)
-                    print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costScreamRedB == true){
-                            storeImages.remove(at: 4)
-                            storeImages.insert("ScreamRedOwned", at: 4)
-                        }
-                    }else{
-                        if(costScreamRedB == true){
-                            storeImagesiPad.remove(at: 4)
-                            storeImagesiPad.insert("ScreamRedOwnediPad", at: 4)
-                        }
-                    }
-                }else{
-                    print("NO TE ALCANZA POBRETÓN")
-                }
-            }else{
-                gameViewController.menuScene.sceneNumber = 8
-                gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-            }
-        }//END if
-        if index == 12{
-            if(costScreamGreenB == false){
-                if coin >= costScreamGreen{
-                    coin = coin - costScreamGreen
-                    costScreamGreenB = true
-                    savedValues()
-                    gameViewController.menuScene.sceneNumber = 9
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
-                    images.removeFromSuperview()
-                    print("MONEDAS", coin)
-                    print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costScreamGreenB == true){
-                            storeImages.remove(at: 12)
-                            storeImages.insert("ScreamGreenOwned", at: 12)
-                        }
-                    }else{
-                        if(costScreamGreenB == true){
-                            storeImagesiPad.remove(at: 12)
-                            storeImagesiPad.insert("ScreamGreenOwnediPad", at: 12)
-                        }
-                    }
-                }else{
-                    print("NO TE ALCANZA POBRETÓN")
-                }
-            }else{
-                gameViewController.menuScene.sceneNumber = 9
-                gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-            }
-        }//END if
-        if index == 3{
-            if(costAcidB == false){
-                if coin >= costAcidF{
-                    coin = coin - costAcidF
-                    costAcidB = true
-                    savedValues()
-                    gameViewController.menuScene.sceneNumber = 10
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
-                    images.removeFromSuperview()
-                    print("MONEDAS", coin)
-                    print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costAcidB == true){
-                            storeImages.remove(at: 3)
-                            storeImages.insert("AcidOwned", at: 3)
-                        }
-                    }else{
-                        if(costAcidB == true){
-                            storeImagesiPad.remove(at: 3)
-                            storeImagesiPad.insert("AcidOwnediPad", at: 3)
-                        }
-                    }
-                }else{
-                    print("NO TE ALCANZA POBRETÓN")
-                }
-            }else{
-                gameViewController.menuScene.sceneNumber = 10
-                gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-            }
-        }//END if
-        if index == 13{
-            if(costDessertB == false){
-                if coin >= costDessert{
-                    coin = coin - costDessert
-                    costDessertB = true
-                    savedValues()
-                    gameViewController.menuScene.sceneNumber = 11
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
-                    images.removeFromSuperview()
-                    print("MONEDAS", coin)
-                    print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costDessertB == true){
-                            storeImages.remove(at: 13)
-                            storeImages.insert("DessertOwned", at: 13)
-                        }
-                    }else{
-                        if(costDessertB == true){
-                            storeImagesiPad.remove(at: 13)
-                            storeImagesiPad.insert("DessertOwnediPad", at: 13)
-                        }
-                    }
-                }else{
-                    print("NO TE ALCANZA POBRETÓN")
-                }
-            }else{
-                gameViewController.menuScene.sceneNumber = 11
-                gameViewController.skView.presentScene(gameViewController.menuScene)
-                images.removeFromSuperview()
-            }
-        }//END if
-        if index == 14{
-            if(costClassyB == false){
-                if coin >= costClassy{
-                    coin = coin - costClassy
-                    costClassyB = true
-                    savedValues()
-                    gameViewController.menuScene.sceneNumber = 12
-                    gameViewController.skView.presentScene(gameViewController.menuScene)
-                    images.removeFromSuperview()
-                    print("MONEDAS", coin)
-                    print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costClassyB == true){
-                            storeImages.remove(at: 14)
-                            storeImages.insert("ClassyOwned", at: 14)
-                        }
-                    }else{
-                        if(costClassyB == true){
-                            storeImagesiPad.remove(at: 14)
-                            storeImagesiPad.insert("ClassyOwnediPad", at: 14)
-                        }
-                    }
-                }else{
-                    print("NO TE ALCANZA POBRETÓN")
-                }
-            }else{
-                gameViewController.menuScene.sceneNumber = 12
+                gameViewController.menuScene.sceneNumber = 18
                 gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
             }
         }//END if
         if index == 2{
-            if(costUrbanicB == false){
-                if coin >= costUrbanic{
-                    coin = coin - costUrbanic
-                    costUrbanicB = true
+            if(costHanukkahB == false){
+                if coin >= costHanukkah{
+                    coin = coin - costHanukkah
+                    costHanukkahB = true
                     savedValues()
-                    gameViewController.menuScene.sceneNumber = 13
+                    gameViewController.menuScene.sceneNumber = 17
                     gameViewController.skView.presentScene(gameViewController.menuScene)
                     images.removeFromSuperview()
                     print("MONEDAS", coin)
                     print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costUrbanicB == true){
-                            storeImages.remove(at: 2)
-                            storeImages.insert("UrbanicOwned", at: 2)
-                        }
-                    }else{
-                        if(costUrbanicB == true){
-                            storeImagesiPad.remove(at: 2)
-                            storeImagesiPad.insert("UrbanicOwnediPad", at: 2)
-                        }
-                    }
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
             }else{
-                gameViewController.menuScene.sceneNumber = 13
+                gameViewController.menuScene.sceneNumber = 17
                 gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 15{
-            if(costAutumnB == false){
-                if coin >= costAutumn{
-                    coin = coin - costAutumn
-                    costAutumnB = true
+        if index == 3{
+            if(costSnowflakeB == false){
+                if coin >= costSnowflake{
+                    coin = coin - costSnowflake
+                    costSnowflakeB = true
                     savedValues()
-                    gameViewController.menuScene.sceneNumber = 14
+                    gameViewController.menuScene.sceneNumber = 16
                     gameViewController.skView.presentScene(gameViewController.menuScene)
                     images.removeFromSuperview()
                     print("MONEDAS", coin)
                     print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costAutumnB == true){
-                            storeImages.remove(at: 15)
-                            storeImages.insert("AutumnOwned", at: 15)
-                        }
-                    }else{
-                        if(costAutumnB == true){
-                            storeImagesiPad.remove(at: 15)
-                            storeImagesiPad.insert("AutumnOwnediPad", at: 15)
-                        }
-                    }
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
             }else{
-                gameViewController.menuScene.sceneNumber = 14
+                gameViewController.menuScene.sceneNumber = 16
                 gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
             }
         }//END if
-        if index == 1{
+        if index == 4{
             if(costOcherB == false){
                 if coin >= costOcher{
                     coin = coin - costOcher
@@ -734,22 +495,351 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     images.removeFromSuperview()
                     print("MONEDAS", coin)
                     print("Image", index)
-                    if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone){
-                        if(costOcherB == true){
-                            storeImages.remove(at: 1)
-                            storeImages.insert("OcherOwned", at: 1)
-                        }
-                    }else{
-                        if(costOcherB == true){
-                            storeImagesiPad.remove(at: 1)
-                            storeImagesiPad.insert("OcherOwnediPad", at: 1)
-                        }
-                    }
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
             }else{
                 gameViewController.menuScene.sceneNumber = 15
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 5{
+            if(costUrbanicB == false){
+                if coin >= costUrbanic{
+                    coin = coin - costUrbanic
+                    costUrbanicB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 13
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 13
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 6{
+            if(costAcidB == false){
+                if coin >= costAcidF{
+                    coin = coin - costAcidF
+                    costAcidB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 10
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 10
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 7{
+            if(costScreamRedB == false){
+                if coin >= costScreamRed{
+                    coin = coin - costScreamRed
+                    costScreamRedB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 8
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 8
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 8{
+            if(costEndTimeB == false){
+                if coin >= costEndTime{
+                    coin = coin - costEndTime
+                    costEndTimeB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 6
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 6
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 9{
+            if(costRetroB == false){
+                if coin >= costRetroF{
+                    coin = coin - costRetroF
+                    costRetroB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 1
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            } else{
+                gameViewController.menuScene.sceneNumber = 1
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }
+        if index == 10{
+            if(costRainbowB == false){
+                if coin >= costRainbowF{
+                    coin = coin - costRainbowF
+                    costRainbowB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 2
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 2
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }
+        if index == 11{
+            if(costLightB == false){
+                if coin >= costLightF{
+                    coin = coin - costLightF
+                    costLightB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 3
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 3
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }
+        if index == 12{
+            if(costSoccerB == false){
+                if coin >= costSoccerF{
+                    coin = coin - costSoccerF
+                    costSoccerB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 4
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 4
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 13{
+            if(costSpaceDustB == false){
+                if coin >= costSpaceDust{
+                    coin = coin - costSpaceDust
+                    costSpaceDustB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 5
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 5
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 14{
+            if(costPumpkinB == false){
+                if coin >= costPumpkin{
+                    coin = coin - costPumpkin
+                    costPumpkinB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 7
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 7
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 15{
+            if(costScreamGreenB == false){
+                if coin >= costScreamGreen{
+                    coin = coin - costScreamGreen
+                    costScreamGreenB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 9
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 9
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 16{
+            if(costDessertB == false){
+                if coin >= costDessert{
+                    coin = coin - costDessert
+                    costDessertB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 11
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 11
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 17{
+            if(costClassyB == false){
+                if coin >= costClassy{
+                    coin = coin - costClassy
+                    costClassyB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 12
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 12
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 18{
+            if(costAutumnB == false){
+                if coin >= costAutumn{
+                    coin = coin - costAutumn
+                    costAutumnB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 14
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 14
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 19{
+            if(costKwanzaB == false){
+                if coin >= costKwanza{
+                    coin = coin - costKwanza
+                    costKwanzaB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 19
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 19
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 20{
+            if(costNewYearB == false){
+                if coin >= costNewYear{
+                    coin = coin - costNewYear
+                    costNewYearB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 20
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 20
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 21{
+            if(costChristmasB == false){
+                if coin >= costChristmas{
+                    coin = coin - costChristmas
+                    costChristmasB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 21
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 21
                 gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
             }
@@ -960,6 +1050,18 @@ class StoreScene: SKScene, ZCarouselDelegate {
             storeControls.coinLabel.fontColor = .black
             
         }
+        
+        if sceneNumber == 15{
+            
+            /// Present Label and Button
+            self.addChild(storeControls.ocherMenu)
+            self.addChild(storeControls.ocherBackground)
+            self.addChild(storeControls.ocherCurrent)
+            
+            storeControls.coinLabel.fontColor = .black
+            
+        }
+
         storeControls.coinLabel.text = ("\(coin)")
         
     }

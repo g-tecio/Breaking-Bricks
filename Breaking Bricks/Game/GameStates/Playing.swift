@@ -23,7 +23,6 @@ class Playing: GKState {
             
             let ball = scene.childNode(withName: BallCategoryName) as! SKSpriteNode
             ball.physicsBody!.applyImpulse(CGVector(dx: randomDirection(), dy: randomDirection()))
-            
         }
         
     }
@@ -38,13 +37,15 @@ class Playing: GKState {
         
         let speed = sqrt(ball.physicsBody!.velocity.dx * ball.physicsBody!.velocity.dx + ball.physicsBody!.velocity.dy * ball.physicsBody!.velocity.dy)
         
+      
+        
         if xSpeed <= 10.0 {
             
             ball.physicsBody!.applyImpulse(CGVector(dx: randomDirection(), dy: 0.0))
             
         }
         
-        if ySpeed <= 10.0 {
+        if ySpeed <= 10.0  {
             
             ball.physicsBody!.applyImpulse(CGVector(dx: 0.0, dy: randomDirection()))
             

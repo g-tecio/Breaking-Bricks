@@ -22,7 +22,7 @@ struct GameControls {
     // Backgrounds
     let bgclassic: SKSpriteNode
     // Paddles
-    let  paddleclassic: SKSpriteNode
+    let paddleclassic: SKSpriteNode
     // Balls
     let ballclassic: SKSpriteNode
     //Timer
@@ -261,6 +261,7 @@ struct GameControls {
         ballclassic.name = "ball"
         ballclassic.zPosition = 2
         ballclassic.position = CGPoint(x: inThisScene.size.width/2 , y: inThisScene.size.height * (18.54/100))
+        
         //Timer Brick
         timerBrick = SKSpriteNode.init(imageNamed: "Timer_score Classic")
         timerBrick.zPosition = 7

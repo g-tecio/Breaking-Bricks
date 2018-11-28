@@ -36,6 +36,7 @@ var lose: Int = 0
 var loseCount = ("\(lose)")
 
 let BallCategoryName = "ball"
+let BallCategoryName1 = "ball1"
 let PaddleCategoryName = "paddle"
 let BlockCategoryName = "block"
 let GameMessageName = "gameMessage"
@@ -176,10 +177,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //Paddle and ball
             let ball = gameControls.ballclassic
+            
             let paddle = gameControls.paddleclassic
             
             ball.physicsBody!.applyImpulse(CGVector(dx: 2.0, dy: -2.0))
             ball.position =  CGPoint(x: self.size.width/2 , y: self.size.height * (18.54/100))
+            
             
             let bottomRect = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: 1)
             //let bottomRect = CGRect(x: 0, y: 0, width: frame.size.width, height: 1)
@@ -1359,6 +1362,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                 }
             }
+            
             
             //Adding soun effects
             if firstBody.categoryBitMask == BallCategory && secondBody.categoryBitMask == BorderCategory {
