@@ -31,6 +31,7 @@ var costSnowflake = 2
 var costKwanza = 2
 var costNewYear = 3
 var costChristmas = 3
+var costIcyBlue = 3
 
 //ClassicB
 var cost2019B = false
@@ -54,6 +55,7 @@ var costAutumnB = false
 var costKwanzaB = false
 var costNewYearB = false
 var costChristmasB = false
+var costIcyBlueB =  false
 
 var storeImages = [
 //0-
@@ -100,6 +102,8 @@ var storeImages = [
 "NewYearBuy",
 //21//21
 "ChristmasBuy",
+//22//22
+"IcyBlueBuy",
 ]
 
 
@@ -126,6 +130,7 @@ var storeImagesiPad = [
 "KwanzaBuyiPad",
 "NewYearBuyiPad",
 "ChristmasBuyiPad",
+"IcyBlueBuyiPad",
 ]
 
 class StoreScene: SKScene, ZCarouselDelegate {
@@ -237,11 +242,11 @@ class StoreScene: SKScene, ZCarouselDelegate {
         //EndTimes
         if(costEndTimeB == true){
             storeImages.remove(at: 8)
-            storeImages.insert("EndTimeOwned", at: 8)
+            storeImages.insert("EndTimesOwned", at: 8)
         }
         if(costEndTimeB == true){
             storeImagesiPad.remove(at: 8)
-            storeImagesiPad.insert("EndTimeOwnediPad", at: 8)
+            storeImagesiPad.insert("EndTimesOwnediPad", at: 8)
         }
         //Retro
         if(costRetroB == true){
@@ -360,6 +365,15 @@ class StoreScene: SKScene, ZCarouselDelegate {
             storeImagesiPad.remove(at: 21)
             storeImagesiPad.insert("ChristmasOwnediPad", at: 21)
         }
+        //Icy Blue
+        if(costIcyBlueB == true){
+            storeImages.remove(at: 22)
+            storeImages.insert("IcyBlueOwned", at: 22)
+        }
+        if(costIcyBlueB == true){
+            storeImagesiPad.remove(at: 22)
+            storeImagesiPad.insert("IcyBlueOwnediPad", at: 22)
+        }
 
         /// Set reference of GameViewControl
         gameViewController = referenceGVC
@@ -385,6 +399,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
         costKwanza = 2
         costNewYear = 3
         costChristmas = 3
+        costIcyBlue = 3
         
         /// Create scene from code
         super.init(size: sceneSize)
@@ -438,6 +453,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
+                if(cost2019B == true){
+                    storeImages.remove(at: 1)
+                    storeImages.insert("2019Owned", at: 1)
+                }
+                if(cost2019B == true){
+                    storeImagesiPad.remove(at: 1)
+                    storeImagesiPad.insert("2019OwnediPad", at: 1)
+                }
             }else{
                 gameViewController.menuScene.sceneNumber = 18
                 gameViewController.skView.presentScene(gameViewController.menuScene)
@@ -457,6 +480,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
+                }
+                if(costHanukkahB == true){
+                    storeImages.remove(at: 2)
+                    storeImages.insert("HanukkahOwned", at: 2)
+                }
+                if(costHanukkahB == true){
+                    storeImagesiPad.remove(at: 2)
+                    storeImagesiPad.insert("HanukkahOwnediPad", at: 2)
                 }
             }else{
                 gameViewController.menuScene.sceneNumber = 17
@@ -478,6 +509,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
+                if(costSnowflakeB == true){
+                    storeImages.remove(at: 3)
+                    storeImages.insert("SnowflakeOwned", at: 3)
+                }
+                if(costSnowflakeB == true){
+                    storeImagesiPad.remove(at: 3)
+                    storeImagesiPad.insert("SnowflakeOwnediPad", at: 3)
+                }
             }else{
                 gameViewController.menuScene.sceneNumber = 16
                 gameViewController.skView.presentScene(gameViewController.menuScene)
@@ -497,6 +536,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
+                }
+                if(costOcherB == true){
+                    storeImages.remove(at: 4)
+                    storeImages.insert("OcherOwned", at: 4)
+                }
+                if(costOcherB == true){
+                    storeImagesiPad.remove(at: 4)
+                    storeImagesiPad.insert("OcherOwnediPad", at: 4)
                 }
             }else{
                 gameViewController.menuScene.sceneNumber = 15
@@ -518,6 +565,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
+                if(costUrbanicB == true){
+                    storeImages.remove(at: 5)
+                    storeImages.insert("UrbanicOwned", at: 5)
+                }
+                if(costUrbanicB == true){
+                    storeImagesiPad.remove(at: 5)
+                    storeImagesiPad.insert("UrbanicOwnediPad", at: 5)
+                }
             }else{
                 gameViewController.menuScene.sceneNumber = 13
                 gameViewController.skView.presentScene(gameViewController.menuScene)
@@ -537,6 +592,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
+                }
+                if(costAcidB == true){
+                    storeImages.remove(at: 6)
+                    storeImages.insert("AcidOwned", at: 6)
+                }
+                if(costAcidB == true){
+                    storeImagesiPad.remove(at: 6)
+                    storeImagesiPad.insert("AcidOwnediPad", at: 6)
                 }
             }else{
                 gameViewController.menuScene.sceneNumber = 10
@@ -558,6 +621,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
+                if(costScreamRedB == true){
+                    storeImages.remove(at: 7)
+                    storeImages.insert("ScreamRedOwned", at: 7)
+                }
+                if(costScreamRedB == true){
+                    storeImagesiPad.remove(at: 7)
+                    storeImagesiPad.insert("ScreamRedOwnediPad", at: 7)
+                }
             }else{
                 gameViewController.menuScene.sceneNumber = 8
                 gameViewController.skView.presentScene(gameViewController.menuScene)
@@ -577,6 +648,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
+                }
+                if(costEndTimeB == true){
+                    storeImages.remove(at: 8)
+                    storeImages.insert("EndTimesOwned", at: 8)
+                }
+                if(costEndTimeB == true){
+                    storeImagesiPad.remove(at: 8)
+                    storeImagesiPad.insert("EndTimesOwnediPad", at: 8)
                 }
             }else{
                 gameViewController.menuScene.sceneNumber = 6
@@ -598,6 +677,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
+                if(costRetroB == true){
+                    storeImages.remove(at: 9)
+                    storeImages.insert("RetroOwned", at: 9)
+                }
+                if(costRetroB == true){
+                    storeImagesiPad.remove(at: 9)
+                    storeImagesiPad.insert("RetroOwnediPad", at: 9)
+                }
             } else{
                 gameViewController.menuScene.sceneNumber = 1
                 gameViewController.skView.presentScene(gameViewController.menuScene)
@@ -617,6 +704,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
+                }
+                if(costRainbowB == true){
+                    storeImages.remove(at: 10)
+                    storeImages.insert("RainbowOwned", at: 10)
+                }
+                if(costRainbowB == true){
+                    storeImagesiPad.remove(at: 10)
+                    storeImagesiPad.insert("RainbowOwnediPad", at: 10)
                 }
             }else{
                 gameViewController.menuScene.sceneNumber = 2
@@ -638,6 +733,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
+                if(costLightB == true){
+                    storeImages.remove(at: 11)
+                    storeImages.insert("LightOwned", at: 11)
+                }
+                if(costLightB == true){
+                    storeImagesiPad.remove(at: 11)
+                    storeImagesiPad.insert("LightOwnediPad", at: 11)
+                }
             }else{
                 gameViewController.menuScene.sceneNumber = 3
                 gameViewController.skView.presentScene(gameViewController.menuScene)
@@ -657,6 +760,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
+                }
+                if(costSoccerB == true){
+                    storeImages.remove(at: 12)
+                    storeImages.insert("SoccerOwned", at: 12)
+                }
+                if(costSoccerB == true){
+                    storeImagesiPad.remove(at: 12)
+                    storeImagesiPad.insert("SoccerOwnediPad", at: 12)
                 }
             }else{
                 gameViewController.menuScene.sceneNumber = 4
@@ -678,6 +789,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
+                if(costSpaceDustB == true){
+                    storeImages.remove(at: 13)
+                    storeImages.insert("SpaceDustOwned", at: 13)
+                }
+                if(costSpaceDustB == true){
+                    storeImagesiPad.remove(at: 13)
+                    storeImagesiPad.insert("SpaceDustOwnediPad", at: 13)
+                }
             }else{
                 gameViewController.menuScene.sceneNumber = 5
                 gameViewController.skView.presentScene(gameViewController.menuScene)
@@ -697,6 +816,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
+                }
+                if(costPumpkinB == true){
+                    storeImages.remove(at: 14)
+                    storeImages.insert("PumpkinOwned", at: 14)
+                }
+                if(costPumpkinB == true){
+                    storeImagesiPad.remove(at: 14)
+                    storeImagesiPad.insert("PumpkinOwnediPad", at: 14)
                 }
             }else{
                 gameViewController.menuScene.sceneNumber = 7
@@ -718,6 +845,15 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
+                if(costScreamGreenB == true){
+                    storeImages.remove(at: 15)
+                    storeImages.insert("ScreamGreenOwned", at: 15)
+                }
+                if(costScreamGreenB == true){
+                    storeImagesiPad.remove(at: 15)
+                    storeImagesiPad.insert("ScreamGreenOwnediPad", at: 15)
+                }
+
             }else{
                 gameViewController.menuScene.sceneNumber = 9
                 gameViewController.skView.presentScene(gameViewController.menuScene)
@@ -737,6 +873,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
+                }
+                if(costDessertB == true){
+                    storeImages.remove(at: 16)
+                    storeImages.insert("DessertOwned", at: 16)
+                }
+                if(costDessertB == true){
+                    storeImagesiPad.remove(at: 16)
+                    storeImagesiPad.insert("DessertOwnediPad", at: 16)
                 }
             }else{
                 gameViewController.menuScene.sceneNumber = 11
@@ -758,6 +902,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
+                if(costClassyB == true){
+                    storeImages.remove(at: 17)
+                    storeImages.insert("ClassyOwned", at: 17)
+                }
+                if(costClassyB == true){
+                    storeImagesiPad.remove(at: 17)
+                    storeImagesiPad.insert("ClassyOwnediPad", at: 17)
+                }
             }else{
                 gameViewController.menuScene.sceneNumber = 12
                 gameViewController.skView.presentScene(gameViewController.menuScene)
@@ -777,6 +929,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
+                }
+                if(costAutumnB == true){
+                    storeImages.remove(at: 18)
+                    storeImages.insert("AutumnOwned", at: 18)
+                }
+                if(costAutumnB == true){
+                    storeImagesiPad.remove(at: 18)
+                    storeImagesiPad.insert("AutumnOwnediPad", at: 18)
                 }
             }else{
                 gameViewController.menuScene.sceneNumber = 14
@@ -798,6 +958,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
+                if(costKwanzaB == true){
+                    storeImages.remove(at: 19)
+                    storeImages.insert("KwanzaOwned", at: 19)
+                }
+                if(costKwanzaB == true){
+                    storeImagesiPad.remove(at: 19)
+                    storeImagesiPad.insert("KwanzaOwnediPad", at: 19)
+                }
             }else{
                 gameViewController.menuScene.sceneNumber = 19
                 gameViewController.skView.presentScene(gameViewController.menuScene)
@@ -817,6 +985,14 @@ class StoreScene: SKScene, ZCarouselDelegate {
                     print("Image", index)
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
+                }
+                if(costNewYearB == true){
+                    storeImages.remove(at: 20)
+                    storeImages.insert("NewYearOwned", at: 20)
+                }
+                if(costNewYearB == true){
+                    storeImagesiPad.remove(at: 20)
+                    storeImagesiPad.insert("NewYearOwnediPad", at: 20)
                 }
             }else{
                 gameViewController.menuScene.sceneNumber = 20
@@ -838,8 +1014,44 @@ class StoreScene: SKScene, ZCarouselDelegate {
                 }else{
                     print("NO TE ALCANZA POBRETÓN")
                 }
+                if(costChristmasB == true){
+                    storeImages.remove(at: 21)
+                    storeImages.insert("ChristmasOwned", at: 21)
+                }
+                if(costChristmasB == true){
+                    storeImagesiPad.remove(at: 21)
+                    storeImagesiPad.insert("ChristmasOwnediPad", at: 21)
+                }
             }else{
                 gameViewController.menuScene.sceneNumber = 21
+                gameViewController.skView.presentScene(gameViewController.menuScene)
+                images.removeFromSuperview()
+            }
+        }//END if
+        if index == 22{
+            if(costIcyBlueB == false){
+                if coin >= costIcyBlue{
+                    coin = coin - costIcyBlue
+                    costIcyBlueB = true
+                    savedValues()
+                    gameViewController.menuScene.sceneNumber = 22
+                    gameViewController.skView.presentScene(gameViewController.menuScene)
+                    images.removeFromSuperview()
+                    print("MONEDAS", coin)
+                    print("Image", index)
+                }else{
+                    print("NO TE ALCANZA POBRETÓN")
+                }
+                if(costIcyBlueB == true){
+                    storeImages.remove(at: 22)
+                    storeImages.insert("IcyBlueOwned", at: 22)
+                }
+                if(costIcyBlueB == true){
+                    storeImagesiPad.remove(at: 22)
+                    storeImagesiPad.insert("IcyBlueOwnediPad", at: 22)
+                }
+            }else{
+                gameViewController.menuScene.sceneNumber = 22
                 gameViewController.skView.presentScene(gameViewController.menuScene)
                 images.removeFromSuperview()
             }
@@ -890,178 +1102,149 @@ class StoreScene: SKScene, ZCarouselDelegate {
         
         self.addChild(storeControls.coin)
         self.addChild(storeControls.coinLabel)
+        self.addChild(storeControls.classicBackground)
+        self.addChild(storeControls.menuclassic)
+        self.addChild(storeControls.currentclassic)
+        storeControls.coinLabel.fontColor = .white
         
         if sceneNumber == 0 {
-            
-            /// Present Label and Button
-            self.addChild(storeControls.classicBackground)
-            self.addChild(storeControls.menuclassic)
-            self.addChild(storeControls.currentclassic)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Classic")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "MENU Classic")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Classic")
             storeControls.coinLabel.fontColor = .white
-            
         }
         if sceneNumber == 1{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.retroLifeSkinBackground)
-            self.addChild(storeControls.retroLifeSkinMenu)
-            self.addChild(storeControls.retroLifeSkinCurrent)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Retro")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "MENU Retro")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Retro")
             storeControls.coinLabel.fontColor = .white
-            
         }
         if sceneNumber == 2{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.rainbowMenu)
-            self.addChild(storeControls.rainbowCurrent)
-            self.addChild(storeControls.rainbowBackground)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Rainbow")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "Menu Rainbow")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Empty 1 Rainbow")
             storeControls.coinLabel.fontColor = .white
-            
         }
         if sceneNumber == 3{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.lightMenu)
-            self.addChild(storeControls.lightCurrent)
-            self.addChild(storeControls.lightBackground)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Light")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "MENU Light")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Mutipurpose Light")
             storeControls.coinLabel.fontColor = UIColor(red:0.54, green:0.54, blue:0.54, alpha:1.0)
         }
         if sceneNumber == 4{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.soccerMenu)
-            self.addChild(storeControls.soccerCurrent)
-            self.addChild(storeControls.soccerBackground)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Soccer")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "MENU Soccer")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Soccer")
             storeControls.coinLabel.fontColor = UIColor(red:0.96, green:0.75, blue:0.00, alpha:1.0)
-            
         }
         if sceneNumber == 5{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.spaceDustMenu)
-            self.addChild(storeControls.spaceDustCurrent)
-            self.addChild(storeControls.spaceDustBackground)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Dust")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "MENU Dust")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Dust")
             storeControls.coinLabel.fontColor = .white
-            
         }
         if sceneNumber == 6{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.endTimesMenu)
-            self.addChild(storeControls.endTimesCurrent)
-            self.addChild(storeControls.endTimesBackground)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background End_Times")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "MENU End_Times")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose End_Times")
             storeControls.coinLabel.fontColor = .white
-            
         }
         if sceneNumber == 7{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.pumpkinMenu)
-            self.addChild(storeControls.pumpkinCurrent)
-            self.addChild(storeControls.pumpkinBackground)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Pumpkin")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "MENU Pumpkin")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Pumpkin")
             storeControls.coinLabel.fontColor = .white
-            
         }
         if sceneNumber == 8{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.screamRedMenu)
-            self.addChild(storeControls.screamRedCurrent)
-            self.addChild(storeControls.screamRedBackground)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Scream_Red")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "Menu Scream_Red")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Scream_Red")
             storeControls.coinLabel.fontColor = .white
-            
         }
         if sceneNumber == 9{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.screamGreenMenu)
-            self.addChild(storeControls.screamGreenBackground)
-            self.addChild(storeControls.screamGreenCurrent)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Scream_Green")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "Menu Scream_Green")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Scream_Green")
             storeControls.coinLabel.fontColor = .white
-            
         }
         if sceneNumber == 10{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.acidRainMenu)
-            self.addChild(storeControls.acidRainCurrent)
-            self.addChild(storeControls.acidRainBackground)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Toxic")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "MENU Toxic")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Mutipurpose Toxic")
             storeControls.coinLabel.fontColor = UIColor(red:0.93, green:0.95, blue:0.06, alpha:1.0)
-            
         }
         if sceneNumber == 11{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.dessertMenu)
-            self.addChild(storeControls.dessertBackground)
-            self.addChild(storeControls.dessertCurrent)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed:"Background Dessert")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "MENU Dessert")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipourpose Dessert")
             storeControls.coinLabel.fontColor = .black
-            
         }
         if sceneNumber == 12{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.classyMenu)
-            self.addChild(storeControls.classyBackground)
-            self.addChild(storeControls.classyCurrent)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed:"Background Classy")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "MENU Classy")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Classy")
             storeControls.coinLabel.fontColor = UIColor(red:0.95, green:0.75, blue:0.04, alpha:1.0)
-            
         }
         if sceneNumber == 13{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.urbanicMenu)
-            self.addChild(storeControls.urbanicBackground)
-            self.addChild(storeControls.urbanicCurrent)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed:"Background Urbanic")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "MENU Urbanic")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Urbanic")
             storeControls.coinLabel.fontColor = .black
-            
         }
         if sceneNumber == 14{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.autumnMenu)
-            self.addChild(storeControls.autumnBackground)
-            self.addChild(storeControls.autumnCurrent)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Autumn")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "Menu Autumn")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Autumn")
             storeControls.coinLabel.fontColor = .white
-            
         }
         if sceneNumber == 15{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.ocherMenu)
-            self.addChild(storeControls.ocherBackground)
-            self.addChild(storeControls.ocherCurrent)
-            
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Ocher")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "Menu Ocher")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Ocher")
             storeControls.coinLabel.fontColor = .black
-            
         }
-        
-        if sceneNumber == 15{
-            
-            /// Present Label and Button
-            self.addChild(storeControls.ocherMenu)
-            self.addChild(storeControls.ocherBackground)
-            self.addChild(storeControls.ocherCurrent)
-            
+        if sceneNumber == 16{
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Snowflake")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "Menu Snowflake")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Snowflake")
+            storeControls.coinLabel.fontColor = UIColor(red:0.58, green:0.25, blue:0.02, alpha:1.0)
+        }
+        if sceneNumber == 17{
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Hanukkah")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "Menu Hanukkah")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Hanukkah")
+            storeControls.coinLabel.fontColor = .white
+        }
+        if sceneNumber == 18{
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background 2019")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "Menu 2019")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "WinsBlank 2019")
             storeControls.coinLabel.fontColor = .black
-            
         }
-
+        if sceneNumber == 19{
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Kwanza")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "Menu Kwanza")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Kwanza")
+            storeControls.coinLabel.fontColor = .white
+        }
+        if sceneNumber == 20{
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background NewYear")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "Menu NewYear")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Cash NewYear")
+            storeControls.coinLabel.fontColor = .white
+        }
+        if sceneNumber == 21{
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Christmas")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "Menu Christmas")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Christmas")
+            storeControls.coinLabel.fontColor = .white
+        }
+        if sceneNumber == 22{
+            storeControls.classicBackground.texture = SKTexture(imageNamed: "Background IcyBlue")
+            storeControls.menuclassic.texture = SKTexture(imageNamed: "Menu IcyBlue")
+            storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose IcyBlue")
+            storeControls.coinLabel.fontColor = .white
+        }
         storeControls.coinLabel.text = ("\(coin)")
         
     }
@@ -1083,24 +1266,25 @@ class StoreScene: SKScene, ZCarouselDelegate {
         userDefaults.setValue(costSoccerB, forKey: "costSoccerB")
         //print("SKIN VALUE costSoccerB ", costSoccerB)
         userDefaults.setValue(costSpaceDustB, forKey: "costSpaceDustB")
-        
         userDefaults.setValue(costAcidB, forKey: "costAcidB")
-        
         userDefaults.setValue(costEndTimeB, forKey: "costEndTimeB")
-        
         userDefaults.setValue(costPumpkinB, forKey: "costPumpkinB")
-
         userDefaults.setValue(costScreamRedB, forKey: "costScreamRedB")
-        
         userDefaults.setValue(costScreamGreenB, forKey: "costScreamGreenB")
-        
         userDefaults.setValue(costDessertB, forKey: "costDessertB")
-        
         userDefaults.setValue(costClassyB, forKey: "costClassyB")
         userDefaults.setValue(costUrbanicB, forKey: "costUrbanicB")
         userDefaults.setValue(costAutumnB, forKey: "costAutumnB")
         userDefaults.setValue(costOcherB, forKey: "costOcherB")
         
+        userDefaults.setValue(costKwanzaB, forKey: "costKwanzaB")
+        userDefaults.setValue(costNewYearB, forKey: "costNewYearB")
+        userDefaults.setValue(costChristmasB, forKey: "costChristmasB")
+        userDefaults.setValue(cost2019B, forKey: "cost2019B")
+        userDefaults.setValue(costHanukkahB, forKey: "costHanukkahB")
+        userDefaults.setValue(costSnowflakeB, forKey: "costSnowflakeB")
+        userDefaults.setValue(costIcyBlueB, forKey: "costIcyBlueB")
+
     }
     /// Before another Scence will be presented
     override func willMove(from view: SKView) {

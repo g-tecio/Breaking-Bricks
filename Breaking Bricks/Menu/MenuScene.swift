@@ -55,115 +55,150 @@ class MenuScene: SKScene {
     /// Present Elements to the Scene
     override func didMove(to view: SKView) {
         
+        self.addChild(menuControls.bgclassic)
+        self.addChild(menuControls.playclassic)
+        self.addChild(menuControls.scoreclassic)
+        self.addChild(menuControls.storeclassic)
         
         if sceneNumber == 0{
-            self.addChild(menuControls.bgclassic)
-            self.addChild(menuControls.playclassic)
-            self.addChild(menuControls.scoreclassic)
-            self.addChild(menuControls.storeclassic)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Classic")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed: "Play Classic")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Classic")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Classic")
         }
         if sceneNumber == 1{
-            self.addChild(menuControls.retroLifeSkinBackground)
-            self.addChild(menuControls.retroLifeSkinPlay)
-            self.addChild(menuControls.retroLifeSkinScore)
-            self.addChild(menuControls.retroLifeSkinStore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Retro")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed: "Play Retro")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Retro")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Retro")
         }
         if sceneNumber == 2{
-            self.addChild(menuControls.rainbowBackground)
-            self.addChild(menuControls.rainbowPlay)
-            self.addChild(menuControls.rainbowScore)
-            self.addChild(menuControls.rainbowStore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Rainbow")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed: "Play Rainbow")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Rainbow")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Rainbow")
         }
         if sceneNumber == 3{
-            self.addChild(menuControls.lightBackground)
-            self.addChild(menuControls.lightPlay)
-            self.addChild(menuControls.lightScore)
-            self.addChild(menuControls.lightStore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Light")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed: "Play Light")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Light")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Light")
         }
         if sceneNumber == 4{
-            self.addChild(menuControls.soccerBackground)
-            self.addChild(menuControls.soccerPlay)
-            self.addChild(menuControls.soccerScore)
-            self.addChild(menuControls.soccerStore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Soccer")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed: "Play Soccer")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Soccer")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Soccer")
         }
         if sceneNumber == 5{
-            self.addChild(menuControls.spaceDustBackground)
-            self.addChild(menuControls.spaceDustPlay)
-            self.addChild(menuControls.spaceDustScore)
-            self.addChild(menuControls.spaceDustStore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Dust")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed: "Play Dust")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Dust")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Dust")
         }
         if sceneNumber == 6{
-            self.addChild(menuControls.endTimesBackground)
-            self.addChild(menuControls.endTimesPlay)
-            self.addChild(menuControls.endTimesScore)
-            self.addChild(menuControls.endTimesStore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background End_Times")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed: "Play End_Times")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store End_Times")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score End_Times")
         }
         if sceneNumber == 7{
-            self.addChild(menuControls.pumpkinBackground)
-            self.addChild(menuControls.pumpkinPlay)
-            self.addChild(menuControls.pumpkinStore)
-            self.addChild(menuControls.pumpkinScore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Pumpkin")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed: "Play Pumpkin")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Pumpkin")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Pumpkin")
         }
         if sceneNumber == 8{
-            self.addChild(menuControls.screamRedBackground)
-            self.addChild(menuControls.screamRedPlay)
-            self.addChild(menuControls.screamRedStore)
-            self.addChild(menuControls.screamRedScore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed:"Background Scream_Red")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play Scream_Red")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Scream_Red")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Scream_Red")
         }
         if sceneNumber == 9{
-            self.addChild(menuControls.screamGreenBackground)
-            self.addChild(menuControls.screamGreenPlay)
-            self.addChild(menuControls.screamGreenStore)
-            self.addChild(menuControls.screamGreenScore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed:"Background Scream_Green")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play Scream_Green")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Scream_Green")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Scream_Green")
         }
         if sceneNumber == 10{
-            self.addChild(menuControls.acidRainBackground)
-            self.addChild(menuControls.acidRainPlay)
-            self.addChild(menuControls.acidRainScore)
-            self.addChild(menuControls.acidRainStore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Toxic")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play Toxic")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Toxic")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Toxic")
         }
         if sceneNumber == 11{
-            self.addChild(menuControls.dessertBackground)
-            self.addChild(menuControls.dessertPlay)
-            self.addChild(menuControls.dessertStore)
-            self.addChild(menuControls.dessertScore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Dessert")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play Dessert")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Dessert")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Dessert")
         }
         if sceneNumber == 12{
-            self.addChild(menuControls.classyBackground)
-            self.addChild(menuControls.classyPlay)
-            self.addChild(menuControls.classyStore)
-            self.addChild(menuControls.classyScore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Classy")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play Classy")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Classy")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Classy")
         }
         if sceneNumber == 13{
-            self.addChild(menuControls.urbanicBackground)
-            self.addChild(menuControls.urbanicPlay)
-            self.addChild(menuControls.urbanicStore)
-            self.addChild(menuControls.urbanicScore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Urbanic")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play Urbanic")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Urbanic")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Urbanic")
         }
         if sceneNumber == 14{
-            self.addChild(menuControls.autumnBackground)
-            self.addChild(menuControls.autumnPlay)
-            self.addChild(menuControls.autumnStore)
-            self.addChild(menuControls.autumnScore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Autumn")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play Autumn")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Autumn")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Autumn")
         }
         if sceneNumber == 15{
-            self.addChild(menuControls.ocherBackground)
-            self.addChild(menuControls.ocherPlay)
-            self.addChild(menuControls.ocherStore)
-            self.addChild(menuControls.ocherScore)
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Ocher")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play Ocher")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Ocher")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Ocher")
+        }
+        if sceneNumber == 16{
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Snowflake")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play Snowflake")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Snowflake")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Snowflake")
+        }
+        if sceneNumber == 17{
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Hanukkah")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play Hanukkah")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Hanukkah")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Hanukkah")
+        }
+        if sceneNumber == 18{
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background 2019")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play 2019")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store 2019")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score 2019")
+        }
+        if sceneNumber == 19{
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background Kwanza")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play Kwanza")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store Kwanza")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score Kwanza")
+        }
+        if sceneNumber == 20{
+            menuControls.bgclassic.texture = SKTexture.init(imageNamed: "Background NewYear")
+            menuControls.playclassic.texture = SKTexture.init(imageNamed:  "Play NewYear")
+            menuControls.storeclassic.texture = SKTexture.init(imageNamed: "Store NewYear")
+            menuControls.scoreclassic.texture = SKTexture.init(imageNamed: "Score NewYear")
         }
         if sceneNumber == 21{
-            self.addChild(menuControls.ocherBackground)
-            self.addChild(menuControls.ocherPlay)
-            self.addChild(menuControls.ocherStore)
-            self.addChild(menuControls.ocherScore)
-            
-            menuControls.ocherBackground.texture = SKTexture(imageNamed: "Background Christmas")
-            menuControls.ocherPlay.texture = SKTexture(imageNamed: "Play Christmas")
-            menuControls.ocherStore.texture = SKTexture(imageNamed: "Store Christmas")
-            menuControls.ocherScore.texture = SKTexture(imageNamed: "Score Christmas")
+            menuControls.bgclassic.texture = SKTexture(imageNamed: "Background Christmas")
+            menuControls.playclassic.texture = SKTexture(imageNamed: "Play Christmas")
+            menuControls.scoreclassic.texture = SKTexture(imageNamed: "Store Christmas")
+            menuControls.storeclassic.texture = SKTexture(imageNamed: "Score Christmas")
         }
-
+        if sceneNumber == 22{
+            menuControls.bgclassic.texture = SKTexture(imageNamed: "Background IcyBlue")
+            menuControls.playclassic.texture = SKTexture(imageNamed: "Play IcyBlue")
+            menuControls.scoreclassic.texture = SKTexture(imageNamed: "Store IcyBlue")
+            menuControls.storeclassic.texture = SKTexture(imageNamed: "Score IcyBlue")
+        }
+        
     }
     
     /// Before another Scence will be presented

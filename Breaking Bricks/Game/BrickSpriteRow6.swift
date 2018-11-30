@@ -32,6 +32,14 @@ struct BrickSpriteRow6 {
     let urbanicSkin: SKSpriteNode!
     let autumnSkin: SKSpriteNode!
     let ocherSkin: SKSpriteNode!
+    //December Update
+    let newYearSkin: SKSpriteNode!
+    let dosmildiecinueveSkin: SKSpriteNode!
+    let kwanzaSkin: SKSpriteNode!
+    let hanukkahSkin: SKSpriteNode!
+    let icyBlueSkin: SKSpriteNode!
+    let snowflakeSkin: SKSpriteNode!
+    let christmasSkin: SKSpriteNode!
     
     //Array Bricks
     let classicblocks = ["Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic","Brick Classic"]
@@ -117,6 +125,43 @@ struct BrickSpriteRow6 {
                        "BrickDown Ocher","BrickDown Ocher","BrickDown Ocher","BrickDown Ocher","BrickDown Ocher",
                        "BrickDown Ocher",]
     
+    let christmasBlocks = ["Chrismas 1","Chrismas 1","Chrismas 1","Chrismas 1","Chrismas 1","Chrismas 1",
+                           "Chrismas 2","Chrismas 2","Chrismas 2","Chrismas 2","Chrismas 2","Chrismas 2",
+                           "Chrismas 2","Chrismas 2","Chrismas 2","Chrismas 2","Chrismas 2","Chrismas 2",
+                           "Chrismas 3","Chrismas 3","Chrismas 3","Chrismas 3","Chrismas 3","Chrismas 3",]
+    
+    let snowflakeBlocks = ["Brick Snowflake","Brick Snowflake","Brick Snowflake","Brick Snowflake","Brick Snowflake",
+                           "Brick Snowflake","Brick Snowflake","Brick Snowflake","Brick Snowflake","Brick Snowflake",
+                           "Brick Snowflake","Brick Snowflake","Brick Snowflake","Brick Snowflake","Brick Snowflake",
+                           "Brick Snowflake","Brick Snowflake","Brick Snowflake","Brick Snowflake","Brick Snowflake",
+                           "Brick Snowflake","Brick Snowflake","Brick Snowflake","Brick Snowflake","Brick Snowflake",]
+    
+    let icyBlueBlocks = ["BrickUp IcyBlue","BrickUp IcyBlue","BrickUp IcyBlue","BrickUp IcyBlue","BrickUp IcyBlue","BrickUp IcyBlue",
+                         "BrickMiddle IcyBlue","BrickMiddle IcyBlue","BrickMiddle IcyBlue","BrickMiddle IcyBlue","BrickMiddle IcyBlue","BrickMiddle IcyBlue",
+                         "BrickMiddle IcyBlue","BrickMiddle IcyBlue","BrickMiddle IcyBlue","BrickMiddle IcyBlue","BrickMiddle IcyBlue","BrickMiddle IcyBlue",
+                         "BrickDown IcyBlue","BrickDown IcyBlue","BrickDown IcyBlue","BrickDown IcyBlue","BrickDown IcyBlue",
+                         "BrickDown IcyBlue",]
+    
+    let hanukkahBlocks = ["BrickBlue Hanukkah","BrickBlue Hanukkah","BrickBlue Hanukkah","BrickBlue Hanukkah","BrickBlue Hanukkah","BrickBlue Hanukkah",
+                          "BrickBlue Hanukkah","BrickBlue Hanukkah","BrickBlue Hanukkah","BrickBlue Hanukkah","BrickBlue Hanukkah","BrickBlue Hanukkah",
+                          "BrickBrown Hanukkah","BrickBrown Hanukkah","BrickBrown Hanukkah","BrickBrown Hanukkah","BrickBrown Hanukkah","BrickBrown Hanukkah",
+                          "BrickBrown Hanukkah","BrickBrown Hanukkah","BrickBrown Hanukkah","BrickBrown Hanukkah","BrickBrown Hanukkah","BrickBrown Hanukkah",]
+    
+    let kwanzaBlocks = ["BrickRed Kwanza","BrickRed Kwanza","BrickBlack Kwanza","BrickBlack Kwanza","BrickGreen Kwanza","BrickGreen Kwanza",
+                        "BrickRed Kwanza","BrickRed Kwanza","BrickBlack Kwanza","BrickBlack Kwanza","BrickGreen Kwanza","BrickGreen Kwanza",
+                        "BrickRed Kwanza","BrickRed Kwanza","BrickBlack Kwanza","BrickBlack Kwanza","BrickGreen Kwanza","BrickGreen Kwanza",
+                        "BrickRed Kwanza","BrickRed Kwanza","BrickBlack Kwanza","BrickBlack Kwanza","BrickGreen Kwanza","BrickGreen Kwanza",]
+    
+    let dosmildiecinueveBlocks = ["BrickCyan 2019","BrickCyan 2019","BrickCyan 2019","BrickCyan 2019","BrickCyan 2019","BrickCyan 2019",
+                                  "BrickYellow 2019","BrickYellow 2019","BrickYellow 2019","BrickYellow 2019","BrickYellow 2019","BrickYellow 2019",
+                                  "BrickYellow 2019","BrickYellow 2019","BrickYellow 2019","BrickYellow 2019","BrickYellow 2019","BrickYellow 2019",
+                                  "BrickCyan 2019","BrickCyan 2019","BrickCyan 2019","BrickCyan 2019","BrickCyan 2019","BrickCyan 2019",]
+
+    let newYearBlocks = ["BrickRed NewYear","BrickOrange NewYear","BrickYellow NewYear","BrickYellow NewYear","BrickOrange NewYear","BrickRed NewYear",
+                         "BrickOrange NewYear","BrickYellow NewYear","BrickLightYellow NewYear","BrickLightYellow NewYear","BrickYellow NewYear","BrickOrange NewYear",
+                         "BrickOrange NewYear","BrickYellow NewYear","BrickLightYellow NewYear","BrickLightYellow NewYear","BrickYellow NewYear","BrickOrange NewYear",
+                         "BrickRed NewYear","BrickOrange NewYear","BrickYellow NewYear","BrickYellow NewYear","BrickOrange NewYear","BrickRed NewYear",]
+    
     init (numBricks: Int, row: Int, col: Int , inThisScene: GameScene) {
         
         //classic
@@ -151,7 +196,21 @@ struct BrickSpriteRow6 {
         autumnSkin = SKSpriteNode(imageNamed: autumnBlocks[numBricks])
         // Ocher Skin
         ocherSkin = SKSpriteNode(imageNamed: ocherBlocks[numBricks])
-
+        // Chrismas
+        christmasSkin = SKSpriteNode(imageNamed: christmasBlocks[numBricks])
+        // snow flake
+        snowflakeSkin  = SKSpriteNode(imageNamed: snowflakeBlocks[numBricks])
+        //Icy Blue
+        icyBlueSkin = SKSpriteNode(imageNamed: icyBlueBlocks[numBricks])
+        //Hanukkah
+        hanukkahSkin = SKSpriteNode(imageNamed: hanukkahBlocks[numBricks])
+        //Kwanza
+        kwanzaSkin = SKSpriteNode(imageNamed: kwanzaBlocks[numBricks])
+        //2019
+        dosmildiecinueveSkin = SKSpriteNode(imageNamed: dosmildiecinueveBlocks[numBricks])
+        //NewYear
+        newYearSkin = SKSpriteNode(imageNamed: newYearBlocks[numBricks])
+        
         if (deviceType == .iPad || deviceType == .iPad2 || deviceType == .iPadMini || UIDevice.current.userInterfaceIdiom == .phone ){
             /// Classic
             //16:9
@@ -472,6 +531,146 @@ struct BrickSpriteRow6 {
                 x: ((inThisScene.size.width * 10.5/100) + (ocherSkin.size.width * (106.25/100)) * CGFloat(col))
                 /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 79.95/100) - ((ocherSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            /// christmas Skin
+            //16:9
+            christmasSkin.size = CGSize(
+                width:(christmasSkin.size.width * (inThisScene.size.width / christmasSkin.size.width ) * (15/100)) ,
+                height: (christmasSkin.size.height * (inThisScene.size.height / christmasSkin.size.height ) * (4/100)))
+            christmasSkin.physicsBody = SKPhysicsBody(rectangleOf: christmasSkin.frame.size)
+            christmasSkin.physicsBody!.allowsRotation = false
+            christmasSkin.physicsBody!.friction = 0.0
+            christmasSkin.physicsBody!.affectedByGravity = false
+            christmasSkin.physicsBody!.isDynamic = false
+            christmasSkin.name = BlockCategoryName
+            christmasSkin.physicsBody!.categoryBitMask = BlockCategory
+            christmasSkin.zPosition = 2
+            //16:9
+            christmasSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (christmasSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((christmasSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            /// snowflakeSkin
+            //16:9
+            snowflakeSkin.size = CGSize(
+                width:(snowflakeSkin.size.width * (inThisScene.size.width / snowflakeSkin.size.width ) * (15/100)) ,
+                height: (snowflakeSkin.size.height * (inThisScene.size.height / snowflakeSkin.size.height ) * (4/100)))
+            snowflakeSkin.physicsBody = SKPhysicsBody(rectangleOf: snowflakeSkin.frame.size)
+            snowflakeSkin.physicsBody!.allowsRotation = false
+            snowflakeSkin.physicsBody!.friction = 0.0
+            snowflakeSkin.physicsBody!.affectedByGravity = false
+            snowflakeSkin.physicsBody!.isDynamic = false
+            snowflakeSkin.name = BlockCategoryName
+            snowflakeSkin.physicsBody!.categoryBitMask = BlockCategory
+            snowflakeSkin.zPosition = 2
+            //16:9
+            snowflakeSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (snowflakeSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((snowflakeSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            /// icyBlueSkin
+            //16:9
+            icyBlueSkin.size = CGSize(
+                width:(icyBlueSkin.size.width * (inThisScene.size.width / icyBlueSkin.size.width ) * (15/100)) ,
+                height: (icyBlueSkin.size.height * (inThisScene.size.height / icyBlueSkin.size.height ) * (4/100)))
+            icyBlueSkin.physicsBody = SKPhysicsBody(rectangleOf: icyBlueSkin.frame.size)
+            icyBlueSkin.physicsBody!.allowsRotation = false
+            icyBlueSkin.physicsBody!.friction = 0.0
+            icyBlueSkin.physicsBody!.affectedByGravity = false
+            icyBlueSkin.physicsBody!.isDynamic = false
+            icyBlueSkin.name = BlockCategoryName
+            icyBlueSkin.physicsBody!.categoryBitMask = BlockCategory
+            icyBlueSkin.zPosition = 2
+            //16:9
+            icyBlueSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (icyBlueSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((icyBlueSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            /// hanukkahSkin
+            //16:9
+            hanukkahSkin.size = CGSize(
+                width:(hanukkahSkin.size.width * (inThisScene.size.width / hanukkahSkin.size.width ) * (15/100)) ,
+                height: (hanukkahSkin.size.height * (inThisScene.size.height / hanukkahSkin.size.height ) * (4/100)))
+            hanukkahSkin.physicsBody = SKPhysicsBody(rectangleOf: hanukkahSkin.frame.size)
+            hanukkahSkin.physicsBody!.allowsRotation = false
+            hanukkahSkin.physicsBody!.friction = 0.0
+            hanukkahSkin.physicsBody!.affectedByGravity = false
+            hanukkahSkin.physicsBody!.isDynamic = false
+            hanukkahSkin.name = BlockCategoryName
+            hanukkahSkin.physicsBody!.categoryBitMask = BlockCategory
+            hanukkahSkin.zPosition = 2
+            //16:9
+            hanukkahSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (hanukkahSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((hanukkahSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            /// kwanzaSkin
+            //16:9
+            kwanzaSkin.size = CGSize(
+                width:(kwanzaSkin.size.width * (inThisScene.size.width / kwanzaSkin.size.width ) * (15/100)) ,
+                height: (kwanzaSkin.size.height * (inThisScene.size.height / kwanzaSkin.size.height ) * (4/100)))
+            kwanzaSkin.physicsBody = SKPhysicsBody(rectangleOf: kwanzaSkin.frame.size)
+            kwanzaSkin.physicsBody!.allowsRotation = false
+            kwanzaSkin.physicsBody!.friction = 0.0
+            kwanzaSkin.physicsBody!.affectedByGravity = false
+            kwanzaSkin.physicsBody!.isDynamic = false
+            kwanzaSkin.name = BlockCategoryName
+            kwanzaSkin.physicsBody!.categoryBitMask = BlockCategory
+            kwanzaSkin.zPosition = 2
+            //16:9
+            kwanzaSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (kwanzaSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((kwanzaSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            //dosmildiecinueveSkin
+            //16:9
+            dosmildiecinueveSkin.size = CGSize(
+                width:(dosmildiecinueveSkin.size.width * (inThisScene.size.width / dosmildiecinueveSkin.size.width ) * (15/100)) ,
+                height: (dosmildiecinueveSkin.size.height * (inThisScene.size.height / dosmildiecinueveSkin.size.height ) * (4/100)))
+            dosmildiecinueveSkin.physicsBody = SKPhysicsBody(rectangleOf: dosmildiecinueveSkin.frame.size)
+            dosmildiecinueveSkin.physicsBody!.allowsRotation = false
+            dosmildiecinueveSkin.physicsBody!.friction = 0.0
+            dosmildiecinueveSkin.physicsBody!.affectedByGravity = false
+            dosmildiecinueveSkin.physicsBody!.isDynamic = false
+            dosmildiecinueveSkin.name = BlockCategoryName
+            dosmildiecinueveSkin.physicsBody!.categoryBitMask = BlockCategory
+            dosmildiecinueveSkin.zPosition = 2
+            //16:9
+            dosmildiecinueveSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (dosmildiecinueveSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((dosmildiecinueveSkin.size.height * (237.5/100) ) * CGFloat(row)))
+            
+            //newYearSkin
+            //16:9
+            newYearSkin.size = CGSize(
+                width:(newYearSkin.size.width * (inThisScene.size.width / newYearSkin.size.width ) * (15/100)) ,
+                height: (newYearSkin.size.height * (inThisScene.size.height / newYearSkin.size.height ) * (4/100)))
+            newYearSkin.physicsBody = SKPhysicsBody(rectangleOf: newYearSkin.frame.size)
+            newYearSkin.physicsBody!.allowsRotation = false
+            newYearSkin.physicsBody!.friction = 0.0
+            newYearSkin.physicsBody!.affectedByGravity = false
+            newYearSkin.physicsBody!.isDynamic = false
+            newYearSkin.name = BlockCategoryName
+            newYearSkin.physicsBody!.categoryBitMask = BlockCategory
+            newYearSkin.zPosition = 2
+            //16:9
+            newYearSkin.position = CGPoint(
+                /// Offset value 115px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 10.5/100) + (newYearSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value 385px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 79.95/100) - ((newYearSkin.size.height * (237.5/100) ) * CGFloat(row)))
             
         }else{
             /// Classic
@@ -794,6 +993,147 @@ struct BrickSpriteRow6 {
                 x: ((inThisScene.size.width * 13.38/100) + (ocherSkin.size.width * (106.25/100)) * CGFloat(col))
                 /// Offset value px from the top     Size between bricks leaving room for row6      brick row
                 ,y: (inThisScene.size.height * 81.7/100) - ((ocherSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            //christmasSkin
+            //4:3
+            christmasSkin.size = CGSize(
+                width:(christmasSkin.size.width * (inThisScene.size.width / christmasSkin.size.width ) * (13.67/100)) ,
+                height: (christmasSkin.size.height * (inThisScene.size.height / christmasSkin.size.height ) * (5.12/100)))
+            christmasSkin.physicsBody = SKPhysicsBody(rectangleOf: christmasSkin.frame.size)
+            christmasSkin.physicsBody!.allowsRotation = false
+            christmasSkin.physicsBody!.friction = 0.0
+            christmasSkin.physicsBody!.affectedByGravity = false
+            christmasSkin.physicsBody!.isDynamic = false
+            christmasSkin.name = BlockCategoryName
+            christmasSkin.physicsBody!.categoryBitMask = BlockCategory
+            christmasSkin.zPosition = 2
+            //4:3
+            christmasSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (christmasSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((christmasSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            //snowflakeSkin
+            //4:3
+            snowflakeSkin.size = CGSize(
+                width:(snowflakeSkin.size.width * (inThisScene.size.width / snowflakeSkin.size.width ) * (13.67/100)) ,
+                height: (snowflakeSkin.size.height * (inThisScene.size.height / snowflakeSkin.size.height ) * (5.12/100)))
+            snowflakeSkin.physicsBody = SKPhysicsBody(rectangleOf: snowflakeSkin.frame.size)
+            snowflakeSkin.physicsBody!.allowsRotation = false
+            snowflakeSkin.physicsBody!.friction = 0.0
+            snowflakeSkin.physicsBody!.affectedByGravity = false
+            snowflakeSkin.physicsBody!.isDynamic = false
+            snowflakeSkin.name = BlockCategoryName
+            snowflakeSkin.physicsBody!.categoryBitMask = BlockCategory
+            snowflakeSkin.zPosition = 2
+            //4:3
+            snowflakeSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (snowflakeSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((snowflakeSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            //icyBlueSkin
+            //4:3
+            icyBlueSkin.size = CGSize(
+                width:(icyBlueSkin.size.width * (inThisScene.size.width / icyBlueSkin.size.width ) * (13.67/100)) ,
+                height: (icyBlueSkin.size.height * (inThisScene.size.height / icyBlueSkin.size.height ) * (5.12/100)))
+            icyBlueSkin.physicsBody = SKPhysicsBody(rectangleOf: icyBlueSkin.frame.size)
+            icyBlueSkin.physicsBody!.allowsRotation = false
+            icyBlueSkin.physicsBody!.friction = 0.0
+            icyBlueSkin.physicsBody!.affectedByGravity = false
+            icyBlueSkin.physicsBody!.isDynamic = false
+            icyBlueSkin.name = BlockCategoryName
+            icyBlueSkin.physicsBody!.categoryBitMask = BlockCategory
+            icyBlueSkin.zPosition = 2
+            //4:3
+            icyBlueSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (icyBlueSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((icyBlueSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            //hanukkahSkin
+            //4:3
+            hanukkahSkin.size = CGSize(
+                width:(hanukkahSkin.size.width * (inThisScene.size.width / hanukkahSkin.size.width ) * (13.67/100)) ,
+                height: (hanukkahSkin.size.height * (inThisScene.size.height / hanukkahSkin.size.height ) * (5.12/100)))
+            hanukkahSkin.physicsBody = SKPhysicsBody(rectangleOf: hanukkahSkin.frame.size)
+            hanukkahSkin.physicsBody!.allowsRotation = false
+            hanukkahSkin.physicsBody!.friction = 0.0
+            hanukkahSkin.physicsBody!.affectedByGravity = false
+            hanukkahSkin.physicsBody!.isDynamic = false
+            hanukkahSkin.name = BlockCategoryName
+            hanukkahSkin.physicsBody!.categoryBitMask = BlockCategory
+            hanukkahSkin.zPosition = 2
+            //4:3
+            hanukkahSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (hanukkahSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((hanukkahSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            //hanukkahSkin
+            //4:3
+            kwanzaSkin.size = CGSize(
+                width:(kwanzaSkin.size.width * (inThisScene.size.width / kwanzaSkin.size.width ) * (13.67/100)) ,
+                height: (kwanzaSkin.size.height * (inThisScene.size.height / kwanzaSkin.size.height ) * (5.12/100)))
+            kwanzaSkin.physicsBody = SKPhysicsBody(rectangleOf: kwanzaSkin.frame.size)
+            kwanzaSkin.physicsBody!.allowsRotation = false
+            kwanzaSkin.physicsBody!.friction = 0.0
+            kwanzaSkin.physicsBody!.affectedByGravity = false
+            kwanzaSkin.physicsBody!.isDynamic = false
+            kwanzaSkin.name = BlockCategoryName
+            kwanzaSkin.physicsBody!.categoryBitMask = BlockCategory
+            kwanzaSkin.zPosition = 2
+            //4:3
+            kwanzaSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (kwanzaSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((kwanzaSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            //dosmildiecinueveSkin
+            //4:3
+            dosmildiecinueveSkin.size = CGSize(
+                width:(dosmildiecinueveSkin.size.width * (inThisScene.size.width / dosmildiecinueveSkin.size.width ) * (13.67/100)) ,
+                height: (dosmildiecinueveSkin.size.height * (inThisScene.size.height / dosmildiecinueveSkin.size.height ) * (5.12/100)))
+            dosmildiecinueveSkin.physicsBody = SKPhysicsBody(rectangleOf: dosmildiecinueveSkin.frame.size)
+            dosmildiecinueveSkin.physicsBody!.allowsRotation = false
+            dosmildiecinueveSkin.physicsBody!.friction = 0.0
+            dosmildiecinueveSkin.physicsBody!.affectedByGravity = false
+            dosmildiecinueveSkin.physicsBody!.isDynamic = false
+            dosmildiecinueveSkin.name = BlockCategoryName
+            dosmildiecinueveSkin.physicsBody!.categoryBitMask = BlockCategory
+            dosmildiecinueveSkin.zPosition = 2
+            //4:3
+            dosmildiecinueveSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (dosmildiecinueveSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((dosmildiecinueveSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
+            // newYearSkin
+            //4:3
+            newYearSkin.size = CGSize(
+                width:(newYearSkin.size.width * (inThisScene.size.width / newYearSkin.size.width ) * (13.67/100)) ,
+                height: (newYearSkin.size.height * (inThisScene.size.height / newYearSkin.size.height ) * (5.12/100)))
+            newYearSkin.physicsBody = SKPhysicsBody(rectangleOf: newYearSkin.frame.size)
+            newYearSkin.physicsBody!.allowsRotation = false
+            newYearSkin.physicsBody!.friction = 0.0
+            newYearSkin.physicsBody!.affectedByGravity = false
+            newYearSkin.physicsBody!.isDynamic = false
+            newYearSkin.name = BlockCategoryName
+            newYearSkin.physicsBody!.categoryBitMask = BlockCategory
+            newYearSkin.zPosition = 2
+            //4:3
+            newYearSkin.position = CGPoint(
+                /// Offset value px from the border             Size between bricks             brick col
+                x: ((inThisScene.size.width * 13.38/100) + (newYearSkin.size.width * (106.25/100)) * CGFloat(col))
+                /// Offset value px from the top     Size between bricks leaving room for row6      brick row
+                ,y: (inThisScene.size.height * 81.7/100) - ((newYearSkin.size.height * (228.57/100) ) * CGFloat(row)))
+            
             
         }//End else
     }//END init

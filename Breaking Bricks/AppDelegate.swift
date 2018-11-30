@@ -40,6 +40,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var oldcostAutumnB : Bool = UserDefaults.standard.bool(forKey: "costAutumnB")
     var oldcostOcherB : Bool = UserDefaults.standard.bool(forKey: "costOcherB")
     
+    var oldcostKwanzaB : Bool = UserDefaults.standard.bool(forKey: "costKwanzaB")
+    var oldcostNewYearB : Bool = UserDefaults.standard.bool(forKey: "costNewYearB")
+    var oldcostChristmasB : Bool = UserDefaults.standard.bool(forKey: "costChristmasB")
+    var oldcost2019B : Bool = UserDefaults.standard.bool(forKey: "cost2019B")
+    var oldcostHanukkahB : Bool = UserDefaults.standard.bool(forKey: "costHanukkahB")
+    var oldcostSnowflakeB : Bool = UserDefaults.standard.bool(forKey: "costSnowflakeB")
+    var oldcostIcyBlueB : Bool = UserDefaults.standard.bool(forKey: "costIcyBlueB")
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         coin += oldCurrency
@@ -62,9 +70,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         costClassyB = oldcostClassyB
         costUrbanicB = oldcostUrbanicB
         costAutumnB = oldcostAutumnB
-        costOcherB = oldcostOcherB
-        
-        
+        costOcherB = oldcostOcherB  
+        costKwanzaB = oldcostKwanzaB
+        costNewYearB = oldcostNewYearB
+        costChristmasB = oldcostChristmasB
+        cost2019B = oldcost2019B
+        costHanukkahB = oldcostHanukkahB
+        costSnowflakeB = oldcostSnowflakeB
+        costIcyBlueB = oldcostIcyBlueB
+            
         //STORE VALUES
         coin = oldCoinStore
         
