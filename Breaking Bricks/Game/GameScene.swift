@@ -232,8 +232,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             gameControls.timerBrick.texture = SKTexture(imageNamed: "Timer_Score Retro")
 
             // Color label
-            gameControls.timerLabel.fontColor = .white
-            gameControls.scoreLabel.fontColor = .white
+            gameControls.timerLabel.fontColor = UIColor(red:0.53, green:0.53, blue:0.53, alpha:1.0)
+            gameControls.scoreLabel.fontColor = UIColor(red:0.53, green:0.53, blue:0.53, alpha:1.0)
             
             //Bricks
             for brick in 0...24{
@@ -1836,7 +1836,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score += 1
         
         ///Test Coin
-        //coin += 1
+        coin += 1
         
         gameControls.scoreLabel.text = ("\(score)")
     }//END BreakBlocks

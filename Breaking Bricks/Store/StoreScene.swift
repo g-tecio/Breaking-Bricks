@@ -1117,7 +1117,7 @@ class StoreScene: SKScene, ZCarouselDelegate {
             storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Retro")
             storeControls.menuclassic.texture = SKTexture(imageNamed: "MENU Retro")
             storeControls.currentclassic.texture = SKTexture(imageNamed: "Multipurpose Retro")
-            storeControls.coinLabel.fontColor = .white
+            storeControls.coinLabel.fontColor = UIColor(red:0.53, green:0.53, blue:0.53, alpha:1.0)
         }
         if sceneNumber == 2{
             storeControls.classicBackground.texture = SKTexture(imageNamed: "Background Rainbow")

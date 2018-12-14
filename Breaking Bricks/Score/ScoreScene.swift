@@ -95,9 +95,9 @@ class ScoreScene: SKScene {
             scoreControls.timeclassiclabel.texture = SKTexture(imageNamed: "Multipurpose Retro")
             scoreControls.menuclassic.texture = SKTexture(imageNamed: "MENU Retro")
 
-            scoreControls.scoreWinLabel.fontColor = .white
-            scoreControls.scoreLoseLabel.fontColor = .white
-            scoreControls.scoreTimeLabel.fontColor = .white
+            scoreControls.scoreWinLabel.fontColor = UIColor(red:0.53, green:0.53, blue:0.53, alpha:1.0)
+            scoreControls.scoreLoseLabel.fontColor = UIColor(red:0.53, green:0.53, blue:0.53, alpha:1.0)
+            scoreControls.scoreTimeLabel.fontColor = UIColor(red:0.53, green:0.53, blue:0.53, alpha:1.0)
             
         }
         if sceneNumber == 2{
